@@ -1,0 +1,27 @@
+.counter {
+    @include flex100Center;
+    background-image: linear-gradient(to right, rgba($color-primary, .6),rgba($white, 1));
+
+    &__header {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $title-font;
+        font-size: 6rem;
+        font-weight: $thin;
+    }
+
+    &__counter-traduttori {
+        font-weight: $bold;
+        color: $color-primary;
+        display: inline-block;
+        width: 10rem;
+    }
+
+    &__counter-nazioni {
+        font-weight: $bold;
+        color: $color-primary;
+        display: inline-block;
+        width: 8rem;
+        
+    }
+}

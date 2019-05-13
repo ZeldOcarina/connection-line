@@ -1,0 +1,17 @@
+.story {
+    height: 100vh;
+    padding: 0 20%;
+    @include flex100Center;
+
+    &__header {
+        text-align: center;
+        font-size: 4rem;
+        line-height: 1.5;
+        font-weight: $thin;
+
+    }
+
+    &__content {
+        
+    }
+}

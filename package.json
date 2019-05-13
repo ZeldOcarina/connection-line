@@ -1,0 +1,23 @@
+{
+    "name": "connection-line",
+    "version": "1.0.0",
+    "description": "A new website for CL Connection Line SAGL",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sass": "sass scss/main.scss public/css/app.css --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": ".git"
+    },
+    "author": "Mattia Rasulo",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "countup.js": "^2.0.4",
+        "ejs": "^2.6.1",
+        "express": "^4.16.4",
+        "mongoose": "^5.5.7"
+    }
+}

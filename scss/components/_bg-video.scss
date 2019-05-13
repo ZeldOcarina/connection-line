@@ -1,0 +1,59 @@
+.bg-video {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+        opacity: 1;
+        overflow: hidden;
+    }
+    
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: 1000;       
+    }
+
+    &__title {
+        text-align: center;
+        color: $white;
+        font-weight: 400;
+        font-size: 4.0rem;
+        padding: 0 20%;
+        margin-top: 3rem;
+        z-index: 50;
+    }
+
+    &__logo {
+        width: auto;
+        position: relative;
+        z-index: 50;
+    }
+
+    &__btn {
+        position: relative;
+        z-index: 50;
+        margin-top: 3rem;
+    }
+
+    :before {
+        content: "";
+        position: absolute;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+        z-index: 1000;
+        background:linear-gradient(to right, rgba($color-primary-dark, .1),rgba($color-secondary, .1));
+      }
+}
