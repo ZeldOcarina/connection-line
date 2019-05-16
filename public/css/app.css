@@ -200,7 +200,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-size: 4rem;
   padding: 0 20%;
   margin-top: 6.5rem;
-  z-index: 50;
+  z-index: 0;
 }
 .bg-video__logo {
   width: 40rem;
@@ -465,6 +465,46 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   color: #00589e;
   display: inline-block;
   width: 8rem;
+}
+
+.progressive-sidebar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 92%;
+  z-index: 2000;
+}
+.progressive-sidebar__ul {
+  position: relative;
+  list-style: none;
+}
+.progressive-sidebar__container {
+  position: relative;
+  cursor: pointer;
+}
+.progressive-sidebar__section {
+  height: 20px;
+  margin: 0.5rem 0;
+  fill: #001e36;
+}
+.progressive-sidebar__section--active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #001e36;
+  -webkit-mask: url("/assets/icons/SVG/controller-record.svg") no-repeat 50% 50%;
+  mask: url("/assets/icons/SVG/controller-record.svg") no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.progressive-sidebar__section-icon {
+  width: 2rem;
+  height: 2rem;
 }
 
 .story {
