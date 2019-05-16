@@ -30,20 +30,23 @@
         font-weight: 400;
         font-size: 4.0rem;
         padding: 0 20%;
-        margin-top: 3rem;
+        margin-top: 6.5rem;
         z-index: 50;
     }
 
     &__logo {
-        width: auto;
+        width: 40rem;
         position: relative;
         z-index: 50;
     }
 
     &__btn {
         position: relative;
+        display: inline-block;
+        width: 40rem;
+        height: 5.5rem;
         z-index: 50;
-        margin-top: 3rem;
+        margin-top: 6.5rem;
     }
 
     :before {

@@ -199,18 +199,21 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-weight: 400;
   font-size: 4rem;
   padding: 0 20%;
-  margin-top: 3rem;
+  margin-top: 6.5rem;
   z-index: 50;
 }
 .bg-video__logo {
-  width: auto;
+  width: 40rem;
   position: relative;
   z-index: 50;
 }
 .bg-video__btn {
   position: relative;
+  display: inline-block;
+  width: 40rem;
+  height: 5.5rem;
   z-index: 50;
-  margin-top: 3rem;
+  margin-top: 6.5rem;
 }
 .bg-video :before {
   content: "";
