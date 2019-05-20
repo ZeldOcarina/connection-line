@@ -345,22 +345,22 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   border-top-right-radius: 3px;
 }
 .card__picture--1 {
-  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/medicina.jpg");
+  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/settori/medicina.jpg");
 }
 .card__picture--2 {
-  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/giustizia.jpg");
+  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/settori/giustizia.jpg");
 }
 .card__picture--3 {
-  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/finanziario.jpg");
+  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/settori/finanziario.jpg");
 }
 .card__picture--4 {
-  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/marketing.jpg");
+  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/settori/marketing.jpg");
 }
 .card__picture--5 {
-  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/informatica.jpg");
+  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/settori/informatica.jpg");
 }
 .card__picture--6 {
-  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/tecnico.jpg");
+  background-image: linear-gradient(to left, rgba(0, 88, 158, 0.25), rgba(255, 255, 255, 0.4)), url("/assets/settori/tecnico.jpg");
 }
 .card__heading {
   font-size: 2.8rem;
@@ -523,6 +523,53 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   line-height: 1.5;
   font-weight: 400;
 }
+.testimonials {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.testimonials__title {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 5rem;
+}
+.testimonials__text {
+  text-align: left;
+  align-self: flex-start;
+  padding: 0 20%;
+}
+.testimonials__carousel {
+  padding: 2 rem 0;
+  display: block;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-basis: content;
+  margin-top: 10rem;
+  background-color: rgba(209, 209, 209, 0.75);
+  width: 100vw;
+  transition: all linear;
+}
+.testimonials__carousel-logo {
+  height: auto;
+  width: auto;
+  margin: 0 10rem;
+  filter: grayscale(100%) brightness(130%);
+}
+
+.owl-stage {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
 #section-hero {
   position: relative;
 }
@@ -542,6 +589,11 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   grid-template-columns: repeat(auto-fit, 35rem);
   grid-gap: 5rem;
   justify-content: center;
+}
+
+#testimonials {
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("/assets/testimonials-background.jpg");
+  background-size: cover;
 }
 
 /*# sourceMappingURL=app.css.map */

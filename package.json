@@ -19,6 +19,8 @@
         "ejs": "^2.6.1",
         "express": "^4.16.4",
         "jquery-scrollify": "^1.0.20",
-        "mongoose": "^5.5.7"
+        "mongoose": "^5.5.7",
+        "owl-carousel": "^2.3.4",
+        "owl.carousel2": "^2.2.1"
     }
 }

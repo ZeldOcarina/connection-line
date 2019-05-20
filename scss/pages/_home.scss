@@ -19,5 +19,11 @@
     justify-content: center;
 }
 
+#testimonials {
+    background-image: linear-gradient(to left, rgba($white, .75),rgba($white, .75)),
+                url('/assets/testimonials-background.jpg');
+    background-size: cover;
+}
+
 
 

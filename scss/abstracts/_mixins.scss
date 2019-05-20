@@ -13,3 +13,10 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin section_title {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1.5;
+    font-weight: $thin;
+}

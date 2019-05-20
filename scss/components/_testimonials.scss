@@ -1,0 +1,43 @@
+.testimonials {
+    @include flex100Center;
+
+    &__title {
+        @include section_title;
+        margin-bottom: 5rem;
+    }
+
+    &__text {
+        text-align: left;
+        align-self: flex-start;
+        padding: 0 20%;
+    }
+
+    &__carousel {
+        padding: 2 rem 0;
+        display: block;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-basis: content;
+        margin-top: 10rem;
+        background-color: rgba($color-grey-light, .75);
+        width: 100vw;
+        transition: all linear;
+
+        &-logo {
+            height: auto;
+            width: auto;
+            margin: 0 10rem;
+            filter: grayscale(100%) brightness(130%);
+        }
+    }
+    
+}
+
+.owl-stage {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}

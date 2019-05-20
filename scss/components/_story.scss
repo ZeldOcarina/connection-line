@@ -4,11 +4,7 @@
     @include flex100Center;
 
     &__header {
-        text-align: center;
-        font-size: 4rem;
-        line-height: 1.5;
-        font-weight: $thin;
-
+        @include section_title;
     }
 
     &__content {

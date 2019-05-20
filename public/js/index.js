@@ -28,11 +28,13 @@
     const secondSection = $('.progressive-sidebar__section-2');
     const thirdSection = $('.progressive-sidebar__section-3');
     const fourthSection = $('.progressive-sidebar__section-4');
+    const fifthSection = $('.progressive-sidebar__section-5');
 
     const heroSection = $('#section-hero');
-    const countersSection = $('#counters')
-    const storySection = $('#story')
-    const settoriSection = $('#settori')
+    const countersSection = $('#counters');
+    const storySection = $('#story');
+    const settoriSection = $('#settori');
+    const testimonialsSection = $('#testimonials');
 
     function removeSidebarActive() {
         sidebar.children().removeClass('progressive-sidebar__section--active')
@@ -48,10 +50,11 @@
     secondSection.on('click', () => scrollToSection(countersSection));
     thirdSection.on('click', () => scrollToSection(storySection));
     fourthSection.on('click', () => scrollToSection(settoriSection));
+    fifthSection.on('click', () => scrollToSection(testimonialsSection));
 
     $(function () {
         $.scrollify({
-            section: "#section-hero, #counters, #story, #settori",
+            section: "#section-hero, #counters, #story, #settori, #testimonials",
             sectionName: false,
             interstitialSection: "",
             easing: "easeOutExpo",
@@ -77,6 +80,9 @@
                 } else if (section === 3) {
                     removeSidebarActive();
                     fourthSection.addClass('progressive-sidebar__section--active');
+                } else if (section === 4) {
+                    removeSidebarActive();
+                    fifthSection.addClass('progressive-sidebar__section--active');
                 }
             },
             afterResize: function () { },
@@ -84,6 +90,40 @@
         });
     });
 })();
+
+/****************************
+ * TESTIMONIALS OWL CAROUSEL
+ ***************************/
+
+(function testimonialCarousel() {
+    $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 50,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            smartSpeed: 3000,
+            slideTransition: 'linear',
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 5,
+                    loop: true
+                },
+                600: {
+                    items: 7,
+                    loop: true
+                },
+                1000: {
+                    items: 10,
+                    loop: true
+                }
+            }
+        });
+    });
+})();
+
+
 
 
 
