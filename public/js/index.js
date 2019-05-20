@@ -29,12 +29,14 @@
     const thirdSection = $('.progressive-sidebar__section-3');
     const fourthSection = $('.progressive-sidebar__section-4');
     const fifthSection = $('.progressive-sidebar__section-5');
+    const sixthSection = $('.progressive-sidebar__section-6');
 
     const heroSection = $('#section-hero');
     const countersSection = $('#counters');
     const storySection = $('#story');
     const settoriSection = $('#settori');
     const testimonialsSection = $('#testimonials');
+    const ctaSection = $('#cta');
 
     function removeSidebarActive() {
         sidebar.children().removeClass('progressive-sidebar__section--active')
@@ -51,10 +53,11 @@
     thirdSection.on('click', () => scrollToSection(storySection));
     fourthSection.on('click', () => scrollToSection(settoriSection));
     fifthSection.on('click', () => scrollToSection(testimonialsSection));
+    sixthSection.on('click', () => scrollToSection(ctaSection));
 
     $(function () {
         $.scrollify({
-            section: "#section-hero, #counters, #story, #settori, #testimonials",
+            section: "#section-hero, #counters, #story, #settori, #testimonials, #cta",
             sectionName: false,
             interstitialSection: "",
             easing: "easeOutExpo",
@@ -66,8 +69,7 @@
             overflowScroll: true,
             updateHash: true,
             touchScroll: true,
-            before: function () { },
-            after: function (section) {
+            before: function (section) {
                 if (section === 0) {
                     removeSidebarActive();
                     firstSection.addClass('progressive-sidebar__section--active');
@@ -83,8 +85,12 @@
                 } else if (section === 4) {
                     removeSidebarActive();
                     fifthSection.addClass('progressive-sidebar__section--active');
+                } else if (section === 5) {
+                    removeSidebarActive();
+                    sixthSection.addClass('progressive-sidebar__section--active');
                 }
             },
+            after: function () { },
             afterResize: function () { },
             afterRender: function () { }
         });
@@ -101,13 +107,13 @@
             loop: true,
             margin: 50,
             autoplay: true,
-            autoplayTimeout: 3000,
-            smartSpeed: 3000,
+            autoplayTimeout: 2600,
+            smartSpeed: 2600,
             slideTransition: 'linear',
             autoplayHoverPause: true,
             responsive: {
                 0: {
-                    items: 5,
+                    items: 4,
                     loop: true
                 },
                 600: {
