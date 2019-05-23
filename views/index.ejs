@@ -55,7 +55,7 @@
             </video>
         </div>
         <img class="bg-video__logo" src="/assets/logo.png" alt="">
-        <h1 class="bg-video__title">&ldquo;Aiutiamo persone ed aziende a superare le barriere linguistiche in qualsiasi
+        <h1 class="bg-video__title">&ldquo;Aiutiamo privati ed aziende a superare le barriere linguistiche in qualsiasi
             ambito
             tecnico.&rdquo;</h1>
         <button class="btn btn--animated btn--primary bg-video__btn">Richiedi subito un preventivo</button>
@@ -282,8 +282,22 @@
                 </div>
                 <div class="form__group">
                     <textarea type="email" class="form__input" id="richiesta" placeholder="Inserisci la tua Richiesta"
-                        rows="10" required></textarea>
+                        rows="6" required></textarea>
                     <label for="richiesta" class="form__label">Richiesta</label>
+                </div>
+                <div class="form__checkbox-group">
+                    <input type="checkbox" class="form__checkbox-input" id="privacy" name="privacy_accepted">
+                    <label for="privacy" class="form__checkbox-label">
+                        <span class="form__checkbox-button"></span>
+                        Acconsento al trattamento dei miei dati personali.
+                    </label>
+                </div>
+                <div class="form__checkbox-group">
+                    <input type="checkbox" class="form__checkbox-input" id="newsletter" name="newsletter_accepted">
+                    <label for="newsletter" class="form__checkbox-label">
+                        <span class="form__checkbox-button"></span>
+                        Sì, voglio iscrivermi alla Newsletter.
+                    </label>
                 </div>
                 <div class="form__group">
                     <button class="btn btn--primary">Invia</button>

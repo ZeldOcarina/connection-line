@@ -1,3 +1,34 @@
+const heroSection = $('#section-hero');
+const countersSection = $('#counters');
+const storySection = $('#story');
+const settoriSection = $('#settori');
+const testimonialsSection = $('#testimonials');
+const ctaSection = $('#cta');
+
+/************************
+ * NAVIGATION MENU LOGIC
+ ***********************/
+
+(function navigationHandler() {
+    const heroLink = $('.navigation__link--home');
+    const countersLink = $('.navigation__link--counters');
+    const storyLink = $('.navigation__link--story');
+    const settoriLink = $('.navigation__link--settori');
+    const testimonialsLink = $('.navigation__link--testimonials');
+    const ctaLink = $('.navigation__link--cta');
+
+    const toggler = $('#navi-toggle');
+
+    heroLink.on('click', toggleNav);
+    countersLink.on('click', toggleNav)
+    storyLink.on('click', toggleNav)
+    settoriLink.on('click', toggleNav)
+    testimonialsLink.on('click', toggleNav)
+    ctaLink.on('click', toggleNav)
+
+    function toggleNav() { toggler[0].checked = false; }
+})();
+
 /*********************
  * COUNTER JAVASCRIPT
  *********************/
@@ -31,12 +62,7 @@
     const fifthSection = $('.progressive-sidebar__section-5');
     const sixthSection = $('.progressive-sidebar__section-6');
 
-    const heroSection = $('#section-hero');
-    const countersSection = $('#counters');
-    const storySection = $('#story');
-    const settoriSection = $('#settori');
-    const testimonialsSection = $('#testimonials');
-    const ctaSection = $('#cta');
+    const activeSidebar = 'progressive-sidebar__section--active';
 
     function removeSidebarActive() {
         sidebar.children().removeClass('progressive-sidebar__section--active')
@@ -57,37 +83,37 @@
 
     $(function () {
         $.scrollify({
-            section: "#section-hero, #counters, #story, #settori, #testimonials, #cta",
+            section: "#section-hero, #counters, #story, #settori, #testimonials, #cta, #footer",
             sectionName: false,
-            interstitialSection: "",
+            interstitialSection: "#footer",
             easing: "easeOutExpo",
             scrollSpeed: 1100,
             offset: 0,
             scrollbars: true,
-            standardScrollElements: "",
+            standardScrollElements: "#cta",
             setHeights: true,
             overflowScroll: true,
-            updateHash: true,
+            updateHash: false,
             touchScroll: true,
             before: function (section) {
                 if (section === 0) {
                     removeSidebarActive();
-                    firstSection.addClass('progressive-sidebar__section--active');
+                    firstSection.addClass(activeSidebar);
                 } else if (section === 1) {
                     removeSidebarActive();
-                    secondSection.addClass('progressive-sidebar__section--active');
+                    secondSection.addClass(activeSidebar);
                 } else if (section === 2) {
                     removeSidebarActive();
-                    thirdSection.addClass('progressive-sidebar__section--active');
+                    thirdSection.addClass(activeSidebar);
                 } else if (section === 3) {
                     removeSidebarActive();
-                    fourthSection.addClass('progressive-sidebar__section--active');
+                    fourthSection.addClass(activeSidebar);
                 } else if (section === 4) {
                     removeSidebarActive();
-                    fifthSection.addClass('progressive-sidebar__section--active');
+                    fifthSection.addClass(activeSidebar);
                 } else if (section === 5) {
                     removeSidebarActive();
-                    sixthSection.addClass('progressive-sidebar__section--active');
+                    sixthSection.addClass(activeSidebar);
                 }
             },
             after: function () { },

@@ -36,6 +36,51 @@
         }
     }
 
+    &__checkbox-group {
+        width: 80%;
+        display: block;
+        margin: 2rem 0;
+    }
+
+    &__checkbox-input {
+        display: none;
+    }
+
+    &__checkbox-label {
+        font-size: $basic-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4rem;
+    }
+
+    &__checkbox-button {
+        height: 2.5rem;
+        width: 2.5rem;
+        border: 4px solid $color-primary;
+        border-radius: .5rem;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.4rem;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.2rem;
+            width: 1.2rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__checkbox-input:checked ~ &__checkbox-label &__checkbox-button::after {
+        opacity: 1;
+    }
 
     &__label {
         font-size: 1.2rem;

@@ -32,12 +32,20 @@
         padding: 0 20%;
         margin-top: 6.5rem;
         z-index: 0;
+
+        @include respond(millecinquecento) { 
+            font-size: 3rem;
+        }
     }
 
     &__logo {
         width: 40rem;
         position: relative;
         z-index: 50;
+
+        @include respond(millecinquecento) { 
+            width: 30rem;
+        }
     }
 
     &__btn {
