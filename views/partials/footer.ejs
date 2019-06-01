@@ -1,4 +1,4 @@
-<footer class="footer" id="#footer">
+<footer class="footer" id="footer">
     <p class="footer__mattia">
         Built by Mattia Rasulo Marketing Studio.
     </p>
@@ -6,10 +6,32 @@
     <div class="footer__navigation">
         <ul class="footer__list">
             <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+            <li class="footer__item"><a href="#popup" class="footer__link popup-opener">NEWSLETTER</a></li>
         </ul>
     </div>
 </footer>
+<div class="popup d-none" id="popup">
+    <div class="popup__content">
+        <h2 class="popup__header">Iscriviti subito alla nostra newsletter!</h2>
+        <p class="popup__text">Non perdere nessuna delle nostre promozioni e resta aggiornato sulle ultime novità dal
+            mondo delle traduzioni iscrivendoti alla nostra imperdibile newsletter!</p>
+        <form action="#" class="popup__form-popup">
+            <div class="popup__form-popup__group">
+                <label for="name" class="popup__form-popup__label">Nome</label>
+                <input type="text" class="popup__form-popup__input" placeholder="Nome" id="name" required>
+
+            </div>
+
+            <div class="popup__form-popup__group">
+                <label for="email" class="popup__form-popup__label">Email</label>
+                <input type="email" class="popup__form-popup__input" placeholder="Email" id="email" required>
+
+            </div>
+            <button href="#" class="btn btn--primary popup__btn">Iscriviti</button>
+        </form>
+        <button class="popup__close">&times;</button>
+    </div>
+</div>
 
 <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/js/jquery.counterup.min.js"></script>

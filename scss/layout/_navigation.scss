@@ -15,6 +15,20 @@
         box-shadow: 0 1rem 3rem rgba($black, .1);
         text-align: center;
         cursor: pointer;
+
+        @include respond(settecento) { 
+            top: 3.5rem;
+            right: 3.5rem;
+            height: 5rem;
+            width: 5rem;
+        }
+        
+        @include respond(trecentosettantacinque) { 
+            top: 2rem;
+            right: 2rem;
+            height: 4.5rem;
+            width: 4.5rem;
+        }
     }
 
     &__background {
@@ -26,7 +40,21 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
-        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+        @include respond(settecento) { 
+            top: 4rem;
+            right: 4rem;
+            height: 4rem;
+            width: 4rem;
+        }
+        
+        @include respond(trecentosettantacinque) { 
+            top: 3rem;
+            right: 3rem;
+            height: 2rem;
+            width: 2rem;
+        }
     }
 
     &__nav {
@@ -35,6 +63,7 @@
         top: 0;
         left: 0;
         z-index: 1500;
+        visibility: hidden;
         opacity: 0;
         width: 0;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -65,8 +94,12 @@
             text-decoration: none;
             text-transform: uppercase;
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $white 50%);
-            background-size: 250%;
+            background-size: 1000%;
             transition: all .4s;
+
+            @include respond(settecento) {
+                font-size: 2rem;
+            }
 
             span {
                 margin-right: 1.5rem;
@@ -89,6 +122,8 @@
     }
 
     &__checkbox:checked ~ &__nav {
+        display: block;
+        visibility: visible;
         opacity: 1;
         width: 100%;
     }
@@ -97,7 +132,7 @@
     //ICON
     &__icon {
         position: relative;
-        margin-top: 3.5rem;
+        margin-top: 50%;
 
         &,
         &::before,
@@ -106,6 +141,13 @@
             height: 2px;
             background-color: $color-grey-dark;
             display: inline-block;
+
+            @include respond(settecento) {
+                width: 2.5rem;
+            }
+            @include respond(trecentosettantacinque) {
+                width: 2rem;
+            }
         }
 
         &::before,
@@ -116,16 +158,49 @@
             transition: all .2s;
         }
 
-        &::before { top: -.8rem; }
-        &::after { top: .8rem; }
+        &::before { 
+            top: -.8rem; 
+            
+            @include respond(settecento) {
+                top: -.7rem;
+            }
+            @include respond(trecentosettantacinque) {
+                top: -.5rem;
+            }
+        }
+        &::after {
+            top: .8rem; 
+        
+            @include respond(settecento) {
+                top: .7rem;
+            }
+            
+            @include respond(trecentosettantacinque) {
+                top: .5rem;
+            }
+        }
     }
 
     &__button:hover &__icon::before {
         top: -1rem;
+        
+        @include respond(settecento) {
+            top: -.7rem;
+        }
+        @include respond(trecentosettantacinque) {
+            top: -.5rem;
+        }
     }
 
     &__button:hover &__icon::after {
         top: 1rem;
+
+        @include respond(settecento) {
+            top: .7rem;
+        }
+        @include respond(trecentosettantacinque) {
+            top: .5rem;
+        }
     }
 
     &__checkbox:checked + &__button &__icon {

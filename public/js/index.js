@@ -4,7 +4,12 @@ const storySection = $('#story');
 const settoriSection = $('#settori');
 const testimonialsSection = $('#testimonials');
 const ctaSection = $('#cta');
+const popupSection = $('#popup');
 
+//POPUP DOM ELEMENTS
+const popupOpener = $('.popup-opener');
+const popupCloseButton = $('.popup__close');
+const displayNone = 'd-none';
 /************************
  * NAVIGATION MENU LOGIC
  ***********************/
@@ -137,22 +142,83 @@ const ctaSection = $('#cta');
             smartSpeed: 2600,
             slideTransition: 'linear',
             autoplayHoverPause: true,
+            items: 3.5,
             responsive: {
-                0: {
+                450: {
                     items: 4,
-                    loop: true
+                    loop: true,
                 },
-                600: {
-                    items: 7,
-                    loop: true
+                500: {
+                    items: 5,
+                    loop: true,
+                },
+                800: {
+                    items: 6,
+                    loop: true,
                 },
                 1000: {
+                    items: 7,
+                    loop: true,
+                },
+                1200: {
+                    items: 8,
+                    loop: true,
+                },
+                1500: {
+                    items: 9,
+                    loop: true,
+                },
+                1800: {
                     items: 10,
-                    loop: true
-                }
-            }
+                    loop: true,
+                },
+                2000: {
+                    items: 11,
+                    loop: true,
+                },
+            },
         });
     });
+})();
+
+/***************
+ * POPUP LOGIC
+ **************/
+
+(function popup() {
+
+    popupOpener.on('click', openPopup);
+    popupCloseButton.on('click', closePopup);
+
+    // Variable to be used in mouseout function
+    let popupState = false;
+    let exitPopup = false;
+
+    $('body').on('mouseout', (e) => {
+        if (!e.relatedTarget && !e.toElement && !exitPopup) {
+            openPopup();
+            exitPopup = true;
+        }
+    });
+
+    $(document).keyup((e) => {
+        if (e.keyCode === 27 && popupState) closePopup();   // esc
+    });
+
+    $('.popup').on('click', (e) => {
+        console.log(e.target);
+    })
+
+
+    function openPopup() {
+        popupSection.removeClass(displayNone);
+        popupState = true;
+    }
+
+    function closePopup() {
+        popupSection.addClass(displayNone);
+        popupState = false;
+    }
 })();
 
 

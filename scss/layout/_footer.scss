@@ -11,13 +11,37 @@
     align-items: center;
     justify-items: center;
 
+    @include respond(milletrecento) {
+        padding: 6rem 1rem;
+    }
+
+    @include respond(novecento) {
+        grid-template-columns: 35% 40% 25%;
+    }
+
+    @include respond(ottocento) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
     &__container {
         width: 60%;
         
         display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        @include respond(novecento) { 
+            width: 100%;        
+        }
+    }
+
+    &__copyright {
+        @include respond(novecento) { 
+            text-align: center;        
+        }
     }
 
     &__navigation {

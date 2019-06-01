@@ -1,13 +1,36 @@
 .counter {
     @include flex100Center;
-    background-image: linear-gradient(to right, rgba($color-primary, .6),rgba($white, 1));
+    width: 80vw;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fit, 70rem);
+    gap: 4rem;
 
     &__header {
         text-align: center;
         text-transform: uppercase;
         font-family: $title-font;
-        font-size: 6rem;
+        font-size: 3.5rem;
         font-weight: $thin;
+
+        @include respond(settecento) {
+            font-size: 3rem;
+            width: 60vw;
+            margin: 0 auto;
+        }
+
+        @include respond(quattrocentosettanta) {
+            font-size: 2.5rem;
+        }
+        
+        @include respond(trecentosettantacinque) {
+            font-size: 2rem;
+            line-height: 1.5;
+            gap: 2rem;
+            width: 80vw;
+        }
     }
 
     &__counter-traduttori {
@@ -15,6 +38,14 @@
         color: $color-primary;
         display: inline-block;
         width: 10rem;
+
+        @include respond(settecento) {
+            width: 6rem;
+        }
+
+        @include respond(trecentosettantacinque) {
+            width: 4rem;
+        }
     }
 
     &__counter-nazioni {
@@ -22,6 +53,37 @@
         color: $color-primary;
         display: inline-block;
         width: 8rem;
+
+        @include respond(settecento) {
+            width: 4.5rem;
+        }
         
+        @include respond(trecentosettantacinque) {
+            width: 4rem;
+        }
+    }
+
+    &__counter-parole {
+        width: 17rem;
+        
+        @include respond(settecento) {
+            width: 14rem;
+        }
+
+        @include respond(trecentosettantacinque) {
+            width: 9rem;
+        }
+    }
+
+    &__counter-lingue {
+        width: 8rem;
+
+        @include respond(settecento) {
+            width: 6rem;
+        }
+
+        @include respond(trecentosettantacinque) {
+            width: 4.5rem;
+        }
     }
 }

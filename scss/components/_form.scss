@@ -2,6 +2,10 @@
 
     &__group:not(:last-child) {
         margin-bottom: 1rem;
+
+        @include respond(settecento) {
+            margin-bottom: .5rem;
+        }
     }
 
     &__input {
@@ -16,6 +20,15 @@
         width: 90%;
         display: block;
         transition: all .3s;
+
+        @include respond(milletrecento) { 
+            padding: 1rem 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        @include respond(novecento) { 
+            width: 100%;
+        }
 
         /*@include respond(tab-port) {
             width: 100%;
@@ -37,9 +50,22 @@
     }
 
     &__checkbox-group {
-        width: 80%;
+        width: 100%;
         display: block;
         margin: 2rem 0;
+
+        @include respond(settecento) {
+            margin: 1rem 0;
+        }
+       
+        @include respond(seicento) {
+            width: 80%;
+        }
+        
+        @include respond(trecentosettantacinque) {
+            margin: .5rem 0;
+        }
+        
     }
 
     &__checkbox-input {
@@ -51,6 +77,16 @@
         cursor: pointer;
         position: relative;
         padding-left: 4rem;
+
+        @include respond(milletrecento) { 
+            font-size: 1.4rem;
+        }
+        
+        @include respond(quattrocento) { 
+            font-size: 1.3rem;
+        }
+
+        
     }
 
     &__checkbox-button {
@@ -63,6 +99,10 @@
         left: 0;
         top: -.4rem;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         &::after {
             content: "";
             display: block;
@@ -74,7 +114,11 @@
             transform: translate(-50%, -50%);
             background-color: $color-primary;
             opacity: 0;
-            transition: opacity .2s;
+            transition: opacity .2s;       
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 

@@ -1,15 +1,40 @@
 .testimonials {
     @include flex100Center;
 
+    @include respond(trecentosettantacinque) {
+        padding-top: 4rem;
+    }
+
     &__title {
         @include section_title;
         margin-bottom: 5rem;
+
+        @include respond(ottocento) {
+            font-size: 3rem;
+        }
+        
+        @include respond(seicento) {
+            font-size: 2.5rem;
+        }
+
+        @include respond(cinquecento) {
+            padding: 0 5rem;
+        }
+        
+        @include respond(trecentosettantacinque) {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
     }
 
     &__text {
         text-align: left;
         align-self: flex-start;
         padding: 0 20%;
+
+        @include respond(ottocento) {
+            padding: 0 15%;
+        }
     }
 
     &__carousel {
@@ -23,6 +48,11 @@
         background-color: rgba($color-grey-light, .75);
         width: 100vw;
         transition: all linear;
+
+        @include respond(trecentosettantacinque) {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
 
         &-logo {
             height: auto;

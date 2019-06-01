@@ -6,6 +6,11 @@
         -moz-perspective: 150rem;
         position: relative;
         height: 52rem;
+
+        @include respond(quattrocento) {
+            width: 80%;
+            margin: 0 auto;
+        }
         
         &__side {
             height: 52rem;
@@ -105,6 +110,10 @@
         &__details {
             padding: 3rem;
             //INSERIRE LA PARTE DI TESTO
+            @include respond(quattrocento) {
+                padding: 1rem;
+                font-size: 1.5rem;
+            }
         }
     
         // FRONT SIDE STYLING
@@ -120,13 +129,16 @@
         &__preventivo-box {
             text-align: center;
             color: $white;
-            margin-bottom: 8rem;
         }
     
         &__chiedi-preventivo {
             font-size: 2.5rem;
             font-weight: 100;
             font-family: $title-font;
+
+            @include respond(quattrocento) {
+                font-size: 1.75rem;
+            }
         }
     
         //@include respond(tab-port) {
@@ -137,6 +149,15 @@
             border-radius: 3px;
             background-color: $white;
             box-shadow: 0 1.5rem 4rem rgba($black, .15);
+
+            &__preventivo-box {
+                margin-bottom: 5rem;
+                padding-top: 4rem;
+
+                &-button {
+                    margin-bottom: 4rem;
+                }
+            }
             
             &__side {
                 height: auto;
@@ -155,7 +176,7 @@
     
         
             &__details {
-                padding: 1rem 3rem;
+                padding: 5rem 3rem 3rem;
             }
     
             // FRONT SIDE STYLING
@@ -165,15 +186,35 @@
                 left: 0;
                 transform: translate(0);
                 width: 100%;
-                padding: 7rem 4rem 4rem 4rem;
+                padding: 8rem 4rem 4rem 4rem;
             }
-    
-            &__price-box {
-                margin-bottom: 3rem;
+
+            &__chiedi-preventivo {
+                margin: 0;
             }
-    
-            &__price-value {
-                font-size: 4rem;
+        }
+
+        @include respond(quattrocento) {
+            &__picture {
+                height: 19rem;
+            }
+
+            &__heading {
+                font-size: 2.4rem;
+            }
+            
+            &__preventivo-box {
+                margin-bottom: 2rem;
+                padding-top: 0;
+
+                &-button {
+                    margin-bottom: 2rem;
+                    padding: 1.3rem 3rem !important;
+                }
+            }
+
+            &__details {
+                padding: 1.5rem 3rem;
             }
         }
     }

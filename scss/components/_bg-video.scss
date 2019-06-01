@@ -36,6 +36,22 @@
         @include respond(millecinquecento) { 
             font-size: 3rem;
         }
+        
+        @include respond(mille) { 
+            padding: 0 10%;
+        }
+
+        @include respond(novecento) { 
+            margin-top: 5rem;
+        }
+
+        @include respond(settecento) { 
+            font-size: 2.3rem;
+        }
+        
+        @include respond(trecentosettantacinque) { 
+            font-size: 2rem;
+        }
     }
 
     &__logo {
@@ -46,6 +62,14 @@
         @include respond(millecinquecento) { 
             width: 30rem;
         }
+
+        @include respond(mille) { 
+            width: 24rem;
+        }
+
+        @include respond(settecento) { 
+            width: 18rem;
+        }
     }
 
     &__btn {
@@ -55,6 +79,22 @@
         height: 5.5rem;
         z-index: 50;
         margin-top: 6.5rem;
+
+        @include respond(novecento) { 
+            margin-top: 5rem;
+        }
+
+        @include respond(settecento) { 
+            width: 35rem;
+            height: 5rem;
+            font-size: 1.5rem !important;
+        }
+
+        @include respond(trecentosettantacinque) { 
+            width: 80%;
+            height: min-content;
+            font-size: 1.3rem !important;
+        }
     }
 
     :before {
