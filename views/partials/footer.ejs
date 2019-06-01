@@ -1,33 +1,35 @@
 <footer class="footer" id="footer">
     <p class="footer__mattia">
-        Built by Mattia Rasulo Marketing Studio.
+        <%= content.footer.builtBy %>
     </p>
-    <p class="footer__copyright">&copy; 2019 CL Connection Line SAGL. Tutti i diritti riservati.</p>
+    <p class="footer__copyright">&copy; <%= content.footer.copyright %></p>
     <div class="footer__navigation">
         <ul class="footer__list">
-            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-            <li class="footer__item"><a href="#popup" class="footer__link popup-opener">NEWSLETTER</a></li>
+            <li class="footer__item"><a href="#" class="footer__link"><%= content.footer.privacyPolicy %></a></li>
+            <li class="footer__item"><a href="#popup"
+                    class="footer__link popup-opener"><%= content.footer.newsletter %></a></li>
         </ul>
     </div>
 </footer>
 <div class="popup d-none" id="popup">
     <div class="popup__content">
-        <h2 class="popup__header">Iscriviti subito alla nostra newsletter!</h2>
-        <p class="popup__text">Non perdere nessuna delle nostre promozioni e resta aggiornato sulle ultime novità dal
-            mondo delle traduzioni iscrivendoti alla nostra imperdibile newsletter!</p>
+        <h2 class="popup__header"><%= content.popup.header %></h2>
+        <p class="popup__text"><%= content.popup.text %></p>
         <form action="#" class="popup__form-popup">
             <div class="popup__form-popup__group">
-                <label for="name" class="popup__form-popup__label">Nome</label>
-                <input type="text" class="popup__form-popup__input" placeholder="Nome" id="name" required>
+                <label for="name" class="popup__form-popup__label"><%= content.popup.form.name %></label>
+                <input type="text" class="popup__form-popup__input" placeholder="<%= content.popup.form.name %>"
+                    id="name" required>
 
             </div>
 
             <div class="popup__form-popup__group">
-                <label for="email" class="popup__form-popup__label">Email</label>
-                <input type="email" class="popup__form-popup__input" placeholder="Email" id="email" required>
+                <label for="email" class="popup__form-popup__label"><%= content.popup.form.email %></label>
+                <input type="email" class="popup__form-popup__input" placeholder="<%= content.popup.form.email %>"
+                    id="email" required>
 
             </div>
-            <button href="#" class="btn btn--primary popup__btn">Iscriviti</button>
+            <button href="#" class="btn btn--primary popup__btn"><%= content.popup.cta %></button>
         </form>
         <button class="popup__close">&times;</button>
     </div>

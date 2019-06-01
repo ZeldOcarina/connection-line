@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Connection Line SAGL | Specialisti della Traduzione</title>
+    <title>Connection Line SAGL | <%= content.title %></title>
     <link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/app.css">
 </head>
@@ -23,50 +23,51 @@
         <nav class="navigation__nav">
             <div class="translations-navbar">
                 <div class="translations-navbar__container">
-                    <img class="translations-navbar__image" src="/assets/flags/english.png">
+                    <a href="/en"><img class="translations-navbar__image" src="/assets/flags/english.png"></a>
                 </div>
                 <div class="translations-navbar__container">
-                    <img class=" translations-navbar__image" src="/assets/flags/italian.png">
+                    <a href="/it"><img class=" translations-navbar__image" src="/assets/flags/italian.png"></a>
                 </div>
                 <div class="translations-navbar__container">
-                    <img class="translations-navbar__image" src="/assets/flags/german.png">
+                    <a href="/de"><img class="translations-navbar__image" src="/assets/flags/german.png"></a>
                 </div>
                 <div class="translations-navbar__container">
-                    <img class="translations-navbar__image" src="/assets/flags/french.png">
+                    <a href="/fr"><img class="translations-navbar__image" src="/assets/flags/french.png"></a>
                 </div>
             </div>
             <ul class="navigation__list">
                 <li class="navigation__item"><a href="#section-hero" class="navigation__link navigation__link--home">
-                        <span>01</span>Home</a>
+                        <span>01</span><%= content.menu.home %></a>
                 </li>
                 <li class="navigation__item"><a href="#counters"
-                        class="navigation__link navigation__link--counters"><span>02</span>I Numeri</a>
+                        class="navigation__link navigation__link--counters"><span>02</span><%= content.menu.numeri %></a>
                 </li>
                 <li class="navigation__item"><a href="#story"
-                        class="navigation__link navigation__link--story"><span>03</span>La Storia</a></li>
+                        class="navigation__link navigation__link--story"><span>03</span><%= content.menu.storia %></a>
+                </li>
                 <li class="navigation__item"><a href="#settori"
-                        class="navigation__link navigation__link--settori"><span>04</span>I Servizi</a>
+                        class="navigation__link navigation__link--settori"><span>04</span><%= content.menu.servizi %></a>
                 </li>
                 <li class="navigation__item"><a href="#testimonials"
-                        class="navigation__link navigation__link--testimonials"><span>05</span>I Nostri
-                        Clienti</a>
+                        class="navigation__link navigation__link--testimonials"><span>05</span><%= content.menu.clienti %></a>
                 </li>
                 <li class="navigation__item"><a href="#cta"
-                        class="navigation__link navigation__link--cta"><span>06</span>Contattaci</a></li>
+                        class="navigation__link navigation__link--cta"><span>06</span><%= content.menu.contatti %></a>
+                </li>
             </ul>
         </nav>
     </div>
     <div class="translations">
-        <div class="translations__container">
-            <img class="translations__image translations__image--english" src="/assets/flags/english.png">
+        <div class="translations-navbar__container">
+            <a href="/en"><img class="translations-navbar__image" src="/assets/flags/english.png"></a>
         </div>
-        <div class="translations__container">
-            <img class=" translations__image translations__image--italian" src="/assets/flags/italian.png">
+        <div class="translations-navbar__container">
+            <a href="/it"><img class=" translations-navbar__image" src="/assets/flags/italian.png"></a>
         </div>
-        <div class="translations__container">
-            <img class="translations__image translations__image--german" src="/assets/flags/german.png">
+        <div class="translations-navbar__container">
+            <a href="/de"><img class="translations-navbar__image" src="/assets/flags/german.png"></a>
         </div>
-        <div class="translations__container">
-            <img class="translations__image translations__image--french" src="/assets/flags/french.png">
+        <div class="translations-navbar__container">
+            <a href="/fr"><img class="translations-navbar__image" src="/assets/flags/french.png"></a>
         </div>
     </div>

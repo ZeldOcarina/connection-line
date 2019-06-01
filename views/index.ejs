@@ -55,42 +55,35 @@
             </video>
         </div>
         <img class="bg-video__logo" src="/assets/logo.png" alt="">
-        <h1 class="bg-video__title">&ldquo;Aiutiamo privati ed aziende a superare le barriere linguistiche in qualsiasi
-            ambito
-            tecnico.&rdquo;</h1>
-        <button class="btn btn--animated btn--primary bg-video__btn">Richiedi subito un preventivo</button>
+        <h1 class="bg-video__title">&ldquo;<%= content.header.topHeader %>&rdquo;</h1>
+        <button class="btn btn--animated btn--primary bg-video__btn"><%= content.header.cta %></button>
     </div>
 </header>
 <section id="counters">
     <div class="counter">
-        <h2 class="counter__header"><span class="counter__counter-traduttori">100</span> interpreti 👩<br><span
-                class="counter__nazioni-text">🌍 da oltre <span class="counter__counter-nazioni">80</span>
-                nazioni. 🌍</span>
+        <h2 class="counter__header"><span class="counter__counter-traduttori">100</span>
+            <%= content.counters.interpreti[0] %>👩<br><span class="counter__nazioni-text">🌍
+                <%= content.counters.interpreti[1] %> <span class="counter__counter-nazioni">80</span>
+                <%= content.counters.interpreti[2] %> 🌍</span>
         </h2>
-        <h2 class="counter__header">🇨🇭 🇬🇧 <span class="counter__counter-traduttori">500</span> combinazioni
-            linguistiche. 🇮🇹 🇩🇪
+        <h2 class="counter__header">🇨🇭 🇬🇧 <span class="counter__counter-traduttori">500</span>
+            <%= content.counters.combinazioni[0] %> 🇮🇹 🇩🇪
         </h2>
-        <h2 class="counter__header"><span class="counter__counter-traduttori">400</span> clienti soddisfatti. 👨‍🏫👩‍🏫
+        <h2 class="counter__header"><span class="counter__counter-traduttori">400</span>
+            <%= content.counters.clientiSoddisfatti[0] %>. 👨‍🏫👩‍🏫
         </h2>
-        <h2 class="counter__header"><span class="counter__counter-traduttori counter__counter-parole">1000000</span> di
-            parole tradotte
-            ㊙㊗<br><span class="counter__nazioni-text">in <span
+        <h2 class="counter__header"><span class="counter__counter-traduttori counter__counter-parole">1000000</span>
+            <%= content.counters.paroleTradotte[0] %>
+            ㊙㊗<br><span class="counter__nazioni-text"><%= content.counters.paroleTradotte[1] %> <span
                     class="counter__counter-nazioni counter__counter-lingue">800</span>
-                lingue diverse. 🌍</span>
+                <%= content.counters.paroleTradotte[2] %> 🌍</span>
         </h2>
     </div>
 </section>
 <section id="story">
     <div class="story">
-        <h2 class="story__header">Una Storia di Eccellenza e di Competenza.</h2>
-        <p class="story__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque voluptas
-            nobis quod sint quaerat voluptatibus voluptatem porro, commodi pariatur accusantium nihil, facilis aperiam
-            maiores numquam doloribus quo eveniet tempore officiis aliquid sequi magni corporis dolore totam. Fugit
-            saepe, hic assumenda architecto cupiditate perspiciatis, neque accusantium beatae voluptatibus, ratione quam
-            pariatur aliquid quibusdam recusandae officiis tempore vero? Aliquam beatae facere in adipisci. Quo sed,
-            quod animi ut sit deleniti, dolor consectetur quidem nihil officiis neque debitis nostrum. Vitae aut aperiam
-            ullam saepe unde, fugiat eos possimus ipsum perspiciatis laborum amet dolor placeat numquam quos dicta
-            incidunt libero quas repudiandae repellendus!</p>
+        <h2 class="story__header"><%= content.story.header %></h2>
+        <p class="story__text"><%= content.story.text %></p>
     </div>
 </section>
 <section id="settori">
@@ -100,20 +93,19 @@
                 &nbsp;
             </div>
             <h4 class="card__heading">
-                <span class="card__heading-span">MEDICINA</span>
+                <span class="card__heading-span"><%= content.cards.medicina.header %></span>
             </h4>
             <div class="card__details">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur
-                    accusantium laboriosam fugiat quasi omnis animi!</p>
+                <p><%= content.cards.medicina.text1 %></p>
+                <p><%= content.cards.medicina.text2 %></p>
             </div>
         </div>
         <div class="card__side card__side--back card__side--back-1">
             <div class="card__cta">
                 <div class="card__preventivo-box">
-                    <p class="card__chiedi-preventivo">CHIEDI SUBITO UN PREVENTIVO!</p>
+                    <p class="card__chiedi-preventivo"><%= content.cards.preventivo %></p>
                 </div>
-                <a href="#popup" class="btn btn--white card__preventivo-box-button">contattaci</a>
+                <a href="#popup" class="btn btn--white card__preventivo-box-button"><%= content.cards.cta %></a>
             </div>
         </div>
     </div>
@@ -124,20 +116,19 @@
                 &nbsp;
             </div>
             <h4 class="card__heading">
-                <span class="card__heading-span">GIUSTIZIA</span>
+                <span class="card__heading-span"><%= content.cards.legale.header %></span>
             </h4>
             <div class="card__details">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur
-                    accusantium laboriosam fugiat quasi omnis animi!</p>
+                <p><%= content.cards.legale.text1 %></p>
+                <p><%= content.cards.legale.text2 %></p>
             </div>
         </div>
         <div class="card__side card__side--back card__side--back-1">
             <div class="card__cta">
                 <div class="card__preventivo-box">
-                    <p class="card__chiedi-preventivo">CHIEDI SUBITO UN PREVENTIVO!</p>
+                    <p class="card__chiedi-preventivo"><%= content.cards.preventivo %></p>
                 </div>
-                <a href="#popup" class="btn btn--white card__preventivo-box-button">Contattaci</a>
+                <a href="#popup" class="btn btn--white card__preventivo-box-button"><%= content.cards.cta %></a>
             </div>
         </div>
     </div>
@@ -148,20 +139,19 @@
                 &nbsp;
             </div>
             <h4 class="card__heading">
-                <span class="card__heading-span">FINANZA</span>
+                <span class="card__heading-span"><%= content.cards.finanza.header %></span>
             </h4>
             <div class="card__details">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur
-                    accusantium laboriosam fugiat quasi omnis animi!</p>
+                <p><%= content.cards.finanza.text1 %></p>
+                <p><%= content.cards.finanza.text2 %></p>
             </div>
         </div>
         <div class="card__side card__side--back">
             <div class="card__cta">
                 <div class="card__preventivo-box">
-                    <p class="card__chiedi-preventivo">CHIEDI SUBITO UN PREVENTIVO!</p>
+                    <p class="card__chiedi-preventivo"><%= content.cards.preventivo %></p>
                 </div>
-                <a href="#popup" class="btn btn--white card__preventivo-box-button">Contattaci</a>
+                <a href="#popup" class="btn btn--white card__preventivo-box-button"><%= content.cards.cta %></a>
             </div>
         </div>
     </div>
@@ -172,20 +162,19 @@
                 &nbsp;
             </div>
             <h4 class="card__heading">
-                <span class="card__heading-span">MARKETING</span>
+                <span class="card__heading-span"><%= content.cards.marketing.header %></span>
             </h4>
             <div class="card__details">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur
-                    accusantium laboriosam fugiat quasi omnis animi!</p>
+                <p><%= content.cards.marketing.text1 %></p>
+                <p><%= content.cards.marketing.text2 %></p>
             </div>
         </div>
         <div class="card__side card__side--back">
             <div class="card__cta">
                 <div class="card__preventivo-box">
-                    <p class="card__chiedi-preventivo">CHIEDI SUBITO UN PREVENTIVO!</p>
+                    <p class="card__chiedi-preventivo"><%= content.cards.preventivo %></p>
                 </div>
-                <a href="#popup" class="btn btn--white card__preventivo-box-button">Contattaci</a>
+                <a href="#popup" class="btn btn--white card__preventivo-box-button"><%= content.cards.cta %></a>
             </div>
         </div>
     </div>
@@ -196,20 +185,19 @@
                 &nbsp;
             </div>
             <h4 class="card__heading">
-                <span class="card__heading-span card__heading-span--1">WEB/INFORMATICA</span>
+                <span class="card__heading-span card__heading-span--1"><%= content.cards.webInformatica.header %></span>
             </h4>
             <div class="card__details">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur
-                    accusantium laboriosam fugiat quasi omnis animi!</p>
+                <p><%= content.cards.webInformatica.text1 %></p>
+                <p><%= content.cards.webInformatica.text2 %></p>
             </div>
         </div>
         <div class="card__side card__side--back">
             <div class="card__cta">
                 <div class="card__preventivo-box">
-                    <p class="card__chiedi-preventivo">CHIEDI SUBITO UN PREVENTIVO!</p>
+                    <p class="card__chiedi-preventivo"><%= content.cards.preventivo %></p>
                 </div>
-                <a href="#popup" class="btn btn--white card__preventivo-box-button">Contattaci</a>
+                <a href="#popup" class="btn btn--white card__preventivo-box-button"><%= content.cards.cta %></a>
             </div>
         </div>
     </div>
@@ -219,31 +207,28 @@
                 &nbsp;
             </div>
             <h4 class="card__heading">
-                <span class="card__heading-span">TECNICO</span>
+                <span class="card__heading-span"><%= content.cards.tecnico.header %></span>
             </h4>
             <div class="card__details">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur
-                    accusantium laboriosam fugiat quasi omnis animi!</p>
+                <p><%= content.cards.tecnico.text1 %></p>
+                <p><%= content.cards.tecnico.text2 %></p>
             </div>
         </div>
         <div class="card__side card__side--back">
             <div class="card__cta">
                 <div class="card__preventivo-box">
-                    <p class="card__chiedi-preventivo">CHIEDI SUBITO UN PREVENTIVO!</p>
+                    <p class="card__chiedi-preventivo"><%= content.cards.preventivo %></p>
                 </div>
-                <a href="#popup" class="btn btn--white card__preventivo-box-button">Contattaci</a>
+                <a href="#popup" class="btn btn--white card__preventivo-box-button"><%= content.cards.cta %></a>
             </div>
         </div>
     </div>
 </section>
 <section id="testimonials">
     <div class="testimonials">
-        <h2 class="testimonials__title mb-3">Lorem ipsum dolor sit amet consectetur.</h2>
-        <p class="testimonials__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex aut ratione quam?
-            Obcaecati autem necessitatibus consequuntur repudiandae quibusdam corporis minima!</p>
-        <p class="testimonials__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse temporibus sequi
-            dicta inventore culpa. Nemo.</p>
+        <h2 class="testimonials__title mb-3"><%= content.testimonials.header %></h2>
+        <p class="testimonials__text"><%= content.testimonials.text1 %></p>
+        <p class="testimonials__text"><%= content.testimonials.text2 %></p>
         <div class="testimonials__carousel owl-carousel" data-loop="true">
             <div class="item">
                 <img src="/assets/logos/bbc.png" alt=""
@@ -275,43 +260,43 @@
 
         <div class="cta__form">
             <h2 class="cta__header mb-3">
-                Richiedi subito un preventivo gratuito! <br>10% di sconto sulle richieste online!
+                <%= content.form.header[0] %> <br><%= content.form.header[1] %>
             </h2>
             <form action="#" class="form">
                 <div class="form__group">
-                    <input type="text" class="form__input" placeholder="Nome e Cognome" id="name" required>
-                    <label for="name" class="form__label">Nome e Cognome</label>
+                    <input type="text" class="form__input" placeholder="<%= content.form.name %>" id="name" required>
+                    <label for="name" class="form__label"><%= content.form.name %></label>
                 </div>
 
                 <div class="form__group">
-                    <input type="email" class="form__input" placeholder="Email" id="email" required>
-                    <label for="email" class="form__label">Email</label>
+                    <input type="email" class="form__input" placeholder="<%= content.form.email %>" id="email" required>
+                    <label for="email" class="form__label"><%= content.form.email %></label>
                 </div>
                 <div class="form__group">
-                    <input type="text" class="form__input" placeholder="Telefono" id="telefono">
-                    <label for="telefono" class="form__label">Telefono</label>
+                    <input type="text" class="form__input" placeholder="<%= content.form.phone %>" id="telefono">
+                    <label for="telefono" class="form__label"><%= content.form.phone %></label>
                 </div>
                 <div class="form__group">
-                    <textarea type="email" class="form__input" id="richiesta" placeholder="Inserisci la tua Richiesta"
-                        rows="6" required></textarea>
-                    <label for="richiesta" class="form__label">Richiesta</label>
+                    <textarea type="email" class="form__input" id="richiesta"
+                        placeholder="<%= content.form.richiesta.richiestaLabel %>" rows="6" required></textarea>
+                    <label for="richiesta" class="form__label"><%= content.form.richiesta.richiestaTextarea %></label>
                 </div>
                 <div class="form__checkbox-group">
                     <input type="checkbox" class="form__checkbox-input" id="privacy" name="privacy_accepted">
                     <label for="privacy" class="form__checkbox-label">
                         <span class="form__checkbox-button"></span>
-                        Acconsento al trattamento dei miei dati personali.
+                        <%= content.form.privacyConsent %>
                     </label>
                 </div>
                 <div class="form__checkbox-group">
                     <input type="checkbox" class="form__checkbox-input" id="newsletter" name="newsletter_accepted">
                     <label for="newsletter" class="form__checkbox-label">
                         <span class="form__checkbox-button"></span>
-                        Sì, voglio iscrivermi alla Newsletter.
+                        <%= content.form.newsletterConsent %>
                     </label>
                 </div>
                 <div class="form__group">
-                    <button class="btn btn--primary mt-1">Invia</button>
+                    <button class="btn btn--primary mt-1"><%= content.form.cta %></button>
                 </div>
             </form>
         </div>
