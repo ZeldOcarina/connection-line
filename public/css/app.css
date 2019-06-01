@@ -1173,6 +1173,55 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   justify-items: center;
 }
 
+.translations {
+  position: fixed;
+  top: 4rem;
+  left: 4rem;
+  display: flex;
+  width: min-content;
+  z-index: 500;
+  opacity: 0.5;
+}
+@media only screen and (max-width: 43.75em) {
+  .translations {
+    top: 4.5rem;
+    left: 3.5rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .translations {
+    display: none;
+    top: 3rem;
+    left: 2rem;
+  }
+}
+.translations__image {
+  width: 5rem;
+  height: 3rem;
+  margin: 0 0.8rem;
+}
+
+.translations-navbar {
+  display: none;
+  width: min-content;
+  z-index: 1000;
+  opacity: 0.5;
+}
+@media only screen and (max-width: 31.25em) {
+  .translations-navbar {
+    display: flex;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+.translations-navbar__image {
+  width: 5rem;
+  height: 3rem;
+  margin: 0 0.8rem;
+}
+
 .footer {
   background-color: #333333;
   padding: 8rem 0;

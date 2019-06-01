@@ -14,6 +14,14 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
+//REQUIRING CONTENT
+const content = require("./content/content");
+const englishContent = content.englishContent();
+const frenchContent = content.frenchContent();
+const germanContent = content.germanContent();
+const italianContent = content.italianContent();
+
+console.log(englishContent, frenchContent, germanContent, italianContent);
 //REQUIRING ROUTES
 const homeRoute = require("./routes/home");
 
