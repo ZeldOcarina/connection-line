@@ -1,4 +1,4 @@
-<footer class="footer" id="footer">
+<footer class="footer footer__thankyou" id="footer">
     <p class="footer__mattia">
         <%= content.footer.builtBy %>
     </p>
@@ -15,24 +15,42 @@
     <div class="popup__content">
         <h2 class="popup__header"><%= content.popup.header %></h2>
         <p class="popup__text"><%= content.popup.text %></p>
-        <form action="#" class="popup__form-popup">
+        <form action="/newsletter-subscription" method="POST" class="popup__form-popup">
             <div class="popup__form-popup__group">
-                <label for="name" class="popup__form-popup__label"><%= content.popup.form.name %></label>
+                <label for="name" class="popup__form-popup__label"><%= content.popup.form.name %> <span
+                        class="red">*</span></label>
                 <input type="text" class="popup__form-popup__input" placeholder="<%= content.popup.form.name %>"
-                    id="name" required>
-
+                    id="name" name="name" required>
             </div>
 
             <div class="popup__form-popup__group">
-                <label for="email" class="popup__form-popup__label"><%= content.popup.form.email %></label>
-                <input type="email" class="popup__form-popup__input" placeholder="<%= content.popup.form.email %>"
-                    id="email" required>
+                <label for="email" class="popup__form-popup__label"><%= content.popup.form.email %> <span
+                        class="red">*</span></label>
+                <input type="email" class="popup__form-popup__input" name="email"
+                    placeholder="<%= content.popup.form.email %>" id="email" required>
 
             </div>
-            <button href="#" class="btn btn--primary popup__btn"><%= content.popup.cta %></button>
-        </form>
-        <button class="popup__close">&times;</button>
+            <div class="popup__content__checkbox-group">
+                <input type="checkbox" class="popup__content__checkbox-input" id="privacy" name="privacy_accepted"
+                    required>
+                <label for="privacy" class="ml-1 popup__content__checkbox-label">
+                    <span class="popup__content__checkbox-button"></span>
+                    <%= content.form.privacyConsent %> <span class="red">*</span>
+                </label>
+            </div>
+            <div class="popup__content__checkbox-group">
+                <input type="checkbox" class="popup__content__checkbox-input" id="newsletter" name="newsletter_accepted"
+                    required>
+                <label for="newsletter" class="ml-1 popup__content__checkbox-label">
+                    <span class="popup__content__checkbox-button"></span>
+                    <%= content.form.newsletterConsent %> <span class="red">*</span>
+                </label>
+            </div>
+            <button class="btn btn--primary popup__btn"><%= content.popup.cta %></button>
     </div>
+    </form>
+    <button class="popup__close">&times;</button>
+</div>
 </div>
 
 <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>

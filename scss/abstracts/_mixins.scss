@@ -5,13 +5,17 @@
     transform: translate(-50%, -50%);
 }
 
-@mixin flex100Center {
-    height: 100vh;
+@mixin flexCenter {
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
     justify-content: center;
+}
+
+@mixin flex100Center {
+    height: 100vh;
+    @include flexCenter;
 }
 
 @mixin section_title {

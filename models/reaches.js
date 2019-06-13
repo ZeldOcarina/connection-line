@@ -5,8 +5,8 @@ const reachesSchema = new mongoose.Schema({
     email: String,
     phoneNumber: String,
     request: String,
-    privacy: Boolean,
-    newsletter: Boolean
+    privacy_accepted: Boolean,
+    newsletter_accepted: Boolean
 });
 
 module.exports = mongoose.model('Reach', reachesSchema);

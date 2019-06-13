@@ -10,6 +10,7 @@ const popupSection = $('#popup');
 const popupOpener = $('.popup-opener');
 const popupCloseButton = $('.popup__close');
 const displayNone = 'd-none';
+
 /************************
  * NAVIGATION MENU LOGIC
  ***********************/
@@ -186,29 +187,7 @@ const displayNone = 'd-none';
  **************/
 
 (function popup() {
-
-    popupOpener.on('click', openPopup);
-    popupCloseButton.on('click', closePopup);
-
-    // Variable to be used in mouseout function
-    let popupState = false;
-    let exitPopup = false;
-
-    $('body').on('mouseout', (e) => {
-        if (!e.relatedTarget && !e.toElement && !exitPopup) {
-            openPopup();
-            exitPopup = true;
-        }
-    });
-
-    $(document).keyup((e) => {
-        if (e.keyCode === 27 && popupState) closePopup();   // esc
-    });
-
-    $('.popup').on('click', (e) => {
-        console.log(e.target);
-    })
-
+    const page = window.location.pathname.match(/\/([^\/]+)\/?$/)[1];
 
     function openPopup() {
         popupSection.removeClass(displayNone);
@@ -219,6 +198,31 @@ const displayNone = 'd-none';
         popupSection.addClass(displayNone);
         popupState = false;
     }
+
+    popupOpener.on('click', openPopup);
+    popupCloseButton.on('click', closePopup);
+
+    if (page !== 'thankyou') {
+        // Variable to be used in mouseout function
+        let popupState = false;
+        let exitPopup = false;
+
+        setTimeout(() => {
+            if (!exitPopup) openPopup();
+        }, 20000);
+
+        $('body').on('mouseout', (e) => {
+            if (!e.relatedTarget && !e.toElement && !exitPopup) {
+                openPopup();
+                exitPopup = true;
+            }
+        });
+
+        $(document).keyup((e) => {
+            if (e.keyCode === 27 && popupState) closePopup();   // esc
+        });
+    }
+
 })();
 
 

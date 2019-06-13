@@ -24,6 +24,7 @@
         overflow: hidden;
         transition: all .5s .2s;
         padding: 5rem;
+        
 
         @include respond(novecento) {
             width: 70%;

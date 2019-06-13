@@ -8,6 +8,7 @@
     <title>Connection Line SAGL | <%= content.title %></title>
     <link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/app.css">
+    <script src="https://kit.fontawesome.com/dd69990d73.js"></script>
 </head>
 
 <body>
@@ -36,22 +37,23 @@
                 </div>
             </div>
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#section-hero" class="navigation__link navigation__link--home">
+                <li class="navigation__item"><a href="/<%= language %>/#section-hero"
+                        class="navigation__link navigation__link--home">
                         <span>01</span><%= content.menu.home %></a>
                 </li>
-                <li class="navigation__item"><a href="#counters"
+                <li class="navigation__item"><a href="/<%= language %>/#counters"
                         class="navigation__link navigation__link--counters"><span>02</span><%= content.menu.numeri %></a>
                 </li>
-                <li class="navigation__item"><a href="#story"
+                <li class="navigation__item"><a href="/<%= language %>/#story"
                         class="navigation__link navigation__link--story"><span>03</span><%= content.menu.storia %></a>
                 </li>
-                <li class="navigation__item"><a href="#settori"
+                <li class="navigation__item"><a href="/<%= language %>/#settori"
                         class="navigation__link navigation__link--settori"><span>04</span><%= content.menu.servizi %></a>
                 </li>
-                <li class="navigation__item"><a href="#testimonials"
+                <li class="navigation__item"><a href="/<%= language %>/#testimonials"
                         class="navigation__link navigation__link--testimonials"><span>05</span><%= content.menu.clienti %></a>
                 </li>
-                <li class="navigation__item"><a href="#cta"
+                <li class="navigation__item"><a href="/<%= language %>/#cta"
                         class="navigation__link navigation__link--cta"><span>06</span><%= content.menu.contatti %></a>
                 </li>
             </ul>

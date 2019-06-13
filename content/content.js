@@ -96,6 +96,10 @@ exports.englishContent = function () {
                 email: 'Email'
             },
             cta: 'Iscriviti'
+        },
+        thankyou: {
+            title: 'Thanks for your submission. We will answer as soon as possible!',
+            social: 'Follow us on social networks and avoid losing any of our offers!'
         }
     }
     return englishText;
@@ -199,6 +203,10 @@ exports.frenchContent = function () {
                 email: 'Email'
             },
             cta: 'Iscriviti'
+        },
+        thankyou: {
+            title: 'Merci pour votre présentation. Nous vous répondrons dès que possible!',
+            social: 'Suivez-nous sur les réseaux sociaux et d\'éviter de perdre l\'une de nos offres'
         }
     }
     return frenchText;
@@ -302,6 +310,10 @@ exports.germanContent = function () {
                 email: 'Email'
             },
             cta: 'Iscriviti'
+        },
+        thankyou: {
+            title: 'Vielen Dank für Ihren Beitrag. Wir werden so schnell wie möglich antworten!',
+            social: 'Folgen Sie uns auf soziale Netzwerke und vermeiden, dass unsere Angebote!'
         }
     }
     return germanText;
@@ -405,6 +417,10 @@ exports.italianContent = function () {
                 email: 'Email'
             },
             cta: 'Iscriviti'
+        },
+        thankyou: {
+            title: 'Grazie per averci contattato, ti risponderemo al più presto!',
+            social: 'Seguici sui social e non perdere nessuna delle nostre offerte!'
         }
     }
     return italianText;

@@ -129,6 +129,10 @@
         &__preventivo-box {
             text-align: center;
             color: $white;
+
+            &-button {
+                margin-top: 5rem;
+            }
         }
     
         &__chiedi-preventivo {
