@@ -1,0 +1,55 @@
+.privacy {
+    &__hero {
+        background-image: linear-gradient(to left, rgba(0, 88, 158, 0.4), rgba(255, 255, 255, 0.5)), url(/assets/privacy-hero.jpg);
+        background-size: cover;
+        background-position: top;
+        width: 100vw;
+        height: 80vh;
+        @include flexCenter;
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        color: $white;
+
+        @include respond(mille) {
+            font-size: 3rem;
+        }
+
+        @include respond(seicento) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__heading-span {
+        padding: 3rem 2rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        background-image: linear-gradient(to right bottom, 
+        rgba($color-primary, .25), 
+        rgba($color-secondary, .25));
+
+        @include respond(seicento) {
+            padding: 2rem 1rem;
+        }
+    }
+
+    &__body {
+        padding: 3rem 25%;
+
+        @include respond(mille) {
+            padding: 3rem 15%;
+        }
+
+        h2 {
+            padding: 2rem 0;
+        }
+
+        p {
+            padding: 1rem 0;
+        }
+    }
+}

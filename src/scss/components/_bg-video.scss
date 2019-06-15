@@ -30,10 +30,10 @@
         font-weight: 400;
         font-size: 4.0rem;
         padding: 0 20%;
-        margin-top: 6.5rem;
+        margin-top: 5rem;
         z-index: 0;
 
-        @include respond(millecinquecento) { 
+        @include respond(millesettecento) { 
             font-size: 3rem;
         }
         
@@ -59,8 +59,8 @@
         position: relative;
         z-index: 50;
 
-        @include respond(millecinquecento) { 
-            width: 30rem;
+        @include respond(millesettecento) { 
+            width: 25rem;
         }
 
         @include respond(mille) { 
@@ -75,14 +75,10 @@
     &__btn {
         position: relative;
         display: inline-block;
-        width: 40rem;
+        width: 36rem;
         height: 5.5rem;
         z-index: 50;
-        margin-top: 6.5rem;
-
-        @include respond(novecento) { 
-            margin-top: 5rem;
-        }
+        margin-top: 5rem;
 
         @include respond(settecento) { 
             width: 35rem;

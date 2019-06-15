@@ -8,13 +8,14 @@ import counter from './utils/Counter';
 import scrollify from './utils/Scrollify';
 import testimonialCarousel from './utils/TestimonialCarousel';
 import popup from './utils/Popup';
-
+import cookies from './utils/Cookies';
 
 navigationHandler();
 counter();
 scrollify();
 testimonialCarousel();
 popup();
+cookies();
 
 
 

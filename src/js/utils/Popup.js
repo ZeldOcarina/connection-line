@@ -14,7 +14,7 @@ const popup = () => {
     popupOpener.on('click', openPopup);
     popupCloseButton.on('click', closePopup);
 
-    if (page !== 'thankyou') {
+    if (page !== 'thankyou' && page !== 'privacy') {
 
         setTimeout(() => {
             if (!exitPopup) openPopup();

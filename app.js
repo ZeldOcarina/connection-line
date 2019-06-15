@@ -20,11 +20,13 @@ mongoose.set('useCreateIndex', true);
 const homeRoute = require("./routes/home");
 const requestRoute = require("./routes/reach");
 const thankyouRoute = require("./routes/thankyou");
+const privacyRoute = require("./routes/privacy");
 
 //HOME PAGE
 app.use(homeRoute);
 app.use(requestRoute);
 app.use(thankyouRoute);
+app.use(privacyRoute);
 
 //REQUEST ROUTE
 

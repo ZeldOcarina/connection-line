@@ -207,7 +207,7 @@ exports.frenchContent = function () {
         thankyou: {
             title: 'Merci pour votre présentation. Nous vous répondrons dès que possible!',
             social: 'Suivez-nous sur les réseaux sociaux et d\'éviter de perdre l\'une de nos offres'
-        }
+        },
     }
     return frenchText;
 }

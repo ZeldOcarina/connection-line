@@ -43,7 +43,7 @@ const scrollify = () => {
             scrollSpeed: 1100,
             offset: 0,
             scrollbars: true,
-            standardScrollElements: "#cta",
+            standardScrollElements: "#cta, #privacy",
             setHeights: true,
             overflowScroll: true,
             updateHash: false,

@@ -12,7 +12,7 @@ module.exports = merge(common, {
     mode: "production",
     output: {
         filename: "[name].bundle.js",
-        path: path.resolve(__dirname, "public")
+        path: path.resolve(__dirname, "public/js")
     },
     optimization: {
         minimizer: [
@@ -22,7 +22,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new MiniCssExtractPlugin({ filename: "[name].css" }),
-        new CleanWebpackPlugin(),
+        //new CleanWebpackPlugin(),
         new webpack.LoaderOptionsPlugin({
             options: {
                 postcss: [

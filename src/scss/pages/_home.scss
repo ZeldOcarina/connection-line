@@ -30,11 +30,6 @@
     }
 }
 
-#testimonials {
-    background-image: linear-gradient(to left, rgba($white, .75),rgba($white, .75)),
-                url('/assets/testimonials-background.jpg');
-}
-
 #cta {
     @include flex100Center;
     background-image: linear-gradient(to right, rgba($color-primary, .9),rgba($white, .5));

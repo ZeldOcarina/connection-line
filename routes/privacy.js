@@ -8,13 +8,12 @@ router.get("/", (req, res) => {
     res.redirect('/en');
 });
 
-router.get('/:language', (req, res) => {
+router.get('/:language/privacy', (req, res) => {
 
     const language = req.params.language;
 
     const selectedLanguageContent = languageSelector(language);
-    res.render('index', { content: selectedLanguageContent, language: language });
-
+    res.render('privacy-' + language, { content: selectedLanguageContent, language: language });
 });
 
 module.exports = router;
