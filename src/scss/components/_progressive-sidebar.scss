@@ -1,0 +1,66 @@
+.progressive-sidebar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 92%;
+    z-index: 10;
+
+    @include respond(quattrocento) {
+        left: 93%;
+    }
+
+    &__ul {
+        position: relative;
+        list-style: none;
+    }
+
+    &__container {
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__section {
+        height: 20px;
+        margin: .5rem 0;
+        fill: $color-primary-dark;
+
+        @include respond(quattrocento) {
+            height: 19px;
+        }
+        
+        &--active::before {
+            content: "";
+            @include absCenter;
+            display: inline-block;
+            height: 1.6rem;
+            width: 1.6rem;
+            background-color: $color-primary-dark;
+            -webkit-mask: url('/assets/icons/SVG/controller-record.svg') no-repeat 50% 50%;
+            mask: url('/assets/icons/SVG/controller-record.svg') no-repeat 50% 50%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+
+            @include respond(cinquecento) {
+                height: 2rem;
+                width: 2rem;
+            }
+            
+            @include respond(quattrocento) {
+                height: 2rem;
+                width: 2rem;
+                top: 12px;
+                
+            }
+        }
+
+        &-icon {
+            width: 2rem;
+            height: 2rem;
+
+            @include respond(cinquecento) {
+                height: 1.6rem;
+                width: 1.6rem;
+            }
+        }
+    }
+}

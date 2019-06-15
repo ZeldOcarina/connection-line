@@ -1,0 +1,44 @@
+.story {
+    height: 100vh;
+    padding: 0 20%;
+    @include flex100Center;
+
+    @include respond(milletrecento) {
+        padding: 0 15%;
+    }
+    
+    @include respond(cinquecento) {
+        padding: 0 10%;
+    }
+
+    @include respond(trecentosettantacinque) {
+        height: auto;
+        padding: 0 7%;
+    }
+
+    &__header {
+        @include section_title;
+
+        @include respond(novecento) {
+            font-size: 3.5rem;
+        }
+        
+        @include respond(cinquecento) {
+            font-size: 3rem;
+        }
+        
+        @include respond(trecentosettantacinque) {
+            margin-top: 3rem;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__text {
+        margin-top: 3rem;
+        font-size: 1.5rem;
+
+        @include respond(trecentosettantacinque) {
+            padding-bottom: 2rem;
+        }
+    }
+}

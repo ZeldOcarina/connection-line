@@ -1,0 +1,143 @@
+.form {
+
+    &__group:not(:last-child) {
+        margin-bottom: 1rem;
+
+        @include respond(settecento) {
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($white, .8);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        transition: all .3s;
+
+        @include respond(milletrecento) { 
+            padding: 1rem 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        @include respond(novecento) { 
+            width: 100%;
+        }
+
+        /*@include respond(tab-port) {
+            width: 100%;
+        }*/
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($black, .1);
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark;
+        }
+    }
+
+    &__checkbox-group {
+        width: 100%;
+        display: block;
+        margin: 2rem 0;
+
+        @include respond(settecento) {
+            margin: 1rem 0;
+        }
+       
+        @include respond(seicento) {
+            width: 80%;
+        }
+        
+        @include respond(trecentosettantacinque) {
+            margin: .5rem 0;
+        }
+        
+    }
+
+    &__checkbox-input {
+        display: none;
+    }
+
+    &__checkbox-label {
+        font-size: $basic-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4rem;
+
+        @include respond(milletrecento) { 
+            font-size: 1.4rem;
+        }
+        
+        @include respond(quattrocento) { 
+            font-size: 1.3rem;
+        }
+
+        
+    }
+
+    &__checkbox-button {
+        height: 2.5rem;
+        width: 2.5rem;
+        border: 4px solid $color-primary;
+        border-radius: .5rem;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.4rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.2rem;
+            width: 1.2rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity .2s;       
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__checkbox-input:checked ~ &__checkbox-label &__checkbox-button::after {
+        opacity: 1;
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: $thin;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+}

@@ -1,0 +1,110 @@
+.bg-video {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+        opacity: 1;
+        overflow: hidden;
+    }
+    
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: 1000;       
+    }
+
+    &__title {
+        text-align: center;
+        color: $white;
+        font-weight: 400;
+        font-size: 4.0rem;
+        padding: 0 20%;
+        margin-top: 6.5rem;
+        z-index: 0;
+
+        @include respond(millecinquecento) { 
+            font-size: 3rem;
+        }
+        
+        @include respond(mille) { 
+            padding: 0 10%;
+        }
+
+        @include respond(novecento) { 
+            margin-top: 5rem;
+        }
+
+        @include respond(settecento) { 
+            font-size: 2.3rem;
+        }
+        
+        @include respond(trecentosettantacinque) { 
+            font-size: 2rem;
+        }
+    }
+
+    &__logo {
+        width: 40rem;
+        position: relative;
+        z-index: 50;
+
+        @include respond(millecinquecento) { 
+            width: 30rem;
+        }
+
+        @include respond(mille) { 
+            width: 24rem;
+        }
+
+        @include respond(settecento) { 
+            width: 18rem;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        display: inline-block;
+        width: 40rem;
+        height: 5.5rem;
+        z-index: 50;
+        margin-top: 6.5rem;
+
+        @include respond(novecento) { 
+            margin-top: 5rem;
+        }
+
+        @include respond(settecento) { 
+            width: 35rem;
+            height: 5rem;
+            font-size: 1.5rem !important;
+        }
+
+        @include respond(trecentosettantacinque) { 
+            width: 80%;
+            height: min-content;
+            font-size: 1.3rem !important;
+        }
+    }
+
+    :before {
+        content: "";
+        position: absolute;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+        z-index: 1000;
+        background:linear-gradient(to right, rgba($color-primary-dark, .1),rgba($color-secondary, .1));
+      }
+}
