@@ -15,7 +15,7 @@
     <div class="popup__content">
         <h2 class="popup__header"><%= content.popup.header %></h2>
         <p class="popup__text"><%= content.popup.text %></p>
-        <form action="/newsletter-subscription" method="POST" class="popup__form-popup">
+        <form action="/<%= language %>/newsletter-subscription" method="POST" class="popup__form-popup">
             <div class="popup__form-popup__group">
                 <label for="name" class="popup__form-popup__label"><%= content.popup.form.name %> <span
                         class="red">*</span></label>
@@ -52,7 +52,7 @@
     <button class="popup__close">&times;</button>
 </div>
 </div>
-<script type="text/javascript" src="/index.bundle.js"></script>
+<script type="text/javascript" src="/js/index.bundle.js"></script>
 </body>
 
 </html>

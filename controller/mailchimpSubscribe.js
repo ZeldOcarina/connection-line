@@ -1,3 +1,5 @@
+const request = require('request');
+
 const mailchimpSubscribe = (email, name, phone) => {
 
     const dataObj = {
@@ -5,6 +7,7 @@ const mailchimpSubscribe = (email, name, phone) => {
             email_address: email,
             status: "subscribed",
             merge_fields: {
+                EMAIL: email,
                 NAME: name,
                 PHONE: phone
             }
@@ -24,6 +27,7 @@ const mailchimpSubscribe = (email, name, phone) => {
 
     request(options, (err, res, body) => {
         if (err) console.error(err)
+        //console.log(res.statusCode);
     });
 }
 

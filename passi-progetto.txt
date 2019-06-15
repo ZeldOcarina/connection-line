@@ -1,0 +1,14 @@
+1. Completare media queries e adattamento mobile. - DONE
+2. Integrare exit-intent popup / lead magnet. - DONE
+3. Implementare traduzioni sito mettendo il contenuto in una funzione che viene rendered da ejs passando le varie lingue come parametro. - DONE
+4. Collegare il form di acquisizione contatti al database. - DONE
+5. Collegare il popup di exit-intent col database. - DONE
+5. Collegare il form di acquisizione contatti con Sendy. - DONE
+5. Collegare il popup di exit-intent con Sendy. - DONE
+6. Disegnare la Thank You Page. - DONE
+6. Ottimizzare e prefixare tutto il css. - DONE
+7. Ottimizzare e pacchettare tutto il front-end js. - DONE
+8. Connettere nodemailer al form. - DONE
+9. Inserire privacy policy.
+9. Inserire cookie notice.
+8. Deploy.
