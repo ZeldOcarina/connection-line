@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const expressSanitizer = require('express-sanitizer');
 
 //REQUIRING MONGO MODEL
 const Reach = require("../models/reaches");
@@ -18,16 +19,17 @@ router.post('/:language/request', (req, res) => {
     //console.log(req.url);
 
     const reach = new Reach({
-        name: reqBody.name,
-        email: reqBody.email,
-        phoneNumber: reqBody.phoneNumber,
-        request: reqBody.request,
+        name: req.sanitize(reqBody.name),
+        email: req.sanitize(reqBody.email),
+        phoneNumber: req.sanitize(reqBody.phoneNumber),
+        request: req.sanitize(reqBody.request),
         privacy_accepted: privacyResponse.privacy,
         newsletter_accepted: privacyResponse.newsletter
     });
 
     reach.save((err, reach) => {
         if (err) res.send(err);
+        console.log(reach);
         if (reach.privacy_accepted && reach.newsletter_accepted) mailchimpSubscribe(reach.email, reach.name, reach.phoneNumber);
         let newsletterMessage;
         reach.newsletter_accepted ? newsletterMessage = 'Si iscrive alla nostra mailing list.' : newsletterMessage = 'Non si iscrive alla mailing list.';
@@ -65,8 +67,8 @@ router.post('/:language/newsletter-subscription', (req, res) => {
     const privacyResponse = requestParser(reqBody);
     const language = req.params.language;
     const lead = new Lead({
-        name: reqBody.name,
-        email: reqBody.email,
+        name: req.sanitize(reqBody.name),
+        email: req.sanitize(reqBody.email),
         privacy_accepted: privacyResponse.privacy,
         newsletter_accepted: privacyResponse.newsletter
     });

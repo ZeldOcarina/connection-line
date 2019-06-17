@@ -1,14 +1,22 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const helmet = require('helmet');
+const expressSanitizer = require('express-sanitizer');
+
+//INCLUDING PERSONAL MODULES
+const limiter = require('./controller/security');
 
 require('dotenv').config()
 
 mongoose.connect('mongodb://localhost:27017/connectionLineDB', { useNewUrlParser: true });
 
 const app = express();
+app.use(helmet());
+app.use(limiter);
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(expressSanitizer());
 app.use('/uploads', express.static('uploads'));
 app.use(express.static('public'));
 
