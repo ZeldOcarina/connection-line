@@ -6,7 +6,7 @@ exports.englishContent = function () {
             numeri: 'The Numbers',
             storia: 'The Story',
             servizi: 'The Services',
-            clienti: 'Our Customers',
+            clienti: 'Our Clients',
             contatti: 'Contact Us',
         },
         header: {
@@ -21,14 +21,15 @@ exports.englishContent = function () {
         },
         story: {
             header: 'Una Storia di Eccellenza e di Competenza.',
-            text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque voluptas
-            nobis quod sint quaerat voluptatibus voluptatem porro, commodi pariatur accusantium nihil, facilis aperiam
-            maiores numquam doloribus quo eveniet tempore officiis aliquid sequi magni corporis dolore totam. Fugit
-            saepe, hic assumenda architecto cupiditate perspiciatis, neque accusantium beatae voluptatibus, ratione quam
-            pariatur aliquid quibusdam recusandae officiis tempore vero? Aliquam beatae facere in adipisci. Quo sed,
-            quod animi ut sit deleniti, dolor consectetur quidem nihil officiis neque debitis nostrum. Vitae aut aperiam
-            ullam saepe unde, fugiat eos possimus ipsum perspiciatis laborum amet dolor placeat numquam quos dicta
-            incidunt libero quas repudiandae repellendus!`
+            text: `We have been active in Ticino in the field of linguistic services since 1997.
+
+            Connection Line is a translation service offering a network of professional translators working in their native languages. We guarantee companies operating in foreign markets a complete, effective language service and help them present a competent, qualified image.
+            
+            We are now an international organisation with 2000 highly qualified translators, interpreters and speakers.
+            
+            Expert translators with specialist skills in various sectors including: technology, business, law, finance, medicine, science, philosophy, religion and literature.
+
+            Competence, speed and exclusive quality control procedures to ensure that texts remain true to the original.`
         },
         cards: {
             preventivo: 'CHIEDI SUBITO UN PREVENTIVO!',
@@ -39,9 +40,9 @@ exports.englishContent = function () {
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             },
             legale: {
-                header: 'LEGALE',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                header: 'LEGAL',
+                text1: 'We are specialised in legal translations in all language combinations.',
+                text2: 'Over the years, we have developed links with legal, trust, banking, insurance, corporate, public and private partners. If the client requires an apostilled, legalised translation, we take care of the entire process.',
             },
             finanza: {
                 header: 'FINANZA',
@@ -65,9 +66,10 @@ exports.englishContent = function () {
             }
         },
         testimonials: {
-            header: 'Lorem ipsum dolor sit amet consectetur.',
-            text1: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex aut ratione quam? Obcaecati autem necessitatibus consequuntur repudiandae quibusdam corporis minima!',
-            text2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse temporibus sequi dicta inventore culpa. Nemo.'
+            header: 'Our Customers.',
+            text1: 'Our objective is to use our experience and knowledge to help individuals and businesses break down age-old language barriers.',
+            text2: 'We believe that the ideal translation renders a text into another language with respect for the originality of the message, for its tone, and for all its technical aspects, while at the same time presenting it in a way that respects the authenticity and integrity of the target language.',
+            text3: 'Our customers\' objectives and requirements become our objectives and requirements. When our customers are satisfied, so are we.'
         },
         form: {
             header: ['Richiedi subito un preventivo gratuito! ', '10% di sconto sulle richieste online!'],
@@ -128,14 +130,16 @@ exports.frenchContent = function () {
         },
         story: {
             header: 'Una Storia di Eccellenza e di Competenza.',
-            text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque voluptas
-            nobis quod sint quaerat voluptatibus voluptatem porro, commodi pariatur accusantium nihil, facilis aperiam
-            maiores numquam doloribus quo eveniet tempore officiis aliquid sequi magni corporis dolore totam. Fugit
-            saepe, hic assumenda architecto cupiditate perspiciatis, neque accusantium beatae voluptatibus, ratione quam
-            pariatur aliquid quibusdam recusandae officiis tempore vero? Aliquam beatae facere in adipisci. Quo sed,
-            quod animi ut sit deleniti, dolor consectetur quidem nihil officiis neque debitis nostrum. Vitae aut aperiam
-            ullam saepe unde, fugiat eos possimus ipsum perspiciatis laborum amet dolor placeat numquam quos dicta
-            incidunt libero quas repudiandae repellendus!`
+            text: `Nous sommes présents au Tessin dans le domaine des services linguistiques depuis 1997.
+
+            L’agence Connection Line est structure qui allie un réseau de professionnels de langues maternelles différentes en mesure de garantir aux entreprises présentes sur des marchés étrangers, un service linguistique complet, efficace, sérieux et compétent.
+            
+            Aujourd’hui, nous sommes une réalité à l’échelon international forte de 2 000 traducteurs, interprètes et speakers hautement qualifiés.
+            
+            Des traducteurs experts et spécialisés dans des secteurs spécifiques : technique, commerce, droit, finance, médecine, science, philosophie, religion et littérature.
+
+Rapidité, compétence, techniques exclusives de contrôle de la qualité garantissant que les traductions soient fidèles aux originaux.
+Livraison des travaux par pli postal, télécopie, modem et courrier électronique.`
         },
         cards: {
             preventivo: 'CHIEDI SUBITO UN PREVENTIVO!',
@@ -147,8 +151,8 @@ exports.frenchContent = function () {
             },
             legale: {
                 header: 'LEGALE',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Traductions légales dans toutes les combinaisons linguistiques. Durant toutes ces années, nous avons développé des collaborations avec des services juridiques, des fiduciaires, des banques ENTI PUBBLICI et des particuliers. Si le client a besoin d’une traduction apostillée et assermentée, nous nous chargeons de toutes les démarches requises par la procédure.',
+                text2: '',
             },
             finanza: {
                 header: 'FINANZA',
@@ -174,6 +178,7 @@ exports.frenchContent = function () {
         testimonials: {
             header: 'Lorem ipsum dolor sit amet consectetur.',
             text1: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex aut ratione quam? Obcaecati autem necessitatibus consequuntur repudiandae quibusdam corporis minima!',
+            text2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse temporibus sequi dicta inventore culpa. Nemo.',
             text2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse temporibus sequi dicta inventore culpa. Nemo.'
         },
         form: {
@@ -235,14 +240,15 @@ exports.germanContent = function () {
         },
         story: {
             header: 'Una Storia di Eccellenza e di Competenza.',
-            text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque voluptas
-            nobis quod sint quaerat voluptatibus voluptatem porro, commodi pariatur accusantium nihil, facilis aperiam
-            maiores numquam doloribus quo eveniet tempore officiis aliquid sequi magni corporis dolore totam. Fugit
-            saepe, hic assumenda architecto cupiditate perspiciatis, neque accusantium beatae voluptatibus, ratione quam
-            pariatur aliquid quibusdam recusandae officiis tempore vero? Aliquam beatae facere in adipisci. Quo sed,
-            quod animi ut sit deleniti, dolor consectetur quidem nihil officiis neque debitis nostrum. Vitae aut aperiam
-            ullam saepe unde, fugiat eos possimus ipsum perspiciatis laborum amet dolor placeat numquam quos dicta
-            incidunt libero quas repudiandae repellendus!`
+            text: `Wir sind seit 1997 im Tessin im Bereich Übersetzungsdienstleistungen tätig.
+
+            Die Übersetzungsagentur Connection Line wurde 1997 in Tessin gegründet und stellt seitdem zahlreichen Firmen, die mit internationalen Unternehmen zusammenarbeiten, ein Netz von professionellen Muttersprachlern zur Verfügung und gewährleistet einen seriösen und kompetenten sowie abgerundeten und effizienten Sprachservice.
+            
+            Heute sind wir ein internationales Unternehmen, das mit mehr als 2000 hochqualifizierten Übersetzern, Dolmetschern und Sprechern zusammenarbeitet.
+            
+            Wir verfügen über erfahrene FachübersetzerInnen auf folgenden Gebieten: Technik, Wirtschaft, Recht, Finanzwesen, Medizin, Religion, Werbung, Marketing, Natur- und Geisteswissenschaften.
+
+            Kompetenz und Qualitätskontrolle garantieren die Originaltreue der Übersetzungen. Termingerechtes Arbeiten ist eine Selbstverständlichkeit. `
         },
         cards: {
             preventivo: 'CHIEDI SUBITO UN PREVENTIVO!',
@@ -254,8 +260,8 @@ exports.germanContent = function () {
             },
             legale: {
                 header: 'LEGALE',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Wir haben uns auf juristische Übersetzungen. In den letzten Jahren haben wir Partnerschaften mit Rechtsanwaltskanzleien ED ENTI PUBBLICI.',
+                text2: 'Wenn ein Kunde eine kommentierte und beglaubigte Übersetzung benötigt, kümmern wir uns um den gesamten Ablauf.',
             },
             finanza: {
                 header: 'FINANZA',
@@ -280,8 +286,9 @@ exports.germanContent = function () {
         },
         testimonials: {
             header: 'Lorem ipsum dolor sit amet consectetur.',
-            text1: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex aut ratione quam? Obcaecati autem necessitatibus consequuntur repudiandae quibusdam corporis minima!',
-            text2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse temporibus sequi dicta inventore culpa. Nemo.'
+            text1: 'Wir haben es uns zum Ziel gesetzt, unsere Erfahrung und unser Wissen für Firmen und Privatpersonen zur Verfügung zu stellen, um ihnen dabei zu helfen, die seit undenklichen Zeiten existierenden Sprachbarrieren zu beseitigen.',
+            text2: 'Wir glauben, dass bei einer adäquaten Übersetzung Sinn, Sprachebene und Ausdrucksweise der Ausgangssprache erhalten bleiben müssen, während gleichzeitig der Struktur und den Besonderheiten der Zielsprache Rechnung getragen wird.',
+            text3: 'Die Ziele und Erwartungen sowie die Zufriedenheit unserer Kunden liegen uns dabei besonders am Herzen.'
         },
         form: {
             header: ['Richiedi subito un preventivo gratuito! ', '10% di sconto sulle richieste online!'],
@@ -341,15 +348,16 @@ exports.italianContent = function () {
             paroleTradotte: ['di parole tradotte', 'in', 'lingue diverse.']
         },
         story: {
-            header: 'Una Storia di Eccellenza e di Competenza.',
-            text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque voluptas
-            nobis quod sint quaerat voluptatibus voluptatem porro, commodi pariatur accusantium nihil, facilis aperiam
-            maiores numquam doloribus quo eveniet tempore officiis aliquid sequi magni corporis dolore totam. Fugit
-            saepe, hic assumenda architecto cupiditate perspiciatis, neque accusantium beatae voluptatibus, ratione quam
-            pariatur aliquid quibusdam recusandae officiis tempore vero? Aliquam beatae facere in adipisci. Quo sed,
-            quod animi ut sit deleniti, dolor consectetur quidem nihil officiis neque debitis nostrum. Vitae aut aperiam
-            ullam saepe unde, fugiat eos possimus ipsum perspiciatis laborum amet dolor placeat numquam quos dicta
-            incidunt libero quas repudiandae repellendus!`
+            header: 'Una Storia di Eccellenza e Competenza.',
+            text: `Siamo presenti in Ticino nel campo dei servizi linguistici dal 1997.
+
+            La nostra struttura mette a disposizione una rete di professionisti madrelingua in grado di garantire alle aziende che operano localmente e sui mercati stranieri un servizio linguistico completo ed efficiente e un’immagine di serietà e competenza. 
+            
+            Siamo oggi una realtà internazionale che conta 2000 traduttori, interpreti e speaker altamente qualificati.
+            
+            Traduttori esperti e specializzati in settori specifici: tecnico, commerciale, pubblicitario, marketing, legale, finanziario, medico, scientifico, filosofico, religioso e letterario.
+
+Velocità, competenza e tecniche esclusive di controllo della qualità che assicurano la fedeltà dei testi all’originale.`
         },
         cards: {
             preventivo: 'CHIEDI SUBITO UN PREVENTIVO!',
@@ -361,8 +369,8 @@ exports.italianContent = function () {
             },
             legale: {
                 header: 'LEGALE',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Siamo specializzati in traduzioni legali in tutte le combinazioni linguistiche.',
+                text2: 'In questi anni abbiamo sviluppato collaborazioni con uffici legali, fiduciari, banche, assicurazioni, aziende, privati ed enti pubblici. Se il cliente necessita di una Traduzione postillata e legalizzata ci occupiamo di tutto l’iter necessario.',
             },
             finanza: {
                 header: 'FINANZA',
@@ -386,9 +394,10 @@ exports.italianContent = function () {
             }
         },
         testimonials: {
-            header: 'Lorem ipsum dolor sit amet consectetur.',
-            text1: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex aut ratione quam? Obcaecati autem necessitatibus consequuntur repudiandae quibusdam corporis minima!',
-            text2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse temporibus sequi dicta inventore culpa. Nemo.'
+            header: 'I Nostri Clienti',
+            text1: 'Il nostro obiettivo è mettere la nostra esperienza e conoscenza al servizio di persone e imprese per aiutarle ad abbattere le barriere linguistiche esistenti da tempi immemorabili.',
+            text2: 'Noi crediamo che la traduzione ideale sia quella capace di rendere un testo in un’altra lingua mantenendone l’originalità del messaggio, il registro, la tecnicità, pur presentandolo in forma tale da rispettare l’autenticità e l’integrità della lingua target.',
+            text3: 'Gli obiettivi e le esigenze della nostra clientela sono i nostri. La soddisfazione della nostra clientela è la nostra.'
         },
         form: {
             header: ['Richiedi subito un preventivo gratuito!', '10% di sconto sulle richieste online!'],
