@@ -35,6 +35,13 @@
         @include respond(ottocento) {
             padding: 0 15%;
         }
+
+        @include respond(trecentosettantacinque) {
+            padding: 0 10%;
+            font-size: 1.2rem;
+        }
+
+
     }
 
     &__carousel {

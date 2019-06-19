@@ -1395,6 +1395,10 @@ body {
     @media only screen and (max-width: 50em) {
       .testimonials__text {
         padding: 0 15%; } }
+    @media only screen and (max-width: 23.45em) {
+      .testimonials__text {
+        padding: 0 10%;
+        font-size: 1.2rem; } }
   .testimonials__carousel {
     padding: 2 rem 0;
     display: block;
