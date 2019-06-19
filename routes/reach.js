@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const expressSanitizer = require('express-sanitizer');
 
 //REQUIRING MONGO MODEL
 const Reach = require("../models/reaches");
@@ -28,7 +27,10 @@ router.post('/:language/request', (req, res) => {
     });
 
     reach.save((err, reach) => {
-        if (err) res.send(err);
+        if (err) {
+            console.error(err);
+            res.send('An error has occurred. Please contact the system administrator.');
+        }
         console.log(reach);
         if (reach.privacy_accepted && reach.newsletter_accepted) mailchimpSubscribe(reach.email, reach.name, reach.phoneNumber);
         let newsletterMessage;
@@ -53,7 +55,10 @@ router.post('/:language/request', (req, res) => {
                 <h3>Ricontattala subito!!</h3>`
             }
             transporter.sendMail(message, (err, info) => {
-                if (err) console.error(err)
+                if (err) {
+                    console.error(err);
+                    res.send('An error has occurred. Please contact the system administrator.');
+                }
                 //console.log(info);
             });
         }
@@ -74,7 +79,10 @@ router.post('/:language/newsletter-subscription', (req, res) => {
     });
 
     lead.save((err, lead) => {
-        if (err) res.send(err);
+        if (err) {
+            console.error(err);
+            res.send('An error has occurred. Please contact the system administrator.');
+        }
         if (lead.newsletter_accepted) {
             mailchimpSubscribe(lead.email, lead.name);
             
@@ -90,7 +98,10 @@ router.post('/:language/newsletter-subscription', (req, res) => {
                 `          
                 }
                 transporter.sendMail(message, (err, info) => {
-                    if (err) console.error(err)
+                    if (err) {
+                        console.error(err);
+                        res.send('An error has occurred. Please contact the system administrator.');
+                    }
                     //console.log(info);
                 });
         }

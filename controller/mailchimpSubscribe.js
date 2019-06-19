@@ -26,7 +26,7 @@ const mailchimpSubscribe = (email, name, phone) => {
     };
 
     request(options, (err, res, body) => {
-        if (err) res.send(err);
+        if (err) res.send('An error has occurred. Please try again or contact the system operator.');
         //console.log(res.statusCode);
     });
 }

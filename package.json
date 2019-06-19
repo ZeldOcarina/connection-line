@@ -4,7 +4,8 @@
     "description": "A new website for CL Connection Line SAGL",
     "main": "app.js",
     "scripts": {
-        "start": "webpack-dev-server  --config webpack.dev.js --open",
+        "startDev": "webpack-dev-server  --config webpack.dev.js --open",
+        "start": "node app.js",
         "build": "webpack --config webpack.prod.js",
         "sass": "node-sass src/scss/main.scss public/css/app.min.css -w",
         "compile:sass": "node-sass src/scss/main.scss public/css/app.comp.css",
@@ -29,6 +30,7 @@
         "ejs": "^2.6.1",
         "express": "^4.16.4",
         "express-rate-limit": "^5.0.0",
+        "express-recaptcha": "^5.0.0",
         "express-sanitizer": "^1.0.5",
         "helmet": "^3.18.0",
         "jquery": "^3.4.1",
