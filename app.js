@@ -36,6 +36,7 @@ app.use(requestRoute);
 app.use(thankyouRoute);
 app.use(privacyRoute);
 
-//REQUEST ROUTE
-
-app.listen(3000, () => console.log("Server started on port 3000"));
+//PORT SETUP
+let port = process.env.PORT;
+if (port == null || port == "") port = 8000;
+app.listen(port, () => console.log("Server started on port 3000"));
