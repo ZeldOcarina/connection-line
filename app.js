@@ -4,6 +4,13 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const expressSanitizer = require('express-sanitizer');
 
+let port = process.env.PORT;
+let appState = 'production'
+if (port == null || port == "") {
+    port = 3000;
+    appState = 'development'
+}
+
 //INCLUDING PERSONAL MODULES
 const limiter = require('./controller/security');
 
@@ -12,11 +19,11 @@ require('dotenv').config()
 mongoose.connect('mongodb://localhost:27017/connectionLineDB', { useNewUrlParser: true });
 
 const app = express();
-app.use(helmet());
-app.use(limiter);
+if (appState === 'production') app.use(helmet());
+if (appState === 'production') app.use(limiter);
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(expressSanitizer());
+if (appState === 'production') app.use(expressSanitizer());
 app.use('/uploads', express.static('uploads'));
 app.use(express.static('public'));
 
@@ -37,6 +44,4 @@ app.use(thankyouRoute);
 app.use(privacyRoute);
 
 //PORT SETUP
-let port = process.env.PORT;
-if (port == null || port == "") port = 8000;
-app.listen(port, () => console.log("Server started on port 3000"));
+app.listen(port, () => console.log("Server started on port " + port));

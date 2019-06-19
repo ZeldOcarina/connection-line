@@ -342,10 +342,10 @@ exports.italianContent = function () {
             cta: 'Richiedi subito un preventivo',
         },
         counters: {
-            interpreti: ['interpreti', 'da oltre', 'nazioni.'],
+            interpreti: ['traduttori ed interpreti', 'da oltre', 'nazioni.'],
             combinazioni: ['combinazioni linguistiche.'],
             clientiSoddisfatti: ['clienti soddisfatti.'],
-            paroleTradotte: ['di parole tradotte', 'in', 'lingue diverse.']
+            paroleTradotte: ['milioni di parole tradotte', 'in', 'lingue diverse.']
         },
         story: {
             header: 'Una Storia di Eccellenza e Competenza.',

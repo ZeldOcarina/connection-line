@@ -16,7 +16,7 @@
         font-weight: $thin;
 
         @include respond(settecento) {
-            font-size: 3rem;
+            font-size: 2.5rem;
             width: 60vw;
             margin: 0 auto;
         }
@@ -40,11 +40,11 @@
         width: 10rem;
 
         @include respond(settecento) {
-            width: 6rem;
+            width: 6.4rem;
         }
 
         @include respond(trecentosettantacinque) {
-            width: 4rem;
+            width: 5.5rem;
         }
     }
 
@@ -52,26 +52,26 @@
         font-weight: $bold;
         color: $color-primary;
         display: inline-block;
-        width: 8rem;
+        width: 7rem;
 
         @include respond(settecento) {
-            width: 4.5rem;
+            width: 4rem;
         }
         
         @include respond(trecentosettantacinque) {
-            width: 4rem;
+            width: 3.5rem;
         }
     }
 
     &__counter-parole {
-        width: 17rem;
+        width: 8rem;
         
         @include respond(settecento) {
-            width: 14rem;
+            width: 5rem;
         }
 
         @include respond(trecentosettantacinque) {
-            width: 9rem;
+            width: 4.5rem;
         }
     }
 

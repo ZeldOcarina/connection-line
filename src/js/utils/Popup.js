@@ -23,7 +23,6 @@ const popup = () => {
         $('body').on('mouseout', (e) => {
             if (!e.relatedTarget && !e.toElement && !exitPopup) {
                 openPopup();
-                exitPopup = true;
             }
         });
 
@@ -35,6 +34,7 @@ const popup = () => {
     function openPopup() {
         popupSection.removeClass(displayNone);
         popupState = true;
+        exitPopup = true;
     }
 
     function closePopup() {
