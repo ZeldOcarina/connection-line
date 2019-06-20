@@ -1235,7 +1235,7 @@ body {
     @media only screen and (max-width: 23.45em) {
       .popup__text {
         margin-bottom: .5rem;
-        width: 95%;
+        width: 80%;
         font-size: 1rem; } }
   .popup__btn {
     margin-top: 2.5rem;
@@ -1428,7 +1428,6 @@ body {
         padding: 0 10%;
         font-size: 1rem; } }
   .testimonials__carousel {
-    padding: 2 rem 0;
     display: block;
     align-content: center;
     align-items: center;
@@ -1440,8 +1439,8 @@ body {
     transition: all linear; }
     @media only screen and (max-width: 23.45em) {
       .testimonials__carousel {
-        margin-top: 5rem;
-        margin-bottom: 5rem; } }
+        margin-top: 2rem;
+        margin-bottom: 2rem; } }
     .testimonials__carousel-logo {
       height: auto;
       width: auto;
