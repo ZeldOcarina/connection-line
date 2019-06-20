@@ -48,7 +48,7 @@
     }
 
     @include respond(quattrocento) {
-        padding: 1rem;
+        padding: 1rem 0;
     }
 }
 
@@ -100,6 +100,7 @@
 
     @include respond(trecentosettantacinque) {
         width: 95%;
+        padding: 2rem;
     }
 
     /*@include respond(tab-land) {

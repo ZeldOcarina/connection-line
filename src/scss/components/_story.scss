@@ -28,8 +28,8 @@
         }
         
         @include respond(trecentosettantacinque) {
-            margin-top: 3rem;
-            font-size: 2.5rem;
+            margin-top: 8rem;
+            font-size: 2.3rem;
         }
     }
 
@@ -38,7 +38,9 @@
         font-size: 1.5rem;
 
         @include respond(trecentosettantacinque) {
+            margin-top: 1.5rem;
             padding-bottom: 2rem;
+            font-size: 1.25rem;
         }
     }
 }

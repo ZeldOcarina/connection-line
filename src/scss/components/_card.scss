@@ -8,7 +8,7 @@
         height: 52rem;
 
         @include respond(quattrocento) {
-            width: 80%;
+            width: 75%;
             margin: 0 auto;
         }
         
@@ -132,6 +132,11 @@
 
             &-button {
                 margin-top: 5rem;
+
+                @include respond(trecentosettantacinque) {
+                    margin-top: 2rem;
+                    font-size: 1.3rem !important;
+                }
             }
         }
     
@@ -200,11 +205,11 @@
 
         @include respond(quattrocento) {
             &__picture {
-                height: 19rem;
+                height: 16rem;
             }
 
             &__heading {
-                font-size: 2.4rem;
+                font-size: 2rem;
             }
             
             &__preventivo-box {
@@ -219,6 +224,7 @@
 
             &__details {
                 padding: 1.5rem 3rem;
+                font-size: 1.3rem;
             }
         }
     }

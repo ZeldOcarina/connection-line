@@ -6,6 +6,11 @@
         @include respond(settecento) {
             margin-bottom: .5rem;
         }
+        
+        @include respond(trecentosettantacinque) {
+            margin-bottom: 0rem;
+            height: auto;
+        }
     }
 
     &__input {
@@ -33,6 +38,10 @@
         /*@include respond(tab-port) {
             width: 100%;
         }*/
+        
+        @include respond(trecentosettantacinque) {
+            font-size: 1.2rem;
+        }
 
         &:focus {
             outline: none;
@@ -83,7 +92,7 @@
         }
         
         @include respond(quattrocento) { 
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
         
@@ -139,5 +148,11 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
+    }
+
+    &__submit {
+        @include respond(trecentosettantacinque) {
+            font-size: 1.2rem;
+        }
     }
 }

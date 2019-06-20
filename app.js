@@ -16,14 +16,15 @@ const limiter = require('./controller/security');
 
 require('dotenv').config()
 
-mongoose.connect('mongodb://localhost:27017/connectionLineDB', { useNewUrlParser: true });
+if (appState === 'development') mongoose.connect('mongodb://localhost:27017/connectionLineDB', { useNewUrlParser: true });
+else if(appState === 'production') mongoose.connect('mongodb+srv://admin-mattia:' + process.env.MONGO_PWD + '@connection-line-fzqvp.mongodb.net/connectionLineDB', { useNewUrlParser: true });
 
 const app = express();
 if (appState === 'production') app.use(helmet());
 if (appState === 'production') app.use(limiter);
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
-if (appState === 'production') app.use(expressSanitizer());
+app.use(expressSanitizer());
 app.use('/uploads', express.static('uploads'));
 app.use(express.static('public'));
 
