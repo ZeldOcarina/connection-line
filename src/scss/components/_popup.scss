@@ -38,7 +38,7 @@
         }
         
         @include respond(quattrocento) {
-            width: 95%;
+            width: 98%;
             padding: 4rem 1rem;
         }
         
@@ -47,7 +47,9 @@
         }
 
         &__checkbox-label {
-            font-size: 1rem;
+            @include respond(trecentosettantacinque) {
+                font-size: 1rem;
+            }
         }
     }
 
@@ -82,8 +84,8 @@
 
             @include respond(trecentosettantacinque) {
                 width: 90%;
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
+                font-size: 1.2rem;
+                margin-bottom: .5rem;
             }
         }
 
@@ -101,8 +103,8 @@
             }
 
             @include respond(trecentosettantacinque) {
-                margin-bottom: 1.5rem;
-                width: 90%;
+                margin-bottom: .5rem;
+                width: 95%;
                 font-size: 1rem;
             }
         }
@@ -135,14 +137,14 @@
         }
 
         @include respond(trecentocinquanta) {
-            width: 90%;
+            width: 95%;
         }
 
         &__group:not(:last-child) {
             margin-bottom: 1rem;
     
             @include respond(settecento) {
-                margin-bottom: .5rem;
+                margin-bottom: .4rem;
             }
         }
 
@@ -158,7 +160,7 @@
             font-size: 1.5rem;
 
             @include respond(trecentosettantacinque) {
-                font-size: 1.2rem;  
+                font-size: 1.1rem;  
             }
 
             &:focus {
@@ -176,19 +178,15 @@
 
             &:focus:valid {
                 border-bottom: 3px solid $color-primary;
-            }
-
-            
+            }            
         }
 
         &__label {
             font-size: 1.3rem;
 
             @include respond(trecentosettantacinque) {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
         }
-    }
-
-        
-    }
+    }  
+}

@@ -1186,13 +1186,14 @@ body {
         width: 85%; } }
     @media only screen and (max-width: 25em) {
       .popup__content {
-        width: 95%;
+        width: 98%;
         padding: 4rem 1rem; } }
     @media only screen and (max-width: 23.45em) {
       .popup__content {
         padding: 4rem 1rem 1rem; } }
-    .popup__content__checkbox-label {
-      font-size: 1rem; }
+    @media only screen and (max-width: 23.45em) {
+      .popup__content__checkbox-label {
+        font-size: 1rem; } }
   .popup__close {
     cursor: pointer;
     border: none;
@@ -1219,8 +1220,8 @@ body {
     @media only screen and (max-width: 23.45em) {
       .popup__header {
         width: 90%;
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem; } }
+        font-size: 1.2rem;
+        margin-bottom: .5rem; } }
   .popup__text {
     width: 60%;
     margin: 0 auto;
@@ -1233,8 +1234,8 @@ body {
         font-size: 1.5rem; } }
     @media only screen and (max-width: 23.45em) {
       .popup__text {
-        margin-bottom: 1.5rem;
-        width: 90%;
+        margin-bottom: .5rem;
+        width: 95%;
         font-size: 1rem; } }
   .popup__btn {
     margin-top: 2.5rem;
@@ -1261,7 +1262,7 @@ body {
       margin-bottom: 1rem; }
       @media only screen and (max-width: 43.75em) {
         .popup__form-popup__group:not(:last-child) {
-          margin-bottom: .5rem; } }
+          margin-bottom: .4rem; } }
     .popup__form-popup__input {
       display: block;
       width: 100%;
@@ -1274,7 +1275,7 @@ body {
       font-size: 1.5rem; }
       @media only screen and (max-width: 23.45em) {
         .popup__form-popup__input {
-          font-size: 1.2rem; } }
+          font-size: 1.1rem; } }
       .popup__form-popup__input:focus {
         outline: none;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
@@ -1288,7 +1289,7 @@ body {
       font-size: 1.3rem; }
       @media only screen and (max-width: 23.45em) {
         .popup__form-popup__label {
-          font-size: 1rem; } }
+          font-size: 1.1rem; } }
 
 .progressive-sidebar {
   position: fixed;
@@ -1818,8 +1819,8 @@ url(../img/nat-10.jpg);
       width: 90%; } }
   @media only screen and (max-width: 23.45em) {
     .cta {
-      width: 95%;
-      padding: 2rem; } }
+      width: 98%;
+      padding: 1rem; } }
   .cta__header {
     text-align: left; }
     @media only screen and (max-width: 81.25em) {
