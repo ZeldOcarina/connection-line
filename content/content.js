@@ -370,7 +370,7 @@ Velocità, competenza e tecniche esclusive di controllo della qualità che assic
             legale: {
                 header: 'LEGALE',
                 text1: 'Siamo specializzati in traduzioni legali in tutte le combinazioni linguistiche.',
-                text2: 'In questi anni abbiamo sviluppato collaborazioni con uffici legali, fiduciari, banche, assicurazioni, aziende, privati ed enti pubblici. Se il cliente necessita di una traduzione postillata e legalizzata ci occupiamo di tutto l’iter necessario.',
+                text2: 'In questi anni abbiamo sviluppato collaborazioni con uffici legali, fiduciarie, banche, assicurazioni, aziende, privati ed enti pubblici. Se il cliente necessita di una traduzione postillata e legalizzata ci occupiamo di tutto l’iter necessario.',
             },
             finanza: {
                 header: 'FINANZA',
