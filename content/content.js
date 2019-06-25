@@ -35,7 +35,7 @@ exports.englishContent = function () {
             preventivo: 'CHIEDI SUBITO UN PREVENTIVO!',
             cta: 'contattaci',
             medicina: {
-                header: 'MEDICINA',
+                header: 'MEDICINE',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             },
@@ -45,22 +45,22 @@ exports.englishContent = function () {
                 text2: 'Over the years, we have developed links with legal, trust, banking, insurance, corporate, public and private partners. If the client requires an apostilled, legalised translation, we take care of the entire process.',
             },
             finanza: {
-                header: 'FINANZA',
+                header: 'FINANCE',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             },
             marketing: {
                 header: 'MARKETING',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'With our network of experts in the production of texts and contents for websites, we develop the creative ideas behind successful marketing strategies.',
+                text2: 'We can put together high-impact messages and copy for advertisements in any language.',
             },
             webInformatica: {
-                header: 'WEB\\INFORMATICA',
+                header: 'WEB\\IT',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             },
             tecnico: {
-                header: 'TECNICO',
+                header: 'TECHNOLOGY',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             }
@@ -145,32 +145,32 @@ Livraison des travaux par pli postal, télécopie, modem et courrier électroniq
             preventivo: 'CHIEDI SUBITO UN PREVENTIVO!',
             cta: 'contattaci',
             medicina: {
-                header: 'MEDICINA',
+                header: 'MÉDECINE',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             },
             legale: {
-                header: 'LEGALE',
+                header: 'DROIT',
                 text1: 'Traductions légales dans toutes les combinaisons linguistiques. Durant toutes ces années, nous avons développé des collaborations avec des services juridiques, des fiduciaires, des banques ENTI PUBBLICI et des particuliers. Si le client a besoin d’une traduction apostillée et assermentée, nous nous chargeons de toutes les démarches requises par la procédure.',
                 text2: '',
             },
             finanza: {
-                header: 'FINANZA',
+                header: 'FINANCE',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             },
             marketing: {
                 header: 'MARKETING',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Grâce à un réseau de professionnels experts dans la rédaction de textes et de contenus pour sites Web, nous élaborons des idées créatives qui donnent naissance à des stratégies marketing gagnantes.',
+                text2: 'Nous élaborons dans toutes les langues demandées des messages et des contenus.',
             },
             webInformatica: {
-                header: 'WEB\\INFORMATICA',
+                header: 'WEB\\INFORMATIQUE',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             },
             tecnico: {
-                header: 'TECNICO',
+                header: 'TECHNIQUE',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             }
@@ -254,32 +254,32 @@ exports.germanContent = function () {
             preventivo: 'CHIEDI SUBITO UN PREVENTIVO!',
             cta: 'contattaci',
             medicina: {
-                header: 'MEDICINA',
+                header: 'MEDIZIN',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             },
             legale: {
-                header: 'LEGALE',
+                header: 'WIRTSCHAFT',
                 text1: 'Wir haben uns auf juristische Übersetzungen. In den letzten Jahren haben wir Partnerschaften mit Rechtsanwaltskanzleien ED ENTI PUBBLICI.',
                 text2: 'Wenn ein Kunde eine kommentierte und beglaubigte Übersetzung benötigt, kümmern wir uns um den gesamten Ablauf.',
             },
             finanza: {
-                header: 'FINANZA',
+                header: 'FINANZWESEN',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             },
             marketing: {
                 header: 'MARKETING',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Dank eines Netzwerks erfahrener Experten in der Überarbeitung von Texten und Webinhalten arbeiten wir kreative Ideen aus, die den Ausgangspunkt für erfolgreiche Marketingstrategien darstellen.',
+                text2: 'Wir gestalten einprägsame Botschafte und Inhalte für Werbetexte in jeder beliebigen Sprache.',
             },
             webInformatica: {
-                header: 'WEB\\INFORMATICA',
+                header: 'WEB\\INFORMATIK',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             },
             tecnico: {
-                header: 'TECNICO',
+                header: 'TECHNIK',
                 text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
                 text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
             }
@@ -353,7 +353,7 @@ exports.italianContent = function () {
 
             La nostra struttura mette a disposizione una rete di professionisti madrelingua in grado di garantire alle aziende che operano localmente e sui mercati stranieri un servizio linguistico completo ed efficiente e un’immagine di serietà e competenza. 
             
-            Siamo oggi una realtà internazionale che conta 2000 traduttori, interpreti e speaker altamente qualificati.
+            Siamo oggi una realtà internazionale che conta oltre 2000 traduttori, interpreti e speaker altamente qualificati.
             
             Traduttori esperti e specializzati in settori specifici: tecnico, commerciale, pubblicitario, marketing, legale, finanziario, medico, scientifico, filosofico, religioso e letterario.
 
@@ -364,33 +364,33 @@ Velocità, competenza e tecniche esclusive di controllo della qualità che assic
             cta: 'contattaci',
             medicina: {
                 header: 'MEDICINA',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Traduzioni mediche in ogni campo. Dal campo divulgativo a quello specialistico.',
+                text2: 'Ci occupiamo di tradurre anche testi relativi ad apparecchiature e attrezzi medicali e sanitari. Le traduzioni mediche sono da sempre il nostro fiore all\'occhiello.',
             },
             legale: {
                 header: 'LEGALE',
                 text1: 'Siamo specializzati in traduzioni legali in tutte le combinazioni linguistiche.',
-                text2: 'In questi anni abbiamo sviluppato collaborazioni con uffici legali, fiduciari, banche, assicurazioni, aziende, privati ed enti pubblici. Se il cliente necessita di una Traduzione postillata e legalizzata ci occupiamo di tutto l’iter necessario.',
+                text2: 'In questi anni abbiamo sviluppato collaborazioni con uffici legali, fiduciari, banche, assicurazioni, aziende, privati ed enti pubblici. Se il cliente necessita di una traduzione postillata e legalizzata ci occupiamo di tutto l’iter necessario.',
             },
             finanza: {
                 header: 'FINANZA',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Traduzioni per il settore finanziario ed economico con tecniche elevatissime e assoluto rispetto della privacy.',
+                text2: 'I nostri esperti traduttori e revisori dispongono della perizia e dell\'esperienza necessaria per soddisfare le esigenze sia di piccole e medie aziende che di grandi istituzioni pubbliche e private.',
             },
             marketing: {
                 header: 'MARKETING',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Grazie ad una rete di esperti nella redazione di testi e di contenuti per siti, elaboriamo le idee creative che danno vita alle strategie di marketing vincenti.',
+                text2: 'Realizziamo messaggi e contenuti incisivi per testi pubblicitari in tutte le lingue richieste.',
             },
             webInformatica: {
                 header: 'WEB\\INFORMATICA',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Siamo specializzati nella collaborazione con software house e senior developers ed aiutiamo a crescere le infrastrutture IT di startup e grandi aziende.',
+                text2: 'La nostra traduzione adatta il tuo software agli usi e costumi locali, portandolo ad un livello davvero globale.',
             },
             tecnico: {
                 header: 'TECNICO',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Traduzioni tecniche e di manuali per tutte le aziende ed industrie, anche nei settori più specialistici.',
+                text2: 'Ci occupiamo inoltre di tradurre documentazioni tecniche relative a prodotti e macchinari ai fini di una commercializzazione all\'estero.',
             }
         },
         testimonials: {
