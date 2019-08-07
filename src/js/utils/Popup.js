@@ -34,7 +34,7 @@ const popup = () => {
 	function openPopup() {
 		popupSection.removeClass(displayNone);
 		popupState = true;
-		if (!exitPopup) Cookies.set('modalOpened', 'true', { expires: 7 });
+		Cookies.set('modalOpened', 'true', { expires: 7 });
 	}
 
 	function closePopup() {
