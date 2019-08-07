@@ -18,57 +18,87 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 
 @mixin respond($breakpoint) {
-    @if $breakpoint == millesettecento {
-        @media only screen and (max-width: 106.25em) { @content };    //1700px
-    }
+	@if $breakpoint == millesettecento {
+		@media only screen and (max-width: 106.25em) {
+			@content;
+		} //1700px
+	}
 
-    @if $breakpoint == millecinquecento {
-        @media only screen and (max-width: 93.75em) { @content };    //1500px
-    }
+	@if $breakpoint == millecinquecento {
+		@media only screen and (max-width: 93.75em) {
+			@content;
+		} //1500px
+	}
 
-    @if $breakpoint == milletrecento {
-        @media only screen and (max-width: 81.25em) { @content };    //1300px
-    }  
+	@if $breakpoint == milletrecento {
+		@media only screen and (max-width: 81.25em) {
+			@content;
+		} //1300px
+	}
 
-    @if $breakpoint == milleduecento {
-        @media only screen and (max-width: 75em) { @content };    //1200px
-    }
+	@if $breakpoint == milleduecento {
+		@media only screen and (max-width: 75em) {
+			@content;
+		} //1200px
+	}
 
-    @if $breakpoint == mille {
-        @media only screen and (max-width: 62.5em) { @content };    //1000px
-    }
+	@if $breakpoint == mille {
+		@media only screen and (max-width: 62.5em) {
+			@content;
+		} //1000px
+	}
 
-    @if $breakpoint == novecento {
-        @media only screen and (max-width: 56.25em) { @content };    //900px
-    }
-    
-    @if $breakpoint == ottocento {
-        @media only screen and (max-width: 50em) { @content };    //800px
-    }
+	@if $breakpoint == novecento {
+		@media only screen and (max-width: 56.25em) {
+			@content;
+		} //900px
+	}
 
-    @if $breakpoint == settecento {
-        @media only screen and (max-width: 43.75em) { @content };    //700px
-    }
+	@if $breakpoint == ottocento {
+		@media only screen and (max-width: 50em) {
+			@content;
+		} //800px
+	}
 
-    @if $breakpoint == seicento {
-        @media only screen and (max-width: 37.75em) { @content };    //600px
-    }
-    
-    @if $breakpoint == cinquecento {
-        @media only screen and (max-width: 31.25em) { @content };    //500px
-    }
-    
-    @if $breakpoint == quattrocentosettanta {
-        @media only screen and (max-width: 29.375em) { @content };    //500px
-    }
+	@if $breakpoint == settecento {
+		@media only screen and (max-width: 43.75em) {
+			@content;
+		} //700px
+	}
 
-    @if $breakpoint == quattrocento {
-        @media only screen and (max-width: 25em) { @content };    //500px
-    }
-    
-    @if $breakpoint == trecentosettantacinque {
-        @media only screen and (max-width: 23.45em) { @content };    //500px
-    }
+	@if $breakpoint == seicento {
+		@media only screen and (max-width: 37.75em) {
+			@content;
+		} //600px
+	}
+
+	@if $breakpoint == cinquecento {
+		@media only screen and (max-width: 31.25em) {
+			@content;
+		} //500px
+	}
+
+	@if $breakpoint == quattrocentosettanta {
+		@media only screen and (max-width: 29.375em) {
+			@content;
+		} //500px
+	}
+
+	@if $breakpoint == quattrocento {
+		@media only screen and (max-width: 25em) {
+			@content;
+		} //500px
+	}
+
+	@if $breakpoint == trecentosettantacinque {
+		@media only screen and (max-width: 23.45em) {
+			@content;
+		} //500px
+	}
+
+	@if $breakpoint == mobile_height {
+		@media only screen and (max-height: 50.75em) {
+			@content;
+		} //812px height = iPhone X and lower
+	}
 }
-
-

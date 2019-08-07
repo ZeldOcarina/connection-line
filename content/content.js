@@ -16,7 +16,7 @@ exports.englishContent = function () {
         counters: {
             interpreti: ['interpreti', 'da oltre', 'nazioni.'],
             combinazioni: ['combinazioni linguistiche.'],
-            clientiSoddisfatti: ['clienti soddisfatti.'],
+            clientiSoddisfatti: ['clienti soddisfatti'],
             paroleTradotte: ['di parole tradotte', 'in', 'lingue diverse.']
         },
         story: {
