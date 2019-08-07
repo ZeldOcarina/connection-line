@@ -1,192 +1,200 @@
 .popup {
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba($black, .8);
-    z-index: 9999;
-    transition: all .3s;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba($black, .8);
+	z-index: 9999;
+	transition: all .3s;
 
-    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        background-color: rgba($black, .3);
-    }
+	@supports (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) {
+		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(5px);
+		background-color: rgba($black, .3);
+	}
 
-    &__content {
-        @include absCenter;
-        width: 50%;
-        background-color: $white;
-        box-shadow: 0 2rem 4rem rgba($black, .2);
-        border-radius: 3px;
-        display: table;
-        overflow: hidden;
-        transition: all .5s .2s;
-        padding: 5rem;
-        
-        @include respond(novecento) {
-            width: 70%;
-        }
+	&__content {
+		@include absCenter;
+		width: 50%;
+		background-color: $white;
+		box-shadow: 0 2rem 4rem rgba($black, .2);
+		border-radius: 3px;
+		display: table;
+		overflow: hidden;
+		transition: all .5s .2s;
+		padding: 5rem;
 
-        @include respond(seicento) {
-            padding: 4rem 2rem;
-        }
-        
-        @include respond(cinquecento) {
-            width: 85%;
-        }
-        
-        @include respond(quattrocento) {
-            width: 98%;
-            padding: 4rem 1rem;
-        }
-        
-        @include respond(trecentosettantacinque) {
-            padding: 4rem 1rem 1rem;
-        }
+		@include respond(novecento) {
+			width: 70%;
+		}
 
-        &__checkbox-label {
-            @include respond(trecentosettantacinque) {
-                font-size: 1rem;
-            }
-        }
-    }
+		@include respond(seicento) {
+			padding: 4rem 2rem;
+		}
 
-    &__close {
-            cursor: pointer;    
-            border: none;
-            background-color: transparent;
-            color: $color-grey-dark;
-            position: absolute;
-            top: 2rem;
-            right: 2.5rem;
-            font-size: 3rem;
-            text-decoration: none;
-            display: inline-block;
-            transition: all .2s;
-            line-height: 1;
+		@include respond(cinquecento) {
+			width: 85%;
+		}
 
-            &:hover {
-                color: $color-primary;
-            }
-        }
+		@include respond(quattrocento) {
+			width: 98%;
+		}
 
-        &__header {
-            margin-bottom: 2.5rem;
-            text-align: center;
+		@include respond(mobile_height) {
+			max-height: 80%;
+			padding: 1rem;
+		}
 
-            @include respond(quattrocento) {
-                font-size: 2rem;
-                width: 60%;
-                margin: 0 auto 2.5rem;
-            }
+		&__checkbox-label {
+			@include respond(trecentosettantacinque) {
+				font-size: 1rem;
+			}
 
-            @include respond(trecentosettantacinque) {
-                width: 90%;
-                font-size: 1.2rem;
-                margin-bottom: .5rem;
-            }
-        }
+			@include respond(mobile_height) {
+				font-size: .8rem;
+			}
+		}
+	}
 
-        &__text {
-            width: 60%;
-            margin: 0 auto;
-            margin-bottom: 2.5rem;
+	&__close {
+		cursor: pointer;
+		border: none;
+		background-color: transparent;
+		color: $white;
+		position: absolute;
+		top: 2rem;
+		right: 2.5rem;
+		font-size: 5rem;
+		text-decoration: none;
+		display: inline-block;
+		transition: all .2s;
+		line-height: 1;
 
-            @include respond(mille) {
-                width: 80%;
-            }
-            
-            @include respond(quattrocento) {
-                font-size: 1.5rem;
-            }
+		&:hover {
+			color: $color-primary;
+		}
 
-            @include respond(trecentosettantacinque) {
-                margin-bottom: .5rem;
-                width: 80%;
-                font-size: 1rem;
-            }
-        }
+		@include respond(mobile_height) {
+			font-size: 2rem;
+		}
+	}
 
-    &__btn {
-        margin-top: 2.5rem;
-        width: 50%;
-        align-self: center;
-        text-align: center;
+	&__header {
+		margin-bottom: 2.5rem;
+		text-align: center;
 
-        @include respond(ottocento) {
-            width: min-content;
-        }
-        
-        @include respond(trecentosettantacinque) {
-            font-size: 1.2rem;
-            padding: 1.5rem 2.5rem;
-            margin-top: 1rem;
-        }
-    }
+		@include respond(quattrocento) {
+			font-size: 2rem;
+			width: 60%;
+			margin: 0 auto 2.5rem;
+		}
 
-    &__form-popup {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        margin: 0 auto;
+		@include respond(trecentosettantacinque) {
+			width: 90%;
+			font-size: 1.2rem;
+			margin-bottom: .3rem;
+		}
+	}
 
-        @include respond(mille) {
-            width: 80%;
-        }
+	&__text {
+		width: 60%;
+		margin: 0 auto;
+		margin-bottom: 2.5rem;
 
-        @include respond(trecentocinquanta) {
-            width: 95%;
-        }
+		@include respond(mille) {
+			width: 80%;
+		}
 
-        &__group:not(:last-child) {
-            margin-bottom: 1rem;
-    
-            @include respond(settecento) {
-                margin-bottom: .4rem;
-            }
-        }
+		@include respond(quattrocento) {
+			font-size: 1.5rem;
+		}
 
-        &__input {
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            margin: 1rem 0 1rem;
-            border-radius: 5px;
-            border: none;
-            font-family: inherit;
-            background-color: $color-grey-light-2;
-            font-size: 1.5rem;
+		@include respond(trecentosettantacinque) {
+			margin-bottom: .5rem;
+			width: 85%;
+			font-size: .8rem;
+		}
+	}
 
-            @include respond(trecentosettantacinque) {
-                font-size: 1.1rem;  
-            }
+	&__btn {
+		margin-top: 2.5rem;
+		width: 50%;
+		align-self: center;
+		text-align: center;
 
-            &:focus {
-                outline: none;
-                box-shadow: 0 1rem 2rem rgba($black, .1);
-            }
-    
-            &:focus:invalid {
-                border-bottom: 3px solid $color-secondary;
-            }
-    
-            &::-webkit-input-placeholder {
-                color: $color-grey-dark;
-            }
+		@include respond(ottocento) {
+			width: min-content;
+		}
 
-            &:focus:valid {
-                border-bottom: 3px solid $color-primary;
-            }            
-        }
+		@include respond(trecentosettantacinque) {
+			font-size: 1.2rem;
+			padding: 1.5rem 2.5rem;
+			margin-top: 1rem;
+		}
+	}
 
-        &__label {
-            font-size: 1.3rem;
+	&__form-popup {
+		display: flex;
+		flex-direction: column;
+		width: 60%;
+		margin: 0 auto;
 
-            @include respond(trecentosettantacinque) {
-                font-size: 1.1rem;
-            }
-        }
-    }  
+		@include respond(mille) {
+			width: 80%;
+		}
+
+		@include respond(trecentocinquanta) {
+			width: 95%;
+		}
+
+		&__group:not(:last-child) {
+			margin-bottom: 1rem;
+
+			@include respond(settecento) {
+				margin-bottom: .4rem;
+			}
+		}
+
+		&__input {
+			display: block;
+			width: 100%;
+			padding: 1rem;
+			margin: 1rem 0 1rem;
+			border-radius: 5px;
+			border: none;
+			font-family: inherit;
+			background-color: $color-grey-light-2;
+			font-size: 1.5rem;
+
+			@include respond(trecentosettantacinque) {
+				font-size: 1.1rem;
+			}
+
+			&:focus {
+				outline: none;
+				box-shadow: 0 1rem 2rem rgba($black, .1);
+			}
+
+			&:focus:invalid {
+				border-bottom: 3px solid $color-secondary;
+			}
+
+			&::-webkit-input-placeholder {
+				color: $color-grey-dark;
+			}
+
+			&:focus:valid {
+				border-bottom: 3px solid $color-primary;
+			}
+		}
+
+		&__label {
+			font-size: 1.3rem;
+
+			@include respond(trecentosettantacinque) {
+				font-size: 1.1rem;
+			}
+		}
+	}
 }
