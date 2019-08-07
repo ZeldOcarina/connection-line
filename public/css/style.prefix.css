@@ -900,6 +900,7 @@ body {
   font-size: "Noto Sans", sans-serif;
   color: #00589e;
   display: inline-block;
+  text-align: center;
   text-decoration: none;
   border-bottom: 1px solid #00589e;
   padding: 3px;
