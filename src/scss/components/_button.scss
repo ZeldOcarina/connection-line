@@ -69,6 +69,11 @@
 		animation: moveInBottom .5s ease-out .5s;
 		animation-fill-mode: backwards;
 	}
+
+	&__link {
+		color: $white;
+		text-decoration: none;
+	}
 }
 
 .btn-text {

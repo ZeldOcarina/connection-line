@@ -798,6 +798,10 @@ body {
   animation: moveInBottom .5s ease-out .5s;
   animation-fill-mode: backwards; }
 
+.btn__link {
+  color: #fff;
+  text-decoration: none; }
+
 .btn-text:link, .btn-text:visited {
   font-size: "Noto Sans", sans-serif;
   color: #00589e;
@@ -1191,7 +1195,7 @@ body {
     @media only screen and (max-height: 50.75em) {
       .popup__content {
         max-height: 80%;
-        padding: 1rem; } }
+        padding: .6rem; } }
     @media only screen and (max-width: 23.45em) {
       .popup__content__checkbox-label {
         font-size: 1rem; } }
@@ -1282,7 +1286,8 @@ body {
       font-size: 1.5rem; }
       @media only screen and (max-width: 23.45em) {
         .popup__form-popup__input {
-          font-size: 1.1rem; } }
+          font-size: 1.1rem;
+          padding: .8rem; } }
       .popup__form-popup__input:focus {
         outline: none;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }

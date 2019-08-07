@@ -43,7 +43,7 @@
 
 		@include respond(mobile_height) {
 			max-height: 80%;
-			padding: 1rem;
+			padding: .6rem;
 		}
 
 		&__checkbox-label {
@@ -169,6 +169,7 @@
 
 			@include respond(trecentosettantacinque) {
 				font-size: 1.1rem;
+				padding: .8rem;
 			}
 
 			&:focus {
