@@ -1326,10 +1326,10 @@ body {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s; }
-  @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  @supports ((-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
     .popup {
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
       background-color: rgba(0, 0, 0, 0.3); } }
   .popup__content {
     position: absolute;
@@ -1360,23 +1360,26 @@ body {
         width: 85%; } }
     @media only screen and (max-width: 25em) {
       .popup__content {
-        width: 98%;
-        padding: 4rem 1rem; } }
-    @media only screen and (max-width: 23.45em) {
+        width: 98%; } }
+    @media only screen and (max-height: 50.75em) {
       .popup__content {
-        padding: 4rem 1rem 1rem; } }
+        max-height: 80%;
+        padding: 1rem; } }
     @media only screen and (max-width: 23.45em) {
       .popup__content__checkbox-label {
         font-size: 1rem; } }
+    @media only screen and (max-height: 50.75em) {
+      .popup__content__checkbox-label {
+        font-size: .8rem; } }
   .popup__close {
     cursor: pointer;
     border: none;
     background-color: transparent;
-    color: #777;
+    color: #fff;
     position: absolute;
     top: 2rem;
     right: 2.5rem;
-    font-size: 3rem;
+    font-size: 5rem;
     text-decoration: none;
     display: inline-block;
     -webkit-transition: all .2s;
@@ -1385,6 +1388,9 @@ body {
     line-height: 1; }
     .popup__close:hover {
       color: #00589e; }
+    @media only screen and (max-height: 50.75em) {
+      .popup__close {
+        font-size: 2rem; } }
   .popup__header {
     margin-bottom: 2.5rem;
     text-align: center; }
@@ -1397,7 +1403,7 @@ body {
       .popup__header {
         width: 90%;
         font-size: 1.2rem;
-        margin-bottom: .5rem; } }
+        margin-bottom: .3rem; } }
   .popup__text {
     width: 60%;
     margin: 0 auto;
@@ -1411,8 +1417,8 @@ body {
     @media only screen and (max-width: 23.45em) {
       .popup__text {
         margin-bottom: .5rem;
-        width: 80%;
-        font-size: 1rem; } }
+        width: 85%;
+        font-size: .8rem; } }
   .popup__btn {
     margin-top: 2.5rem;
     width: 50%;
