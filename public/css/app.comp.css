@@ -743,6 +743,7 @@ body {
     left: 0;
     bottom: 0;
     z-index: 1000;
+    border-radius: 50px;
     background: linear-gradient(to right, rgba(0, 30, 54, 0.1), rgba(180, 180, 180, 0.1)); }
 
 .btn, .btn:link, .btn:visited {
@@ -1405,7 +1406,37 @@ body {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  /**********************
+    * CSS PER CAROSELLO JS
+    ***********************
+
+	&__carousel {
+		display: block;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		flex-basis: content;
+		margin-top: 10rem;
+		background-color: rgba($color-grey-light, .75);
+		width: 100vw;
+		transition: all linear;
+		padding: 2rem;
+		@include respond(trecentosettantacinque) {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+        } 
+    
+    &-logo {
+			height: auto;
+			width: auto;
+			margin: 0 10rem;
+			filter: grayscale(100%) brightness(130%);
+		}
+    
+    *****************************
+    * CSS PER CAROSELLO SENZA JS
+    ****************************/ }
   @media only screen and (max-width: 23.45em) {
     .testimonials {
       padding-top: 4rem; } }
@@ -1440,24 +1471,32 @@ body {
         padding: 0 10%;
         font-size: 1rem; } }
   .testimonials__carousel {
-    display: block;
+    display: flex;
     align-content: center;
     align-items: center;
     justify-content: center;
     flex-basis: content;
+    flex-wrap: wrap;
     margin-top: 10rem;
     background-color: rgba(209, 209, 209, 0.75);
     width: 100vw;
-    transition: all linear; }
-    @media only screen and (max-width: 23.45em) {
+    transition: all linear;
+    padding: 4rem; }
+    @media only screen and (max-height: 50.75em) {
       .testimonials__carousel {
         margin-top: 2rem;
-        margin-bottom: 2rem; } }
+        margin-bottom: 5rem;
+        padding: 2rem; } }
     .testimonials__carousel-logo {
       height: auto;
       width: auto;
-      margin: 0 10rem;
+      margin: 3rem;
+      max-height: 6rem;
       filter: grayscale(100%) brightness(130%); }
+      @media only screen and (max-height: 50.75em) {
+        .testimonials__carousel-logo {
+          max-height: 3rem;
+          margin: 0 .5rem; } }
 
 .owl-stage {
   display: flex;
