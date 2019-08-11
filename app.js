@@ -27,7 +27,7 @@ else if (appState === 'production')
 	);
 
 const app = express();
-app.use(favicon(path.join(__dirname, 'public', 'assets/favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'assets/favicon.png')));
 if (appState === 'production') app.use(helmet());
 if (appState === 'production') app.use(limiter);
 app.set('view engine', 'ejs');
