@@ -1,77 +1,116 @@
 .testimonials {
-    @include flex100Center;
+	@include flex100Center;
 
-    @include respond(trecentosettantacinque) {
-        padding-top: 4rem;
-    }
+	@include respond(trecentosettantacinque) {
+		padding-top: 4rem;
+	}
 
-    &__title {
-        @include section_title;
-        margin-bottom: 5rem;
+	&__title {
+		@include section_title;
+		margin-bottom: 5rem;
 
-        @include respond(ottocento) {
-            font-size: 3rem;
-        }
-        
-        @include respond(seicento) {
-            font-size: 2.5rem;
-        }
+		@include respond(ottocento) {
+			font-size: 3rem;
+		}
 
-        @include respond(cinquecento) {
-            padding: 0 5rem;
-        }
-        
-        @include respond(trecentosettantacinque) {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-    }
+		@include respond(seicento) {
+			font-size: 2.5rem;
+		}
 
-    &__text {
-        text-align: left;
-        align-self: flex-start;
-        padding: 0 20%;
+		@include respond(cinquecento) {
+			padding: 0 5rem;
+		}
 
-        @include respond(ottocento) {
-            padding: 0 15%;
-        }
+		@include respond(trecentosettantacinque) {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+	}
 
-        @include respond(trecentosettantacinque) {
-            padding: 0 10%;
-            font-size: 1rem;
-        }
-    }
+	&__text {
+		text-align: left;
+		align-self: flex-start;
+		padding: 0 20%;
 
-    &__carousel {
-        display: block;
-        align-content: center;
-        align-items: center;
-        justify-content: center;
-        flex-basis: content;
-        margin-top: 10rem;
-        background-color: rgba($color-grey-light, .75);
-        width: 100vw;
-        transition: all linear;
+		@include respond(ottocento) {
+			padding: 0 15%;
+		}
 
-        @include respond(trecentosettantacinque) {
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-        }
+		@include respond(trecentosettantacinque) {
+			padding: 0 10%;
+			font-size: 1rem;
+		}
+	}
 
-        &-logo {
-            height: auto;
-            width: auto;
-            margin: 0 10rem;
-            filter: grayscale(100%) brightness(130%);
-        }
-    }
+	/**********************
+    * CSS PER CAROSELLO JS
+    ***********************
+
+	&__carousel {
+		display: block;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		flex-basis: content;
+		margin-top: 10rem;
+		background-color: rgba($color-grey-light, .75);
+		width: 100vw;
+		transition: all linear;
+		padding: 2rem;
+		@include respond(trecentosettantacinque) {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+        } 
     
+    &-logo {
+			height: auto;
+			width: auto;
+			margin: 0 10rem;
+			filter: grayscale(100%) brightness(130%);
+		}
+    
+    *****************************
+    * CSS PER CAROSELLO SENZA JS
+    ****************************/
+
+	&__carousel {
+		display: flex;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		flex-basis: content;
+		margin-top: 10rem;
+		background-color: rgba($color-grey-light, .75);
+		width: 100vw;
+		transition: all linear;
+		padding: 5rem;
+
+		@include respond (mobile_height) {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+			padding: 2rem;
+		}
+
+		&-logo {
+			height: auto;
+			width: auto;
+			margin: 0 3rem;
+			max-height: 9rem;
+			filter: grayscale(100%) brightness(130%);
+
+			@include respond (mobile_height) {
+				max-height: 1.5rem;
+				margin: 0 .5rem;
+			}
+		}
+	}
 }
 
+//SEMPRE INCLUSO TANTO NON FUNZIONA SENZA JS
 .owl-stage {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
 }
