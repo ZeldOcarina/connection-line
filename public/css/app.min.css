@@ -1475,25 +1475,26 @@ body {
     align-items: center;
     justify-content: center;
     flex-basis: content;
+    flex-wrap: wrap;
     margin-top: 10rem;
     background-color: rgba(209, 209, 209, 0.75);
     width: 100vw;
     transition: all linear;
-    padding: 5rem; }
+    padding: 4rem; }
     @media only screen and (max-height: 50.75em) {
       .testimonials__carousel {
         margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
         padding: 2rem; } }
     .testimonials__carousel-logo {
       height: auto;
       width: auto;
-      margin: 0 3rem;
-      max-height: 9rem;
+      margin: 3rem;
+      max-height: 6rem;
       filter: grayscale(100%) brightness(130%); }
       @media only screen and (max-height: 50.75em) {
         .testimonials__carousel-logo {
-          max-height: 1.5rem;
+          max-height: 3rem;
           margin: 0 .5rem; } }
 
 .owl-stage {
