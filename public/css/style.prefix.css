@@ -1755,6 +1755,9 @@ body {
           justify-content: center;
   justify-items: center; }
 
+.owl-dots {
+  display: none; }
+
 .translations {
   position: fixed;
   top: 4rem;
