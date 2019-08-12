@@ -76,6 +76,8 @@
 		position: relative;
 		display: inline-block;
 		width: 36rem;
+		min-width: max-content;
+		min-height: max-content;
 		height: 5.5rem;
 		z-index: 50;
 		margin-top: 5rem;

@@ -722,6 +722,8 @@ body {
     position: relative;
     display: inline-block;
     width: 36rem;
+    min-width: max-content;
+    min-height: max-content;
     height: 5.5rem;
     z-index: 50;
     margin-top: 5rem; }
@@ -2029,3 +2031,6 @@ url(../img/nat-10.jpg);
 
 .twitter {
   color: #1DA1F2; }
+
+.small-text {
+  font-size: 1.3rem; }

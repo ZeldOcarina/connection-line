@@ -1,14 +1,14 @@
 import $ from 'jquery';
 import { popupSection, popupOpener, popupCloseButton, displayNone } from './UiElements';
 import Cookies from 'js-cookie';
-import lastURLword from './LastURLWord';
+import lastURLWord from './LastURLWord';
 
 /***************
  * POPUP LOGIC
  **************/
 
 const popup = () => {
-	const page = lastURLword();
+	const page = lastURLWord();
 	// Variable to be used in mouseout function
 	let popupState = false;
 
@@ -25,22 +25,22 @@ const popup = () => {
 				openPopup();
 			}
 		});
-
-		$(document).keyup((e) => {
-			if (e.keyCode === 27 && popupState) closePopup(); // esc
-		});
-
-		$(document).click((e) => {
-			if (!$(e.target).closest('.popup__content').length) {
-				closePopup();
-			}
-		});
 	}
+
+	$(document).keyup((e) => {
+		if (e.keyCode === 27 && popupState) closePopup(); // esc
+	});
 
 	function openPopup() {
 		popupSection.removeClass(displayNone);
 		popupState = true;
 		Cookies.set('modalOpened', 'true', { expires: 7 });
+		$('#popup').click((e) => {
+			if (!$(e.target).closest('.popup__content').length) {
+				console.log('click');
+				closePopup();
+			}
+		});
 	}
 
 	function closePopup() {

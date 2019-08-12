@@ -9,6 +9,7 @@ import scrollify from './utils/Scrollify';
 import testimonialCarousel from './utils/TestimonialCarousel';
 import popup from './utils/Popup';
 import cookies from './utils/Cookies';
+import smallText from './utils/SmallText';
 
 navigationHandler();
 counter();
@@ -16,3 +17,4 @@ scrollify();
 testimonialCarousel();
 popup();
 cookies();
+smallText();

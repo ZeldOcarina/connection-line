@@ -56,7 +56,7 @@
         </div>
         <img class="bg-video__logo" src="/assets/logo.png" alt="">
         <h1 class="bg-video__title">&ldquo;<%= content.header.topHeader %>&rdquo;</h1>
-        <button class="btn btn--animated btn--primary bg-video__btn"><a href="#cta" class="btn__link"><%= content.header.cta %></a></button>
+        <button class="btn btn--animated btn--primary bg-video__btn"><a href="#cta" class="btn__link" id="btn-link"><%= content.header.cta %></a></button>
     </div>
 </header>
 <section id="counters">
@@ -305,14 +305,14 @@
                 </div>
                 <div class="form__checkbox-group">
                     <input type="checkbox" class="form__checkbox-input" id="privacy" name="privacy_accepted" required>
-                    <label for="privacy" class="form__checkbox-label">
+                    <label for="privacy" class="form__checkbox-label form__checkbox-label--privacy">
                         <span class="form__checkbox-button"></span>
                         <%= content.form.privacyConsent %> <span class="red">*</span>
                     </label>
                 </div>
                 <div class="form__checkbox-group">
                     <input type="checkbox" class="form__checkbox-input" id="newsletter" name="newsletter_accepted">
-                    <label for="newsletter" class="form__checkbox-label">
+                    <label for="newsletter" class="form__checkbox-label form__checkbox-label--newsletter">
                         <span class="form__checkbox-button"></span>
                         <%= content.form.newsletterConsent %>
                     </label>

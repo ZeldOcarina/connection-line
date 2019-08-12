@@ -10,17 +10,17 @@ exports.englishContent = function () {
             contatti: 'Contact Us',
         },
         header: {
-            topHeader: 'We help people and companies overcome language barriers in any technical field.',
-            cta: 'Ask for a quote',
+            topHeader: 'We help individuals and companies overcome language barriers in any technical area.',
+            cta: 'Request a quote now',
         },
         counters: {
-            interpreti: ['interpreti', 'da oltre', 'nazioni.'],
-            combinazioni: ['combinazioni linguistiche.'],
-            clientiSoddisfatti: ['clienti soddisfatti'],
-            paroleTradotte: ['di parole tradotte', 'in', 'lingue diverse.']
+            interpreti: ['translators and interpreters', 'from over', 'countries.'],
+            combinazioni: ['language pairs.'],
+            clientiSoddisfatti: ['satisfied customers'],
+            paroleTradotte: ['million words translated', 'into', 'different languages.']
         },
         story: {
-            header: 'Una Storia di Eccellenza e di Competenza.',
+            header: 'A History of Excellence and Skill.',
             text: `We have been active in Ticino in the field of linguistic services since 1997.
 
             Connection Line is a translation service offering a network of professional translators working in their native languages. We guarantee companies operating in foreign markets a complete, effective language service and help them present a competent, qualified image.
@@ -32,12 +32,12 @@ exports.englishContent = function () {
             Competence, speed and exclusive quality control procedures to ensure that texts remain true to the original.`
         },
         cards: {
-            preventivo: 'CHIEDI SUBITO UN PREVENTIVO!',
-            cta: 'contattaci',
+            preventivo: 'REQUEST A QUOTE NOW!',
+            cta: 'CONTACT US',
             medicina: {
                 header: 'MEDICINE',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Request a quote now.',
+                text2: 'We also translate texts about medical and healthcare equipment and instruments. Medical translations have always been the jewel in our crown.',
             },
             legale: {
                 header: 'LEGAL',
@@ -46,23 +46,23 @@ exports.englishContent = function () {
             },
             finanza: {
                 header: 'FINANCE',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Translations for the financial and economic sector using highly advanced techniques and with complete confidentiality guaranteed.',
+                text2: 'Our expert translators and reviewers have all the skill and experience necessary to meet the needs of both small and medium enterprises and large public and private institutions.',
             },
             marketing: {
                 header: 'MARKETING',
-                text1: 'With our network of experts in the production of texts and contents for websites, we develop the creative ideas behind successful marketing strategies.',
-                text2: 'We can put together high-impact messages and copy for advertisements in any language.',
+                text1: 'Thanks to a network of experts in drafting text and content for websites, we are able to develop creative ideas that bring winning marketing strategies to life.',
+                text2: 'We create incisive messages and content for advertising copy in any language.',
             },
             webInformatica: {
                 header: 'WEB\\IT',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'We specialise in working with software houses and senior developers, helping to expand and improve the IT infrastructures of both start-ups and large companies.',
+                text2: 'Our translations adapt your software to local customs and uses, taking it to a truly global level.',
             },
             tecnico: {
                 header: 'TECHNOLOGY',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Technical translations and translations of manuals for all companies and industries, even in the most highly specialised sectors.',
+                text2: 'We translate technical documentation of products and machinery aimed at sales abroad.',
             }
         },
         testimonials: {
@@ -72,32 +72,32 @@ exports.englishContent = function () {
             text3: 'Our customers\' objectives and requirements become our objectives and requirements. When our customers are satisfied, so are we.'
         },
         form: {
-            header: ['Richiedi subito un preventivo gratuito! ', '10% di sconto sulle richieste online!'],
-            name: 'Nome e Cognome',
+            header: ['Request a free quote now! ', '10% off online quotes!'],
+            name: 'Name and Last Name',
             email: 'Email',
-            phone: 'Telefono',
+            phone: 'Telephone',
             richiesta: {
-                richiestaLabel: 'Inserisci la tua Richiesta',
-                richiestaTextarea: 'Richiesta',
+                richiestaLabel: 'Submit your Request',
+                richiestaTextarea: 'Request',
             },
-            privacyConsent: 'Acconsento al trattamento dei miei dati personali.',
-            newsletterConsent: 'Sì, voglio iscrivermi alla Newsletter.',
-            cta: 'Invia'
+            privacyConsent: 'I agree to the processing of my personal data.',
+            newsletterConsent: 'Yes, sign me up for the newsletter.',
+            cta: 'SEND'
         },
         footer: {
             builtBy: 'Built by Mattia Rasulo Marketing Studio.',
-            copyright: '2019 CL Connection Line SAGL. Tutti i diritti riservati.',
+            copyright: '2019 CL Connection Line SAGL. All rights reserved.',
             privacyPolicy: 'Privacy policy',
             newsletter: 'NEWSLETTER',
         },
         popup: {
-            header: 'Iscriviti subito alla nostra newsletter!',
-            text: 'Non perdere nessuna delle nostre promozioni e resta aggiornato sulle ultime novità dal mondo delle traduzioni iscrivendoti alla nostra imperdibile newsletter!',
+            header: 'Sign up for our newsletter today!',
+            text: 'Don’t miss any of our special offers and keep up-to-date on the latest from the world of translation by signing up to our remarkable newsletter!',
             form: {
-                name: 'Nome',
+                name: 'Name',
                 email: 'Email'
             },
-            cta: 'Iscriviti'
+            cta: 'Sign Up'
         },
         thankyou: {
             title: 'Thanks for your submission. We will answer as soon as possible!',
@@ -120,16 +120,16 @@ exports.frenchContent = function () {
         },
         header: {
             topHeader: 'Nous aidons les gens et les entreprises à surmonter les barrières linguistiques dans tout domaine technique.',
-            cta: 'Demande de soumission',
+            cta: 'Demandez immédiatement un devis',
         },
         counters: {
-            interpreti: ['interpreti', 'da oltre', 'nazioni.'],
-            combinazioni: ['combinazioni linguistiche.'],
-            clientiSoddisfatti: ['clienti soddisfatti.'],
-            paroleTradotte: ['di parole tradotte', 'in', 'lingue diverse.']
+            interpreti: ['TRADUCTEURS ET INTERPRÈTES', 'DE PLUS DE', 'PAYS.'],
+            combinazioni: ['COMBINAISONS LINGUISTIQUES.'],
+            clientiSoddisfatti: ['CLIENTS SATISFAITS'],
+            paroleTradotte: ['MILLIONS DE MOTS TRADUITS', 'en', 'LANGUES DIFFÉRENTES.']
         },
         story: {
-            header: 'Una Storia di Eccellenza e di Competenza.',
+            header: 'Une histoire d’excellence et de compétence',
             text: `Nous sommes présents au Tessin dans le domaine des services linguistiques depuis 1997.
 
             L’agence Connection Line est structure qui allie un réseau de professionnels de langues maternelles différentes en mesure de garantir aux entreprises présentes sur des marchés étrangers, un service linguistique complet, efficace, sérieux et compétent.
@@ -138,76 +138,76 @@ exports.frenchContent = function () {
             
             Des traducteurs experts et spécialisés dans des secteurs spécifiques : technique, commerce, droit, finance, médecine, science, philosophie, religion et littérature.
 
-Rapidité, compétence, techniques exclusives de contrôle de la qualité garantissant que les traductions soient fidèles aux originaux.
-Livraison des travaux par pli postal, télécopie, modem et courrier électronique.`
+            Rapidité, compétence, techniques exclusives de contrôle de la qualité garantissant que les traductions soient fidèles aux originaux.
+            Livraison des travaux par pli postal, télécopie, modem et courrier électronique.`
         },
         cards: {
-            preventivo: 'CHIEDI SUBITO UN PREVENTIVO!',
-            cta: 'contattaci',
+            preventivo: 'Demandez immédiatement un devis gratuit!',
+            cta: 'contactez-nous',
             medicina: {
                 header: 'MÉDECINE',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Traductions médicales dans tous les domaines. Du domaine de vulgarisation au plus spécialisé.',
+                text2: 'Nous nous occupons de traduire des textes concernant les appareils et les instruments médicaux et sanitaires. Les traductions médicales sont depuis toujours notre figure de proue.',
             },
             legale: {
                 header: 'DROIT',
-                text1: 'Traductions légales dans toutes les combinaisons linguistiques. Durant toutes ces années, nous avons développé des collaborations avec des services juridiques, des fiduciaires, des banques ENTI PUBBLICI et des particuliers. Si le client a besoin d’une traduction apostillée et assermentée, nous nous chargeons de toutes les démarches requises par la procédure.',
+                text1: 'Traductions légales dans toutes les combinaisons linguistiques. Durant toutes ces années, nous avons développé des collaborations avec des services juridiques, des fiduciaires, des banques et des particuliers. Si le client a besoin d’une traduction apostillée et assermentée, nous nous chargeons de toutes les démarches.',
                 text2: '',
             },
             finanza: {
                 header: 'FINANCE',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Traductions pour le secteur financier et économique avec des techniques de pointe et un respect absolu de la vie privée.',
+                text2: 'Nous nous occupons de traduire des textes concernant les appareils et les instruments médicaux et sanitaires. Les traductions médicales sont depuis toujours notre figure de proue.',
             },
             marketing: {
                 header: 'MARKETING',
-                text1: 'Grâce à un réseau de professionnels experts dans la rédaction de textes et de contenus pour sites Web, nous élaborons des idées créatives qui donnent naissance à des stratégies marketing gagnantes.',
-                text2: 'Nous élaborons dans toutes les langues demandées des messages et des contenus.',
+                text1: 'Grâce à un réseau d’experts dans la rédaction des textes et des contenus destinés aux sites web, nous élaborons les idées créatives qui donnent vie à des stratégies de marketing efficaces.',
+                text2: 'Nous mettons au point des messages percutants pour des textes publicitaires dans toutes les langues.',
             },
             webInformatica: {
                 header: 'WEB\\INFORMATIQUE',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Nous sommes spécialisés dans la collaboration avec des éditeurs de logiciel et des développeurs senior et nous aidons à développer les infrastructures IT de start-up et de grandes entreprises.',
+                text2: 'Notre traduction adapte votre logiciel aux us et coutumes locales et le porte à un niveau vraiment international.',
             },
             tecnico: {
                 header: 'TECHNIQUE',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Traductions techniques et de manuels pour toutes les entreprises et industries, même dans les secteurs les plus spécialisés.',
+                text2: 'Nous nous occupons également de traduire des documents techniques concernant les produits et les machines dans le but d’une commercialisation à l’étranger.',
             }
         },
         testimonials: {
-            header: 'Lorem ipsum dolor sit amet consectetur.',
-            text1: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex aut ratione quam? Obcaecati autem necessitatibus consequuntur repudiandae quibusdam corporis minima!',
-            text2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse temporibus sequi dicta inventore culpa. Nemo.',
-            text2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse temporibus sequi dicta inventore culpa. Nemo.'
+            header: 'NOS CLIENTS',
+            text1: 'Notre objectif est de mettre notre expérience et nos connaissances au service des entreprises et des particuliers, afin de leur permettre de surmonter les barrières linguistiques existantes.',
+            text2: 'Selon nous, la traduction idéale consiste à transposer un texte dans une autre langue tout en maintenant l’originalité du message, son style linguistique et ses caractéristiques techniques, dans le respect de l’authenticité et de l’intégrité de la langue cible.',
+            text3: 'Nous partageons les objectifs et les attentes de nos clients, mais aussi leurs satisfactions.'
         },
         form: {
-            header: ['Richiedi subito un preventivo gratuito! ', '10% di sconto sulle richieste online!'],
-            name: 'Nome e Cognome',
+            header: ['Demandez immédiatement un devis gratuit! ', '10% de réduction sur les demandes en ligne!'],
+            name: 'Nom et prénom',
             email: 'Email',
-            phone: 'Telefono',
+            phone: 'Téléphone',
             richiesta: {
-                richiestaLabel: 'Inserisci la tua Richiesta',
-                richiestaTextarea: 'Richiesta',
+                richiestaLabel: 'Insérez votre demande',
+                richiestaTextarea: 'demande',
             },
-            privacyConsent: 'Acconsento al trattamento dei miei dati personali.',
-            newsletterConsent: 'Sì, voglio iscrivermi alla Newsletter.',
-            cta: 'Invia'
+            privacyConsent: 'J’accepte le traitement de mes données personnelles.',
+            newsletterConsent: 'Oui, je souhaite m’inscrire à la newsletter.',
+            cta: 'ENVOYER'
         },
         footer: {
             builtBy: 'Built by Mattia Rasulo Marketing Studio.',
-            copyright: '2019 CL Connection Line SAGL. Tutti i diritti riservati.',
+            copyright: '2019 CL Connection Line SAGL. Tous droits réservés.',
             privacyPolicy: 'Privacy policy',
             newsletter: 'NEWSLETTER',
         },
         popup: {
-            header: 'Iscriviti subito alla nostra newsletter!',
-            text: 'Non perdere nessuna delle nostre promozioni e resta aggiornato sulle ultime novità dal mondo delle traduzioni iscrivendoti alla nostra imperdibile newsletter!',
+            header: 'Inscrivez-vous à notre newsletter',
+            text: 'Ne passez à côté d’aucune de nos promotions et restez informés des dernières nouveautés du monde de la traduction en vous inscrivant à notre newsletter!',
             form: {
-                name: 'Nome',
+                name: 'Nom',
                 email: 'Email'
             },
-            cta: 'Iscriviti'
+            cta: 'INSCRIVEZ-VOUS'
         },
         thankyou: {
             title: 'Merci pour votre présentation. Nous vous répondrons dès que possible!',
@@ -229,17 +229,17 @@ exports.germanContent = function () {
             contatti: 'Kontaktlinsen',
         },
         header: {
-            topHeader: 'Wir helfen Menschen und Unternehmen auf die Sprachbarrieren in den technischen Bereich zu überwinden.',
-            cta: 'Fragen Sie nach einem Angebot',
+            topHeader: 'Wir unterstützen Privatpersonen und Unternehmen bei der Überwindung von Sprachbarrieren in allen technischen Bereichen.',
+            cta: 'Fordern Sie sofort einen Kostenvoranschlag an',
         },
         counters: {
-            interpreti: ['interpreti', 'da oltre', 'nazioni.'],
-            combinazioni: ['combinazioni linguistiche.'],
-            clientiSoddisfatti: ['clienti soddisfatti.'],
-            paroleTradotte: ['di parole tradotte', 'in', 'lingue diverse.']
+            interpreti: ['ÜBERSETZER UND DOLMETSCHER', 'AUS ÜBER', 'SPRACHKOMBINATIONEN.'],
+            combinazioni: ['ZUFRIEDENE KUNDEN.'],
+            clientiSoddisfatti: ['ZUFRIEDENE KUNDEN'],
+            paroleTradotte: ['ÜBERSETZTE WÖRTER', 'in', 'VERSCHIEDENEN SPRACHEN.']
         },
         story: {
-            header: 'Una Storia di Eccellenza e di Competenza.',
+            header: 'Eine von Exzellenz und Kompetenz geprägte Geschichte.',
             text: `Wir sind seit 1997 im Tessin im Bereich Übersetzungsdienstleistungen tätig.
 
             Die Übersetzungsagentur Connection Line wurde 1997 in Tessin gegründet und stellt seitdem zahlreichen Firmen, die mit internationalen Unternehmen zusammenarbeiten, ein Netz von professionellen Muttersprachlern zur Verfügung und gewährleistet einen seriösen und kompetenten sowie abgerundeten und effizienten Sprachservice.
@@ -251,72 +251,72 @@ exports.germanContent = function () {
             Kompetenz und Qualitätskontrolle garantieren die Originaltreue der Übersetzungen. Termingerechtes Arbeiten ist eine Selbstverständlichkeit. `
         },
         cards: {
-            preventivo: 'CHIEDI SUBITO UN PREVENTIVO!',
-            cta: 'contattaci',
+            preventivo: 'Fordern Sie sofort einen Kostenvoranschlag an!',
+            cta: 'KONTAKTIEREN SIE UNS',
             medicina: {
                 header: 'MEDIZIN',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Übersetzungen medizinischer Fachtexte in allen Bereichen, von informativ bis hin zu fachspezifisch.',
+                text2: 'Wir übersetzen auch Texte im Zusammenhang mit Geräten und Instrumenten für Medizin und Gesundheit. Übersetzungen von medizinischen Fachtexten sind seit jeher unsere Stärke.',
             },
             legale: {
                 header: 'WIRTSCHAFT',
-                text1: 'Wir haben uns auf juristische Übersetzungen. In den letzten Jahren haben wir Partnerschaften mit Rechtsanwaltskanzleien ED ENTI PUBBLICI.',
+                text1: 'Wir haben uns auf juristische Übersetzungen. In den letzten Jahren haben wir Partnerschaften mit Rechtsanwaltskanzleien.',
                 text2: 'Wenn ein Kunde eine kommentierte und beglaubigte Übersetzung benötigt, kümmern wir uns um den gesamten Ablauf.',
             },
             finanza: {
                 header: 'FINANZWESEN',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Übersetzungen für den Finanz- und Wirtschaftssektor mit sehr hohen technischen Standards und absoluter Wahrung der Privatsphäre.',
+                text2: 'Unsere erfahrenen Übersetzer verfügen über das Fachwissen, um die Anforderungen von kleinen und mittleren Unternehmen sowie großen Institutionen zu erfüllen.',
             },
             marketing: {
                 header: 'MARKETING',
-                text1: 'Dank eines Netzwerks erfahrener Experten in der Überarbeitung von Texten und Webinhalten arbeiten wir kreative Ideen aus, die den Ausgangspunkt für erfolgreiche Marketingstrategien darstellen.',
-                text2: 'Wir gestalten einprägsame Botschafte und Inhalte für Werbetexte in jeder beliebigen Sprache.',
+                text1: 'Dank eines Netzwerks von Experten im Verfassen von Texten und Inhalten für Websites entwickeln wir kreative Ideen, die die Gestaltung erfolgreicher Marketingstrategien ermöglichen.',
+                text2: 'Für Werbetexte erstellen wir Nachrichten und prägnante Inhalte in allen gewünschten Sprachen.',
             },
             webInformatica: {
                 header: 'WEB\\INFORMATIK',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Wir sind auf die Zusammenarbeit mit Softwarehäusern spezialisiert und unterstützen den Ausbau der IT-Infrastruktur von Start-ups und Großunternehmen.',
+                text2: 'Unsere Übersetzung passt Ihre Software an die lokalen Sitten und Bräuche an und hebt sie auf eine wirklich globale Ebene!',
             },
             tecnico: {
                 header: 'TECHNIK',
-                text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quas.',
-                text2: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et alias eligendi enim atque consequuntur accusantium laboriosam fugiat quasi omnis animi!',
+                text1: 'Technische Übersetzungen und Übersetzungen von Handbüchern für alle Unternehmen und Branchen, auch für besonders spezielle Fachgebiete.',
+                text2: 'Wir übersetzen auch technische Produkt- und Geräteunterlagen für die Vermarktung im Ausland.',
             }
         },
         testimonials: {
-            header: 'Lorem ipsum dolor sit amet consectetur.',
+            header: 'Unsere Kunden',
             text1: 'Wir haben es uns zum Ziel gesetzt, unsere Erfahrung und unser Wissen für Firmen und Privatpersonen zur Verfügung zu stellen, um ihnen dabei zu helfen, die seit undenklichen Zeiten existierenden Sprachbarrieren zu beseitigen.',
             text2: 'Wir glauben, dass bei einer adäquaten Übersetzung Sinn, Sprachebene und Ausdrucksweise der Ausgangssprache erhalten bleiben müssen, während gleichzeitig der Struktur und den Besonderheiten der Zielsprache Rechnung getragen wird.',
             text3: 'Die Ziele und Erwartungen sowie die Zufriedenheit unserer Kunden liegen uns dabei besonders am Herzen.'
         },
         form: {
-            header: ['Richiedi subito un preventivo gratuito! ', '10% di sconto sulle richieste online!'],
-            name: 'Nome e Cognome',
-            email: 'Email',
-            phone: 'Telefono',
+            header: ['Fordern Sie sofort einen kostenlosen Kostenvoranschlag an! ', '10% Rabatt auf Online-Anfragen!'],
+            name: 'Name und Nachname',
+            email: 'E-Mail-Adresse',
+            phone: 'Telefonnummer',
             richiesta: {
-                richiestaLabel: 'Inserisci la tua Richiesta',
-                richiestaTextarea: 'Richiesta',
+                richiestaLabel: 'Geben Sie Ihre Anfrage ein',
+                richiestaTextarea: 'Anfrage',
             },
-            privacyConsent: 'Acconsento al trattamento dei miei dati personali.',
-            newsletterConsent: 'Sì, voglio iscrivermi alla Newsletter.',
-            cta: 'Invia'
+            privacyConsent: 'Ich stimme der Verarbeitung meiner personenbezogenen Daten zu.',
+            newsletterConsent: 'Ja, ich möchte den Newsletter abonnieren!',
+            cta: 'SENDEN'
         },
         footer: {
             builtBy: 'Built by Mattia Rasulo Marketing Studio.',
-            copyright: '2019 CL Connection Line SAGL. Tutti i diritti riservati.',
+            copyright: '2019 CL Connection Line SAGL. Alle Rechte vorbehalten.',
             privacyPolicy: 'Privacy policy',
             newsletter: 'NEWSLETTER',
         },
         popup: {
-            header: 'Iscriviti subito alla nostra newsletter!',
-            text: 'Non perdere nessuna delle nostre promozioni e resta aggiornato sulle ultime novità dal mondo delle traduzioni iscrivendoti alla nostra imperdibile newsletter!',
+            header: 'Abonnieren Sie jetzt unseren Newsletter!',
+            text: 'Verpassen Sie keine unserer Werbeaktionen und bleiben Sie stets aktuell über die neuesten Nachrichten aus der Welt der Übersetzungen informiert, indem Sie unseren einzigartigen Newsletter abonnieren!',
             form: {
-                name: 'Nome',
-                email: 'Email'
+                name: 'Name',
+                email: 'E-Mail-Adresse'
             },
-            cta: 'Iscriviti'
+            cta: 'ABONNIEREN'
         },
         thankyou: {
             title: 'Vielen Dank für Ihren Beitrag. Wir werden so schnell wie möglich antworten!',
