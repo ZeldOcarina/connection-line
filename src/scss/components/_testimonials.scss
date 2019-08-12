@@ -44,7 +44,7 @@
 
 	/**********************
     * CSS PER CAROSELLO JS
-    ***********************
+    ***********************/
 
 	&__carousel {
 		display: block;
@@ -60,18 +60,20 @@
 		@include respond(trecentosettantacinque) {
 			margin-top: 2rem;
 			margin-bottom: 2rem;
-        } 
-    
-    &-logo {
+		}
+
+		&-logo {
 			height: auto;
 			width: auto;
 			margin: 0 10rem;
 			filter: grayscale(100%) brightness(130%);
 		}
-    
-    *****************************
+	}
+}
+
+/*****************************
     * CSS PER CAROSELLO SENZA JS
-    ****************************/
+    ****************************
 
 	&__carousel {
 		display: flex;
@@ -105,7 +107,7 @@
 			}
 		}
 	}
-}
+}*/
 
 //SEMPRE INCLUSO TANTO NON FUNZIONA SENZA JS
 .owl-stage {

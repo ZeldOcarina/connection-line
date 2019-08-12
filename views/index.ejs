@@ -230,8 +230,10 @@
         <p class="testimonials__text"><%= content.testimonials.text1 %></p>
         <p class="testimonials__text"><%= content.testimonials.text2 %></p>
         <p class="testimonials__text"><%= content.testimonials.text3 %></p>
-        <!--<div class="testimonials__carousel owl-carousel" data-loop="true">-->
-        <div class="testimonials__carousel">
+        
+        <%# Da usare soltanto se non si vuole attivare il carosello %>
+            <%# <div class="testimonials__carousel"> %>
+        <div class="testimonials__carousel owl-carousel" data-loop="true">
             <div class="item">
                 <img src="/assets/logos/apax.png" alt="" class="testimonials__carousel-logo">
             </div>
@@ -249,6 +251,18 @@
             </div>
             <div class="item">
                 <img src="/assets/logos/fleury.png" alt="" class="testimonials__carousel-logo">
+            </div>
+            <div class="item">
+                <img src="/assets/logos/forbo.png" alt="Forbo Flooring Systems SA" class="testimonials__carousel-logo">
+            </div>
+            <div class="item">
+                <img src="/assets/logos/chorel.png" alt="Chorel SA" class="testimonials__carousel-logo">
+            </div>
+            <div class="item">
+                <img src="/assets/logos/serpiano.png" alt="Hotel Serpiano" class="testimonials__carousel-logo">
+            </div>
+            <div class="item">
+                <img src="/assets/logos/aurofin.png" alt="Aurofin SA" class="testimonials__carousel-logo">
             </div>
         </div>
     </div>

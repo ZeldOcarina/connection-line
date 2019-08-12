@@ -1630,34 +1630,7 @@ body {
           justify-content: center;
   /**********************
     * CSS PER CAROSELLO JS
-    ***********************
-
-	&__carousel {
-		display: block;
-		align-content: center;
-		align-items: center;
-		justify-content: center;
-		flex-basis: content;
-		margin-top: 10rem;
-		background-color: rgba($color-grey-light, .75);
-		width: 100vw;
-		transition: all linear;
-		padding: 2rem;
-		@include respond(trecentosettantacinque) {
-			margin-top: 2rem;
-			margin-bottom: 2rem;
-        } 
-    
-    &-logo {
-			height: auto;
-			width: auto;
-			margin: 0 10rem;
-			filter: grayscale(100%) brightness(130%);
-		}
-    
-    *****************************
-    * CSS PER CAROSELLO SENZA JS
-    ****************************/ }
+    ***********************/ }
   @media only screen and (max-width: 23.45em) {
     .testimonials {
       padding-top: 4rem; } }
@@ -1694,10 +1667,7 @@ body {
         padding: 0 10%;
         font-size: 1rem; } }
   .testimonials__carousel {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-align-content: center;
         -ms-flex-line-pack: center;
             align-content: center;
@@ -1712,33 +1682,61 @@ body {
     -webkit-flex-basis: content;
         -ms-flex-preferred-size: content;
             flex-basis: content;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
     margin-top: 10rem;
     background-color: rgba(209, 209, 209, 0.75);
     width: 100vw;
     -webkit-transition: all linear;
     -o-transition: all linear;
     transition: all linear;
-    padding: 4rem; }
-    @media only screen and (max-height: 50.75em) {
+    padding: 2rem; }
+    @media only screen and (max-width: 23.45em) {
       .testimonials__carousel {
         margin-top: 2rem;
-        margin-bottom: 5rem;
-        padding: 2rem; } }
+        margin-bottom: 2rem; } }
     .testimonials__carousel-logo {
       height: auto;
       width: auto;
-      margin: 3rem;
-      max-height: 6rem;
+      margin: 0 10rem;
       -webkit-filter: grayscale(100%) brightness(130%);
               filter: grayscale(100%) brightness(130%); }
-      @media only screen and (max-height: 50.75em) {
-        .testimonials__carousel-logo {
-          max-height: 3rem;
-          margin: 0 .5rem; } }
 
+/*****************************
+    * CSS PER CAROSELLO SENZA JS
+    ****************************
+
+	&__carousel {
+		display: flex;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		flex-basis: content;
+		flex-wrap: wrap;
+		margin-top: 10rem;
+		background-color: rgba($color-grey-light, .75);
+		width: 100vw;
+		transition: all linear;
+		padding: 4rem;
+
+		@include respond (mobile_height) {
+			margin-top: 2rem;
+			margin-bottom: 5rem;
+			padding: 2rem;
+		}
+
+		&-logo {
+			height: auto;
+			width: auto;
+			margin: 3rem;
+			max-height: 6rem;
+			filter: grayscale(100%) brightness(130%);
+
+			@include respond (mobile_height) {
+				max-height: 3rem;
+				margin: 0 .5rem;
+			}
+		}
+	}
+}*/
 .owl-stage {
   display: -webkit-box;
   display: -webkit-flex;
