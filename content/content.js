@@ -111,12 +111,12 @@ exports.frenchContent = function () {
     const frenchText = {
         title: 'Des spécialistes de la traduction',
         menu: {
-            home: 'Maison',
-            numeri: 'The Numbers',
-            storia: 'Les Chiffres',
-            servizi: 'Es Forces Militaires',
-            clienti: 'Nos clients',
-            contatti: 'Contactez-nous',
+            home: 'ACCUEIL',
+            numeri: 'LES CHIFFRES',
+            storia: 'NOTRE HISTOIRE',
+            servizi: 'NOS SERVICES',
+            clienti: 'NOS CLIENTS',
+            contatti: 'CONTACTEZ-NOUS',
         },
         header: {
             topHeader: 'Nous aidons les gens et les entreprises à surmonter les barrières linguistiques dans tout domaine technique.',
@@ -130,16 +130,7 @@ exports.frenchContent = function () {
         },
         story: {
             header: 'Une histoire d’excellence et de compétence',
-            text: `Nous sommes présents au Tessin dans le domaine des services linguistiques depuis 1997.
-
-            L’agence Connection Line est structure qui allie un réseau de professionnels de langues maternelles différentes en mesure de garantir aux entreprises présentes sur des marchés étrangers, un service linguistique complet, efficace, sérieux et compétent.
-            
-            Aujourd’hui, nous sommes une réalité à l’échelon international forte de 2 000 traducteurs, interprètes et speakers hautement qualifiés.
-            
-            Des traducteurs experts et spécialisés dans des secteurs spécifiques : technique, commerce, droit, finance, médecine, science, philosophie, religion et littérature.
-
-            Rapidité, compétence, techniques exclusives de contrôle de la qualité garantissant que les traductions soient fidèles aux originaux.
-            Livraison des travaux par pli postal, télécopie, modem et courrier électronique.`
+            text: `Nous sommes présents au Tessin dans le domaine des services linguistiques depuis 1997. L’agence Connection Line est une structure qui allie un réseau de professionnels de langues maternelles différentes en mesure de garantir aux entreprises présentes sur des marchés étrangers un service linguistique complet, efficace, sérieux et compétent. Aujourd’hui, nous sommes une réalité à l’échelle internationale forte de 2 000 traducteurs, interprètes et speakers hautement qualifiés. Des traducteurs experts et spécialisés dans des secteurs spécifiques : technique, commerce, droit, finance, médecine, science, philosophie, religion et littérature. Rapidité, compétence, techniques exclusives de contrôle de la qualité garantissent des traductions fidèles aux originaux. Livraison des travaux par pli postal, télécopie, modem et courrier électronique.`
         },
         cards: {
             preventivo: 'Demandez immédiatement un devis gratuit!',
@@ -157,7 +148,7 @@ exports.frenchContent = function () {
             finanza: {
                 header: 'FINANCE',
                 text1: 'Traductions pour le secteur financier et économique avec des techniques de pointe et un respect absolu de la vie privée.',
-                text2: 'Nous nous occupons de traduire des textes concernant les appareils et les instruments médicaux et sanitaires. Les traductions médicales sont depuis toujours notre figure de proue.',
+                text2: 'Nos traducteurs disposent de l’expertise nécessaires pour satisfaire aux exigences aussi bien des petites et moyennes entreprises que des grandes institutions.',
             },
             marketing: {
                 header: 'MARKETING',
@@ -176,7 +167,7 @@ exports.frenchContent = function () {
             }
         },
         testimonials: {
-            header: 'NOS CLIENTS',
+            header: 'Nos Clients',
             text1: 'Notre objectif est de mettre notre expérience et nos connaissances au service des entreprises et des particuliers, afin de leur permettre de surmonter les barrières linguistiques existantes.',
             text2: 'Selon nous, la traduction idéale consiste à transposer un texte dans une autre langue tout en maintenant l’originalité du message, son style linguistique et ses caractéristiques techniques, dans le respect de l’authenticité et de l’intégrité de la langue cible.',
             text3: 'Nous partageons les objectifs et les attentes de nos clients, mais aussi leurs satisfactions.'
