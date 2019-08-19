@@ -36,7 +36,7 @@ exports.englishContent = function () {
             cta: 'CONTACT US',
             medicina: {
                 header: 'MEDICINE',
-                text1: 'Request a quote now.',
+                text1: 'Medical translations in every field, from general information to specialised texts.',
                 text2: 'We also translate texts about medical and healthcare equipment and instruments. Medical translations have always been the jewel in our crown.',
             },
             legale: {
