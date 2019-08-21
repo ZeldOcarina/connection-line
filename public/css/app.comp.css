@@ -1079,6 +1079,12 @@ body {
       margin-bottom: 0rem;
       height: auto; } }
 
+.form__paragraph {
+  margin-top: -.5rem;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+  font-size: 1.2rem; }
+
 .form__input {
   font-size: 1.5rem;
   font-family: inherit;
@@ -1094,6 +1100,49 @@ body {
   /*@include respond(tab-port) {
             width: 100%;
         }*/ }
+  .form__input--file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1; }
+    .form__input--file-icon {
+      margin-right: 1rem;
+      filter: invert(48%) sepia(0%) saturate(2239%) hue-rotate(80deg) brightness(102%) contrast(81%); }
+  .form__input--file + label {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 90%;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: #f0f0f0;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    padding: 3rem 1rem;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 0; }
+    @media only screen and (max-width: 81.25em) {
+      .form__input--file + label {
+        font-size: 1.4rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .form__input--file + label {
+        width: 100%; } }
+    @media only screen and (max-width: 25em) {
+      .form__input--file + label {
+        font-size: 1.2rem; } }
+  .form__input--file:focus + label,
+  .form__input--file + label:hover {
+    background-color: #d1d1d1; }
+  .form__input--file:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px; }
+  .form__input--file + label * {
+    pointer-events: none; }
   @media only screen and (max-width: 81.25em) {
     .form__input {
       padding: 1rem 1.5rem;
