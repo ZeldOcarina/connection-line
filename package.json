@@ -45,6 +45,7 @@
 		"owl.carousel": "^2.3.4",
 		"owl.carousel2": "^2.2.1",
 		"request": "^2.88.0",
+		"sanitize-filename": "^1.6.2",
 		"serve-favicon": "^2.5.0",
 		"waypoints": "^4.0.1"
 	},

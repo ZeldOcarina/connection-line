@@ -1,11 +1,12 @@
 const multer = require('multer');
+const sanitize = require('sanitize-filename');
 
 var storage = multer.diskStorage({
 	destination: function(req, file, cb) {
 		cb(null, 'public/uploads');
 	},
 	filename: function(req, file, cb) {
-		cb(null, `${req.body.name}-${file.originalname}`);
+		cb(null, sanitize(`${req.body.name}-${file.originalname}`));
 	}
 });
 

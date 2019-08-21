@@ -69,7 +69,7 @@ router.post('/:language/newsletter-subscription', (req, res) => {
 			const message = {
 				from: 'connectionlinesagl@gmail.com',
 				to: 'connectionlinesagl@gmail.com',
-				//cc: 'connectionlinesagl@gmail.com',
+				cc: 'info@connectionlinesagl.com',
 				subject: 'Nuova iscrizione alla mailing list!',
 				html: `
                 <h2>Abbiamo un nuovo iscritto per la nostra mailing list!</h2>

@@ -1,9 +1,11 @@
 const transporter = require('../controller/nodemailer-setup');
+const sanitize = require('sanitize-filename');
 
-module.exports = emailSender = (req, res, next) => {
+module.exports = emailSender = async (req, res, next) => {
 	let newsletterMessage;
-	console.log(req.files);
-	const links = req.files.map((file) => `http://connectionline.ch/uploads/${file.filename.replace(/ /g, '%20')}`);
+	const links = req.files.map(
+		(file) => `http://connectionline.ch/uploads/${sanitize(file.filename.replace(/ /g, '%20'))}`
+	);
 
 	req.body.newsletter_accepted === 'on'
 		? (newsletterMessage = 'Si iscrive alla nostra mailing list.')
@@ -34,13 +36,12 @@ module.exports = emailSender = (req, res, next) => {
 						
                 <h3>Ricontattala subito!!</h3>`
 		};
-		transporter.sendMail(message, (err, info) => {
-			if (err) {
-				console.error(err);
-				res.send('An error has occurred. Please contact the system administrator.');
-			}
-			//console.log(info);
-		});
+		try {
+			await transporter.sendMail(message);
+		} catch (err) {
+			console.error(err);
+			res.send('An error has occurred. Please contact the system administrator at connectionlinesagl@gmail.com');
+		}
 	}
 	next();
 };
