@@ -295,7 +295,7 @@
             <h2 class="cta__header mb-3">
                 <%= content.form.header[0] %> <br><%= content.form.header[1] %>
             </h2>
-            <form action="/<%= language %>/request" method="POST" class="form">
+            <form action="/<%= language %>/request" method="POST" class="form" enctype="multipart/form-data">
                 <div class="form__group">
                     <input type="text" class="form__input" placeholder="<%= content.form.name %>" id="name" name="name"
                         required>
@@ -311,6 +311,11 @@
                     <input type="text" class="form__input" placeholder="<%= content.form.phone %>" id="telefono"
                         name="phoneNumber">
                     <label for="telefono" class="form__label"><%= content.form.phone %></label>
+                </div>
+                <div class="form__group">
+                    <input type="file" class="form__input" id="file"
+                        name="file" multiple>
+                    <label for="file" class="form__label"><%= content.form.file %></label>
                 </div>
                 <div class="form__group">
                     <textarea type="email" class="form__input" id="richiesta" name="request"

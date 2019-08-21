@@ -76,6 +76,7 @@ exports.englishContent = function () {
             name: 'Name and Last Name',
             email: 'Email',
             phone: 'Telephone',
+            file: 'The files must be .pdf, .doc o .docx and cannot be bigger than 5MB. Accepts a maximum of 5 files.',
             richiesta: {
                 richiestaLabel: 'Submit your Request',
                 richiestaTextarea: 'Request',
@@ -177,6 +178,7 @@ exports.frenchContent = function () {
             name: 'Nom et prénom',
             email: 'Email',
             phone: 'Téléphone',
+            file: 'The files must be .pdf, .doc o .docx and cannot be bigger than 5MB. Accepts a maximum of 5 files.',
             richiesta: {
                 richiestaLabel: 'Insérez votre demande',
                 richiestaTextarea: 'demande',
@@ -286,6 +288,7 @@ exports.germanContent = function () {
             name: 'Name und Nachname',
             email: 'E-Mail-Adresse',
             phone: 'Telefonnummer',
+            file: 'The files must be .pdf, .doc o .docx and cannot be bigger than 5MB. Accepts a maximum of 5 files.',
             richiesta: {
                 richiestaLabel: 'Geben Sie Ihre Anfrage ein',
                 richiestaTextarea: 'Anfrage',
@@ -395,6 +398,7 @@ Velocità, competenza e tecniche esclusive di controllo della qualità che assic
             name: 'Nome e Cognome',
             email: 'Email',
             phone: 'Telefono',
+            file: 'Il file deve essere .pdf, .doc o .docx e non può superare i 5MB. Accetta un massimo di cinque file.',
             richiesta: {
                 richiestaLabel: 'Inserisci la tua Richiesta',
                 richiestaTextarea: 'Richiesta',
