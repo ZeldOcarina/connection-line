@@ -12,3 +12,7 @@ export const popupSection = $('#popup');
 export const popupOpener = $('.popup-opener');
 export const popupCloseButton = $('.popup__close');
 export const displayNone = 'd-none';
+
+//INPUT FILE DOM ELEMENTS
+export const input = document.querySelector('.form__input--file');
+export const label = document.querySelector('.form__input--label');

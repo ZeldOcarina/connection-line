@@ -12,7 +12,7 @@ module.exports = emailSender = (req, res, next) => {
 		const message = {
 			from: req.body.email,
 			to: 'connectionlinesagl@gmail.com',
-			cc: 'info@connectionlinesagl.com',
+			//cc: 'info@connectionlinesagl.com',
 			subject: 'Una nuova richiesta dal sito!',
 			html: `
             <h1>È arrivata una nuova richiesta dal sito!</h1>

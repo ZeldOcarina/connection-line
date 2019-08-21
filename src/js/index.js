@@ -10,6 +10,7 @@ import testimonialCarousel from './utils/TestimonialCarousel';
 import popup from './utils/Popup';
 import cookies from './utils/Cookies';
 import smallText from './utils/SmallText';
+import inputFile from './utils/InputFile';
 
 navigationHandler();
 counter();
@@ -18,3 +19,4 @@ testimonialCarousel();
 popup();
 cookies();
 smallText();
+inputFile();
