@@ -7,21 +7,29 @@ const Lead = require('../models/leads');
 
 const requestParser = require('../controller/requestParser');
 const mailchimpSubscribe = require('../controller/mailchimpSubscribe');
+const fileUploader = require('../controller/file-uploader');
+const emailSender = require('../controller/email-send');
 
-const transporter = require('../controller/nodemailer-setup');
-
-router.post('/:language/request', (req, res) => {
+router.post('/:language/request', fileUploader, emailSender, (req, res) => {
 	const reqBody = req.body;
+	//console.log(req.file);
 	const privacyResponse = requestParser(reqBody);
 	const language = req.params.language;
 	//console.log(req.params);
 	//console.log(req.url);
+
+	const fileLinks = req.files.map(
+		(file) => `https://connectionline.ch/uploads/${reqBody.name}-${file.filename.replace(/ /g, '%20')}`
+	);
+
+	console.log(fileLinks);
 
 	const reach = new Reach({
 		name: req.sanitize(reqBody.name),
 		email: req.sanitize(reqBody.email),
 		phoneNumber: req.sanitize(reqBody.phoneNumber),
 		request: req.sanitize(reqBody.request),
+		files: fileLinks,
 		privacy_accepted: privacyResponse.privacy,
 		newsletter_accepted: privacyResponse.newsletter
 	});
@@ -31,40 +39,9 @@ router.post('/:language/request', (req, res) => {
 			console.error(err);
 			res.send('An error has occurred. Please contact the system administrator.');
 		}
-		console.log(reach);
+		//console.log(reach);
 		if (reach.privacy_accepted && reach.newsletter_accepted)
 			mailchimpSubscribe(reach.email, reach.name, reach.phoneNumber);
-		let newsletterMessage;
-		reach.newsletter_accepted
-			? (newsletterMessage = 'Si iscrive alla nostra mailing list.')
-			: (newsletterMessage = 'Non si iscrive alla mailing list.');
-		if (reach.privacy_accepted) {
-			const message = {
-				from: 'connectionlinesagl@gmail.com',
-				to: 'connectionlinesagl@gmail.com',
-				//cc: 'connectionlinesagl@gmail.com',
-				subject: 'Una nuova richiesta dal sito!',
-				html: `
-            <h1>È arrivata una nuova richiesta dal sito!</h1>
-                        <p><strong>Nome:</strong> ${reach.name}</p>
-                        <p><strong>Email:</strong> ${reach.email}</p>
-                        <p><strong>Numero di Telefono:</strong> ${reach.phoneNumber}</p>
-                        <ul>
-                        <li>Accetta le normative sulla privacy</li>
-                        <li>${newsletterMessage}</li>
-                        </ul>
-                        <p><strong>Richiesta:</strong></p>
-                        <p>${reach.request}</p>
-                <h3>Ricontattala subito!!</h3>`
-			};
-			transporter.sendMail(message, (err, info) => {
-				if (err) {
-					console.error(err);
-					res.send('An error has occurred. Please contact the system administrator.');
-				}
-				//console.log(info);
-			});
-		}
 		res.redirect(`/${language}/thankyou`);
 	});
 });

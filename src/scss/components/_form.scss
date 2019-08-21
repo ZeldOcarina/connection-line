@@ -1,158 +1,219 @@
 .form {
+	&__group:not(:last-child) {
+		margin-bottom: 1rem;
 
-    &__group:not(:last-child) {
-        margin-bottom: 1rem;
+		@include respond(settecento) {
+			margin-bottom: .5rem;
+		}
 
-        @include respond(settecento) {
-            margin-bottom: .5rem;
-        }
-        
-        @include respond(trecentosettantacinque) {
-            margin-bottom: 0rem;
-            height: auto;
-        }
-    }
+		@include respond(trecentosettantacinque) {
+			margin-bottom: 0rem;
+			height: auto;
+		}
+	}
 
-    &__input {
-        font-size: 1.5rem;
-        font-family: inherit;
-        color: inherit;
-        padding: 1.5rem 2rem;
-        border-radius: 2px;
-        background-color: rgba($white, .8);
-        border: none;
-        border-bottom: 3px solid transparent;
-        width: 90%;
-        display: block;
-        transition: all .3s;
+	&__paragraph {
+		margin-top: -.5rem;
+		margin-bottom: 3rem;
+		margin-left: 2rem;
+		font-size: $small-font-size;
+	}
 
-        @include respond(milletrecento) { 
-            padding: 1rem 1.5rem;
-            font-size: 1.4rem;
-        }
+	&__input {
+		font-size: 1.5rem;
+		font-family: inherit;
+		color: inherit;
+		padding: 1.5rem 2rem;
+		border-radius: 2px;
+		background-color: rgba($white, .8);
+		border: none;
+		border-bottom: 3px solid transparent;
+		width: 90%;
+		display: block;
+		transition: all .3s;
 
-        @include respond(novecento) { 
-            width: 100%;
-        }
+		&--file {
+			width: 0.1px;
+			height: 0.1px;
+			opacity: 0;
+			overflow: hidden;
+			position: absolute;
+			z-index: -1;
 
-        /*@include respond(tab-port) {
+			&-icon {
+				margin-right: 1rem;
+				filter: invert(48%) sepia(0%) saturate(2239%) hue-rotate(80deg) brightness(102%) contrast(81%);
+			}
+		}
+
+		&--file + label {
+			display: flex !important;
+			align-items: center;
+			justify-content: center;
+			align-content: center;
+			width: 90%;
+			font-size: $basic-font-size;
+			font-weight: $thin;
+			background-color: $color-grey-light-2;
+			display: inline-block;
+			cursor: pointer;
+			margin-bottom: 2rem;
+			padding: 3rem 1rem;
+			text-align: center;
+			margin-left: 0;
+			margin-bottom: 0;
+
+			@include respond(milletrecento) {
+				font-size: 1.4rem;
+			}
+
+			@include respond(novecento) {
+				width: 100%;
+			}
+
+			@include respond(quattrocento) {
+				font-size: 1.2rem;
+			}
+		}
+
+		&--file:focus + label,
+		&--file + label:hover {
+			background-color: $color-grey-light;
+		}
+
+		&--file:focus + label {
+			outline: 1px dotted #000;
+			outline: -webkit-focus-ring-color auto 5px;
+		}
+
+		&--file + label * {
+			pointer-events: none;
+		}
+
+		@include respond(milletrecento) {
+			padding: 1rem 1.5rem;
+			font-size: 1.4rem;
+		}
+
+		@include respond(novecento) {
+			width: 100%;
+		}
+
+		/*@include respond(tab-port) {
             width: 100%;
         }*/
-        
-        @include respond(trecentosettantacinque) {
-            font-size: 1.2rem;
-        }
 
-        &:focus {
-            outline: none;
-            box-shadow: 0 1rem 2rem rgba($black, .1);
-            border-bottom: 3px solid $color-primary;
-        }
+		@include respond(trecentosettantacinque) {
+			font-size: 1.2rem;
+		}
 
-        &:focus:invalid {
-            border-bottom: 3px solid $color-secondary;
-        }
+		&:focus {
+			outline: none;
+			box-shadow: 0 1rem 2rem rgba($black, .1);
+			border-bottom: 3px solid $color-primary;
+		}
 
-        &::-webkit-input-placeholder {
-            color: $color-grey-dark;
-        }
-    }
+		&:focus:invalid {
+			border-bottom: 3px solid $color-secondary;
+		}
 
-    &__checkbox-group {
-        width: 100%;
-        display: block;
-        margin: 2rem 0;
+		&::-webkit-input-placeholder {
+			color: $color-grey-dark;
+		}
+	}
 
-        @include respond(settecento) {
-            margin: 1rem 0;
-        }
-       
-        @include respond(seicento) {
-            width: 80%;
-        }
-        
-        @include respond(trecentosettantacinque) {
-            margin: .5rem 0;
-        }
-        
-    }
+	&__checkbox-group {
+		width: 100%;
+		display: block;
+		margin: 2rem 0;
 
-    &__checkbox-input {
-        display: none;
-    }
+		@include respond(settecento) {
+			margin: 1rem 0;
+		}
 
-    &__checkbox-label {
-        font-size: $basic-font-size;
-        cursor: pointer;
-        position: relative;
-        padding-left: 4rem;
+		@include respond(seicento) {
+			width: 80%;
+		}
 
-        @include respond(milletrecento) { 
-            font-size: 1.4rem;
-        }
-        
-        @include respond(quattrocento) { 
-            font-size: 1.2rem;
-        }
+		@include respond(trecentosettantacinque) {
+			margin: .5rem 0;
+		}
+	}
 
-        
-    }
+	&__checkbox-input {
+		display: none;
+	}
 
-    &__checkbox-button {
-        height: 2.5rem;
-        width: 2.5rem;
-        border: 4px solid $color-primary;
-        border-radius: .5rem;
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        top: -.4rem;
+	&__checkbox-label {
+		font-size: $basic-font-size;
+		cursor: pointer;
+		position: relative;
+		padding-left: 4rem;
 
-        &:hover {
-            cursor: pointer;
-        }
+		@include respond(milletrecento) {
+			font-size: 1.4rem;
+		}
 
-        &::after {
-            content: "";
-            display: block;
-            height: 1.2rem;
-            width: 1.2rem;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: $color-primary;
-            opacity: 0;
-            transition: opacity .2s;       
+		@include respond(quattrocento) {
+			font-size: 1.2rem;
+		}
+	}
 
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
+	&__checkbox-button {
+		height: 2.5rem;
+		width: 2.5rem;
+		border: 4px solid $color-primary;
+		border-radius: .5rem;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: -.4rem;
 
-    &__checkbox-input:checked ~ &__checkbox-label &__checkbox-button::after {
-        opacity: 1;
-    }
+		&:hover {
+			cursor: pointer;
+		}
 
-    &__label {
-        font-size: 1.2rem;
-        font-weight: $thin;
-        margin-left: 2rem;
-        margin-top: .7rem;
-        display: block;
-        transition: all .3s;
-    }
+		&::after {
+			content: "";
+			display: block;
+			height: 1.2rem;
+			width: 1.2rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: $color-primary;
+			opacity: 0;
+			transition: opacity .2s;
 
-    &__input:placeholder-shown + &__label {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-4rem);
-    }
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
 
-    &__submit {
-        @include respond(trecentosettantacinque) {
-            font-size: 1.2rem;
-        }
-    }
+	&__checkbox-input:checked ~ &__checkbox-label &__checkbox-button::after {
+		opacity: 1;
+	}
+
+	&__label {
+		font-size: 1.2rem;
+		font-weight: $thin;
+		margin-left: 2rem;
+		margin-top: .7rem;
+		display: block;
+		transition: all .3s;
+	}
+
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-4rem);
+	}
+
+	&__submit {
+		@include respond(trecentosettantacinque) {
+			font-size: 1.2rem;
+		}
+	}
 }

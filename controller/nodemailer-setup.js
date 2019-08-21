@@ -1,17 +1,14 @@
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
-    pool: true,
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true, // use TLS
-    auth: {
-      user: "connectionlinesagl@gmail.com",
-      pass: process.env.GMAIL_PASSWORD
-    }
-  });
+	service: 'SendGrid',
+	auth: {
+		user: process.env.SENDGRID_USERNAME,
+		pass: process.env.SENDGRID_PASSWORD
+	}
+});
 
-  /*transporter.verify(function(error, success) {
+/*transporter.verify(function(error, success) {
     if (error) {
       console.log(error);
     } else {
@@ -19,4 +16,4 @@ const transporter = nodemailer.createTransport({
     }
   });*/
 
-  module.exports = transporter;  
+module.exports = transporter;
