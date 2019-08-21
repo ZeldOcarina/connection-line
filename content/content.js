@@ -224,8 +224,8 @@ exports.germanContent = function () {
             cta: 'Fordern Sie sofort einen Kostenvoranschlag an',
         },
         counters: {
-            interpreti: ['ÜBERSETZER UND DOLMETSCHER', 'AUS ÜBER', 'SPRACHKOMBINATIONEN.'],
-            combinazioni: ['ZUFRIEDENE KUNDEN.'],
+            interpreti: ['ÜBERSETZER UND DOLMETSCHER', 'AUS ÜBER', 'LÄNDERN.'],
+            combinazioni: ['SPRACHKOMBINATIONEN.'],
             clientiSoddisfatti: ['ZUFRIEDENE KUNDEN'],
             paroleTradotte: ['ÜBERSETZTE WÖRTER', 'in', 'VERSCHIEDENEN SPRACHEN.']
         },
@@ -251,7 +251,7 @@ exports.germanContent = function () {
             },
             legale: {
                 header: 'WIRTSCHAFT',
-                text1: 'Wir haben uns auf juristische Übersetzungen. In den letzten Jahren haben wir Partnerschaften mit Rechtsanwaltskanzleien.',
+                text1: 'Wir haben uns auf juristische Übersetzungen spezialisiert und in den letzten Jahren Partnerschaften mit Rechtsanwaltskanzleien aufgebaut.',
                 text2: 'Wenn ein Kunde eine kommentierte und beglaubigte Übersetzung benötigt, kümmern wir uns um den gesamten Ablauf.',
             },
             finanza: {
@@ -277,7 +277,7 @@ exports.germanContent = function () {
         },
         testimonials: {
             header: 'Unsere Kunden',
-            text1: 'Wir haben es uns zum Ziel gesetzt, unsere Erfahrung und unser Wissen für Firmen und Privatpersonen zur Verfügung zu stellen, um ihnen dabei zu helfen, die seit undenklichen Zeiten existierenden Sprachbarrieren zu beseitigen.',
+            text1: 'Wir haben es uns zum Ziel gesetzt, unsere Erfahrung und unser Wissen für Firmen und Privatpersonen zur Verfügung zu stellen, um ihnen dabei zu helfen, die seit undenklichen Zeiten existierenden Sprachbarrieren zu überwinden.',
             text2: 'Wir glauben, dass bei einer adäquaten Übersetzung Sinn, Sprachebene und Ausdrucksweise der Ausgangssprache erhalten bleiben müssen, während gleichzeitig der Struktur und den Besonderheiten der Zielsprache Rechnung getragen wird.',
             text3: 'Die Ziele und Erwartungen sowie die Zufriedenheit unserer Kunden liegen uns dabei besonders am Herzen.'
         },
