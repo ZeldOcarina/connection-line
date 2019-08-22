@@ -1,11 +1,33 @@
+const aws = require('aws-sdk');
 const multer = require('multer');
+const multerS3 = require('multer-s3');
 const sanitize = require('sanitize-filename');
 
-var storage = multer.diskStorage({
+aws.config.update({
+	accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+	secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+	region: process.env.AWS_REGION
+});
+
+const s3 = new aws.S3();
+
+/************************************
+ * NORMAL DISK STORAGE UPLOAD CONFIG
+ ************************************/
+
+/*const storage = multer.diskStorage({
 	destination: function(req, file, cb) {
 		cb(null, 'public/uploads');
 	},
 	filename: function(req, file, cb) {
+		cb(null, sanitize(`${req.body.name}-${file.originalname}`));
+	}
+}); */
+
+const storage = multerS3({
+	s3,
+	bucket: process.env.S3_BUCKET,
+	key: function(req, file, cb) {
 		cb(null, sanitize(`${req.body.name}-${file.originalname}`));
 	}
 });
@@ -22,7 +44,7 @@ const multerFilter = (req, file, cb) => {
 };
 
 const upload = multer({
-	storage: storage,
+	storage,
 	fileFilter: multerFilter,
 	limits: {
 		fileSize: 5000000,

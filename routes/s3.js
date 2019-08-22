@@ -1,4 +1,4 @@
-const aws = require('aws-sdk');
+/*const aws = require('aws-sdk');
 
 const S3_BUCKET = process.env.S3_BUCKET;
 
@@ -29,3 +29,4 @@ app.get('/sign-s3', (req, res) => {
 		res.end();
 	});
 });
+*/

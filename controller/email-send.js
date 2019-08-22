@@ -3,9 +3,7 @@ const sanitize = require('sanitize-filename');
 
 module.exports = emailSender = async (req, res, next) => {
 	let newsletterMessage;
-	const links = req.files.map(
-		(file) => `http://connectionline.ch/uploads/${sanitize(file.filename.replace(/ /g, '%20'))}`
-	);
+	const links = req.files.map((file) => file.location);
 
 	req.body.newsletter_accepted === 'on'
 		? (newsletterMessage = 'Si iscrive alla nostra mailing list.')
@@ -14,7 +12,7 @@ module.exports = emailSender = async (req, res, next) => {
 		const message = {
 			from: req.body.email,
 			to: 'connectionlinesagl@gmail.com',
-			cc: 'info@connectionlinesagl.com',
+			//cc: 'info@connectionlinesagl.com',
 			subject: 'Una nuova richiesta dal sito!',
 			html: `
             <h1>È arrivata una nuova richiesta dal sito!</h1>

@@ -18,9 +18,7 @@ router.post('/:language/request', fileUploader, emailSender, (req, res) => {
 	//console.log(req.params);
 	//console.log(req.url);
 
-	const fileLinks = req.files.map(
-		(file) => `https://connectionline.ch/uploads/${reqBody.name}-${file.filename.replace(/ /g, '%20')}`
-	);
+	const fileLinks = req.files.map((file) => file.location);
 
 	const reach = new Reach({
 		name: req.sanitize(reqBody.name),
