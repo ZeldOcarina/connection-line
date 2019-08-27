@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const multer = require('multer');
+
 //REQUIRING MONGO MODEL
 const Reach = require('../models/reaches');
 const Lead = require('../models/leads');
@@ -9,15 +11,18 @@ const requestParser = require('../controller/requestParser');
 const mailchimpSubscribe = require('../controller/mailchimpSubscribe');
 const fileUploader = require('../controller/file-uploader');
 const emailSender = require('../controller/email-send');
+const captchaChecker = require('../controller/captchaChecker');
 
-router.post('/:language/request', fileUploader, emailSender, (req, res) => {
+router.post('/:language/request', fileUploader, captchaChecker, emailSender, async (req, res) => {
 	const reqBody = req.body;
+
 	//console.log(req.file);
 	const privacyResponse = requestParser(reqBody);
 	const language = req.params.language;
 	//console.log(req.params);
 	//console.log(req.url);
 
+	//if (await captchaCheck(process.env.RECAPTCHA_SECRET_KEY, req.body['g-recaptcha-response'])) {
 	const fileLinks = req.files.map((file) => file.location);
 
 	const reach = new Reach({
@@ -40,9 +45,14 @@ router.post('/:language/request', fileUploader, emailSender, (req, res) => {
 			mailchimpSubscribe(reach.email, reach.name, reach.phoneNumber);
 		res.redirect(`/${language}/thankyou`);
 	});
+	/*} else {
+		res.send(
+			'An error has occurred on processing your request. Please contact us manually at info@connectionlinesagl.com'
+		);
+	}*/
 });
 
-router.post('/:language/newsletter-subscription', (req, res) => {
+router.post('/:language/newsletter-subscription', captchaChecker, (req, res) => {
 	// Handles subscription to the newsletter
 	const reqBody = req.body;
 	const privacyResponse = requestParser(reqBody);

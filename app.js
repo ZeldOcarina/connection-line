@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const expressSanitizer = require('express-sanitizer');
 
+const { getUrl } = require('./controller/getUrl');
+
 let port = process.env.PORT;
 let appState = 'production';
 if (port == null || port == '') {
@@ -45,9 +47,10 @@ const homeRoute = require('./routes/home');
 const requestRoute = require('./routes/reach');
 const thankyouRoute = require('./routes/thankyou');
 const privacyRoute = require('./routes/privacy');
+const captchaCheck = require('./controller/captchaCheck');
 
 //HOME PAGE
-app.use(homeRoute);
+app.use(getUrl, homeRoute);
 app.use(requestRoute);
 app.use(thankyouRoute);
 app.use(privacyRoute);

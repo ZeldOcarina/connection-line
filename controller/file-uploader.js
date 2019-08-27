@@ -3,6 +3,8 @@ const multer = require('multer');
 const multerS3 = require('multer-s3');
 const sanitize = require('sanitize-filename');
 
+const captchaCheck = require('./captchaCheck');
+
 aws.config.update({
 	accessKeyId: process.env.AWS_ACCESS_KEY_ID,
 	secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,

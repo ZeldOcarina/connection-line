@@ -30,27 +30,27 @@ module.exports = emailSender = async (req, res, next) => {
 			cc: 'info@connectionlinesagl.com',
 			subject: 'Una nuova richiesta dal sito!',
 			html: `
-            <h1>È arrivata una nuova richiesta dal sito!</h1>
-                        <p><strong>Nome:</strong> ${req.body.name}</p>
-                        <p><strong>Email:</strong> ${req.body.email}</p>
-                        <p><strong>Numero di Telefono:</strong> ${req.body.phoneNumber}</p>
-                        <ul>
-                        <li>Accetta le normative sulla privacy</li>
-                        <li>${newsletterMessage}</li>
-                        </ul>
-                        <p><strong>Richiesta:</strong></p>
-						<p>${req.body.request}</p>
-						${links.length > 0
-							? `<p>Il cliente ha caricato questi file:</p>
-						${links.map(
-							(link) => `
-						<p>${link}</p>
-						`
-						)}
-						<p>Ricorda che questi link sono validi per una settimana.</p>`
-							: ''}
-						
-                <h3>Ricontattala subito!!</h3>`
+				<h1>È arrivata una nuova richiesta dal sito!</h1>
+							<p><strong>Nome:</strong> ${req.body.name}</p>
+							<p><strong>Email:</strong> ${req.body.email}</p>
+							<p><strong>Numero di Telefono:</strong> ${req.body.phoneNumber}</p>
+							<ul>
+							<li>Accetta le normative sulla privacy</li>
+							<li>${newsletterMessage}</li>
+							</ul>
+							<p><strong>Richiesta:</strong></p>
+							<p>${req.body.request}</p>
+							${links.length > 0
+								? `<p>Il cliente ha caricato questi file:</p>
+							${links.map(
+								(link) => `
+							<p>${link}</p>
+							`
+							)}
+							<p>Ricorda che questi link sono validi per una settimana.</p>`
+								: ''}
+							
+					<h3>Ricontattala subito!!</h3>`
 		};
 		try {
 			await transporter.sendMail(message);
