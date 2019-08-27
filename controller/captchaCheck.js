@@ -9,6 +9,9 @@ const captchaCheck = async (secret, response) => {
 		return res.data.success;
 	} catch (err) {
 		console.error(err);
+		return res
+			.status(500)
+			.render('error', { title: 'Error!', msg: 'Something with the reCaptcha has gone wrong... 😢' });
 	}
 };
 

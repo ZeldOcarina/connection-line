@@ -8,6 +8,12 @@ const expressSanitizer = require('express-sanitizer');
 
 const { getUrl } = require('./controller/getUrl');
 
+process.on('uncaughtException', (err) => {
+	console.error(err.name, err.message);
+	console.log('Uncaught Exception, shutting down');
+	process.exit(1);
+});
+
 let port = process.env.PORT;
 let appState = 'production';
 if (port == null || port == '') {
@@ -47,7 +53,6 @@ const homeRoute = require('./routes/home');
 const requestRoute = require('./routes/reach');
 const thankyouRoute = require('./routes/thankyou');
 const privacyRoute = require('./routes/privacy');
-const captchaCheck = require('./controller/captchaCheck');
 
 //HOME PAGE
 app.use(getUrl, homeRoute);
@@ -55,5 +60,17 @@ app.use(requestRoute);
 app.use(thankyouRoute);
 app.use(privacyRoute);
 
+app.all('*', (req, res, next) => {
+	res.status(404).render('error', { title: '404', msg: 'The required page does not exist on this server!' });
+});
+
 //PORT SETUP
-app.listen(port, () => console.log('Server started on port ' + port));
+const server = app.listen(port, () => console.log('Server started on port ' + port));
+
+process.on('unhandledRejection', (err) => {
+	console.log(err.name, err.message);
+	console.log('Unhandled rejection, shutting down');
+	server.close(() => {
+		process.exit(1);
+	});
+});

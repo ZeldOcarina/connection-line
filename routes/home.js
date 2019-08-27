@@ -13,7 +13,7 @@ router.get('/:language', (req, res) => {
 
 	const selectedLanguageContent = languageSelector(language);
 
-	res.render('index', {
+	res.status(200).render('index', {
 		content: selectedLanguageContent,
 		language: language,
 		publicKey: process.env.RECAPTCHA_PUBLIC_KEY

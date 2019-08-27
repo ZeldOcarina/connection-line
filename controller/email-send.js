@@ -56,7 +56,11 @@ module.exports = emailSender = async (req, res, next) => {
 			await transporter.sendMail(message);
 		} catch (err) {
 			console.error(err);
-			res.send('An error has occurred. Please contact the system administrator at connectionlinesagl@gmail.com');
+			res.status(500).render('error', {
+				title: 'Error!',
+				msg:
+					'There has been an error in your request. Would you mind writing us at info@connectionlinesagl.com?'
+			});
 		}
 	}
 	next();

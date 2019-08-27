@@ -12,7 +12,7 @@ router.get('/:language/privacy', (req, res) => {
 	const language = req.params.language;
 
 	const selectedLanguageContent = languageSelector(language);
-	res.render('privacy-' + language, { content: selectedLanguageContent, language: language });
+	res.status(200).render('privacy-' + language, { content: selectedLanguageContent, language: language });
 });
 
 module.exports = router;

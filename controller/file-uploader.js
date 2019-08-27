@@ -3,8 +3,6 @@ const multer = require('multer');
 const multerS3 = require('multer-s3');
 const sanitize = require('sanitize-filename');
 
-const captchaCheck = require('./captchaCheck');
-
 aws.config.update({
 	accessKeyId: process.env.AWS_ACCESS_KEY_ID,
 	secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
@@ -44,7 +42,10 @@ const multerFilter = (req, file, cb) => {
 		file.mimetype === 'application/vnd.ms-powerpoint'
 	)
 		cb(null, true);
-	else cb(console.error('Wrong file type!'), false);
+	else {
+		req.fileValidationError = 'Forbidden extension';
+		return cb(null, false, req.fileValidationError);
+	}
 };
 
 const upload = multer({
@@ -56,4 +57,10 @@ const upload = multer({
 	}
 });
 
-module.exports = upload.array('file', 5);
+exports.fileUploader = upload.array('file', 5);
+
+exports.multerErrorChecker = (req, res, next) => {
+	if (req.fileValidationError)
+		return res.status(400).render('error', { title: 'Error!', msg: 'Wrong files uploaded!' });
+	next();
+};

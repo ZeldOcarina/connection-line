@@ -9,11 +9,11 @@ const Lead = require('../models/leads');
 
 const requestParser = require('../controller/requestParser');
 const mailchimpSubscribe = require('../controller/mailchimpSubscribe');
-const fileUploader = require('../controller/file-uploader');
+const { fileUploader, multerErrorChecker } = require('../controller/file-uploader');
 const emailSender = require('../controller/email-send');
 const captchaChecker = require('../controller/captchaChecker');
 
-router.post('/:language/request', fileUploader, captchaChecker, emailSender, async (req, res) => {
+router.post('/:language/request', fileUploader, captchaChecker, multerErrorChecker, emailSender, (req, res) => {
 	const reqBody = req.body;
 
 	//console.log(req.file);
@@ -38,7 +38,7 @@ router.post('/:language/request', fileUploader, captchaChecker, emailSender, asy
 	reach.save((err, reach) => {
 		if (err) {
 			console.error(err);
-			res.send('An error has occurred. Please contact the system administrator.');
+			res.status(500).render('error', { title: 'Error!', msg: 'Server error! 😢' });
 		}
 		//console.log(reach);
 		if (reach.privacy_accepted && reach.newsletter_accepted)
@@ -67,7 +67,7 @@ router.post('/:language/newsletter-subscription', captchaChecker, (req, res) => 
 	lead.save((err, lead) => {
 		if (err) {
 			console.error(err);
-			res.send('An error has occurred. Please contact the system administrator.');
+			res.status(500).render('error', { title: 'Error!', msg: 'Server error! 😢' });
 		}
 		if (lead.newsletter_accepted) {
 			mailchimpSubscribe(lead.email, lead.name);
