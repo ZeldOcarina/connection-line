@@ -39,7 +39,9 @@ const multerFilter = (req, file, cb) => {
 		file.mimetype === 'application/pdf' ||
 		file.mimetype === 'application/x-pdf' ||
 		file.mimetype === 'application/msword' ||
-		file.mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+		file.mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ||
+		file.mimetype === 'application/vnd.openxmlformats-officedocument.presentationml.presentation' ||
+		file.mimetype === 'application/vnd.ms-powerpoint'
 	)
 		cb(null, true);
 	else cb(console.error('Wrong file type!'), false);
