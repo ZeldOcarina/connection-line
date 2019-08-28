@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const multer = require('multer');
-
 //REQUIRING MONGO MODEL
 const Reach = require('../models/reaches');
 const Lead = require('../models/leads');
@@ -12,6 +10,7 @@ const mailchimpSubscribe = require('../controller/mailchimpSubscribe');
 const { fileUploader, multerErrorChecker } = require('../controller/file-uploader');
 const emailSender = require('../controller/email-send');
 const captchaChecker = require('../controller/captchaChecker');
+const transporter = require('../controller/nodemailer-setup');
 
 router.post('/:language/request', fileUploader, captchaChecker, multerErrorChecker, emailSender, (req, res) => {
 	const reqBody = req.body;
@@ -38,12 +37,12 @@ router.post('/:language/request', fileUploader, captchaChecker, multerErrorCheck
 	reach.save((err, reach) => {
 		if (err) {
 			console.error(err);
-			res.status(500).render('error', { title: 'Error!', msg: 'Server error! 😢' });
+			res.status(500).render('error', { title: '500', msg: 'Server error! 😢' });
 		}
 		//console.log(reach);
 		if (reach.privacy_accepted && reach.newsletter_accepted)
 			mailchimpSubscribe(reach.email, reach.name, reach.phoneNumber);
-		res.redirect(`/${language}/thankyou`);
+		res.status(201).redirect(`/${language}/thankyou`);
 	});
 	/*} else {
 		res.send(
@@ -67,7 +66,7 @@ router.post('/:language/newsletter-subscription', captchaChecker, (req, res) => 
 	lead.save((err, lead) => {
 		if (err) {
 			console.error(err);
-			res.status(500).render('error', { title: 'Error!', msg: 'Server error! 😢' });
+			res.status(500).render('error', { title: '500', msg: 'Server error! 😢' });
 		}
 		if (lead.newsletter_accepted) {
 			mailchimpSubscribe(lead.email, lead.name);
@@ -75,7 +74,7 @@ router.post('/:language/newsletter-subscription', captchaChecker, (req, res) => 
 			const message = {
 				from: 'connectionlinesagl@gmail.com',
 				to: 'connectionlinesagl@gmail.com',
-				cc: 'info@connectionlinesagl.com',
+				//cc: 'info@connectionlinesagl.com',
 				subject: 'Nuova iscrizione alla mailing list!',
 				html: `
                 <h2>Abbiamo un nuovo iscritto per la nostra mailing list!</h2>
@@ -86,7 +85,7 @@ router.post('/:language/newsletter-subscription', captchaChecker, (req, res) => 
 			transporter.sendMail(message, (err, info) => {
 				if (err) {
 					console.error(err);
-					res.send('An error has occurred. Please contact the system administrator.');
+					res.status(500).render('error', { title: '500', msg: 'Server error! 😢' });
 				}
 				//console.log(info);
 			});
