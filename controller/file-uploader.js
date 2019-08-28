@@ -37,19 +37,35 @@ const multerFilter = (req, file, cb) => {
 		file.mimetype === 'application/pdf' ||
 		file.mimetype === 'application/x-pdf' ||
 		file.mimetype === 'application/msword' ||
-		file.mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+		file.mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ||
+		file.mimetype === 'application/vnd.openxmlformats-officedocument.presentationml.presentation' ||
+		file.mimetype === 'application/vnd.ms-powerpoint'
 	)
 		cb(null, true);
-	else cb(console.error('Wrong file type!'), false);
+	else {
+		cb(new Error('An error has occurred on uploading the files!'), false);
+	}
 };
 
 const upload = multer({
 	storage,
 	fileFilter: multerFilter,
 	limits: {
-		fileSize: 5000000,
-		files: 5
+		fileSize: 1024 * 1024 * 10,
+		files: 10
 	}
 });
 
-module.exports = upload.array('file', 5);
+exports.fileUploader = upload.array('file', 10);
+
+exports.multerErrorChecker = (err, req, res, next) => {
+	if (err.name === 'MulterError') {
+		console.error(err);
+		console.log(req.files, req.body);
+		return res.status(400).render('error', {
+			title: 'Upload Error',
+			msg: 'Please try again or send your files manually to info@connectionlinesagl.com'
+		});
+	}
+	next();
+};
