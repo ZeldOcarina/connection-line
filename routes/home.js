@@ -5,7 +5,7 @@ const languageSelector = require('../controller/language-selector');
 
 //HOME ROUTE
 router.get('/', (req, res) => {
-	res.redirect('/en');
+	res.redirect('/it');
 });
 
 router.get('/:language', (req, res) => {
