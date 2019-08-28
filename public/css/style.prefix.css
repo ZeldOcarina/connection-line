@@ -2208,6 +2208,32 @@ body {
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg); }
 
+.error {
+  height: 70vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(#00589e), to(#d1d1d1));
+  background-image: -o-linear-gradient(left, #00589e, #d1d1d1);
+  background-image: linear-gradient(to right, #00589e, #d1d1d1); }
+  .error__title {
+    font-size: 5rem;
+    color: #b10000; }
+  .error__message {
+    margin-top: 2rem;
+    font-size: 3rem; }
+
 #section-hero {
   position: relative; }
 

@@ -1,10 +1,11 @@
 {
 	"name": "connection-line",
-	"version": "1.0.0",
-	"description": "A new website for CL Connection Line SAGL",
+	"version": "1.1.0",
+	"description": "A new website for Cl Connection Line SAGL",
 	"main": "app.js",
 	"scripts": {
 		"start": "node app.js",
+		"prod": "NODE_ENV=production nodemon server.js",
 		"watch:js": "webpack --config webpack.dev.js",
 		"build:js": "webpack --config webpack.prod.js",
 		"sass": "node-sass src/scss/main.scss public/css/app.min.css -w",
@@ -12,7 +13,7 @@
 		"prefix:css": "postcss public/css/app.comp.css -o public/css/style.prefix.css",
 		"compress:css": "node-sass public/css/style.prefix.css public/css/app.min.css --output-style compressed",
 		"build:css": "npm-run-all compile:sass prefix:css compress:css",
-		"build": "npm-run-all buildJS compile:sass prefix:css compress:css"
+		"build": "npm-run-all build:js compile:sass prefix:css compress:css"
 	},
 	"repository": {
 		"type": "git",

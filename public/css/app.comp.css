@@ -1873,6 +1873,20 @@ body {
   top: 0;
   transform: rotate(-135deg); }
 
+.error {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(to right, #00589e, #d1d1d1); }
+  .error__title {
+    font-size: 5rem;
+    color: #b10000; }
+  .error__message {
+    margin-top: 2rem;
+    font-size: 3rem; }
+
 #section-hero {
   position: relative; }
 
