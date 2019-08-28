@@ -8,6 +8,10 @@
 	z-index: 9999;
 	transition: all .3s;
 
+	@include respond(mobile_height) {
+		overflow: auto;
+	}
+
 	@supports (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) {
 		-webkit-backdrop-filter: blur(5px);
 		backdrop-filter: blur(5px);
