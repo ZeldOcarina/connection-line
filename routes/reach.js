@@ -90,7 +90,7 @@ router.post('/:language/newsletter-subscription', captchaChecker, (req, res) => 
 				//console.log(info);
 			});
 		}
-		res.redirect(`/${language}/thankyou`);
+		res.redirect(`/${language}/thankyou-lead`);
 	});
 });
 

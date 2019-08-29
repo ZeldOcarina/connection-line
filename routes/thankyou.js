@@ -4,10 +4,22 @@ const router = express.Router();
 //REQUIRING CONTENT
 const languageSelector = require('../controller/language-selector');
 
-router.get('/:language/thankyou', (req, res) => {
+router.use((req, res, next) => {
 	const language = req.params.language;
-	const selectedLanguageContent = languageSelector(language);
-	res.status(200).render('thankyou', { content: selectedLanguageContent, language: language, url: req.url });
+	req.selectedLanguageContent = languageSelector(language);
+	next();
+});
+
+router.get('/:language/thankyou', (req, res) => {
+	res
+		.status(200)
+		.render('thankyou', { content: req.selectedLanguageContent, language: req.params.language, url: req.url });
+});
+
+router.get('/:language/thankyou-lead', (req, res) => {
+	res
+		.status(200)
+		.render('thankyou-lead', { content: req.selectedLanguageContent, language: req.params.language, url: req.url });
 });
 
 module.exports = router;

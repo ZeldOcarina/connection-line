@@ -1,0 +1,34 @@
+<%- include("partials/header"); -%>
+
+<body>
+    <div class="thankyou">
+        <div class="thankyou__thankyou">
+            <h1 class="thankyou__title"><%= content.thankyouLead.title %></h1>
+            <p class="thankyou__social-text"><%= content.thankyouLead.social %><p>
+                    <div class="thankyou__social-container">
+                        <a href="https://www.facebook.com/Connection-Line-1627953997447733">
+                            <i class="fab fa-facebook-square facebook"></i>
+                        </a>
+                        <!--<a href="https://www.linkedin.com/feed/">
+                            <i class="fab fa-linkedin linkedin"></i>
+                        </a>-->
+                    </div>
+        </div>
+
+        <footer class="footer thankyou__footer" id="footer">
+            <p class="footer__mattia">
+                <%= content.footer.builtBy %>
+            </p>
+            <p class="footer__copyright">&copy; <%= content.footer.copyright %></p>
+            <div class="footer__navigation">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link"><%= content.footer.privacyPolicy %></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="/js/index.bundle.js"></script>
+</body>
+
+</html>

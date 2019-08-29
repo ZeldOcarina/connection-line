@@ -103,6 +103,10 @@ exports.englishContent = function () {
         thankyou: {
             title: 'Thanks for your submission. We will answer as soon as possible!',
             social: 'Follow us on social networks and avoid losing any of our offers!'
+        },
+        thankyouLead: {
+            title: 'Thanks for subscribing to our mailing list!',
+            social: 'Follow us on social networks and avoid losing any of our offers!'
         }
     }
     return englishText;
@@ -206,6 +210,10 @@ exports.frenchContent = function () {
             title: 'Merci pour votre présentation. Nous vous répondrons dès que possible!',
             social: 'Suivez-nous sur les réseaux sociaux et d\'éviter de perdre l\'une de nos offres'
         },
+        thankyouLead: {
+            title: 'Thanks for subscribing to our mailing list!',
+            social: 'Suivez-nous sur les réseaux sociaux et d\'éviter de perdre l\'une de nos offres'
+        }
     }
     return frenchText;
 }
@@ -314,6 +322,10 @@ exports.germanContent = function () {
         },
         thankyou: {
             title: 'Vielen Dank für Ihren Beitrag. Wir werden so schnell wie möglich antworten!',
+            social: 'Folgen Sie uns auf soziale Netzwerke und vermeiden, dass unsere Angebote!'
+        },
+        thankyouLead: {
+            title: 'Thanks for subscribing to our mailing list!',
             social: 'Folgen Sie uns auf soziale Netzwerke und vermeiden, dass unsere Angebote!'
         }
     }
@@ -424,6 +436,10 @@ Velocità, competenza e tecniche esclusive di controllo della qualità che assic
         },
         thankyou: {
             title: 'Grazie per averci contattato, ti risponderemo al più presto!',
+            social: 'Seguici sui social e non perdere nessuna delle nostre offerte!'
+        },
+        thankyouLead: {
+            title: 'Grazie per esserti iscritto alla nostra newsletter!',
             social: 'Seguici sui social e non perdere nessuna delle nostre offerte!'
         }
     }
