@@ -54,7 +54,8 @@
                         <%= content.form.newsletterConsent %> <span class="red">*</span>
                     </label>
                 </div>
-                <div class="g-recaptcha" data-sitekey="<%= publicKey %>"></div>
+                    <div class="g-recaptcha popup__captcha" data-sitekey="<%= publicKey %>" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+                
                 <button class="btn btn--primary popup__btn"><%= content.popup.cta %></button>
         </div>
         </form>

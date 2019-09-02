@@ -17,7 +17,7 @@ import {
  ************/
 
 const scrollify = () => {
-	if (lastURLWord() !== 'privacy') {
+	if (lastURLWord() !== 'privacy' || lastURLWord() !== 'thank-you' || lastURLWord() !== 'thank-you-lead') {
 		const sidebar = $('.progressive-sidebar__container');
 		const firstSection = $('.progressive-sidebar__section-1');
 		const secondSection = $('.progressive-sidebar__section-2');
