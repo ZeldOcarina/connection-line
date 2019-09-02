@@ -56,7 +56,7 @@ const scrollify = () => {
 				interstitialSection: '#footer',
 				easing: 'easeOutExpo',
 				scrollSpeed: 1100,
-				offset: 100,
+				offset: 0,
 				scrollbars: true,
 				standardScrollElements: '#cta, #privacy',
 				setHeights: true,
