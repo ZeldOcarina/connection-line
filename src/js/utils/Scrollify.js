@@ -17,7 +17,7 @@ import {
  ************/
 
 const scrollify = () => {
-	if (lastURLWord() !== 'privacy' || lastURLWord() !== 'thank-you' || lastURLWord() !== 'thank-you-lead') {
+	if (lastURLWord() !== 'privacy' || lastURLWord() !== 'thank-you' || lastURLWord() !== 'lead') {
 		const sidebar = $('.progressive-sidebar__container');
 		const firstSection = $('.progressive-sidebar__section-1');
 		const secondSection = $('.progressive-sidebar__section-2');
@@ -56,7 +56,7 @@ const scrollify = () => {
 				interstitialSection: '#footer',
 				easing: 'easeOutExpo',
 				scrollSpeed: 1100,
-				offset: 0,
+				offset: 100,
 				scrollbars: true,
 				standardScrollElements: '#cta, #privacy',
 				setHeights: true,
