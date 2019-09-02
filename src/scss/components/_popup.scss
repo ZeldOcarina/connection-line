@@ -96,8 +96,8 @@
 
 		@include respond(trecentosettantacinque) {
 			width: 90%;
-			font-size: 1.2rem;
-			margin-bottom: .3rem;
+			font-size: 1rem;
+			margin-bottom: 0;
 		}
 	}
 
@@ -156,8 +156,12 @@
 			margin-bottom: 1rem;
 
 			@include respond(settecento) {
-				margin-bottom: .4rem;
+				margin-bottom: 0;
 			}
+		}
+
+		&__group {
+			margin-top: -.5rem;
 		}
 
 		&__input {
@@ -172,7 +176,7 @@
 			font-size: 1.5rem;
 
 			@include respond(trecentosettantacinque) {
-				font-size: 1rem;
+				font-size: .8rem;
 				padding: .5rem;
 				margin: 0;
 			}
@@ -199,7 +203,7 @@
 			font-size: 1.3rem;
 
 			@include respond(trecentosettantacinque) {
-				font-size: 1.1rem;
+				font-size: .8rem;
 			}
 		}
 	}

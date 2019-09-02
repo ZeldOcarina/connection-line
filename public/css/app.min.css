@@ -1318,8 +1318,8 @@ body {
     @media only screen and (max-width: 23.45em) {
       .popup__header {
         width: 90%;
-        font-size: 1.2rem;
-        margin-bottom: .3rem; } }
+        font-size: 1rem;
+        margin-bottom: 0; } }
   .popup__text {
     width: 60%;
     margin: 0 auto;
@@ -1360,7 +1360,9 @@ body {
       margin-bottom: 1rem; }
       @media only screen and (max-width: 43.75em) {
         .popup__form-popup__group:not(:last-child) {
-          margin-bottom: .4rem; } }
+          margin-bottom: 0; } }
+    .popup__form-popup__group {
+      margin-top: -.5rem; }
     .popup__form-popup__input {
       display: block;
       width: 100%;
@@ -1373,7 +1375,7 @@ body {
       font-size: 1.5rem; }
       @media only screen and (max-width: 23.45em) {
         .popup__form-popup__input {
-          font-size: 1rem;
+          font-size: .8rem;
           padding: .5rem;
           margin: 0; } }
       .popup__form-popup__input:focus {
@@ -1389,7 +1391,7 @@ body {
       font-size: 1.3rem; }
       @media only screen and (max-width: 23.45em) {
         .popup__form-popup__label {
-          font-size: 1.1rem; } }
+          font-size: .8rem; } }
 
 .progressive-sidebar {
   position: fixed;
