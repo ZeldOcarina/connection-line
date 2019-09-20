@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const languageSelector = require('../controller/language-selector');
+const languageSelector = require('../utils/language-selector');
 
 //HOME ROUTE
 router.get('/', (req, res) => {

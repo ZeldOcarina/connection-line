@@ -9,7 +9,7 @@ const expressSanitizer = require('express-sanitizer');
 const { getUrl } = require('./controller/getUrl');
 
 process.on('uncaughtException', (err) => {
-	console.error(err.name, err.message);
+	console.error(err.name, err.message, err.stack);
 	console.log('Uncaught Exception, shutting down');
 	process.exit(1);
 });
@@ -22,7 +22,7 @@ if (port == null || port == '') {
 }
 
 //INCLUDING PERSONAL MODULES
-const limiter = require('./controller/security');
+const limiter = require('./config/security');
 
 require('dotenv').config();
 
@@ -43,6 +43,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressSanitizer());
 app.use('/uploads', express.static('uploads'));
 app.use(express.static('public'));
+app.use(express.json());
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
@@ -53,12 +54,14 @@ const homeRoute = require('./routes/home');
 const requestRoute = require('./routes/reach');
 const thankyouRoute = require('./routes/thankyou');
 const privacyRoute = require('./routes/privacy');
+const blogRoute = require('./routes/blog');
 
 //HOME PAGE
 app.use(getUrl, homeRoute);
 app.use(requestRoute);
 app.use(thankyouRoute);
 app.use(privacyRoute);
+app.use(blogRoute);
 
 app.all('*', (req, res, next) => {
 	res.status(404).render('error', { title: '404', msg: 'The required page does not exist on this server!' });
@@ -68,7 +71,7 @@ app.all('*', (req, res, next) => {
 const server = app.listen(port, () => console.log('Server started on port ' + port));
 
 process.on('unhandledRejection', (err) => {
-	console.log(err.name, err.message);
+	console.log(err.stack);
 	console.log('Unhandled rejection, shutting down');
 	server.close(() => {
 		process.exit(1);

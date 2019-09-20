@@ -5,12 +5,12 @@ const router = express.Router();
 const Reach = require('../models/reaches');
 const Lead = require('../models/leads');
 
-const requestParser = require('../controller/requestParser');
-const mailchimpSubscribe = require('../controller/mailchimpSubscribe');
+const requestParser = require('../utils/requestParser');
+const mailchimpSubscribe = require('../utils/mailchimpSubscribe');
 const { fileUploader, multerErrorChecker } = require('../controller/file-uploader');
 const emailSender = require('../controller/email-send');
 const captchaChecker = require('../controller/captchaChecker');
-const transporter = require('../controller/nodemailer-setup');
+const transporter = require('../config/nodemailer-setup');
 
 router.post('/:language/request', fileUploader, captchaChecker, multerErrorChecker, emailSender, (req, res) => {
 	const reqBody = req.body;

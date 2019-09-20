@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 //REQUIRING CONTENT
-const languageSelector = require('../controller/language-selector');
+const languageSelector = require('../utils/language-selector');
 
 router.use((req, res, next) => {
 	const language = req.params.language;
