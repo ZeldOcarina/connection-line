@@ -1,89 +1,54 @@
 const Post = require('../models/posts');
+const catchAsync = require('../utils/catchAsync');
+const AppError = require('../utils/appError');
 
-exports.getAllPosts = async (req, res) => {
-	try {
-		const posts = await Post.find();
+exports.getAllPosts = catchAsync(async (req, res, next) => {
+	const posts = await Post.find();
 
-		res.status(200).json({
-			status: 'success',
-			data: {
-				posts
-			}
-		});
-	} catch (err) {
-		console.error(err);
-		res.status(400).json({
-			status: 'error',
-			data: err.message
-		});
-	}
-};
+	res.status(200).json({
+		status: 'success',
+		data: {
+			posts
+		}
+	});
+});
 
-exports.createBlog = async (req, res) => {
-	try {
-		const newPost = await Post.create(req.body);
-		console.log(newPost);
-		res.status(201).json({
-			status: 'success',
-			data: {
-				post: newPost
-			}
-		});
-	} catch (err) {
-		console.error(err);
-		res.status(400).json({
-			status: 'error',
-			data: err.message
-		});
-	}
-};
+exports.createBlog = catchAsync(async (req, res, next) => {
+	const newPost = await Post.create(req.body);
+	res.status(201).json({
+		status: 'success',
+		data: {
+			post: newPost
+		}
+	});
+});
 
-exports.showPost = async (req, res) => {
-	try {
-		console.log(req.params);
-		const post = await Post.find({ slug: req.params.slug });
-		res.status(200).json({
-			status: 'success',
-			data: {
-				post
-			}
-		});
-	} catch (err) {
-		console.error(err);
-		res.status(400).json({
-			status: 'error',
-			data: err.message
-		});
-	}
-};
+exports.showPost = catchAsync(async (req, res, next) => {
+	const post = await Post.find({ slug: req.params.slug });
 
-exports.updatePost = async (req, res) => {
-	try {
-		const post = await Post.findOneAndUpdate({ slug: req.params.slug }, req.body, { new: true });
-		res.status(200).json({
-			status: 'success',
-			data: {
-				post
-			}
-		});
-	} catch (err) {
-		console.error(err);
-		res.status(400).json({
-			status: 'error',
-			data: err.message
-		});
-	}
-};
+	if (post.length === 0) return next(new AppError('No tour found', 404));
 
-exports.destroyBlog = async (req, res) => {
-	try {
-		await Post.findOneAndDelete({ slug: req.params.slug });
-		res.status(204).json({});
-	} catch (err) {
-		console.error(err);
-		res.status(400).json({
-			status: 'error',
-			data: err.message
-		});
-	}
-};
+	res.status(200).json({
+		status: 'success',
+		data: {
+			post
+		}
+	});
+});
+
+exports.updatePost = catchAsync(async (req, res, next) => {
+	const post = await Post.findOneAndUpdate({ slug: req.params.slug }, req.body, { new: true });
+	if (!post) return next(new AppError('No tour found', 404));
+	res.status(200).json({
+		status: 'success',
+		data: {
+			post
+		}
+	});
+});
+
+exports.destroyBlog = catchAsync(async (req, res, next) => {
+	const post = await Post.findOneAndDelete({ slug: req.params.slug });
+	if (!post) return next(new AppError('No tour found', 404));
+	res.status(204).json({});
+});

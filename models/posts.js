@@ -6,6 +6,7 @@ mongoose.plugin(slug);
 const postSchema = new mongoose.Schema({
 	title: {
 		required: [ true, 'A blog article must have a title' ],
+		unique: true,
 		type: String
 	},
 	subtitle: String,
