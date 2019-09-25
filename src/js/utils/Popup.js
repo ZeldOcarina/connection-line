@@ -15,7 +15,7 @@ const popup = () => {
 	popupOpener.on('click', openPopup);
 	popupCloseButton.on('click', closePopup);
 
-	if (page !== 'thankyou' && page !== 'privacy' && !Cookies.get('modalOpened')) {
+	/*if (page !== 'thankyou' && page !== 'privacy' && !Cookies.get('modalOpened')) {
 		setTimeout(() => {
 			if (!Cookies.get('modalOpened')) openPopup();
 		}, 20000);
@@ -25,7 +25,7 @@ const popup = () => {
 				openPopup();
 			}
 		});
-	}
+	}*/
 
 	$(document).keyup((e) => {
 		if (e.keyCode === 27 && popupState) closePopup(); // esc
