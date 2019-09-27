@@ -1,10 +1,38 @@
 const mongoose = require('mongoose');
 
-const commentSchema = new mongoose.Schema({
-	comment: [ String, 'A comment must have some content' ],
-	author: String,
+const User = require('./users');
+
+const commentsSchema = new mongoose.Schema({
+	comment: {
+		type: String,
+		required: [ true, 'A comment must have some content' ]
+	},
+	author: {
+		type: mongoose.Schema.ObjectId,
+		ref: 'User'
+	},
 	createdAt: Date,
-	relatedBlog: String
+	relatedPost: {
+		type: mongoose.Schema.ObjectId,
+		ref: 'Post'
+	}
 });
 
-module.exports = mongoose.model('Blog', blogSchema);
+commentsSchema.pre('save', function(next) {
+	this.createdAt = Date.now();
+	next();
+});
+
+commentsSchema.pre('save', async function() {
+	await User.findByIdAndUpdate(this.author, { commentsMade: this._id });
+});
+
+commentsSchema.pre(/^find/, function(next) {
+	this.populate({
+		path: 'author',
+		select: 'name -_id'
+	});
+	next();
+});
+
+module.exports = mongoose.model('Comment', commentsSchema);

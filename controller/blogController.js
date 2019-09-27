@@ -14,6 +14,8 @@ exports.getAllPosts = catchAsync(async (req, res, next) => {
 });
 
 exports.createBlog = catchAsync(async (req, res, next) => {
+	req.body.author = req.user._id;
+	console.log(req.body);
 	const newPost = await Post.create(req.body);
 	res.status(201).json({
 		status: 'success',
@@ -37,8 +39,9 @@ exports.showPost = catchAsync(async (req, res, next) => {
 });
 
 exports.updatePost = catchAsync(async (req, res, next) => {
-	const post = await Post.findOneAndUpdate({ slug: req.params.slug }, req.body, { new: true });
-	if (!post) return next(new AppError('No tour found', 404));
+	const user = req.user._id;
+	const post = await Post.findOneAndUpdate({ slug: req.params.slug, author: user }, req.body, { new: true });
+	if (!post) return next(new AppError("You cannot update someone else's post", 401));
 	res.status(200).json({
 		status: 'success',
 		data: {
