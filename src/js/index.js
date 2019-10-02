@@ -11,6 +11,7 @@ import popup from './utils/Popup';
 import cookies from './utils/Cookies';
 import smallText from './utils/SmallText';
 import inputFile from './utils/InputFile';
+import formilla from './utils/formilla';
 
 //import aws_s3 from './utils/aws_s3';
 
@@ -22,4 +23,5 @@ popup();
 cookies();
 smallText();
 inputFile();
+formilla();
 //aws_s3();
