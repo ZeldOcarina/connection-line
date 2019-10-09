@@ -1,5 +1,5 @@
 const aws = require('aws-sdk');
-const transporter = require('../controller/nodemailer-setup');
+const transporter = require('../config/nodemailer-setup');
 
 aws.config.update({
 	accessKeyId: process.env.AWS_ACCESS_KEY_ID,
