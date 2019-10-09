@@ -30,6 +30,7 @@ app.use(express.json());
 
 //REQUIRING ROUTES
 const homeRoute = require('./routes/home');
+const messengerBotRoute = require('./routes/messengerBot');
 const requestRoute = require('./routes/reach');
 const thankyouRoute = require('./routes/thankyou');
 const privacyRoute = require('./routes/privacy');
@@ -38,6 +39,7 @@ const usersRoute = require('./routes/users');
 
 //HOME PAGE
 app.use(getUrl, homeRoute);
+app.use('/messenger-bot', messengerBotRoute);
 app.use(requestRoute);
 app.use(thankyouRoute);
 app.use(privacyRoute);
