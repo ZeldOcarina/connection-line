@@ -38,8 +38,8 @@ const blogRoute = require('./routes/blog');
 const usersRoute = require('./routes/users');
 
 //HOME PAGE
-app.use(getUrl, homeRoute);
 app.use('/messenger-bot', messengerBotRoute);
+app.use(getUrl, homeRoute);
 app.use(requestRoute);
 app.use(thankyouRoute);
 app.use(privacyRoute);
