@@ -53,5 +53,7 @@ app.all('*', (req, res, next) => {
 
 app.use(globalErrorHandler);
 
+app.locals.publicKey = process.env.RECAPTCHA_PUBLIC_KEY;
+
 exports.app = app;
 exports.appState = appState;

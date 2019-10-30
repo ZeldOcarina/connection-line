@@ -15,8 +15,8 @@ router.get('/:language', (req, res) => {
 
 	res.status(200).render('index', {
 		content: selectedLanguageContent,
-		language,
-		publicKey: process.env.RECAPTCHA_PUBLIC_KEY
+		language
+		//publicKey: process.env.RECAPTCHA_PUBLIC_KEY
 	});
 });
 
