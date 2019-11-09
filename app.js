@@ -4,6 +4,7 @@ const favicon = require('serve-favicon');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const expressSanitizer = require('express-sanitizer');
+const cors = require('cors');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controller/errorController');
@@ -27,6 +28,7 @@ app.use(expressSanitizer());
 app.use('/uploads', express.static('uploads'));
 app.use(express.static('public'));
 app.use(express.json());
+app.use(cors());
 
 //REQUIRING ROUTES
 const homeRoute = require('./routes/home');
@@ -38,12 +40,13 @@ const blogRoute = require('./routes/blog');
 const usersRoute = require('./routes/users');
 
 //HOME PAGE
+app.use('/api/v1/blog', blogRoute);
 app.use('/messenger-bot', messengerBotRoute);
 app.use(getUrl, homeRoute);
 app.use(requestRoute);
 app.use(thankyouRoute);
 app.use(privacyRoute);
-app.use(blogRoute);
+
 app.use(usersRoute);
 
 //404
