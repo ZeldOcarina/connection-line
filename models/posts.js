@@ -28,7 +28,7 @@ postSchema.pre('save', function() {
 
 postSchema.pre('save', async function(next) {
 	const author = await User.findOneAndUpdate({ _id: this.author }, { postsMade: this._id }, { new: true });
-	console.log(author);
+	//console.log(author);
 });
 
 postSchema.pre(/^find/, function(next) {

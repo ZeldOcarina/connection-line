@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+
+<div class="blog-home">
+    <section class="blog-home__top-section">
+        <h1>Il Blog della Traduzione</h1>
+        <h2>L'angolo della comunicazione per la traduzione!</h2>
+    </section>
+    <section class="blog-home__post-section">
+        <h3>Scopri i nostri ultimi post!</h3>
+        <div class="blog-home__post-container">
+            <% posts.map(post => { %>
+                <div class="blog-home__post-container--card">
+                    <h1><%= post.title %></h1>
+                    <h2><%= post.subtitle %></h2>
+                    <p class="blog-home__post-container--card--author"><%= post.author.name %> - <%= `${post.createdAt.getDate()}/${(post.createdAt.getMonth() + 1) < 10 ? '0' + (post.createdAt.getMonth() + 1) : post.createdAt.getMonth() + 1 }/${post.createdAt.getFullYear()}` %></p>
+                    <p><%= post.content.length > 200 ? `${post.content.substring(0, 200)} ...` : post.content %></p>
+                    
+                    
+                </div>
+            <% }) %>
+        </div>  
+    </div>    
+</div>
+
+<%- include("partials/footer"); -%>
