@@ -17,12 +17,8 @@ import {
  ************/
 
 const scrollify = () => {
-	if (
-		lastURLWord() !== 'privacy' &&
-		lastURLWord() !== 'thank-you' &&
-		lastURLWord() !== 'lead' &&
-		lastURLWord() !== 'blog'
-	) {
+	const lastWord = lastURLWord();
+	if (lastWord === 'it' || lastWord === 'en' || lastWord === 'fr' || lastWord === 'de') {
 		const sidebar = $('.progressive-sidebar__container');
 		const firstSection = $('.progressive-sidebar__section-1');
 		const secondSection = $('.progressive-sidebar__section-2');

@@ -1,0 +1,19 @@
+<div class="blog-card">
+    <a class="blog-card__top--link" href="/blog/<%= post.slug %>">
+        <div class="blog-card__top" style="background-image: linear-gradient(to right, rgba(0, 88, 158, 0.4), rgba(180, 180, 180, 0.3)), url(<%= post.image %>)">
+            <div class="blog-card__top--title-container">
+                <h1><%= post.title %></h1>
+                <h2><%= post.subtitle %></h2>
+            </div>       
+        </div>
+    </a>
+    <div class="blog-card__avatar-container">
+        <img class="blog-card__avatar" src="<%= post.author.avatar %>">
+    </div>
+    
+    <p class="blog-card__author"><%= post.author.name %><br>
+    <%= `${post.createdAt.getDate()}/${(post.createdAt.getMonth() + 1) < 10 ? '0' + (post.createdAt.getMonth() + 1) : post.createdAt.getMonth() + 1 }/${post.createdAt.getFullYear()}` %></p>
+
+    <p><%= post.content.length > 200 ? `${post.content.substring(0, 205)} ...` : post.content %></p>
+    <a href="/blog/<%= post.slug %>" class="blog-card__button">Vai al Post</a>
+</div>

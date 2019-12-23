@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { blogHome, showBlog } = require('../controller/blogController');
+const { getRegister } = require('../controller/authController');
 
 const { italianContent } = require('../content/content');
 
@@ -11,7 +11,6 @@ router.use((req, res, next) => {
 	next();
 });
 
-router.get('/', blogHome);
-router.get('/:slug', showBlog);
+router.get('/register', getRegister);
 
 module.exports = router;

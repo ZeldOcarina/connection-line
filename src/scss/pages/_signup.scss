@@ -1,0 +1,51 @@
+.signup {
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__container {
+		text-align: center;
+		border: .5px solid $color-primary;
+		border-radius: 15px;
+		padding: 5rem;
+		box-shadow: 3px 3px 20px -1px rgba($color-primary, .2);
+	}
+
+	&__logo {
+		width: 17rem;
+		margin-bottom: 2rem;
+	}
+
+	&__input-container {
+		padding: .5rem 0;
+	}
+
+	&__text-input,
+	&__submit {
+		width: 30rem;
+		padding: 1.5rem 2rem;
+		border-radius: 10px;
+		border: none;
+		background-color: rgba($color-secondary, .3);
+	}
+
+	&__submit {
+		color: $white;
+		background-color: $color-primary;
+		cursor: pointer;
+		transition: all .2s;
+		margin-top: 1rem;
+
+		&:hover {
+			background-color: rgba($color-primary, .8);
+			transform: translateY(-.2rem);
+		}
+	}
+
+	::-webkit-input-placeholder {
+		/* Chrome/Opera/Safari */
+		color: $color-grey;
+	}
+}

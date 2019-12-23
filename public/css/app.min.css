@@ -3,7 +3,7 @@
  * Copyright 2013-2018 David Deutsch
  * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
  */
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Raleway:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Raleway:200, 400,400i,700,700i");
 .owl-carousel, .owl-carousel .owl-item {
   -webkit-tap-highlight-color: transparent;
   position: relative; }
@@ -559,7 +559,12 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #000; }
-  body h1, body h2, body h3, body h4, body h5, body h6 {
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6 {
     font-family: "Raleway", sans-serif; }
 
 .mt-1 {
@@ -823,6 +828,78 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.blog-card {
+  background-image: linear-gradient(to right, rgba(0, 88, 158, 0.5), rgba(180, 180, 180, 0.4));
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: min-content; }
+  .blog-card__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 25rem;
+    border-radius: 10px;
+    margin-bottom: 2rem; }
+    .blog-card__top--link {
+      text-decoration: none;
+      width: 100%; }
+    .blog-card__top--title-container {
+      background-image: linear-gradient(to right, rgba(0, 88, 158, 0.9), rgba(180, 180, 180, 0.9));
+      padding: 1.5rem;
+      border-radius: 10px;
+      color: white;
+      width: 70%; }
+  .blog-card h1,
+  .blog-card h2 {
+    text-align: center;
+    font-weight: 400; }
+  .blog-card h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    line-height: 1.2;
+    margin-bottom: 1rem; }
+  .blog-card h2 {
+    font-size: 1.6rem;
+    letter-spacing: .6px; }
+  .blog-card__author {
+    text-align: center;
+    padding: 2rem 0; }
+  .blog-card__avatar-container {
+    border: 1px solid white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; }
+  .blog-card__avatar {
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 100%; }
+  .blog-card p {
+    margin-bottom: 2rem;
+    padding: 0 1rem; }
+  .blog-card__button {
+    background-color: #00589e;
+    border: none;
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+    width: 100%;
+    margin: auto 0 2rem;
+    position: relative;
+    color: #d1d1d1;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center; }
 
 .card {
   perspective: 150rem;
@@ -1879,41 +1956,51 @@ body {
   top: 0;
   transform: rotate(-135deg); }
 
-.blog-home__top-section {
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
-  .blog-home__top-section h1,
-  .blog-home__top-section h2 {
-    font-weight: 400; }
-
-.blog-home__post-section {
-  padding: 5rem; }
-  .blog-home__post-section h3 {
-    font-weight: 400;
-    text-align: center;
-    padding: 5rem; }
-
-.blog-home__post-container {
-  display: grid;
-  width: 100%;
-  justify-content: center;
-  padding-bottom: 5rem;
-  grid-template-columns: repeat(auto-fill, 40rem);
-  grid-template-rows: repeat(auto-fill, 40rem);
-  grid-gap: 15px; }
-  .blog-home__post-container--card {
-    background-color: orangered;
-    padding: 2rem; }
-    .blog-home__post-container--card--author {
+.blog-home {
+  color: #2a2a2a; }
+  .blog-home__top-section {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white; }
+    .blog-home__top-section h1,
+    .blog-home__top-section h2 {
+      font-weight: 200;
+      letter-spacing: .2rem; }
+    .blog-home__top-section h1 {
+      text-transform: uppercase;
+      font-size: 4.5rem;
+      margin-bottom: 2rem; }
+    .blog-home__top-section h2 {
+      text-transform: uppercase;
+      font-size: 2.5rem; }
+    .blog-home__top-section-container {
+      padding: .8rem 1.3rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      background-image: linear-gradient(to right bottom, rgba(0, 88, 158, 0.7), rgba(180, 180, 180, 0.7));
+      text-align: center; }
+  .blog-home__post-section {
+    padding: 0 10rem 5rem; }
+    .blog-home__post-section h3 {
+      font-weight: 400;
       text-align: center;
-      padding: 2rem 0; }
-    .blog-home__post-container--card h1,
-    .blog-home__post-container--card h2 {
-      text-align: center;
-      font-weight: 400; }
+      padding: 5rem; }
+  .blog-home__post-container {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 5rem;
+    grid-template-columns: repeat(auto-fill, 42rem);
+    grid-template-rows: repeat(auto-fill, min-content);
+    grid-gap: 25px; }
+
+.show-blog__text-container {
+  padding: 10rem 20%;
+  line-height: 2;
+  letter-spacing: .2rem; }
 
 .error {
   height: 70vh;
@@ -2096,6 +2183,42 @@ url(../img/nat-10.jpg);
     padding: 2rem 0; }
   .privacy__body p {
     padding: 1rem 0; }
+
+.signup {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .signup__container {
+    text-align: center;
+    border: 0.5px solid #00589e;
+    border-radius: 15px;
+    padding: 5rem;
+    box-shadow: 3px 3px 20px -1px rgba(0, 88, 158, 0.2); }
+  .signup__logo {
+    width: 17rem;
+    margin-bottom: 2rem; }
+  .signup__input-container {
+    padding: .5rem 0; }
+  .signup__text-input, .signup__submit {
+    width: 30rem;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(180, 180, 180, 0.3); }
+  .signup__submit {
+    color: #fff;
+    background-color: #00589e;
+    cursor: pointer;
+    transition: all .2s;
+    margin-top: 1rem; }
+    .signup__submit:hover {
+      background-color: rgba(0, 88, 158, 0.8);
+      transform: translateY(-0.2rem); }
+  .signup ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #858585; }
 
 .thankyou a {
   margin: 5% 0; }

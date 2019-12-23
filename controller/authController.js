@@ -19,6 +19,10 @@ const loginUser = (userId, statusCode, res) => {
 	});
 };
 
+exports.getRegister = (req, res) => {
+	res.status(200).render('blog/signup');
+};
+
 exports.signup = catchAsync(async (req, res, next) => {
 	const newUser = await User.create({
 		name: req.body.name,

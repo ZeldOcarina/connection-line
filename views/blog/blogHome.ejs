@@ -1,0 +1,21 @@
+<%- include("../partials/header"); -%>
+
+<div class="blog-home">
+    <section class="blog-home__top-section" style="background-image: linear-gradient(to right, rgba(0, 88, 158, 0.3), rgba(180, 180, 180, 0.4)), url('/assets/blog/blog-home.jpg'); background-size: cover; background-position: bottom;">
+        <div class="blog-home__top-section-container">
+            <h1>Il Blog della Traduzione</h1>
+            <h2>L'angolo della comunicazione per la traduzione!</h2>
+        </div>
+        
+    </section>
+    <section class="blog-home__post-section">
+        <h3>Scopri i nostri ultimi post!</h3>
+        <div class="blog-home__post-container">
+            <% posts.map(post => { %>
+                <%- include('postScheda', { post }) %> 
+            <% }) %>
+        </div>  
+    </div>    
+</div>
+
+<%- include("../partials/footer"); -%>

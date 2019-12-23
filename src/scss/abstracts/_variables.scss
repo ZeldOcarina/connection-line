@@ -18,8 +18,11 @@ $title-font: 'Raleway', sans-serif;
 $basic-font: 'Noto Sans', sans-serif;
 
 $cards-linear: linear-gradient(to left, rgba($color-primary, .25), rgba($white, .4));
+$blog-linear: linear-gradient(to right, rgba($color-primary, .5), rgba($color-secondary, .4));
 
+$big-font-size: 2.5rem;
 $basic-font-size: 1.6rem;
 $small-font-size: 1.2rem;
 $bold: 700;
 $thin: 400;
+$super-thin: 200;

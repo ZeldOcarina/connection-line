@@ -38,18 +38,24 @@ const homeRoute = require('./routes/home');
 const requestRoute = require('./routes/reach');
 const thankyouRoute = require('./routes/thankyou');
 const privacyRoute = require('./routes/privacy');
-const apiBlogRoute = require('./routes/apiBlog');
 const blogRoute = require('./routes/blog');
-const usersRoute = require('./routes/users');
+const authRoute = require('./routes/auth');
+
+// API REQUIREMENT
+const apiBlogRoute = require('./routes/api/apiBlog');
+const usersRoute = require('./routes/api/users');
 
 //HOME PAGE
+app.use(authRoute);
 app.use('/blog', blogRoute);
 app.use(getUrl, homeRoute);
 app.use(requestRoute);
 app.use(thankyouRoute);
 app.use(privacyRoute);
+
+//API ROUTES
 app.use('/api/v1/blog', apiBlogRoute);
-app.use(usersRoute);
+app.use('/api/v1/users/', usersRoute);
 
 //404
 app.all('*', (req, res, next) => {

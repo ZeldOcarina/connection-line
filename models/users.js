@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
 		lowercase: true,
 		validate: [ validator.isEmail, 'Please provide a valid email' ]
 	},
-	photo: String,
+	avatar: String,
 	role: {
 		type: String,
 		enum: [ 'user', 'editor', 'administrator', 'webmaster' ],
@@ -65,6 +65,7 @@ userSchema.pre('save', async function(next) {
 userSchema.pre('save', function(next) {
 	if (!this.isModified('password') || this.isNew) return next();
 	this.passwordChangedAt = Date.now() - 1000;
+	this.avatar = this.avatar || '/assets/blog/avatar/avataaars.svg';
 	next();
 });
 

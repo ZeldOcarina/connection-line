@@ -1,0 +1,17 @@
+<%- include("../partials/header"); -%>
+
+<div class="show-blog">
+    <section class="blog-home__top-section" style="background-image: linear-gradient(to right, rgba(0, 88, 158, 0.3), rgba(180, 180, 180, 0.4)), url(<%= post.image %>); background-size: no-repeat; background-position: center;">
+        <div class="blog-home__top-section-container">
+            <h1><%= post.title %></h1>
+            <h2><%= post.subtitle %></h2>
+        </div>
+    </section>
+    <section id="post-content">
+        <div class="show-blog__text-container">
+            <p class="show-blog__text"><%= post.content %></p>
+        </div>
+    </section>
+</div>
+
+<%- include("../partials/footer"); -%>

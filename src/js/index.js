@@ -11,6 +11,7 @@ import popup from './utils/Popup';
 import cookies from './utils/Cookies';
 import smallText from './utils/SmallText';
 import inputFile from './utils/InputFile';
+import register from './controller/auth/register';
 
 //import aws_s3 from './utils/aws_s3';
 
@@ -23,3 +24,4 @@ cookies();
 smallText();
 inputFile();
 //aws_s3();
+register();
