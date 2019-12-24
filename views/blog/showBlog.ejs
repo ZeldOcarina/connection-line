@@ -9,6 +9,14 @@
     </section>
     <section id="post-content">
         <div class="show-blog__text-container">
+            <div class="show-blog__author-container">
+                <% const { createdAt } = post; %>
+                <div class="show-blog__author-container--author">
+                    <img class="show-blog__author-container--avatar" src="<%= post.author.avatar %>" alt="Avatar">
+                    <span><%= post.author.name %></span>    
+                </div>
+                <span class="show-blog__author-container--date"><%= `${createdAt.getDate()}/${createdAt.getMonth() + 1}/${createdAt.getFullYear()}` %></span>
+                            </div>
             <p class="show-blog__text"><%= post.content %></p>
         </div>
     </section>

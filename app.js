@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const expressSanitizer = require('express-sanitizer');
 const cors = require('cors');
+const reloadify = require('reloadify')(__dirname + '/public');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controller/errorController');
@@ -19,6 +20,7 @@ const limiter = require('./config/security');
 require('dotenv').config();
 
 const app = express();
+if (appState !== 'production') app.use(reloadify);
 app.use(cors());
 app.use(favicon(path.join(__dirname, 'public', 'assets/favicon.png')));
 if (appState === 'production') app.use(helmet());

@@ -1998,9 +1998,28 @@ body {
     grid-gap: 25px; }
 
 .show-blog__text-container {
-  padding: 10rem 20%;
+  padding: 2rem 20% 10rem;
   line-height: 2;
   letter-spacing: .2rem; }
+
+.show-blog__author-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-color: #f1f1f1;
+  margin-bottom: 7rem;
+  padding: 2rem 5rem;
+  border-radius: 10px; }
+  .show-blog__author-container--author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .show-blog__author-container--avatar {
+    width: 7rem;
+    margin-right: 2rem; }
+  .show-blog__author-container--date {
+    margin-left: auto;
+    color: #757575; }
 
 .error {
   height: 70vh;
