@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { getRegister } = require('../controller/authController');
+const { getRegister, getLogin } = require('../controller/authController');
 
 const { italianContent } = require('../content/content');
 
@@ -12,5 +12,6 @@ router.use((req, res, next) => {
 });
 
 router.get('/register', getRegister);
+router.get('/login', getLogin);
 
 module.exports = router;

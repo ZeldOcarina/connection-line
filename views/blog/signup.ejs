@@ -3,24 +3,29 @@
 <div class="signup">
     <div class="signup__container">
         <img class="signup__logo" src="/assets/logo.png">
-        <form class="signup__form" id="signup-form">
+        <form class="signup__form" name="signup-form">
+            <% if(context === 'register') { %>
             <div class="signup__input-container">
-                <input class="signup__text-input" type="text" name="name" placeholder="Inserisci il tuo nome">
+                <input class="signup__text-input" type="text" name="name" placeholder="Inserisci il tuo nome" required>
+            </div>
+            <% } %>
+            <div class="signup__input-container">
+                <input class="signup__text-input" type="text" name="email" placeholder="Inserisci la tua email" required>
             </div>
             <div class="signup__input-container">
-                <input class="signup__text-input" type="text" name="email" placeholder="Inserisci la tua email">
+                <input class="signup__text-input" type="password" name="password" placeholder="Inserisci la tua password" required>
             </div>
+            <% if(context === 'register') { %>
+                <div class="signup__input-container">
+                    <input class="signup__text-input" type="password" name="passwordConfirm" placeholder="Reinserisci la tua password" required>
+                </div>
+            <% } %>
             <div class="signup__input-container">
-                <input class="signup__text-input" type="password" name="password" placeholder="Inserisci la tua password">
-            </div>
-            <div class="signup__input-container">
-                <input class="signup__text-input" type="password" name="passwordConfirm" placeholder="Reinserisci la tua password">
-            </div>
-            <div class="signup__input-container">
-                <input class="signup__submit" type="submit" value="Registrati">
+                <input class="signup__submit" type="submit" value="<%= context === 'login' ? 'Login' : 'Registrati' %>">
             </div>
             
         </form>
+
     </div>
        
 </div>

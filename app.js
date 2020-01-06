@@ -56,7 +56,7 @@ app.use(thankyouRoute);
 app.use(privacyRoute);
 
 //API ROUTES
-app.use('/api/v1/blog', apiBlogRoute);
+app.use('/api/v1/blog/', apiBlogRoute);
 app.use('/api/v1/users/', usersRoute);
 
 //404

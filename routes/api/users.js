@@ -1,7 +1,7 @@
 const express = require('express');
 const { getAllUsers } = require('../../controller/userController');
 const {
-	signup,
+	signupAPI,
 	login,
 	protect,
 	restrictTo,
@@ -13,7 +13,7 @@ const {
 const router = express.Router();
 
 router.get('/', protect, restrictTo('webmaster', 'administrator'), getAllUsers);
-router.post('/signup', signup);
+router.post('/signup', signupAPI);
 router.post('/login', login);
 router.post('/forgotPassword', forgotPassword);
 router.patch('/resetPassword/:token', resetPassword);
