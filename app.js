@@ -6,9 +6,11 @@ const helmet = require('helmet');
 const expressSanitizer = require('express-sanitizer');
 const cors = require('cors');
 const reloadify = require('reloadify')(__dirname + '/public');
+const cookieParser = require('cookie-parser');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controller/errorController');
+const { isLoggedIn } = require('./controller/authController');
 
 const { getUrl } = require('./controller/getUrl');
 
@@ -31,6 +33,7 @@ app.use(expressSanitizer());
 app.use('/uploads', express.static('uploads'));
 app.use(express.static('public'));
 app.use(express.json());
+app.use(cookieParser());
 
 //GLOBAL TEMPLATES VARIABLES
 app.locals.publicKey = process.env.RECAPTCHA_PUBLIC_KEY;
@@ -42,22 +45,41 @@ const thankyouRoute = require('./routes/thankyou');
 const privacyRoute = require('./routes/privacy');
 const blogRoute = require('./routes/blog');
 const authRoute = require('./routes/auth');
+const userRoute = require('./routes/user');
 
 // API REQUIREMENT
 const apiBlogRoute = require('./routes/api/apiBlog');
 const usersRoute = require('./routes/api/users');
 
+//TEST MIDDLEWARE
+app.use((req, res, next) => {
+	//console.log(req.cookies);
+	next();
+});
+
+// SET LOCAL REQUEST VARIABLES
+app.locals.tinyAPIKey = process.env.tinyAPIKey;
+app.use(isLoggedIn, (req, res, next) => {
+	res.locals.page = req.url;
+	const firstWordUrl = req.url.split('/')[1];
+	res.locals.isNotBlog = firstWordUrl !== 'blog' && firstWordUrl !== 'user';
+	next();
+});
+
 //HOME PAGE
 app.use(authRoute);
-app.use('/blog', blogRoute);
-app.use(getUrl, homeRoute);
-app.use(requestRoute);
-app.use(thankyouRoute);
-app.use(privacyRoute);
 
 //API ROUTES
 app.use('/api/v1/blog/', apiBlogRoute);
 app.use('/api/v1/users/', usersRoute);
+
+// VIEW ROUTES
+app.use('/blog', blogRoute);
+app.use('/user', userRoute);
+app.use(getUrl, homeRoute);
+app.use(requestRoute);
+app.use(thankyouRoute);
+app.use(privacyRoute);
 
 //404
 app.all('*', (req, res, next) => {

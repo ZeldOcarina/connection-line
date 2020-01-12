@@ -14,6 +14,6 @@
     <p class="blog-card__author"><%= post.author.name %><br>
     <%= `${post.createdAt.getDate()}/${(post.createdAt.getMonth() + 1) < 10 ? '0' + (post.createdAt.getMonth() + 1) : post.createdAt.getMonth() + 1 }/${post.createdAt.getFullYear()}` %></p>
 
-    <p><%= post.content.length > 200 ? `${post.content.substring(0, 205)} ...` : post.content %></p>
+    <p><%- post.content.length > 200 ? `${post.content.substring(0, 205)} ...` : post.content %></p>
     <a href="/blog/<%= post.slug %>" class="blog-card__button">Vai al Post</a>
 </div>

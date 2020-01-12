@@ -15,8 +15,10 @@ exports.getAllPosts = catchAsync(async (req, res, next) => {
 
 exports.createBlog = catchAsync(async (req, res, next) => {
 	req.body.author = req.user._id;
-	//console.log(req.body);
-	const newPost = await Post.create(req.body);
+	const newPost = await Post.create({
+		...req.body,
+		image: req.file ? req.file.location : '/assets/blog/default-picture/default-picture.jpg'
+	});
 	res.status(201).json({
 		status: 'success',
 		data: {

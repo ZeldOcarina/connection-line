@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const { blogHome, showBlog } = require('../controller/blogController');
+const { blogHome, showBlog, getPostForm } = require('../controller/blogController');
+const { protect } = require('../controller/authController');
 
 const { italianContent } = require('../content/content');
 
@@ -11,7 +12,8 @@ router.use((req, res, next) => {
 	next();
 });
 
-router.get('/', blogHome);
+router.get('/', protect, blogHome);
+router.get('/post', protect, getPostForm);
 router.get('/:slug', showBlog);
 
 module.exports = router;

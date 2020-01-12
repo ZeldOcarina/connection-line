@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 import { signupForm } from '../../model/model';
 import { displayFlash } from '../../utils/display-alert';
@@ -22,14 +23,19 @@ function register() {
 					if (password !== passwordConfirm)
 						return displayFlash('error', 'La password e la conferma password non coincidono');
 
-					const response = await axios.post('/api/v1/users/signup', {
-						name,
-						email,
-						password,
-						passwordConfirm
+					const response = await axios({
+						method: 'POST',
+						url: '/api/v1/users/signup',
+						data: {
+							name,
+							email,
+							password,
+							passwordConfirm
+						}
 					});
 					if (response.status == 201) {
 						displayFlash('success', 'Registrazione Avvenuta con Successo');
+						Cookies.set('jwt', response.data.token, { expires: 90 });
 						setTimeout(() => {
 							window.location.href = '/blog';
 						}, 3000);
@@ -37,16 +43,23 @@ function register() {
 				} else {
 					const { email, password } = formContent;
 
-					const response = await axios.post('/api/v1/users/login', {
-						email,
-						password
+					const response = await axios({
+						method: 'POST',
+						url: '/api/v1/users/login',
+						data: {
+							email,
+							password
+						}
 					});
 
 					console.log(response);
-					if (response.status === 200) displayFlash('success', 'Login avvenuto con successo');
-					else throw new Error(response);
-
-					window.location.href = '/blog';
+					if (response.status === 200) {
+						displayFlash('success', 'Login avvenuto con successo');
+						Cookies.set('jwt', response.data.token, { expires: 90 });
+						setTimeout(() => {
+							window.location.href = '/blog';
+						}, 3000);
+					} else throw new Error(response);
 				}
 			} catch (err) {
 				console.dir(err);

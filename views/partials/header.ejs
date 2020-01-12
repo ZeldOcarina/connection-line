@@ -14,6 +14,9 @@
         })(window,document,'script','dataLayer','GTM-PRTTW9W');</script>
         <!-- End Google Tag Manager -->
     <!--<link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">-->
+    <% if(page === '/blog/post') { %>
+        <script src="https://cdn.tiny.cloud/1/<%= tinyAPIKey %>/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <% } %>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/app.min.css">
     <script src="https://kit.fontawesome.com/dd69990d73.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -25,52 +28,55 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="flash-message"></div>
-    <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-
-        <label for="navi-toggle" class="navigation__button">
-            <span class="navigation__icon">&nbsp;</span>
-        </label>
-
-        <div class="navigation__background">&nbsp;</div>
-
-        <nav class="navigation__nav">
-            <div class="translations-navbar">
-                <div class="translations-navbar__container">
-                    <a href="/en"><img class="translations-navbar__image" src="/assets/flags/english.png"></a>
+    <% if(isNotBlog) { %>
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+    
+            <div class="navigation__background">&nbsp;</div>
+    
+            <nav class="navigation__nav">
+                <div class="translations-navbar">
+                    <div class="translations-navbar__container">
+                        <a href="/en"><img class="translations-navbar__image" src="/assets/flags/english.png"></a>
+                    </div>
+                    <div class="translations-navbar__container">
+                        <a href="/it"><img class=" translations-navbar__image" src="/assets/flags/italian.png"></a>
+                    </div>
+                    <div class="translations-navbar__container">
+                        <a href="/de"><img class="translations-navbar__image" src="/assets/flags/german.png"></a>
+                    </div>
+                    <div class="translations-navbar__container">
+                        <a href="/fr"><img class="translations-navbar__image" src="/assets/flags/french.png"></a>
+                    </div>
                 </div>
-                <div class="translations-navbar__container">
-                    <a href="/it"><img class=" translations-navbar__image" src="/assets/flags/italian.png"></a>
-                </div>
-                <div class="translations-navbar__container">
-                    <a href="/de"><img class="translations-navbar__image" src="/assets/flags/german.png"></a>
-                </div>
-                <div class="translations-navbar__container">
-                    <a href="/fr"><img class="translations-navbar__image" src="/assets/flags/french.png"></a>
-                </div>
-            </div>
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="/<%= language %>/#section-hero"
-                        class="navigation__link navigation__link--home">
-                        <span>01</span><%= content.menu.home %></a>
-                </li>
-                <li class="navigation__item"><a href="/<%= language %>/#counters"
-                        class="navigation__link navigation__link--counters"><span>02</span><%= content.menu.numeri %></a>
-                </li>
-                <li class="navigation__item"><a href="/<%= language %>/#story"
-                        class="navigation__link navigation__link--story"><span>03</span><%= content.menu.storia %></a>
-                </li>
-                <li class="navigation__item"><a href="/<%= language %>/#settori"
-                        class="navigation__link navigation__link--settori"><span>04</span><%= content.menu.servizi %></a>
-                </li>
-                <li class="navigation__item"><a href="/<%= language %>/#testimonials"
-                        class="navigation__link navigation__link--testimonials"><span>05</span><%= content.menu.clienti %></a>
-                </li>
-                <li class="navigation__item"><a href="/<%= language %>/#cta"
-                        class="navigation__link navigation__link--cta"><span>06</span><%= content.menu.contatti %></a>
-                </li>
-            </ul>
-        </nav>
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="/<%= language %>/#section-hero"
+                            class="navigation__link navigation__link--home">
+                            <span>01</span><%= content.menu.home %></a>
+                    </li>
+                    <li class="navigation__item"><a href="/<%= language %>/#counters"
+                            class="navigation__link navigation__link--counters"><span>02</span><%= content.menu.numeri %></a>
+                    </li>
+                    <li class="navigation__item"><a href="/<%= language %>/#story"
+                            class="navigation__link navigation__link--story"><span>03</span><%= content.menu.storia %></a>
+                    </li>
+                    <li class="navigation__item"><a href="/<%= language %>/#settori"
+                            class="navigation__link navigation__link--settori"><span>04</span><%= content.menu.servizi %></a>
+                    </li>
+                    <li class="navigation__item"><a href="/<%= language %>/#testimonials"
+                            class="navigation__link navigation__link--testimonials"><span>05</span><%= content.menu.clienti %></a>
+                    </li>
+                    <li class="navigation__item"><a href="/<%= language %>/#cta"
+                            class="navigation__link navigation__link--cta"><span>06</span><%= content.menu.contatti %></a>
+                    </li>
+                </ul>
+            </nav>
+    
+    
     </div>
     <div class="translations">
         <div class="translations-navbar__container">
@@ -86,3 +92,21 @@
             <a href="/fr"><img class="translations-navbar__image" src="/assets/flags/french.png"></a>
         </div>
     </div>
+    <% } else { %>
+        <nav class="blog-navbar">
+            <a class="blog-navbar__link" href="/blog">Blog Home</a>
+            <img class="blog-navbar__logo" src="/assets/logo.png">
+            <div>
+                <% if(user) { %>
+                    <a class="blog-navbar__link blog-navbar__btn blog-navbar__btn--crea-post" href="/user/me">Il Mio Profilo</a>
+                    <a class="blog-navbar__link blog-navbar__btn blog-navbar__btn--crea-post" href="/blog/post">Crea Post</a>
+                    <a class="blog-navbar__link blog-navbar__btn blog-navbar__btn--logout" href="/logout">Logout</a>
+                <% } else { %>
+                    <a class="blog-navbar__link blog-navbar__btn blog-navbar__btn--login" href="/login">Login</a>
+                <% } %>
+                
+                
+            </div>
+            
+        </nav>
+    <% } %>

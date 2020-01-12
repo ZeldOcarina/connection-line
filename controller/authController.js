@@ -79,6 +79,7 @@ exports.protect = catchAsync(async (req, res, next) => {
 	let token;
 	if (req.headers.authorization && req.headers.authorization.startsWith('Bearer'))
 		token = req.headers.authorization.split(' ')[1];
+	else if (req.cookies.jwt) token = req.cookies.jwt;
 	if (!token) return next(new AppError('You are not logged in! Please log in to get access', 401));
 	// 2) Validate the token
 	const decoded = await jwt.verify(token, process.env.JWT_SECRET);
@@ -95,6 +96,23 @@ exports.protect = catchAsync(async (req, res, next) => {
 	if (freshUser.changedPasswordAfter(decoded.iat))
 		return next(new AppError('User recently changed password. Please log in again.', 401));
 	req.user = freshUser;
+	next();
+});
+
+// ONLY FOR RENDERED PAGES, NO ERRORS!
+exports.isLoggedIn = catchAsync(async (req, res, next) => {
+	if (req.cookies.jwt) {
+		// 1) Verify the token
+		const decoded = await jwt.verify(req.cookies.jwt, process.env.JWT_SECRET);
+		// 2) Check if user exists
+		const currentUser = await User.findById(decoded.id);
+		if (!currentUser) return next();
+		// 3) Check if user changed password after the jwt was issued
+		if (currentUser.changedPasswordAfter(decoded.iat)) return next();
+		// THERE IS A LOGGED IN USER
+		res.locals.user = currentUser;
+		return next();
+	}
 	next();
 });
 

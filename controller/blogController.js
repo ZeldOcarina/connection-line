@@ -1,7 +1,7 @@
 const Post = require('../models/posts');
 
 exports.blogHome = async (req, res) => {
-	console.log(req.user);
+	//console.log(req.user);
 	const posts = await Post.find();
 	res.status(200).render('blog/blogHome', { posts });
 };
@@ -15,4 +15,8 @@ exports.showBlog = async (req, res) => {
 	} catch (err) {
 		console.error(err);
 	}
+};
+
+exports.getPostForm = (req, res) => {
+	res.status(200).render('blog/makePostForm');
 };

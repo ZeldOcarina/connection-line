@@ -1,0 +1,33 @@
+.blog-navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 4rem;
+	background-color: $color-primary-dark;
+
+	&__link {
+		text-decoration: none;
+		color: $color-secondary;
+	}
+
+	&__btn {
+		border: 1px solid $color-secondary;
+		border-radius: 2.5rem;
+		padding: 1rem 2rem;
+
+		&:hover {
+			background-color: $white;
+			color: $color-primary-dark;
+			cursor: pointer;
+		}
+
+		&--crea-post {
+			border: none;
+		}
+	}
+
+	&__logo {
+		padding-top: .5rem;
+		width: 7rem;
+	}
+}

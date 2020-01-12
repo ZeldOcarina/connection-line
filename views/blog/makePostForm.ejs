@@ -1,0 +1,25 @@
+<%- include("../partials/header"); -%>
+<div class="new-post__container">   
+    <form class="new-post__form">
+        <img class="new-post__icon" src="/assets/logo.png">
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="post-title">Titolo</label>
+            <input class="new-post__text-input" type="text" name="title" id="post-title">
+        </div>
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="post-subtitle">Sottotitolo</label>
+            <input class="new-post__text-input" type="text" name="subtitle" id="post-subtitle">
+        </div>
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="post-subtitle">Contenuto</label>
+            <input class="new-post__textarea" type="text" name="content" id="post-textarea">
+        </div>
+        <div class="new-post__input-container">
+            <input type="file" class="form__input form__input--file" id="post-image"
+                name="post-image" accept="image/*">
+            <label class="form__input--label" for="post-image"><img class="form__input--file-icon" src="/assets/icons/upload.png">Carica l'immagine principale.</label>
+        </div>
+        <input class="new-post__submit btn btn--primary" type="submit" value="Pubblica">
+    </form>    
+</div>
+<%- include("../partials/footer"); -%>

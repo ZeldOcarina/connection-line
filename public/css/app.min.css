@@ -901,6 +901,29 @@ body {
     text-decoration: none;
     text-align: center; }
 
+.blog-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  background-color: #001e36; }
+  .blog-navbar__link {
+    text-decoration: none;
+    color: #b4b4b4; }
+  .blog-navbar__btn {
+    border: 1px solid #b4b4b4;
+    border-radius: 2.5rem;
+    padding: 1rem 2rem; }
+    .blog-navbar__btn:hover {
+      background-color: #fff;
+      color: #001e36;
+      cursor: pointer; }
+    .blog-navbar__btn--crea-post {
+      border: none; }
+  .blog-navbar__logo {
+    padding-top: .5rem;
+    width: 7rem; }
+
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -1147,7 +1170,7 @@ body {
         width: 4.5rem; } }
 
 .flash-message {
-  position: absolute;
+  position: fixed;
   top: 50px;
   right: 50px;
   z-index: 3000;
@@ -2044,6 +2067,53 @@ body {
     margin-left: auto;
     color: #757575; }
 
+.new-post__container {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.new-post__icon {
+  width: 20rem;
+  margin-bottom: 4rem; }
+
+.new-post__form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  padding: 4rem;
+  border: 1px solid #b4b4b4; }
+
+.new-post__input-container {
+  width: 100%;
+  padding-bottom: 1.5rem; }
+  .new-post__input-container .form__input--label {
+    width: 100%; }
+
+.new-post__label {
+  display: block;
+  padding-bottom: 5px; }
+
+.new-post__text-input {
+  display: block;
+  width: 100%;
+  padding: .5rem 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .5rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
+
+.new-post__submit {
+  width: 100%;
+  margin-top: 2rem; }
+
+.form__input.form__input--file {
+  width: 100%; }
+
 .error {
   height: 70vh;
   display: flex;
@@ -2181,6 +2251,31 @@ url(../img/nat-10.jpg);
       .cta__form {
         width: 100%;
         margin: 0; } }
+
+.me {
+  background-color: rgba(180, 180, 180, 0.2);
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .me__title {
+    margin-bottom: 3rem; }
+  .me__avatar {
+    margin-top: 3rem;
+    width: 15rem;
+    border-radius: 50%; }
+  .me__avatar-caption {
+    text-align: center; }
+  .me__btn-modify,
+  .me input[type=submit] {
+    margin-top: 3rem; }
+  .me .new-post__form {
+    border: none;
+    width: 50%; }
+  .me figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
 
 .privacy__hero {
   background-image: linear-gradient(to left, rgba(0, 88, 158, 0.4), rgba(255, 255, 255, 0.5)), url(/assets/privacy-hero.jpg);
@@ -2337,3 +2432,15 @@ url(../img/nat-10.jpg);
 
 .small-text {
   font-size: 1.3rem; }
+
+.container {
+  padding: 10rem 30rem; }
+
+.hidden {
+  visibility: hidden; }
+
+.d-none {
+  display: none; }
+
+.pointer {
+  cursor: pointer; }

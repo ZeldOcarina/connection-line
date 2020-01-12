@@ -12,6 +12,8 @@ import cookies from './utils/Cookies';
 import smallText from './utils/SmallText';
 import inputFile from './utils/InputFile';
 import register from './controller/auth/register';
+import newPost from './controller/newPost';
+import me from './utils/me';
 
 //import aws_s3 from './utils/aws_s3';
 
@@ -25,3 +27,5 @@ smallText();
 inputFile();
 //aws_s3();
 register();
+newPost();
+me();
