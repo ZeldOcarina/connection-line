@@ -12,7 +12,7 @@ router.use((req, res, next) => {
 	next();
 });
 
-router.get('/', protect, blogHome);
+router.get('/', blogHome);
 router.get('/post', protect, getPostForm);
 router.get('/:slug', showBlog);
 

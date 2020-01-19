@@ -59,10 +59,12 @@ app.use((req, res, next) => {
 
 // SET LOCAL REQUEST VARIABLES
 app.locals.tinyAPIKey = process.env.tinyAPIKey;
+
 app.use(isLoggedIn, (req, res, next) => {
 	res.locals.page = req.url;
 	const firstWordUrl = req.url.split('/')[1];
 	res.locals.isNotBlog = firstWordUrl !== 'blog' && firstWordUrl !== 'user';
+	if (!req.user) res.locals.user = null;
 	next();
 });
 

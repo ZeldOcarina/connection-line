@@ -1,6 +1,7 @@
 const Post = require('../models/posts');
 
 exports.blogHome = async (req, res) => {
+	//console.log(res.locals.user);
 	//console.log(req.user);
 	const posts = await Post.find();
 	res.status(200).render('blog/blogHome', { posts });

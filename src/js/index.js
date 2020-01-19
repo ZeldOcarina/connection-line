@@ -12,6 +12,7 @@ import cookies from './utils/Cookies';
 import smallText from './utils/SmallText';
 import inputFile from './utils/InputFile';
 import register from './controller/auth/register';
+import logout from './controller/auth/logout';
 import newPost from './controller/newPost';
 import me from './utils/me';
 
@@ -29,3 +30,4 @@ inputFile();
 register();
 newPost();
 me();
+logout();

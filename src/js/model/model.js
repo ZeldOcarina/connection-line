@@ -9,5 +9,6 @@ export const flashMessage = document.querySelector('.flash-message');
 export const newPostForm = document.querySelector('.new-post__form');
 export const fileInput = document.querySelector('#post-image');
 export const fileInputLabel = document.querySelector('.form__input--label');
+export const logoutBtn = document.querySelector('.blog-navbar__btn--logout');
 
 export const signupForm = document.querySelector('.signup__form');
