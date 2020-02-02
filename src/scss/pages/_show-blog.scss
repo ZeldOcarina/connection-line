@@ -1,0 +1,33 @@
+.show-blog {
+	&__text-container {
+		padding: 2rem 20% 10rem;
+		line-height: 2;
+		letter-spacing: .2rem;
+	}
+
+	&__author-container {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		background-color: #f1f1f1;
+		margin-bottom: 7rem;
+		padding: 2rem 5rem;
+		border-radius: 10px;
+
+		&--author {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&--avatar {
+			width: 7rem;
+			margin-right: 2rem;
+		}
+
+		&--date {
+			margin-left: auto;
+			color: #757575;
+		}
+	}
+}

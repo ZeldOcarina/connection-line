@@ -24,14 +24,25 @@ commentsSchema.pre('save', function(next) {
 });
 
 commentsSchema.pre('save', async function() {
-	await User.findByIdAndUpdate(this.author, { commentsMade: this._id });
+	const user = await User.findById(this.author);
+	user.commentsMade.push(this._id);
+	await user.save({ validateBeforeSave: false });
 });
 
 commentsSchema.pre(/^find/, function(next) {
 	this.populate({
 		path: 'author',
-		select: 'name -_id'
+		select: 'name avatar _id'
 	});
+	next();
+});
+
+commentsSchema.pre('remove', async function(next) {
+	const user = await User.findById(this.author);
+	const index = user.commentsMade.indexOf(this._id);
+	if (index === -1) next();
+	user.commentsMade.splice(index, 1);
+	await user.save({ validateBeforeSave: false });
 	next();
 });
 

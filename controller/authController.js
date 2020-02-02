@@ -11,6 +11,27 @@ const transporter = require('../config/nodemailer-setup');
 
 const signToken = (id) => jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN });
 
+const createSendToken = (user, statusCode, req, res) => {
+	const token = signToken(user._id);
+
+	res.cookie('jwt', token, {
+		expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000),
+		httpOnly: true,
+		secure: process.env.NODE_ENV === 'production' ? true : false
+	});
+
+	// Remove password from output
+	user.password = undefined;
+
+	res.status(statusCode).json({
+		status: 'success',
+		token,
+		data: {
+			user
+		}
+	});
+};
+
 const loginUser = (userId, statusCode, res) => {
 	const token = signToken(userId);
 	res.status(statusCode).json({
@@ -19,7 +40,15 @@ const loginUser = (userId, statusCode, res) => {
 	});
 };
 
-exports.signup = catchAsync(async (req, res, next) => {
+exports.getRegister = (req, res) => {
+	res.status(200).render('blog/signup', { context: 'register' });
+};
+
+exports.getLogin = (req, res) => {
+	res.status(200).render('blog/signup', { context: 'login' });
+};
+
+exports.signupAPI = catchAsync(async (req, res, next) => {
 	const newUser = await User.create({
 		name: req.body.name,
 		email: req.body.email,
@@ -27,7 +56,7 @@ exports.signup = catchAsync(async (req, res, next) => {
 		passwordConfirm: req.body.passwordConfirm
 	});
 
-	loginUser(newUser._id, 201, res);
+	createSendToken(newUser, 201, req, res);
 });
 
 exports.login = catchAsync(async (req, res, next) => {
@@ -50,6 +79,7 @@ exports.protect = catchAsync(async (req, res, next) => {
 	let token;
 	if (req.headers.authorization && req.headers.authorization.startsWith('Bearer'))
 		token = req.headers.authorization.split(' ')[1];
+	else if (req.cookies.jwt) token = req.cookies.jwt;
 	if (!token) return next(new AppError('You are not logged in! Please log in to get access', 401));
 	// 2) Validate the token
 	const decoded = await jwt.verify(token, process.env.JWT_SECRET);
@@ -68,6 +98,28 @@ exports.protect = catchAsync(async (req, res, next) => {
 	req.user = freshUser;
 	next();
 });
+
+// ONLY FOR RENDERED PAGES, NO ERRORS!
+exports.isLoggedIn = async (req, res, next) => {
+	if (req.cookies.jwt) {
+		try {
+			// 1) Verify the token
+			const decoded = await jwt.verify(req.cookies.jwt, process.env.JWT_SECRET);
+			// 2) Check if user exists
+			const currentUser = await User.findById(decoded.id);
+			if (!currentUser) return next();
+			// 3) Check if user changed password after the jwt was issued
+			if (currentUser.changedPasswordAfter(decoded.iat)) return next();
+			// THERE IS A LOGGED IN USER
+			req.user = currentUser;
+			res.locals.user = currentUser;
+			return next();
+		} catch (err) {
+			return next();
+		}
+	}
+	next();
+};
 
 exports.restrictTo = (...roles) => {
 	return (req, res, next) => {
@@ -150,3 +202,12 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
 	// 4) Log the user in, send JWT
 	loginUser(user._id, 200, res);
 });
+
+exports.logout = (req, res) => {
+	res.cookie('jwt', 'loggedout', {
+		expires: new Date(new Date().getTime() + 0.1 * 60 * 1000),
+		httpOnly: true
+	});
+
+	res.status(200).json({ status: 'success' });
+};

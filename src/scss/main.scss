@@ -13,8 +13,12 @@
 
 @import './components/bg-video';
 @import './components/button';
+@import './components/blog-card';
+@import './components/blog-navbar';
 @import './components/card';
+@import './components/comments';
 @import './components/counter';
+@import './components/flash';
 @import './components/form';
 @import './components/popup';
 @import './components/progressive-sidebar';
@@ -26,9 +30,14 @@
 @import './layout/header';
 @import './layout/navigation';
 
+@import './pages/blog-home';
+@import './pages/show-blog';
+@import './pages/blog-new-post';
 @import './pages/error';
 @import './pages/home';
+@import './pages/me';
 @import './pages/privacy';
+@import './pages/signup';
 @import './pages/thankyou';
 
 @import './utils/utils';

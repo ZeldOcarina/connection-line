@@ -1,0 +1,53 @@
+<%- include("../partials/header"); -%>
+
+<div class="show-blog">
+    <section class="blog-home__top-section" style="background-image: linear-gradient(to right, rgba(0, 88, 158, 0.3), rgba(180, 180, 180, 0.4)), url(<%= post.image %>); background-size: cover; background-position: center;">
+        <div class="blog-home__top-section-container">
+            <h1><%= post.title %></h1>
+            <h2><%= post.subtitle %></h2>
+        </div>
+    </section>
+    <section id="post-content">
+        <div class="show-blog__text-container">
+            <div class="show-blog__author-container">
+                <% const { createdAt } = post; %>
+                <div class="show-blog__author-container--author">
+                    <img class="show-blog__author-container--avatar" src="<%= post.author.avatar %>" alt="Avatar">
+                    <span><%= post.author.name %></span>    
+                </div>
+                <span class="show-blog__author-container--date"><%= `${createdAt.getDate()}/${createdAt.getMonth() + 1}/${createdAt.getFullYear()}` %></span>
+                            </div>
+            <p class="show-blog__text"><%- post.content %></p>
+            
+                <div class="comments">
+                    <% for(comment of post.comments) { %>
+                        <% const { comment: commentText, author, _id: commentId } = comment; %>
+                        <% const { name, avatar } = author; %>
+                        <div class="comments__comment">
+                            <img src="<%= avatar %>" class="show-blog__author-container--avatar comments__comment__avatar">
+                            <span><%= name %></span>
+                            <div class="comments__comment__name-and-btn-container">
+                                <p class="comments__comment__comment-text"><%= commentText %></p>
+                                <% if(user.commentsMade.includes(commentId)) { %>
+                                    <div class="comments__comment__btns-container">
+                                        <btn class="btn btn--modify modify-comment-btn" data-comment-id="<%= commentId %>">Modifica</btn>
+                                        <btn class="btn btn--erease delete-comment-btn" data-comment-id="<%= commentId %>">Cancella</btn>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if(user) { %>
+                        <btn class="btn btn--primary comments__add-comment-btn"><%= user.name.split(' ')[0] %> Inserisci il Tuo Commento</btn>
+                    <% } else { %>
+                        <a class="btn btn--primary comments__add-comment-btn" href="/login">Fai il Login per Commentare il Post</a>
+                    <% } %>
+                </div>
+            
+
+            
+        </div>
+    </section>
+</div>
+
+<%- include("../partials/footer"); -%>

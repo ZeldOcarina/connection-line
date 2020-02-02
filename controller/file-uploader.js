@@ -3,6 +3,8 @@ const multer = require('multer');
 const multerS3 = require('multer-s3');
 const sanitize = require('sanitize-filename');
 
+const Post = require('../models/posts');
+
 aws.config.update({
 	accessKeyId: process.env.AWS_ACCESS_KEY_ID,
 	secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
@@ -28,7 +30,18 @@ const storage = multerS3({
 	s3,
 	bucket: process.env.S3_BUCKET,
 	key: function(req, file, cb) {
-		cb(null, sanitize(`${req.body.name}-${file.originalname}`));
+		if (file.fieldname === 'post-image')
+			cb(null, sanitize(`${req.body.title.toLowerCase().split(' ').join('-')}-${file.originalname}`));
+		else if (file.fieldname === 'avatar')
+			cb(
+				null,
+				sanitize(
+					`${Date.now()}-${req.body.name.toLowerCase().split(' ').join('-')}-avatar.${file.originalname.split(
+						'.'
+					)[1]}`
+				)
+			);
+		else cb(null, sanitize(`${req.body.name}-${file.originalname}`));
 	}
 });
 
@@ -39,12 +52,13 @@ const multerFilter = (req, file, cb) => {
 		file.mimetype === 'application/msword' ||
 		file.mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ||
 		file.mimetype === 'application/vnd.openxmlformats-officedocument.presentationml.presentation' ||
-		file.mimetype === 'application/vnd.ms-powerpoint'
+		file.mimetype === 'application/vnd.ms-powerpoint' ||
+		file.mimetype === 'image/jpg' ||
+		file.mimetype === 'image/jpeg' ||
+		file.mimetype === 'image/png'
 	)
 		cb(null, true);
-	else {
-		cb(new Error('An error has occurred on uploading the files!'), false);
-	}
+	else cb(new Error('An error has occurred on uploading the files!'), false);
 };
 
 const upload = multer({
@@ -57,6 +71,8 @@ const upload = multer({
 });
 
 exports.fileUploader = upload.array('file', 10);
+exports.postFileUploader = upload.single('post-image');
+exports.avatarFileUploader = upload.single('avatar');
 
 exports.multerErrorChecker = (err, req, res, next) => {
 	if (err.name === 'MulterError') {
@@ -68,4 +84,66 @@ exports.multerErrorChecker = (err, req, res, next) => {
 		});
 	}
 	next();
+};
+
+exports.cancellaAvatarFoto = (req, res, next) => {
+	if (req.file) {
+		aws.config.update({
+			accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+			secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+			region: process.env.AWS_REGION
+		});
+
+		const s3 = new aws.S3();
+
+		const key = req.user.avatar.split('/')[req.user.avatar.split('/').length - 1];
+		const toBeDeleted = [ { Key: key } ];
+
+		const params = {
+			Bucket: process.env.S3_BUCKET,
+			Delete: {
+				Objects: toBeDeleted
+			}
+		};
+
+		s3.deleteObjects(params, (err, data) => {
+			if (err) {
+				console.error(err, err.stack); // an error occurred
+			}
+		});
+	}
+	next();
+};
+
+exports.cancellaBlogFoto = async (req, res, next) => {
+	try {
+		aws.config.update({
+			accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+			secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+			region: process.env.AWS_REGION
+		});
+
+		const s3 = new aws.S3();
+
+		const { image } = await Post.findOne({ slug: req.params.slug });
+
+		const key = image.split('/')[image.split('/').length - 1];
+
+		const toBeDeleted = [ { Key: key } ];
+
+		const params = {
+			Bucket: process.env.S3_BUCKET,
+			Delete: {
+				Objects: toBeDeleted
+			}
+		};
+
+		s3.deleteObjects(params, (err, data) => {
+			if (err) console.error(err, err.stack); // an error occurred
+		});
+		next();
+	} catch (err) {
+		console.error(err);
+		next(err);
+	}
 };

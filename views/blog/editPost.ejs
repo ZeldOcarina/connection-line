@@ -1,0 +1,26 @@
+<%- include("../partials/header"); -%>
+<div class="new-post__container">   
+    <form class="new-post__form">
+        <img class="new-post__icon" src="/assets/logo.png">
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="post-title">Titolo</label>
+            <input class="new-post__text-input" type="text" name="title" id="post-title" value="<%= post.title %>">
+        </div>
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="post-subtitle">Sottotitolo</label>
+            <input class="new-post__text-input" type="text" name="subtitle" id="post-subtitle" value="<%= post.subtitle %>">
+        </div>
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="post-subtitle">Contenuto</label>
+            <textarea class="new-post__textarea" type="text" name="content" id="post-textarea"><%= post.content %></textarea>
+        </div>
+        <div class="new-post__input-container new-post__input-container--edit-file-container">
+            <input type="file" class="form__input form__input--file" id="post-image"
+                name="post-image" accept="image/*" hidden>
+            <span class="new-post__label">Immagine Principale:</span>
+            <img class="new-post__edit-image" src="<%= post.image %>">
+        </div>
+        <input class="new-post__submit btn btn--primary" type="submit" value="Pubblica">
+    </form>    
+</div>
+<%- include("../partials/footer"); -%>

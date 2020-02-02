@@ -5,9 +5,15 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const expressSanitizer = require('express-sanitizer');
 const cors = require('cors');
+<<<<<<< HEAD
+=======
+const reloadify = require('reloadify')(__dirname + '/public');
+const cookieParser = require('cookie-parser');
+>>>>>>> blog
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controller/errorController');
+const { isLoggedIn } = require('./controller/authController');
 
 const { getUrl } = require('./controller/getUrl');
 
@@ -19,6 +25,8 @@ const limiter = require('./config/security');
 require('dotenv').config();
 
 const app = express();
+if (appState !== 'production') app.use(reloadify);
+app.use(cors());
 app.use(favicon(path.join(__dirname, 'public', 'assets/favicon.png')));
 if (appState === 'production') app.use(helmet());
 if (appState === 'production') app.use(limiter);
@@ -28,7 +36,14 @@ app.use(expressSanitizer());
 app.use('/uploads', express.static('uploads'));
 app.use(express.static('public'));
 app.use(express.json());
+<<<<<<< HEAD
 app.use(cors());
+=======
+app.use(cookieParser());
+
+//GLOBAL TEMPLATES VARIABLES
+app.locals.publicKey = process.env.RECAPTCHA_PUBLIC_KEY;
+>>>>>>> blog
 
 //REQUIRING ROUTES
 const homeRoute = require('./routes/home');
@@ -37,17 +52,54 @@ const requestRoute = require('./routes/reach');
 const thankyouRoute = require('./routes/thankyou');
 const privacyRoute = require('./routes/privacy');
 const blogRoute = require('./routes/blog');
-const usersRoute = require('./routes/users');
+const authRoute = require('./routes/auth');
+const userRoute = require('./routes/user');
+
+// API REQUIREMENT
+const apiBlogRoute = require('./routes/api/apiBlog');
+const usersRoute = require('./routes/api/users');
+
+//TEST MIDDLEWARE
+app.use((req, res, next) => {
+	//console.log(req.cookies);
+	next();
+});
+
+// SET LOCAL REQUEST VARIABLES
+app.locals.tinyAPIKey = process.env.tinyAPIKey;
+
+app.use(isLoggedIn, (req, res, next) => {
+	res.locals.page = req.url;
+	const firstWordUrl = req.url.split('/')[1];
+	res.locals.isNotBlog = firstWordUrl !== 'blog' && firstWordUrl !== 'user';
+	if (!req.user) res.locals.user = null;
+	next();
+});
 
 //HOME PAGE
+<<<<<<< HEAD
 app.use('/api/v1/blog', blogRoute);
 app.use('/messenger-bot', messengerBotRoute);
+=======
+app.use(authRoute);
+
+//API ROUTES
+app.use('/api/v1/blog/', apiBlogRoute);
+app.use('/api/v1/users/', usersRoute);
+
+// VIEW ROUTES
+app.use('/blog', blogRoute);
+app.use('/user', userRoute);
+>>>>>>> blog
 app.use(getUrl, homeRoute);
 app.use(requestRoute);
 app.use(thankyouRoute);
 app.use(privacyRoute);
+<<<<<<< HEAD
 
 app.use(usersRoute);
+=======
+>>>>>>> blog
 
 //404
 app.all('*', (req, res, next) => {

@@ -15,6 +15,7 @@ const postSchema = new mongoose.Schema({
 	slug: { type: String, slug: 'title', unique: true, slugPaddingSize: 1 },
 	content: String,
 	createdAt: Date,
+	image: String,
 	author: {
 		type: mongoose.Schema.ObjectId,
 		ref: 'User'
@@ -22,17 +23,14 @@ const postSchema = new mongoose.Schema({
 	comments: [ { type: mongoose.Schema.ObjectId, ref: 'Comment' } ]
 });
 
-postSchema.pre('save', function() {
+postSchema.pre('save', async function() {
 	this.createdAt = Date.now();
-});
-
-postSchema.pre('save', async function(next) {
 	const author = await User.findOneAndUpdate({ _id: this.author }, { postsMade: this._id }, { new: true });
-	console.log(author);
+	this.image = this.image || '/assets/blog/default-top-picture';
 });
 
 postSchema.pre(/^find/, function(next) {
-	this.populate({ path: 'author', select: 'name' });
+	this.populate({ path: 'author', select: 'name avatar' });
 	this.populate({ path: 'comments', select: 'comment author createdAt' });
 	next();
 });

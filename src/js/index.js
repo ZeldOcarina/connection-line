@@ -12,6 +12,12 @@ import cookies from './utils/Cookies';
 import smallText from './utils/SmallText';
 import inputFile from './utils/InputFile';
 import formilla from './utils/formilla';
+import register from './controller/auth/register';
+import logout from './controller/auth/logout';
+import newPost from './controller/newPost';
+import deletePost from './controller/deletePost';
+import me from './utils/me';
+import blogComments from './view/blogComments';
 
 //import aws_s3 from './utils/aws_s3';
 
@@ -25,3 +31,9 @@ smallText();
 inputFile();
 formilla();
 //aws_s3();
+register();
+newPost();
+deletePost();
+me();
+logout();
+blogComments();

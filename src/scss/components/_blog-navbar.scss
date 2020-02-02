@@ -1,0 +1,58 @@
+.blog-navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 4rem;
+	background-color: $color-primary-dark;
+
+	&__link {
+		text-decoration: none;
+		color: $color-secondary;
+	}
+
+	&__btn {
+		border: 1px solid $color-secondary;
+		border-radius: 2.5rem;
+		padding: 1rem 2rem;
+
+		&:hover {
+			background-color: $white;
+			color: $color-primary-dark;
+			cursor: pointer;
+		}
+
+		&--crea-post {
+			border: none;
+		}
+
+		&--elimina,
+		&--modifica {
+			border: none;
+		}
+
+		&--elimina {
+			color: white;
+			background-color: $erease;
+
+			&:hover {
+				background-color: rgba($erease, .8);
+				color: white;
+			}
+		}
+
+		&--modifica {
+			color: black;
+			background-color: $modify;
+			margin-right: .3rem;
+
+			&:hover {
+				background-color: rgba($modify, .8);
+			}
+		}
+	}
+
+	&__logo {
+		padding-top: .5rem;
+		width: 7rem;
+	}
+}

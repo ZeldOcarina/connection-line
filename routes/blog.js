@@ -1,12 +1,20 @@
 const express = require('express');
 const router = express.Router();
 
-const { getAllPosts, showPost, createBlog, updatePost, destroyBlog } = require('../controller/blogController');
-const { postComment } = require('../controller/commentsController');
+const { blogHome, showBlog, getPostForm, getEditBlog } = require('../controller/blogController');
 const { protect } = require('../controller/authController');
 
-//HOME ROUTE
-router.route('/').get(getAllPosts).post(protect, createBlog);
-router.route('/:slug').get(showPost).patch(protect, updatePost).delete(destroyBlog).post(protect, postComment);
+const { italianContent } = require('../content/content');
+
+router.use((req, res, next) => {
+	res.locals.content = italianContent();
+	res.locals.language = 'italian';
+	next();
+});
+
+router.get('/', blogHome);
+router.get('/post', protect, getPostForm);
+router.get('/:slug/edit', protect, getEditBlog);
+router.get('/:slug', showBlog);
 
 module.exports = router;

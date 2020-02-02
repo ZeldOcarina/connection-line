@@ -1,0 +1,15 @@
+<%- include("partials/header"); -%>
+<div class="container">
+    <div class="me">
+        <h2 class="me__title">I tuoi dati:</h2>
+        <p class="me__name">Name: <%= user.name %></p>
+        <p class="me__email">Email: <%= user.email %></p>
+        <img class="me__avatar" src="<%= user.avatar ? user.avatar : '/assets/blog/avatar/avataaars.svg' %>">
+        <caption>Avatar</caption>
+        <button class="me__btn-modify btn btn--primary">Modifica</button>
+    </div>
+    
+</div>
+
+
+<%- include("partials/footer"); -%>
