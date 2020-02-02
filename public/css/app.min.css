@@ -809,6 +809,17 @@ body {
   color: #fff;
   text-decoration: none; }
 
+.btn--erease {
+  background-color: #990000;
+  color: #fff; }
+  .btn--erease:hover {
+    background-color: #770000; }
+
+.btn--modify {
+  background-color: #ece91e; }
+  .btn--modify:hover {
+    background-color: #c7c41f; }
+
 .btn-text:link, .btn-text:visited {
   font-size: "Noto Sans", sans-serif;
   color: #00589e;
@@ -920,6 +931,20 @@ body {
       cursor: pointer; }
     .blog-navbar__btn--crea-post {
       border: none; }
+    .blog-navbar__btn--elimina, .blog-navbar__btn--modifica {
+      border: none; }
+    .blog-navbar__btn--elimina {
+      color: white;
+      background-color: #990000; }
+      .blog-navbar__btn--elimina:hover {
+        background-color: rgba(153, 0, 0, 0.8);
+        color: white; }
+    .blog-navbar__btn--modifica {
+      color: black;
+      background-color: #ece91e;
+      margin-right: .3rem; }
+      .blog-navbar__btn--modifica:hover {
+        background-color: rgba(236, 233, 30, 0.8); }
   .blog-navbar__logo {
     padding-top: .5rem;
     width: 7rem; }
@@ -1096,6 +1121,48 @@ body {
     .card__details {
       padding: 1.5rem 3rem;
       font-size: 1.3rem; } }
+
+.comments {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  margin-top: 7rem; }
+  .comments__form-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%; }
+  .comments__avatar-img {
+    border-radius: 50%;
+    width: 10rem;
+    margin-right: 4rem; }
+  .comments__textarea {
+    border: none;
+    height: 12rem;
+    font-size: 3rem;
+    padding: 2rem;
+    width: 50vw; }
+    .comments__textarea:focus {
+      outline: 1px solid #cecece;
+      padding: 2rem; }
+  .comments__comment {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 2rem; }
+    .comments__comment__avatar {
+      border-radius: 50%; }
+    .comments__comment__name-and-btn-container {
+      margin-left: 10%; }
+    .comments__comment__name-and-btn-container {
+      display: flex;
+      width: 100%; }
+    .comments__comment__btns-container {
+      margin-left: auto; }
+  .comments__add-comment-btn {
+    margin-top: 3rem;
+    text-align: center; }
 
 .counter {
   height: 100vh;
@@ -2110,6 +2177,13 @@ body {
 .new-post__submit {
   width: 100%;
   margin-top: 2rem; }
+
+.new-post__edit-image {
+  width: 100%;
+  transition: all .3s; }
+  .new-post__edit-image:hover {
+    cursor: pointer;
+    filter: brightness(0.6); }
 
 .form__input.form__input--file {
   width: 100%; }

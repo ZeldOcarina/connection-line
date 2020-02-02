@@ -1,3 +1,4 @@
+<% const splittedPage = page.split('/'); %>
 <!DOCTYPE html>
 <html lang="it">
 
@@ -14,7 +15,7 @@
         })(window,document,'script','dataLayer','GTM-PRTTW9W');</script>
         <!-- End Google Tag Manager -->
     <!--<link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">-->
-    <% if(page === '/blog/post') { %>
+    <% if(page === '/blog/post' || splittedPage[splittedPage.length - 1] === 'edit') { %>
         <script src="https://cdn.tiny.cloud/1/<%= tinyAPIKey %>/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <% } %>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/app.min.css">
@@ -28,6 +29,9 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="flash-message"></div>
+    <% if(user) { %>
+        <div id="user-data" data-user-id="<%= user.id %>" data-user-image="<%= user.avatar %>" hidden></div>
+    <% } %>
     <% if(isNotBlog) { %>
         <div class="navigation">
             <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
@@ -95,9 +99,14 @@
     <% } else { %>
         <nav class="blog-navbar">
             <a class="blog-navbar__link" href="/blog">Blog Home</a>
-            <img class="blog-navbar__logo" src="/assets/logo.png">
+            <a href="/"><img class="blog-navbar__logo" src="/assets/logo.png"></a>
             <div>
                 <% if(user) { %>
+                    <% const lastURLWord = splittedPage[splittedPage.length - 1]; %>
+                    <% if(splittedPage[1] === 'blog' && splittedPage[2] && lastURLWord !== 'post' && lastURLWord !== 'edit') { %>
+                        <a href="/blog/<%= post.slug %>/edit" class="blog-navbar__link blog-navbar__btn blog-navbar__btn--modifica">Modifica</a>
+                        <btn class="blog-navbar__link blog-navbar__btn blog-navbar__btn--elimina" data-slug="<%= post.slug %>">Elimina</btn>
+                    <% } %>
                     <a class="blog-navbar__link blog-navbar__btn blog-navbar__btn--crea-post" href="/user/me">Il Mio Profilo</a>
                     <a class="blog-navbar__link blog-navbar__btn blog-navbar__btn--crea-post" href="/blog/post">Crea Post</a>
                     <btn class="blog-navbar__link blog-navbar__btn blog-navbar__btn--logout">Logout</btn>

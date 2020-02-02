@@ -23,7 +23,11 @@
             <div class="signup__input-container">
                 <input class="signup__submit" type="submit" value="<%= context === 'login' ? 'Login' : 'Registrati' %>">
             </div>
-            
+            <% if(context === 'login') { %>
+                <div class="signup__input-container mt-3">
+                    <span>Non sei ancora registrato? <a href="/register">Registrati subito!</a></span>
+                </div>
+            <% } %>
         </form>
 
     </div>

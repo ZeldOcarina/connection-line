@@ -2,15 +2,16 @@
 	"name": "connection-line",
 	"version": "1.1.0",
 	"description": "A new website for Cl Connection Line SAGL",
-	"main": "app.js",
+	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
-		"start:dev": "nodemon server.js",
+		"start:dev": "npm-run-all --parallel dev:*",
+		"dev:server": "nodemon server.js --ignore js/",
 		"start:testProd": "NODE_ENV=production nodemon server.js",
 		"prod": "node server.js NODE_ENV=production",
-		"watch:js": "webpack --config webpack.dev.js",
+		"dev:js": "webpack --config webpack.dev.js",
 		"build:js": "webpack --config webpack.prod.js",
-		"sass": "node-sass src/scss/main.scss public/css/app.min.css -w",
+		"dev:sass": "node-sass src/scss/main.scss public/css/app.min.css -w",
 		"compile:sass": "node-sass src/scss/main.scss public/css/app.comp.css",
 		"prefix:css": "postcss public/css/app.comp.css -o public/css/style.prefix.css",
 		"compress:css": "node-sass public/css/style.prefix.css public/css/app.min.css --output-style compressed",
@@ -87,6 +88,7 @@
 		"webpack": "^4.29.6",
 		"webpack-cli": "^3.3.5",
 		"webpack-dev-server": "^3.2.1",
+		"webpack-hot-middleware": "^2.25.0",
 		"webpack-merge": "^4.2.1"
 	}
 }

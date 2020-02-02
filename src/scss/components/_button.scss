@@ -74,6 +74,23 @@
 		color: $white;
 		text-decoration: none;
 	}
+
+	&--erease {
+		background-color: $erease;
+		color: $white;
+
+		&:hover {
+			background-color: $erease-hover;
+		}
+	}
+
+	&--modify {
+		background-color: $modify;
+
+		&:hover {
+			background-color: $modify-hover;
+		}
+	}
 }
 
 .btn-text {

@@ -18,6 +18,34 @@
                 <span class="show-blog__author-container--date"><%= `${createdAt.getDate()}/${createdAt.getMonth() + 1}/${createdAt.getFullYear()}` %></span>
                             </div>
             <p class="show-blog__text"><%- post.content %></p>
+            
+                <div class="comments">
+                    <% for(comment of post.comments) { %>
+                        <% const { comment: commentText, author, _id: commentId } = comment; %>
+                        <% const { name, avatar } = author; %>
+                        <div class="comments__comment">
+                            <img src="<%= avatar %>" class="show-blog__author-container--avatar comments__comment__avatar">
+                            <span><%= name %></span>
+                            <div class="comments__comment__name-and-btn-container">
+                                <p class="comments__comment__comment-text"><%= commentText %></p>
+                                <% if(user.commentsMade.includes(commentId)) { %>
+                                    <div class="comments__comment__btns-container">
+                                        <btn class="btn btn--modify modify-comment-btn" data-comment-id="<%= commentId %>">Modifica</btn>
+                                        <btn class="btn btn--erease delete-comment-btn" data-comment-id="<%= commentId %>">Cancella</btn>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if(user) { %>
+                        <btn class="btn btn--primary comments__add-comment-btn"><%= user.name.split(' ')[0] %> Inserisci il Tuo Commento</btn>
+                    <% } else { %>
+                        <a class="btn btn--primary comments__add-comment-btn" href="/login">Fai il Login per Commentare il Post</a>
+                    <% } %>
+                </div>
+            
+
+            
         </div>
     </section>
 </div>

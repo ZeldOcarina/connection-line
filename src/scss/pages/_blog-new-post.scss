@@ -52,6 +52,16 @@
 		width: 100%;
 		margin-top: 2rem;
 	}
+
+	&__edit-image {
+		width: 100%;
+		transition: all .3s;
+
+		&:hover {
+			cursor: pointer;
+			filter: brightness(0.6);
+		}
+	}
 }
 
 .form__input.form__input--file {

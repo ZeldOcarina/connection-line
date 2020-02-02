@@ -3,6 +3,8 @@ const multer = require('multer');
 const multerS3 = require('multer-s3');
 const sanitize = require('sanitize-filename');
 
+const Post = require('../models/posts');
+
 aws.config.update({
 	accessKeyId: process.env.AWS_ACCESS_KEY_ID,
 	secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
@@ -111,4 +113,37 @@ exports.cancellaAvatarFoto = (req, res, next) => {
 		});
 	}
 	next();
+};
+
+exports.cancellaBlogFoto = async (req, res, next) => {
+	try {
+		aws.config.update({
+			accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+			secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+			region: process.env.AWS_REGION
+		});
+
+		const s3 = new aws.S3();
+
+		const { image } = await Post.findOne({ slug: req.params.slug });
+
+		const key = image.split('/')[image.split('/').length - 1];
+
+		const toBeDeleted = [ { Key: key } ];
+
+		const params = {
+			Bucket: process.env.S3_BUCKET,
+			Delete: {
+				Objects: toBeDeleted
+			}
+		};
+
+		s3.deleteObjects(params, (err, data) => {
+			if (err) console.error(err, err.stack); // an error occurred
+		});
+		next();
+	} catch (err) {
+		console.error(err);
+		next(err);
+	}
 };
