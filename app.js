@@ -5,11 +5,8 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const expressSanitizer = require('express-sanitizer');
 const cors = require('cors');
-<<<<<<< HEAD
-=======
 const reloadify = require('reloadify')(__dirname + '/public');
 const cookieParser = require('cookie-parser');
->>>>>>> blog
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controller/errorController');
@@ -36,14 +33,10 @@ app.use(expressSanitizer());
 app.use('/uploads', express.static('uploads'));
 app.use(express.static('public'));
 app.use(express.json());
-<<<<<<< HEAD
-app.use(cors());
-=======
 app.use(cookieParser());
 
 //GLOBAL TEMPLATES VARIABLES
 app.locals.publicKey = process.env.RECAPTCHA_PUBLIC_KEY;
->>>>>>> blog
 
 //REQUIRING ROUTES
 const homeRoute = require('./routes/home');
@@ -77,10 +70,6 @@ app.use(isLoggedIn, (req, res, next) => {
 });
 
 //HOME PAGE
-<<<<<<< HEAD
-app.use('/api/v1/blog', blogRoute);
-app.use('/messenger-bot', messengerBotRoute);
-=======
 app.use(authRoute);
 
 //API ROUTES
@@ -90,16 +79,10 @@ app.use('/api/v1/users/', usersRoute);
 // VIEW ROUTES
 app.use('/blog', blogRoute);
 app.use('/user', userRoute);
->>>>>>> blog
 app.use(getUrl, homeRoute);
 app.use(requestRoute);
 app.use(thankyouRoute);
 app.use(privacyRoute);
-<<<<<<< HEAD
-
-app.use(usersRoute);
-=======
->>>>>>> blog
 
 //404
 app.all('*', (req, res, next) => {

@@ -14,7 +14,7 @@ exports.getAllUsers = catchAsync(async (req, res, next) => {
 });
 
 exports.getMe = (req, res) => {
-	console.log(req.user);
+	//console.log(req.user);
 	res.status(200).render('me');
 };
 

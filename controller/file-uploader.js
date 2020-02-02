@@ -77,7 +77,7 @@ exports.avatarFileUploader = upload.single('avatar');
 exports.multerErrorChecker = (err, req, res, next) => {
 	if (err.name === 'MulterError') {
 		console.error(err);
-		console.log(req.files, req.body);
+		//console.log(req.files, req.body);
 		return res.status(400).render('error', {
 			title: 'Upload Error',
 			msg: 'Please try again or send your files manually to info@connectionlinesagl.com'
