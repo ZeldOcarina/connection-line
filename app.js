@@ -6,7 +6,7 @@ const helmet = require('helmet');
 const expressSanitizer = require('express-sanitizer');
 const cors = require('cors');
 let reloadify;
-if (appState !== 'production') reloadify = require('reloadify')(__dirname + '/public');
+if (process.env.NODE_ENV !== 'production') reloadify = require('reloadify')(__dirname + '/public');
 const cookieParser = require('cookie-parser');
 
 const AppError = require('./utils/appError');
