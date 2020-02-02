@@ -5,7 +5,8 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const expressSanitizer = require('express-sanitizer');
 const cors = require('cors');
-const reloadify = require('reloadify')(__dirname + '/public');
+let reloadify;
+if (appState !== 'production') reloadify = require('reloadify')(__dirname + '/public');
 const cookieParser = require('cookie-parser');
 
 const AppError = require('./utils/appError');
