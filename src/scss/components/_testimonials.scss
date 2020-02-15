@@ -1,74 +1,75 @@
 .testimonials {
-	@include flex100Center;
+  @include flex100Center;
 
-	@include respond(trecentosettantacinque) {
-		padding-top: 4rem;
-	}
+  @include respond(trecentosettantacinque) {
+    display: block;
+    padding-top: 4rem;
+  }
 
-	&__title {
-		@include section_title;
-		margin-bottom: 5rem;
+  &__title {
+    @include section_title;
+    margin-bottom: 5rem;
 
-		@include respond(ottocento) {
-			font-size: 3rem;
-		}
+    @include respond(ottocento) {
+      font-size: 3rem;
+    }
 
-		@include respond(seicento) {
-			font-size: 2.5rem;
-		}
+    @include respond(seicento) {
+      font-size: 2.5rem;
+    }
 
-		@include respond(cinquecento) {
-			padding: 0 5rem;
-		}
+    @include respond(cinquecento) {
+      padding: 0 5rem;
+    }
 
-		@include respond(trecentosettantacinque) {
-			font-size: 2rem;
-			margin-bottom: 2rem;
-		}
-	}
+    @include respond(trecentosettantacinque) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
 
-	&__text {
-		text-align: left;
-		align-self: flex-start;
-		padding: 0 20%;
+  &__text {
+    text-align: left;
+    align-self: flex-start;
+    padding: 0 20%;
 
-		@include respond(ottocento) {
-			padding: 0 15%;
-		}
+    @include respond(ottocento) {
+      padding: 0 15%;
+    }
 
-		@include respond(trecentosettantacinque) {
-			padding: 0 10%;
-			font-size: 1rem;
-		}
-	}
+    @include respond(trecentosettantacinque) {
+      padding: 0 10%;
+      font-size: 1rem;
+    }
+  }
 
-	/**********************
+  /**********************
     * CSS PER CAROSELLO JS
     ***********************/
 
-	&__carousel {
-		display: block;
-		align-content: center;
-		align-items: center;
-		justify-content: center;
-		flex-basis: content;
-		margin-top: 10rem;
-		background-color: rgba($color-grey-light, .75);
-		width: 100vw;
-		transition: all linear;
-		padding: 2rem;
-		@include respond(trecentosettantacinque) {
-			margin-top: 2rem;
-			margin-bottom: 2rem;
-		}
+  &__carousel {
+    display: block;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-basis: content;
+    margin-top: 10rem;
+    background-color: rgba($color-grey-light, 0.75);
+    width: 100vw;
+    transition: all linear;
+    padding: 2rem;
+    @include respond(cinquecento) {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
 
-		&-logo {
-			height: auto;
-			width: auto;
-			margin: 0 10rem;
-			filter: grayscale(100%) brightness(130%);
-		}
-	}
+    &-logo {
+      height: auto;
+      width: auto;
+      margin: 0 10rem;
+      filter: grayscale(100%) brightness(130%);
+    }
+  }
 }
 
 /*****************************
@@ -111,13 +112,13 @@
 
 //SEMPRE INCLUSO TANTO NON FUNZIONA SENZA JS
 .owl-stage {
-	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-	justify-items: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 .owl-dots {
-	display: none;
+  display: none;
 }
