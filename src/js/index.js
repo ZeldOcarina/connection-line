@@ -36,4 +36,4 @@ newPost();
 deletePost();
 me();
 logout();
-blogComments();
+//blogComments();
