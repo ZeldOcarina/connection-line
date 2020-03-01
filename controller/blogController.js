@@ -4,7 +4,7 @@ exports.blogHome = async (req, res) => {
   try {
     const posts = await Post.find({});
     //console.log(posts);
-    return res.status(200).render("blog/blogHome", { posts });
+    res.status(200).render("blog/blogHome", { posts });
   } catch (err) {
     console.error(err);
   }

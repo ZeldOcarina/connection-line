@@ -1,94 +1,103 @@
 .blog-card {
-	background-image: $blog-linear;
-	border-radius: 10px;
-	padding: 2rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: min-content;
+  background-image: $blog-linear;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: min-content;
 
-	&__top {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		background-size: cover;
-		background-position: center;
-		width: 100%;
-		height: 25rem;
-		border-radius: 10px;
-		margin-bottom: 2rem;
+  @include respond(cinquecento) {
+    width: 90vw;
+    margin: 0 auto;
+  }
 
-		&--link {
-			text-decoration: none;
-			width: 100%;
-		}
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 25rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
 
-		&--title-container {
-			background-image: linear-gradient(to right, rgba($color-primary, .9), rgba($color-secondary, .9));
-			padding: 1.5rem;
-			border-radius: 10px;
-			color: white;
-			width: 70%;
-		}
-	}
+    &--link {
+      text-decoration: none;
+      width: 100%;
+    }
 
-	h1,
-	h2 {
-		text-align: center;
-		font-weight: 400;
-	}
+    &--title-container {
+      background-image: linear-gradient(
+        to right,
+        rgba($color-primary, 0.9),
+        rgba($color-secondary, 0.9)
+      );
+      padding: 1.5rem;
+      border-radius: 10px;
+      color: white;
+      width: 70%;
+    }
+  }
 
-	h1 {
-		font-size: $big-font-size;
-		font-weight: $super-thin;
-		text-transform: uppercase;
-		letter-spacing: .6px;
-		line-height: 1.2;
-		margin-bottom: 1rem;
-	}
+  h1,
+  h2 {
+    text-align: center;
+    font-weight: 400;
+  }
 
-	h2 {
-		font-size: 1.6rem;
-		letter-spacing: .6px;
-	}
+  h1 {
+    font-size: $big-font-size;
+    font-weight: $super-thin;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
 
-	&__author {
-		text-align: center;
-		padding: 2rem 0;
-	}
+  h2 {
+    font-size: 1.6rem;
+    letter-spacing: 0.6px;
+  }
 
-	&__avatar-container {
-		border: 1px solid white;
-		padding: 1rem;
-		text-align: center;
-		border-radius: 50%;
-		width: 100px;
-		height: 100px;
-	}
+  &__author {
+    text-align: center;
+    padding: 2rem 0;
+  }
 
-	&__avatar {
-		border-radius: 50%;
-		margin: 0 auto;
-		width: 100%;
-	}
+  &__avatar-container {
+    border: 1px solid white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
 
-	p {
-		margin-bottom: 2rem;
-		padding: 0 1rem;
-	}
+  &__avatar {
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 100%;
+  }
 
-	&__button {
-		background-color: $color-primary;
-		border: none;
-		padding: 1.5rem 3rem;
-		border-radius: 10px;
-		width: 100%;
-		margin: auto 0 2rem;
-		position: relative;
-		color: $color-grey-light;
-		cursor: pointer;
-		text-decoration: none;
-		text-align: center;
-	}
+  p {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  &__button {
+    background-color: $color-primary;
+    border: none;
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+    width: 100%;
+    margin: auto 0 2rem;
+    position: relative;
+    color: $color-grey-light;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+  }
 }

@@ -848,6 +848,10 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: min-content; }
+  @media only screen and (max-width: 31.25em) {
+    .blog-card {
+      width: 90vw;
+      margin: 0 auto; } }
   .blog-card__top {
     display: flex;
     flex-direction: column;
@@ -876,12 +880,12 @@ body {
     font-size: 2.5rem;
     font-weight: 200;
     text-transform: uppercase;
-    letter-spacing: .6px;
+    letter-spacing: 0.6px;
     line-height: 1.2;
     margin-bottom: 1rem; }
   .blog-card h2 {
     font-size: 1.6rem;
-    letter-spacing: .6px; }
+    letter-spacing: 0.6px; }
   .blog-card__author {
     text-align: center;
     padding: 2rem 0; }
@@ -954,13 +958,13 @@ body {
   -moz-perspective: 150rem;
   position: relative;
   height: 52rem; }
-  @media only screen and (max-width: 25em) {
+  @media only screen and (max-width: 37.75em) {
     .card {
-      width: 75%;
+      width: 75vw;
       margin: 0 auto; } }
   .card__side {
     height: 52rem;
-    transition: all .8s ease;
+    transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -1010,7 +1014,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); }
   .card__heading-span {
-    padding: .8rem 1.3rem;
+    padding: 0.8rem 1.3rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     background-image: linear-gradient(to right bottom, rgba(0, 88, 158, 0.25), rgba(180, 180, 180, 0.25)); }
@@ -2025,29 +2029,53 @@ body {
     justify-content: center;
     flex-direction: column;
     color: white; }
+    @media only screen and (max-width: 50em) {
+      .blog-home__top-section {
+        height: min-content; } }
     .blog-home__top-section h1,
     .blog-home__top-section h2 {
       font-weight: 200;
-      letter-spacing: .2rem; }
+      letter-spacing: 0.2rem; }
     .blog-home__top-section h1 {
       text-transform: uppercase;
       font-size: 4.5rem;
       margin-bottom: 2rem; }
+      @media only screen and (max-width: 50em) {
+        .blog-home__top-section h1 {
+          font-size: 3.5rem;
+          margin-bottom: 1rem; } }
     .blog-home__top-section h2 {
       text-transform: uppercase;
       font-size: 2.5rem; }
+      @media only screen and (max-width: 50em) {
+        .blog-home__top-section h2 {
+          font-size: 2rem; } }
     .blog-home__top-section-container {
-      padding: .8rem 1.3rem;
+      padding: 0.8rem 1.3rem;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
       background-image: linear-gradient(to right bottom, rgba(0, 88, 158, 0.7), rgba(180, 180, 180, 0.7));
       text-align: center; }
+      @media only screen and (max-width: 56.25em) {
+        .blog-home__top-section-container {
+          padding: 5rem; } }
+      @media only screen and (max-width: 50em) {
+        .blog-home__top-section-container {
+          margin: 2rem 3rem;
+          padding: 3rem 2rem; } }
   .blog-home__post-section {
     padding: 0 10rem 5rem; }
+    @media only screen and (max-width: 31.25em) {
+      .blog-home__post-section {
+        padding: 0 5rem 5rem; } }
     .blog-home__post-section h3 {
       font-weight: 400;
       text-align: center;
       padding: 5rem; }
+      @media only screen and (max-width: 31.25em) {
+        .blog-home__post-section h3 {
+          padding: 3rem 0;
+          width: 100%; } }
   .blog-home__post-container {
     display: grid;
     width: 100%;
@@ -2064,6 +2092,12 @@ body {
   padding: 2rem 20% 10rem;
   line-height: 2;
   letter-spacing: 0.2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .show-blog__text-container {
+      padding: 2rem 10% 10rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .show-blog__text-container {
+      font-size: 2rem; } }
 
 .show-blog__author-container {
   display: flex;
@@ -2073,6 +2107,10 @@ body {
   margin-bottom: 3rem;
   padding: 2rem 5rem;
   border-radius: 10px; }
+  @media only screen and (max-width: 31.25em) {
+    .show-blog__author-container {
+      flex-direction: column;
+      padding: 2rem 0; } }
   .show-blog__author-container--author {
     display: flex;
     align-items: center;
@@ -2083,6 +2121,10 @@ body {
   .show-blog__author-container--date {
     margin-left: auto;
     color: #757575; }
+    @media only screen and (max-width: 31.25em) {
+      .show-blog__author-container--date {
+        margin-left: 0;
+        margin-top: 2rem; } }
 
 .new-post__container {
   padding: 5rem 0;

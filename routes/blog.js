@@ -11,11 +11,11 @@ const { protect } = require("../controller/authController");
 
 const { italianContent } = require("../content/content");
 
-router.use((req, res, next) => {
+/*router.use((req, res, next) => {
   res.locals.content = italianContent();
   res.locals.language = "italian";
   next();
-});
+});*/
 
 router.get("/", blogHome);
 router.get("/post", protect, getPostForm);
