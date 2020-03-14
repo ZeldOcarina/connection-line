@@ -4,6 +4,7 @@
       class="blog-card__top"
       style="background-image: linear-gradient(to right, rgba(0, 88, 158, 0.4), rgba(180, 180, 180, 0.3)), url(<%= post.image %>)"
     >
+    
       <div class="blog-card__top--title-container">
         <h1><%= post.title %></h1>
         <h2><%= post.subtitle %></h2>
@@ -25,5 +26,7 @@
     <%- post.content.length > 200 ? `${post.content.substring(0, 205)} ...` :
     post.content %>
   </p>
+  <% //console.log(post) %>
+  <% console.log(post.content.substring(0, 205)) %>
   <a href="/blog/<%= post.slug %>" class="blog-card__button">Vai al Post</a>
 </div>

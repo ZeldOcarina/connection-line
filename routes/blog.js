@@ -7,7 +7,7 @@ const {
   getPostForm,
   getEditBlog
 } = require("../controller/blogController");
-const { protect } = require("../controller/authController");
+const { protect, restrictTo } = require("../controller/authController");
 
 const { italianContent } = require("../content/content");
 
@@ -18,8 +18,18 @@ const { italianContent } = require("../content/content");
 });*/
 
 router.get("/", blogHome);
-router.get("/post", protect, getPostForm);
-router.get("/:slug/edit", protect, getEditBlog);
+router.get(
+  "/post",
+  protect,
+  restrictTo("editor", "administrator", "webmaster"),
+  getPostForm
+);
+router.get(
+  "/:slug/edit",
+  restrictTo("editor", "administrator", "webmaster"),
+  protect,
+  getEditBlog
+);
 router.get("/:slug", showBlog);
 
 module.exports = router;

@@ -103,14 +103,17 @@
             <div>
                 <% if(user) { %>
                     <% const lastURLWord = splittedPage[splittedPage.length - 1]; %>
-                    <% if(splittedPage[1] === 'blog' && splittedPage[2] && lastURLWord !== 'post' && lastURLWord !== 'edit') { %>
+                    <% if(splittedPage[1] === 'blog' && splittedPage[2] && lastURLWord !== 'post' && lastURLWord !== 'edit' && user && user.role !== 'user') { %>
                         <a href="/blog/<%= post.slug %>/edit" class="blog-navbar__link blog-navbar__btn blog-navbar__btn--modifica">Modifica</a>
                         <btn class="blog-navbar__link blog-navbar__btn blog-navbar__btn--elimina" data-slug="<%= post.slug %>">Elimina</btn>
                     <% } %>
                     <a class="blog-navbar__link blog-navbar__btn blog-navbar__btn--crea-post" href="/user/me">Il Mio Profilo</a>
-                    <a class="blog-navbar__link blog-navbar__btn blog-navbar__btn--crea-post" href="/blog/post">Crea Post</a>
+                    <% if(user && user.role !== 'user') { %>
+                        <a class="blog-navbar__link blog-navbar__btn blog-navbar__btn--crea-post" href="/blog/post">Crea Post</a>
+                    <% } %>
                     <btn class="blog-navbar__link blog-navbar__btn blog-navbar__btn--logout">Logout</btn>
                 <%  } else { %>
+                    <a class="blog-navbar__link blog-navbar__btn blog-navbar__btn--login" href="/register">Registrati</a>
                     <a class="blog-navbar__link blog-navbar__btn blog-navbar__btn--login" href="/login">Login</a>
                 <%  } %>                
             </div>

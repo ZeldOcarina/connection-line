@@ -40,7 +40,11 @@ const newPost = () => {
   newPostForm.addEventListener("input", e => {
     let { name, value } = e.target;
     formContent[name] = value;
-    if (document.querySelector(".form__input--label")) {
+    if (
+      document.querySelector(".form__input--label") &&
+      e.target.files &&
+      e.target.files > 0
+    ) {
       document.querySelector(
         ".form__input--label"
       ).innerHTML = `<img class="form__input--file-icon" src="/assets/icons/upload.png">${e.target.files[0].name}`;
@@ -78,12 +82,16 @@ const newPost = () => {
       form.append("title", formContent.title);
       form.append("subtitle", formContent.subtitle);
       form.append("content", formContent.content);
-      form.append(
-        "post-image",
-        fileInput.files[0]
-          ? fileInput.files[0]
-          : editPostImage.getAttribute("src")
-      );
+
+      debugger;
+
+      if (fileInput.files && fileInput.files.length > 0)
+        form.append(
+          "post-image",
+          fileInput.files[0]
+            ? fileInput.files[0]
+            : editPostImage.getAttribute("src")
+        );
 
       /*for (var [ key, value ] of form.entries()) {
 					console.log(key, value);
@@ -103,7 +111,6 @@ const newPost = () => {
           url: `/api/v1/blog/${slug}`,
           data: form
         });
-        console.log(result.data);
       }
 
       function sendToBlogPost(message) {

@@ -32,12 +32,11 @@ const sendErrorDev = (err, req, res) => {
     });
 
   res
-    .status(err.status)
+    .status(err.statusCode)
     .render("error", { title: "An error has occurred!", msg: err.message });
 };
 
 const sendErrorProd = (err, req, res) => {
-  debugger;
   if (err.isOperational)
     return res.status(400).json({
       status: err.statusCode,

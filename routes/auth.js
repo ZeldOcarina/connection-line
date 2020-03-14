@@ -16,7 +16,7 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get("/register", protect, getRegister);
+router.get("/register", getRegister);
 router.get("/login", getLogin);
 router.get("/logout", logout);
 

@@ -160,7 +160,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   // 3) Send it to user's email
   const resetURL = `${req.protocol}://${req.get(
     "host"
-  )}/it/api/v1/users/resetPassword/${resetToken}`;
+  )}/api/v1/users/resetPassword/${resetToken}`;
 
   try {
     await transporter.sendMail({
@@ -198,6 +198,8 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     passwordResetToken: hashedToken,
     passwordResetExpires: { $gt: Date.now() }
   });
+
+  debugger;
 
   // 2) If token has not expired and there is a user, set the new password
   if (!user) return next(new AppError("Token is invalid or has expired"), 400);
