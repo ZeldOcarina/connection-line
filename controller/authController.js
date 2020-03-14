@@ -158,16 +158,19 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   await user.save({ validateBeforeSave: false });
 
   // 3) Send it to user's email
+  /*const resetURL = `${req.protocol}://${req.get(
+    "host"
+  )}/api/v1/users/resetPassword/${resetToken}`;*/
   const resetURL = `${req.protocol}://${req.get(
     "host"
-  )}/api/v1/users/resetPassword/${resetToken}`;
+  )}/user/reset-password?resetToken=${resetToken}`;
 
   try {
     await transporter.sendMail({
       from: "Connection Line Sagl <info@connectionlinesagl.com>",
       to: req.body.email,
       subject: "Password Reset (valid for 10 minutes)",
-      text: `Forgot password? Submit a patch request with your new password and passwordConfirm to. ${resetURL}.\n If you did not forget your password please forget this email`
+      text: `Forgot password? Please visit ${resetURL}. to reset the password.\r\n If you did not forget your password please forget this email`
     });
 
     res.status(200).json({
@@ -191,15 +194,13 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
   // 1) Get user based on the token
   const hashedToken = crypto
     .createHash("sha256")
-    .update(req.params.token)
+    .update(req.params.token.replace(".", ""))
     .digest("hex");
 
   const user = await User.findOne({
     passwordResetToken: hashedToken,
     passwordResetExpires: { $gt: Date.now() }
   });
-
-  debugger;
 
   // 2) If token has not expired and there is a user, set the new password
   if (!user) return next(new AppError("Token is invalid or has expired"), 400);

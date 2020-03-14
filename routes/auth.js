@@ -4,8 +4,7 @@ const router = express.Router();
 const {
   getRegister,
   getLogin,
-  logout,
-  protect
+  logout
 } = require("../controller/authController");
 
 const { italianContent } = require("../content/content");

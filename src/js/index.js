@@ -19,6 +19,7 @@ import deletePost from "./controller/deletePost";
 import me from "./utils/me";
 import blogComments from "./view/blogComments";
 import passwordRecover from "./controller/auth/passwordRecover";
+import passwordReset from "./controller/auth/passwordReset";
 
 //import aws_s3 from './utils/aws_s3';
 
@@ -38,4 +39,5 @@ deletePost();
 me();
 logout();
 blogComments();
+passwordReset();
 passwordRecover();

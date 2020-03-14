@@ -17,5 +17,8 @@ router
 router.route("/password-forget").get((req, res) => {
   res.status(200).render("blog/password-recover");
 });
+router.route("/reset-password").get((req, res) => {
+  res.status(200).render("blog/reset-password");
+});
 
 module.exports = router;

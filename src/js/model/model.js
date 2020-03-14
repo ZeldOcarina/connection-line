@@ -17,3 +17,6 @@ export const signupForm = document.querySelector(".signup__form");
 export const passwordRecoverForm = document.querySelector(
   ".password-recover__form"
 );
+export const passwordResetForm = document.querySelector(
+  ".password-reset__form"
+);

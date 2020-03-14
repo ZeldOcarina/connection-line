@@ -8,7 +8,6 @@ export default async function passwordRecover() {
   passwordRecoverForm.addEventListener("input", e => {
     let { name, value } = e.target;
     formContent[name] = value;
-    console.log(formContent);
   });
 
   passwordRecoverForm.addEventListener("submit", async e => {
@@ -19,7 +18,6 @@ export default async function passwordRecover() {
         url: "/api/v1/users/forgotPassword",
         data: { email: formContent.email }
       });
-      console.log(result);
       displayFlash(
         "success",
         "Controlla la tua email per resettare la password!"
