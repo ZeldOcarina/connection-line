@@ -26,7 +26,5 @@
     <%- post.content.length > 200 ? `${post.content.substring(0, 205)} ...` :
     post.content %>
   </p>
-  <% //console.log(post) %>
-  <% console.log(post.content.substring(0, 205)) %>
   <a href="/blog/<%= post.slug %>" class="blog-card__button">Vai al Post</a>
 </div>
