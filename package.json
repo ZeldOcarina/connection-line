@@ -48,7 +48,7 @@
     "express-recaptcha": "^5.0.0",
     "express-sanitizer": "^1.0.5",
     "helmet": "^3.21.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-scrollify": "^1.0.20",
     "js-cookie": "^2.2.1",
     "jsonwebtoken": "^8.5.1",
