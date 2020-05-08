@@ -4,7 +4,7 @@ import {
   newPostForm,
   fileInput,
   fileInputLabel,
-  editPostImage
+  editPostImage,
 } from "../model/model";
 import { displayFlash } from "../utils/display-alert";
 import lastURLWord from "../utils/LastURLWord";
@@ -19,7 +19,7 @@ const newPost = () => {
   const originalContent = {
     title: originalTitle,
     subtitle: originalSubtitle,
-    content: originalPostContent
+    content: originalPostContent,
   };
 
   const formContent = lastURLWord() === "edit" ? originalContent : {};
@@ -30,14 +30,14 @@ const newPost = () => {
     plugins: "code emoticons table",
     toolbar:
       "undo redo | bold italic underline strikethrough removeformat | forecolor backcolor | alignleft aligncenter alignright alignjustify | outdent indent | emoticons code | table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow tableinsertcolbefore tableinsertcolafter tabledeletecol",
-    init_instance_callback: function(editor) {
-      editor.on("input", function(e) {
+    init_instance_callback: function (editor) {
+      editor.on("input", function (e) {
         formContent.content = tinymce.activeEditor.getContent();
       });
-    }
+    },
   });
 
-  newPostForm.addEventListener("input", e => {
+  newPostForm.addEventListener("input", (e) => {
     let { name, value } = e.target;
     formContent[name] = value;
     if (
@@ -51,7 +51,7 @@ const newPost = () => {
     }
   });
 
-  fileInput.addEventListener("change", e => {
+  fileInput.addEventListener("change", (e) => {
     const { files } = e.target;
     if (files.length > 0 && lastURLWord() !== "edit")
       fileInputLabel.textContent = files[0].name;
@@ -74,16 +74,13 @@ const newPost = () => {
     });
   }
 
-  newPostForm.addEventListener("submit", async e => {
+  newPostForm.addEventListener("submit", async (e) => {
     try {
       e.preventDefault();
-      console.log(formContent);
       const form = new FormData();
       form.append("title", formContent.title);
       form.append("subtitle", formContent.subtitle);
       form.append("content", formContent.content);
-
-      debugger;
 
       if (fileInput.files && fileInput.files.length > 0)
         form.append(
@@ -102,14 +99,14 @@ const newPost = () => {
         result = await axios({
           method: "POST",
           url: "/api/v1/blog",
-          data: form
+          data: form,
         });
       } else {
         const slug = window.location.pathname.split("/")[2];
         result = await axios({
           method: "PATCH",
           url: `/api/v1/blog/${slug}`,
-          data: form
+          data: form,
         });
       }
 

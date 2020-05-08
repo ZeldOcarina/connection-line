@@ -1,58 +1,67 @@
 .blog-navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2rem 4rem;
-	background-color: $color-primary-dark;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  background-color: $color-primary-dark;
 
-	&__link {
-		text-decoration: none;
-		color: $color-secondary;
-	}
+  @include respond(quattrocentosettanta) {
+    flex-direction: column;
+  }
 
-	&__btn {
-		border: 1px solid $color-secondary;
-		border-radius: 2.5rem;
-		padding: 1rem 2rem;
+  &__link {
+    text-decoration: none;
+    color: $color-secondary;
+  }
 
-		&:hover {
-			background-color: $white;
-			color: $color-primary-dark;
-			cursor: pointer;
-		}
+  &__btn {
+    border: 1px solid $color-secondary;
+    border-radius: 2.5rem;
+    padding: 1rem 2rem;
 
-		&--crea-post {
-			border: none;
-		}
+    &:hover {
+      background-color: $white;
+      color: $color-primary-dark;
+      cursor: pointer;
+    }
 
-		&--elimina,
-		&--modifica {
-			border: none;
-		}
+    &--crea-post {
+      border: none;
+    }
 
-		&--elimina {
-			color: white;
-			background-color: $erease;
+    &--elimina,
+    &--modifica {
+      border: none;
+    }
 
-			&:hover {
-				background-color: rgba($erease, .8);
-				color: white;
-			}
-		}
+    &--elimina {
+      color: white;
+      background-color: $erease;
 
-		&--modifica {
-			color: black;
-			background-color: $modify;
-			margin-right: .3rem;
+      &:hover {
+        background-color: rgba($erease, 0.8);
+        color: white;
+      }
+    }
 
-			&:hover {
-				background-color: rgba($modify, .8);
-			}
-		}
-	}
+    &--modifica {
+      color: black;
+      background-color: $modify;
+      margin-right: 0.3rem;
 
-	&__logo {
-		padding-top: .5rem;
-		width: 7rem;
-	}
+      &:hover {
+        background-color: rgba($modify, 0.8);
+      }
+    }
+  }
+
+  &__logo {
+    padding-top: 0.5rem;
+    width: 7rem;
+
+    @include respond(quattrocentosettanta) {
+      width: 10rem;
+      margin: 2rem 0 3rem 0;
+    }
+  }
 }

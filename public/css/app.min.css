@@ -1012,6 +1012,9 @@ body {
   align-items: center;
   padding: 2rem 4rem;
   background-color: #001e36; }
+  @media only screen and (max-width: 29.375em) {
+    .blog-navbar {
+      flex-direction: column; } }
   .blog-navbar__link {
     text-decoration: none;
     color: #b4b4b4; }
@@ -1036,12 +1039,16 @@ body {
     .blog-navbar__btn--modifica {
       color: black;
       background-color: #ece91e;
-      margin-right: .3rem; }
+      margin-right: 0.3rem; }
       .blog-navbar__btn--modifica:hover {
         background-color: rgba(236, 233, 30, 0.8); }
   .blog-navbar__logo {
-    padding-top: .5rem;
+    padding-top: 0.5rem;
     width: 7rem; }
+    @media only screen and (max-width: 29.375em) {
+      .blog-navbar__logo {
+        width: 10rem;
+        margin: 2rem 0 3rem 0; } }
 
 .card {
   perspective: 150rem;
@@ -1255,7 +1262,6 @@ body {
     .comments__comment__btns-container {
       margin-left: auto; }
   .comments__add-comment-btn {
-    margin-top: 3rem;
     text-align: center; }
 
 .counter {
@@ -2134,12 +2140,18 @@ body {
         .blog-home__top-section h1 {
           font-size: 3.5rem;
           margin-bottom: 1rem; } }
+      @media only screen and (max-width: 29.375em) {
+        .blog-home__top-section h1 {
+          font-size: 2.2rem; } }
     .blog-home__top-section h2 {
       text-transform: uppercase;
       font-size: 2.5rem; }
       @media only screen and (max-width: 50em) {
         .blog-home__top-section h2 {
           font-size: 2rem; } }
+      @media only screen and (max-width: 29.375em) {
+        .blog-home__top-section h2 {
+          font-size: 1.8rem; } }
     .blog-home__top-section-container {
       padding: 0.8rem 1.3rem;
       -webkit-box-decoration-break: clone;
@@ -2215,6 +2227,18 @@ body {
       .show-blog__author-container--date {
         margin-left: 0;
         margin-top: 2rem; } }
+
+.show-blog .cta {
+  width: 100%;
+  margin-top: 8rem; }
+
+.show-blog .form__paragraph {
+  padding-top: 0;
+  margin-left: 1rem; }
+
+.show-blog .form__input--label-span {
+  text-align: left;
+  padding-left: 1rem; }
 
 .new-post__container {
   padding: 5rem 0;

@@ -31,7 +31,6 @@
       <div class="show-blog__text-body">
         <%- post.content %>
       </div>
-
       <div class="comments">
         <% for(comment of post.comments) { %> <% const { comment: commentText,
         author, _id: commentId } = comment; %> <% const { name, avatar } =
@@ -69,6 +68,9 @@
           >Fai il Login per Commentare il Post</a
         >
         <% } %>
+      </div>
+      <div>
+      <%- include("../components/contactForm"); -%>
       </div>
     </div>
   </section>

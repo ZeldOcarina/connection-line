@@ -307,61 +307,9 @@
     </div>
 </section>
 <section id="cta">
-    <div class="cta">
-
-        <div class="cta__form">
-            <h2 class="cta__header mb-3">
-                <%= content.form.header[0] %> <br><%= content.form.header[1] %>
-            </h2>
-            <form action="/<%= language %>/request" method="POST" class="form" id="contact-form" enctype="multipart/form-data">
-                <div class="form__group">
-                    <input type="text" class="form__input" placeholder="<%= content.form.name %>" id="name" name="name"
-                        required>
-                    <label for="name" class="form__label"><%= content.form.name %> <span class="red">*</span></label>
-                </div>
-
-                <div class="form__group">
-                    <input type="email" class="form__input" placeholder="<%= content.form.email %>" id="email"
-                        name="email" required>
-                    <label for="email" class="form__label"><%= content.form.email %> <span class="red">*</span></label>
-                </div>
-                <div class="form__group">
-                    <input type="text" class="form__input" placeholder="<%= content.form.phone %>" id="telefono"
-                        name="phoneNumber">
-                    <label for="telefono" class="form__label"><%= content.form.phone %></label>
-                </div>
-                <div class="form__group">
-                    <input type="file" class="form__input form__input--file" data-multiple-caption="{count} files selected" id="file"
-                        name="file" accept="application/msword, application/pdf, .doc, .docx, .ppt, .pptx" multiple>
-                    <label class="form__input--label" for="file"><img class="form__input--file-icon" src="/assets/icons/upload.png"><%= content.form.file %></label>
-                </div>
-                <p class="form__paragraph">Max 10 files. 10MB each. Admitted .pdf, .doc, .docx, .ppt, .pptx extensions.</p>
-                <div class="form__group">
-                    <textarea type="email" class="form__input" id="richiesta" name="request"
-                        placeholder="<%= content.form.richiesta.richiestaLabel %>" rows="6" required></textarea>
-                    <label for="richiesta" class="form__label"><%= content.form.richiesta.richiestaTextarea %> <span
-                            class="red">*</span></label>
-                </div>
-                <div class="form__checkbox-group">
-                    <input type="checkbox" class="form__checkbox-input" id="privacy" name="privacy_accepted" required>
-                    <label for="privacy" class="form__checkbox-label form__checkbox-label--privacy">
-                        <span class="form__checkbox-button"></span>
-                        <%= content.form.privacyConsent %> <span class="red">*</span>
-                    </label>
-                </div>
-                <div class="form__checkbox-group">
-                    <input type="checkbox" class="form__checkbox-input" id="newsletter" name="newsletter_accepted">
-                    <label for="newsletter" class="form__checkbox-label form__checkbox-label--newsletter">
-                        <span class="form__checkbox-button"></span>
-                        <%= content.form.newsletterConsent %>
-                    </label>
-                </div>
-                <div class="g-recaptcha" data-sitekey="<%= publicKey %>"></div>
-                <div class="form__group">
-                    <button class="btn btn--primary form__submit mt-1"><%= content.form.cta %></button>
-                </div>
-            </form>
-        </div>
+    
+        <%- include("components/contactForm"); %>
+   
     </div>
 </section>
 

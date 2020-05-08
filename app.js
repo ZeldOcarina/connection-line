@@ -60,7 +60,6 @@ const usersRoute = require("./routes/api/users");
 
 //TEST MIDDLEWARE
 app.use((req, res, next) => {
-  //console.log(req.cookies);
   next();
 });
 

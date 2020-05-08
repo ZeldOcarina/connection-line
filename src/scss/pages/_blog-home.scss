@@ -28,6 +28,10 @@
         font-size: 3.5rem;
         margin-bottom: 1rem;
       }
+
+      @include respond(quattrocentosettanta) {
+        font-size: 2.2rem;
+      }
     }
 
     h2 {
@@ -36,6 +40,10 @@
 
       @include respond(ottocento) {
         font-size: 2rem;
+      }
+
+      @include respond(quattrocentosettanta) {
+        font-size: 1.8rem;
       }
     }
 
