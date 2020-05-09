@@ -1,48 +1,79 @@
 .translations {
-    position: fixed;
-    top: 4rem;
-    left: 4rem;
-    display: flex;
-    width: min-content;
-    z-index: 500;
-    opacity: .5;
+  position: fixed;
+  top: 4rem;
+  left: 4rem;
+  display: flex;
+  width: min-content;
+  z-index: 500;
 
-    @include respond(settecento) { 
-        top: 4.5rem;
-        left: 3.5rem;
-    }
-    
-    @include respond(cinquecento) {
-        display: none; 
-        top: 3rem;
-        left: 2rem;
-    }
+  .translations-navbar__container {
+    opacity: 0.5;
+  }
 
-    &__image {
-        width: 5rem;
-        height: 3rem;
-        margin: 0 .8rem;
-    }
+  @include respond(settecento) {
+    top: 4.5rem;
+    left: 3.5rem;
+  }
+
+  @include respond(cinquecento) {
+    display: none;
+    top: 3rem;
+    left: 2rem;
+  }
+
+  &__image {
+    width: 5rem;
+    height: 3rem;
+    margin: 0 0.8rem;
+  }
 }
 
 .translations-navbar {
-    display: none;
-    width: min-content;
-    z-index: 1000;
-    opacity: .5;
+  display: none;
+  width: min-content;
+  z-index: 1000;
+  opacity: 0.5;
 
-    @include respond(cinquecento) {
-        display: flex;
-        position: absolute;
-        top: 12%;
-        left: 50%;
-        transform: translate(-50%, 0); 
-    }
+  @include respond(cinquecento) {
+    display: flex;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 
-    &__image {
-        width: 5rem;
-        height: 3rem;
-        margin: 0 .8rem;
+  &__blog-btn {
+    text-decoration: none;
+    width: max-content;
+  }
+
+  &__container {
+    &--blog {
+      background-color: $white;
+      width: max-content;
+      padding: 2rem;
+      opacity: 0.9 !important;
+      margin-left: 2rem;
+      transform: translateY(-1.6rem);
+
+      @include respond(quattrocentosettanta) {
+        text-align: center;
+        margin: 4rem auto 0rem auto;
+      }
+
+      @include respond(trecentosettantacinque) {
+        display: none;
+      }
+
+      a {
+        color: $color-primary;
+      }
     }
+  }
+
+  &__image {
+    width: 5rem;
+    height: 3rem;
+    margin: 0 0.8rem;
+  }
 }
-

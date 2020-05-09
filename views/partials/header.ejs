@@ -56,8 +56,16 @@
                     <div class="translations-navbar__container">
                         <a href="/fr"><img class="translations-navbar__image" src="/assets/flags/french.png"></a>
                     </div>
+                    
                 </div>
                 <ul class="navigation__list">
+                <% if(splittedPage[1] === 'it') { %>
+                    <li class="navigation__item over-500-hidden">
+                        <div class="translations-navbar__container translations-navbar__container--blog">
+                            <a href="/blog" class="translations-navbar__blog-btn">Scopri il nostro blog!</a>
+                        </div>
+                    </li>
+                <% } %>
                     <li class="navigation__item"><a href="/<%= language %>/#section-hero"
                             class="navigation__link navigation__link--home">
                             <span>01</span><%= content.menu.home %></a>
@@ -95,6 +103,11 @@
         <div class="translations-navbar__container">
             <a href="/fr"><img class="translations-navbar__image" src="/assets/flags/french.png"></a>
         </div>
+        <% if(splittedPage[1] === 'it') { %>
+            <div class="translations-navbar__container translations-navbar__container--blog">
+                <a href="/blog" class="translations-navbar__blog-btn">Scopri il nostro blog!</a>
+            </div>
+        <% } %>
     </div>
     <% } else { %>
         <nav class="blog-navbar">

@@ -1843,8 +1843,9 @@ body {
   left: 4rem;
   display: flex;
   width: min-content;
-  z-index: 500;
-  opacity: .5; }
+  z-index: 500; }
+  .translations .translations-navbar__container {
+    opacity: 0.5; }
   @media only screen and (max-width: 43.75em) {
     .translations {
       top: 4.5rem;
@@ -1857,13 +1858,13 @@ body {
   .translations__image {
     width: 5rem;
     height: 3rem;
-    margin: 0 .8rem; }
+    margin: 0 0.8rem; }
 
 .translations-navbar {
   display: none;
   width: min-content;
   z-index: 1000;
-  opacity: .5; }
+  opacity: 0.5; }
   @media only screen and (max-width: 31.25em) {
     .translations-navbar {
       display: flex;
@@ -1871,10 +1872,29 @@ body {
       top: 12%;
       left: 50%;
       transform: translate(-50%, 0); } }
+  .translations-navbar__blog-btn {
+    text-decoration: none;
+    width: max-content; }
+  .translations-navbar__container--blog {
+    background-color: #fff;
+    width: max-content;
+    padding: 2rem;
+    opacity: 0.9 !important;
+    margin-left: 2rem;
+    transform: translateY(-1.6rem); }
+    @media only screen and (max-width: 29.375em) {
+      .translations-navbar__container--blog {
+        text-align: center;
+        margin: 4rem auto 0rem auto; } }
+    @media only screen and (max-width: 23.45em) {
+      .translations-navbar__container--blog {
+        display: none; } }
+    .translations-navbar__container--blog a {
+      color: #00589e; }
   .translations-navbar__image {
     width: 5rem;
     height: 3rem;
-    margin: 0 .8rem; }
+    margin: 0 0.8rem; }
 
 .footer {
   background-color: #333333;
@@ -2628,3 +2648,7 @@ url(../img/nat-10.jpg);
 
 .pointer {
   cursor: pointer; }
+
+@media only screen and (min-width: 31.25em) {
+  .over-500-hidden {
+    display: none; } }

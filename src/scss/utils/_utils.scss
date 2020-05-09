@@ -17,3 +17,9 @@
 .pointer {
   cursor: pointer;
 }
+
+.over-500-hidden {
+  @include respond(over-500) {
+    display: none;
+  }
+}
