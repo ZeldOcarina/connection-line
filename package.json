@@ -41,7 +41,7 @@
     "cors": "^2.8.5",
     "counterup": "^1.0.2",
     "countup.js": "^2.0.4",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-rate-limit": "^5.0.0",
