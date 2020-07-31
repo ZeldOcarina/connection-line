@@ -65,6 +65,7 @@ app.use((req, res, next) => {
 
 // SET LOCAL REQUEST VARIABLES
 app.locals.tinyAPIKey = process.env.tinyAPIKey;
+app.locals.publicKey = process.env.RECAPTCHA_PUBLIC_KEY;
 
 app.use(isLoggedIn, (req, res, next) => {
   res.locals.page = req.url;
@@ -95,8 +96,6 @@ app.all("*", (req, res, next) => {
 });
 
 app.use(globalErrorHandler);
-
-app.locals.publicKey = process.env.RECAPTCHA_PUBLIC_KEY;
 
 exports.app = app;
 exports.appState = appState;
