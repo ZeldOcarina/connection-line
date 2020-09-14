@@ -5,7 +5,7 @@ tar czfv connectionline.tar.gz config content controller models public routes sr
 scp connectionline.tar.gz staging.connectionline.ch:/home/Mattia/
 rm connectionline.tar.gz
 
-ssh staging.connectionline.ch << 'ENDSSH'
+ssh connectionline.ch << 'ENDSSH'
 
 cd /home/Mattia/connectionline.ch
 pm2 stop ecosystem.config.js

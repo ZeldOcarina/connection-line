@@ -1,0 +1,64 @@
+<% const activeURL = `/blog?` %>
+
+<% if(pages > 1 || !pages) { %>
+    <div class="paginator">
+        <div class="paginator__container">
+
+    <% if(pages > 1 && pagina !== 1) { %>
+        <a class="paginator__container--link" href="<%= activeURL %>page=1">Prima Pagina</a>
+    <% } %>
+
+    <% if(pages > 1 && pagina > 1) { %>
+    <a class="paginator__container--link" href="<%= activeURL %>page=<%=  pagina - 1 %>">
+        <</a> <% } %> 
+    
+    <% if(pages > 1 && pagina < 3 && pages === 2 && pagina === 2) { %>
+        
+            <a href="<%= activeURL %>page=1" class="paginator__container--link <% if(page === pagina) { %><%= 'paginator__active' %><% } %>">1</a>
+            <a href="<%= activeURL %>page=2" class="paginator__container--link paginator__active">2</a>
+        
+    <% } %>
+
+    <% if(pages > 1 && pagina < 3 && pages === 2 && pagina !== 2) { %>
+        <% for(i = 1; i <= pagina + 1; i++) { %> 
+            <a href="<%= activeURL %>page=<%= i %>" class="paginator__container--link <% if(i === pagina) { %><%= 'paginator__active' %><% } %>"><%= i %></a>
+        <% } %>
+    <% } %>
+
+    <% if(pages > 1 && pagina < 3 && pages !== 3 && pages !== 2) { %>
+        <% for(i = 1; i <= pagina + 2; i++) { %> 
+            <a href="<%= activeURL %>page=<%= i %>" class="paginator__container--link <% if(i === pagina) { %><%= 'paginator__active' %><% } %>"><%= i %></a>
+        <% } %>
+    <% } %>
+
+    <% if(pages === 3 && pagina < 3) { %>
+        <% for(i = 1; i <= pages; i++) { %> 
+            <a href="<%= activeURL %>page=<%= i %>" class="paginator__container--link <% if(i === pagina) { %><%= 'paginator__active' %><% } %>"><%= i %></a>
+        <% } %>
+    <% } %>
+
+    <% if(pages > 1 && pagina >= 3 && pagina !== pages && pagina !== pages - 1) { %> 
+        <% for(i = pagina - 2; i <= pagina + 2; i++) { %> 
+            <a href="<%= activeURL %>page=<%= i %>" class="paginator__container--link <% if(i === pagina) { %><%= 'paginator__active' %><% } %>"><%= i %></a>
+        <% } %>
+    <% } %>
+    
+    <% if(pages - 1 === pagina && pages > 3) { %>
+        <% for(i = pagina - 2; i < pages + 1; i++) { %>
+            <a href="<%= activeURL %>page=<%= i %>" class="paginator__container--link <% if(i === pagina) { %><%= 'paginator__active' %><% } %>"><%= i %></a>
+        <% } %>
+    <% } %>
+
+    <% if(pages === pagina && pages > 2) { %> 
+        <% for(i = pagina - 2; i < pages + 1; i++) { %>
+            <a href="<%= activeURL %>page=<%= i %>" class="paginator__container--link <% if(i === pagina) { %><%= 'paginator__active' %><% } %>"><%= i %></a>
+        <% } %>
+    <% } %>
+    
+    <% if(pages > 1 && pagina < pages) { %>
+    <a class="paginator__container--link ml-1" href="<%= activeURL %>page=<%=  pagina + 1 %>">></a>
+    <a class="paginator__container--link" href="<%= activeURL %>page=<%= pages %>">Ultima Pagina</a>
+    <% } %>
+</div>
+</div>
+    <% } %>

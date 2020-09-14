@@ -14,7 +14,9 @@
             <% posts.map(post => { %>
                 <%- include('postScheda', { post }) %> 
             <% }) %>
+            
         </div>  
+        <%- include('../components/pagination', {  }) %>
     </div>    
 </div>
 

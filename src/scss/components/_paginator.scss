@@ -1,0 +1,35 @@
+.paginator {
+  display: flex;
+  justify-content: center;
+  //background-color: $scheda-home-background;
+  padding: 2rem 0;
+  margin-top: 2rem;
+
+  &__container {
+    padding: 3rem 1rem;
+    min-height: min-content;
+
+    &--link {
+      color: $white;
+      padding: 2rem;
+      background-color: rgba($color-primary, 0.95);
+      text-decoration: none;
+
+      @include respond(phone) {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+
+      &:hover {
+        color: $white;
+        text-decoration: none;
+        background-color: $color-primary-hover;
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  &__active {
+    background-color: $color-primary-hover;
+  }
+}
