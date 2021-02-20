@@ -6,9 +6,9 @@ const bodyParser = require("body-parser");
 const helmet = require("helmet");
 const expressSanitizer = require("express-sanitizer");
 const cors = require("cors");
-let reloadify;
-if (process.env.NODE_ENV !== "production")
-  reloadify = require("reloadify")(__dirname + "/public");
+// let reloadify;
+// if (process.env.NODE_ENV !== "production")
+//   reloadify = require("reloadify")(__dirname + "/public");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 
@@ -28,7 +28,7 @@ const app = express();
 
 app.use(morgan(appState === "development" ? "dev" : "combined"));
 
-if (appState !== "production") app.use(reloadify);
+// if (appState !== "production") app.use(reloadify);
 app.use(cors());
 app.use(favicon(path.join(__dirname, "public", "assets/favicon.png")));
 if (appState === "production") app.use(helmet());

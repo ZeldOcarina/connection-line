@@ -1,0 +1,57 @@
+.seo {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 88, 158, 0.3),
+      rgba(180, 180, 180, 0.4)
+    ),
+    url(/assets/seo/home-background.jpg);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(quattrocento) {
+    height: max-content;
+  }
+
+  &__text-box {
+    background-color: rgba(white, 0.8);
+    width: 100rem;
+    padding: 8rem;
+    border-radius: 20px;
+
+    @include respond(quattrocento) {
+      padding: 8rem 4rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+  }
+
+  &__cta {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 6rem;
+
+    &:hover {
+      transform: translateX(-50%);
+      margin-top: 6rem;
+    }
+  }
+
+  &__main-image {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 88, 158, 0.3),
+        rgba(180, 180, 180, 0.4)
+      ),
+      url(/assets/seo/background.jpg);
+    background-size: cover;
+    background-position: top;
+  }
+}

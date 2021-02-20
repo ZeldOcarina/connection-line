@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+
+<div class="show-blog">
+  <section
+    class="blog-home__top-section seo__main-image"
+    style=""
+  >
+    <div class="blog-home__top-section-container">
+      <h1><%- content.seo.title %></h1>
+      <h2><%- content.seo.subtitle %></h2>
+    </div>
+  </section>
+  <section id="post-content">
+    <div class="show-blog__text-container">
+      <div class="show-blog__text-body">
+        <%- content.seo.content %>
+      </div>
+      <div>
+      <%- include("components/contactForm"); -%>
+      </div>
+    </div>
+      
+    </div>
+  </section>
+</div>

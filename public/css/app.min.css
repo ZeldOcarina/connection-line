@@ -544,7 +544,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow-x: hidden; }
 
 body {
   box-sizing: border-box; }
@@ -1703,6 +1704,38 @@ body {
         .popup__form-popup__label {
           font-size: .8rem; } }
 
+.seo {
+  background-image: linear-gradient(to right, rgba(0, 88, 158, 0.3), rgba(180, 180, 180, 0.4)), url(/assets/seo/home-background.jpg);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (max-width: 25em) {
+    .seo {
+      height: max-content; } }
+  .seo__text-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100rem;
+    padding: 8rem;
+    border-radius: 20px; }
+    @media only screen and (max-width: 25em) {
+      .seo__text-box {
+        padding: 8rem 4rem; } }
+  .seo__title {
+    text-align: center; }
+  .seo__cta {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 6rem; }
+    .seo__cta:hover {
+      transform: translateX(-50%);
+      margin-top: 6rem; }
+  .seo__main-image {
+    background-image: linear-gradient(to right, rgba(0, 88, 158, 0.3), rgba(180, 180, 180, 0.4)), url(/assets/seo/background.jpg);
+    background-size: cover;
+    background-position: top; }
+
 .story {
   height: 100vh;
   padding: 0 20%;
@@ -2673,3 +2706,6 @@ url(../img/nat-10.jpg);
 @media only screen and (min-width: 31.25em) {
   .over-500-hidden {
     display: none; } }
+
+.text-center {
+  text-align: center !important; }
