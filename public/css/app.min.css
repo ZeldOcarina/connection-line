@@ -1706,6 +1706,8 @@ body {
 
 .seo {
   background-image: linear-gradient(to right, rgba(0, 88, 158, 0.3), rgba(180, 180, 180, 0.4)), url(/assets/seo/home-background.jpg);
+  background-position: center;
+  background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -1713,7 +1715,8 @@ body {
   align-items: center; }
   @media only screen and (max-width: 25em) {
     .seo {
-      height: max-content; } }
+      height: max-content;
+      background-image: linear-gradient(to right, rgba(0, 88, 158, 0.3), rgba(180, 180, 180, 0.4)), url(/assets/seo/home-background-mobile.jpg); } }
   .seo__text-box {
     background-color: rgba(255, 255, 255, 0.8);
     width: 100rem;
@@ -1721,7 +1724,9 @@ body {
     border-radius: 20px; }
     @media only screen and (max-width: 25em) {
       .seo__text-box {
-        padding: 8rem 4rem; } }
+        padding: 8rem 4rem;
+        border-radius: 0;
+        background-color: rgba(255, 255, 255, 0.5); } }
   .seo__title {
     text-align: center; }
   .seo__cta {
