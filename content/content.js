@@ -135,17 +135,22 @@ exports.englishContent = function () {
     seo: {
       home: {
         title: "SEO Translations",
-        description: /*html*/ `SEO translation is now an essential necessity for a website or to professionally enter a new market. <br/>
-        What better way to give the correct visibility to your website than a perfect positioning on search engines in all the languages ​​in which it is translated? <br/>
-        We have described this new, innovative Connection Line SAGL service on a dedicated page.`,
+        description: /*html*/ `SEO translation has become essential for websites or to make a professional entrance on a new market.<br />
+        What better way to give proper visibility to your website than a perfect positioning on search engines in all the languages it is translated into?<br />
+        We have described this new, innovative Connection Line SAGL service on a dedicated page.
+        `,
         cta: "Go to description",
       },
       title: "SEO TRANSLATIONS",
       subtitle: "Internationalization at your fingertips.",
-      content: /*html*/ `<p>Is the translation of your site correct and effective and does it manage to capture the interest of your potential foreign customers?</p>
-      <p>The most effective website, and which leads your foreign interlocutor to be strongly interested in your products and/or services, is that which is translated effectively and competently by professional mother tongue translators and which is adapted, even in the smallest details, to the culture of the country in which it is intended.</p>
-      <p>Thanks to the collaboration with the best web marketing and SEO (Search Engine Optimization) experts, Connection Line is able to offer translations and SEO reviews of your sites in all languages. This will allow you to greatly optimize your communication and make it more understandable and captivating, to the point that foreign visitors will not notice they are browsing a translated site.</p>
-      <p>We offer you free translation analysis of your site in any language and 10 &percnt; discount on revisions.</p>
+      content: /*html*/ `<p>Is the translation of your website correct and effective? Does it manage to capture the interest of your potential customers abroad?</p>
+      <p>The most effective websites, able to generate strongly interest in your products and/or services on the part of a foreign visitor, are those translated 
+      effectively and competently by professional, mother-tongue translators and adapted, down to the smallest detail, to the culture of the country they are 
+      intended for.</p>
+      <p>Thanks to the collaboration with the best web marketing and SEO (Search Engine Optimization) experts, Connection Line is able to offer translations 
+      and SEO reviews of your sites in all languages. This will allow you to optimize your communication to a huge extent, making it so readily understandable 
+      and captivating that foreign visitors will not notice they are browsing a translated website.</p>
+      <p>We offer you a free analysis of the translations of your website in any language and a 10% discount on translation reviews.</p>
       <p>Don't miss out on this opportunity!</p>`,
     },
   };
@@ -284,18 +289,22 @@ exports.frenchContent = function () {
     seo: {
       home: {
         title: "Traductions SEO",
-        description: /*html*/ `La traduction SEO est désormais une nécessité essentielle pour un site Web ou pour pénétrer professionnellement un nouveau marché. <br/>
-          Quelle meilleure façon de donner la bonne visibilité à votre site web qu'un positionnement parfait sur les moteurs de recherche dans toutes les langues dans lesquelles il est traduit? <br/>
-          Nous avons décrit ce nouveau service innovant Connection Line SAGL sur une page dédiée.`,
+        description: /*html*/ `La traduction SEO est désormais une nécessité vitale pour un site Web ou pour pénétrer professionnellement un nouveau marché.<br/>
+        Quelle meilleure façon de donner la bonne visibilité à votre site web qu'un positionnement parfait sur les moteurs de recherche dans toutes les langues dans lesquelles il est traduit ?<br/>
+        Nous présentons ce nouveau service de Connection Line SAGL sur une page dédiée.`,
         cta: "Aller à la description",
       },
       title: "TRADUCTIONS SEO",
-      subtitle: "L'internationalisation à portée de main.",
-      content: /*html*/ `<p>La traduction de votre site est; correct et efficace et parvient &agrave; capter l'intérêt de vos clients étrangers potentiels?</p>
-        <p>Le site Web le plus efficace, et qui amène votre interlocuteur étranger à s'intéresser fortement à vos produits et / ou services, est; ce qui est traduit efficacement et avec compétence par des traducteurs professionnels de langue maternelle et qui est adapté, même dans les moindres détails, à la culture du pays dans lequel prévu. </p>
-        <p>Grâce à la collaboration avec les meilleurs experts en marketing Web et SEO (Search Engine Optimization), Connection Line &egrave; capable de proposer des traductions et des revues SEO de vos sites dans toutes les langues. Cela vous permettra d'optimiser considérablement votre communication et de la rendre plus compréhensible et engageante, au point que les visiteurs étrangers ne remarqueront pas qu'ils naviguent sur un site traduit.</p>
-        <p>Nous vous proposons une analyse de traduction gratuite de votre site dans toutes les langues et 10 &percnt; remise sur les révisions. </p>
-        <p>Ne manquez pas cette chance!</p>`,
+      subtitle: "L'INTERNATIONALISATION À PORTÉE DE MAIN.",
+      content: /*html*/ `<p>La traduction de votre site est-elle correcte et efficace et parvient-elle à capter l'intérêt de vos clients étrangers potentiels ?</p>
+        <p>Le site Web le plus performant et qui amène votre interlocuteur étranger à s'intéresser fortement à vos produits et / ou services, doit être traduit 
+        efficacement et avec compétence par des traducteurs professionnels de langue maternelle et doit être adapté, même dans les moindres détails, à la culture 
+        du pays auquel il s’adresse.</p>
+        <p>Grâce à la collaboration avec les meilleurs experts en marketing Web et SEO (Search Engine Optimization), Connection Line est capable de proposer des 
+        traductions et des révisions SEO de vos sites dans toutes les langues. Cela vous permettra d'optimiser considérablement votre communication et de la 
+        rendre plus compréhensible et engageante : l’objectif est que les visiteurs étrangers ne remarquent pas qu'ils naviguent sur un site traduit.</p>
+        <p>Nous vous offrons l’analyse gratuite des traductions de votre site dans toutes les langues et une réduction de 10 % sur les révisions.</p>
+        <p>Ne manquez pas cette occasion !</p>`,
     },
   };
   return frenchText;
@@ -439,9 +448,10 @@ exports.germanContent = function () {
     seo: {
       home: {
         title: "SEO Übersetzungen",
-        description: /*html*/ `SEO-Übersetzung ist heute eine wesentliche Notwendigkeit für eine Website oder den professionellen Eintritt in einen neuen Markt.
-            Gibt es einen besseren Weg, um Ihre Website korrekt sichtbar zu machen, als eine perfekte Positionierung in Suchmaschinen in allen Sprachen, in die sie übersetzt wurde?
-            Wir haben diesen neuen, innovativen Connection Line SAGL-Dienst auf einer speziellen Seite beschrieben.`,
+        description: /*html*/ `SEO-Übersetzung ist heute eine wesentliche Notwendigkeit für eine Webseite oder für den professionellen Einstieg in einen neuen Markt.<br/>
+        Gibt es einen besseren Weg, um Ihrer Webseite die richtige Sichtbarkeit zu verleihen, als eine perfekte Positionierung in den Suchmaschinen in allen Sprachen, in die sie übersetzt ist?<br/>
+        Für diesen neuen, innovativen Service der Connection Line Sagl haben wir folgende Seite gewidmet.
+        `,
         cta: "Zur Beschreibung gehen",
       },
       title: "SEO Übersetzungen",
