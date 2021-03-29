@@ -44,12 +44,16 @@ exports.showPost = catchAsync(async (req, res, next) => {
 
 exports.updatePost = catchAsync(async (req, res, next) => {
   const user = req.user._id;
+
+  const editedPost = { ...req.body };
+
+  console.log(req.body);
+
+  if (req.file && req.file.location) editedPost.image = req.file.location;
+
   const post = await Post.findOneAndUpdate(
     { slug: req.params.slug, author: user },
-    {
-      ...req.body,
-      image: req.file ? req.file.location : req.body["post-image"],
-    },
+    editedPost,
     { new: true }
   );
   if (!post)

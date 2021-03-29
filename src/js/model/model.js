@@ -12,6 +12,22 @@ export let fileInput = document.querySelector("#post-image");
 export const fileInputLabel = document.querySelector(".form__input--label");
 export const logoutBtn = document.querySelector(".blog-navbar__btn--logout");
 export const deleteBtn = document.querySelector(".blog-navbar__btn--elimina");
+export const seoDescriptionCharacterCounter = document.querySelector(
+  ".new-post__character-counter"
+);
+export const pageTitleCharacterCounter = document.querySelector(
+  ".new-post__page-title-character-counter"
+);
+export const pageTitleInput = document.getElementById("page-title");
+
+export const seoDescriptionInput = document.getElementById(
+  "post-seo-description"
+);
+
+export const postTitleInput = document.getElementById("post-title");
+export const postTitleCharacterCounter = document.querySelector(
+  ".new-post__post-title-character-counter"
+);
 
 export const signupForm = document.querySelector(".signup__form");
 export const passwordRecoverForm = document.querySelector(

@@ -5,6 +5,9 @@ import {
   fileInput,
   fileInputLabel,
   editPostImage,
+  seoDescriptionInput,
+  pageTitleInput,
+  postTitleInput,
 } from "../model/model";
 import { displayFlash } from "../utils/display-alert";
 import lastURLWord from "../utils/LastURLWord";
@@ -12,14 +15,25 @@ import lastURLWord from "../utils/LastURLWord";
 const newPost = () => {
   if (window.location.pathname !== "/blog/post" && lastURLWord() !== "edit")
     return;
+  const originalSlug = newPostForm.querySelector("#slug").value;
+  const originalPageTitle = newPostForm.querySelector("#page-title").value;
   const originalTitle = newPostForm.querySelector("#post-title").value;
   const originalSubtitle = newPostForm.querySelector("#post-subtitle").value;
   const originalPostContent = newPostForm.querySelector("#post-textarea").value;
+  const originalSeoDescription = newPostForm.querySelector(
+    "#post-seo-description"
+  ).value;
+  const originalImageAltText = newPostForm.querySelector("#image-alt-text")
+    .value;
 
   const originalContent = {
+    slug: originalSlug,
+    pageTitle: originalPageTitle,
     title: originalTitle,
     subtitle: originalSubtitle,
     content: originalPostContent,
+    seoDescription: originalSeoDescription,
+    imageAltText: originalImageAltText,
   };
 
   const formContent = lastURLWord() === "edit" ? originalContent : {};
@@ -77,10 +91,29 @@ const newPost = () => {
   newPostForm.addEventListener("submit", async (e) => {
     try {
       e.preventDefault();
+      if (
+        seoDescriptionInput.value.length < 120 ||
+        seoDescriptionInput.value.length > 320
+      ) {
+        displayFlash(
+          "error",
+          "La descrizione SEO non è della lunghezza accettata"
+        );
+        return;
+      }
+      if (postTitleInput.value.length > 60)
+        displayFlash("error", "Il titolo del post è troppo lungo");
+      if (pageTitleInput.value.length > 60)
+        displayFlash("error", "Il titolo della pagina è troppo lungo");
+
       const form = new FormData();
+      form.append("slug", formContent.slug);
+      form.append("pageTitle", formContent.pageTitle);
       form.append("title", formContent.title);
       form.append("subtitle", formContent.subtitle);
       form.append("content", formContent.content);
+      form.append("seoDescription", formContent.seoDescription);
+      form.append("imageAltText", formContent.imageAltText);
 
       if (fileInput.files && fileInput.files.length > 0)
         form.append(
@@ -90,9 +123,11 @@ const newPost = () => {
             : editPostImage.getAttribute("src")
         );
 
-      /*for (var [ key, value ] of form.entries()) {
-					console.log(key, value);
-				}*/
+      for (var [key, value] of form.entries()) {
+        console.log(key, value);
+      }
+
+      debugger;
 
       let result;
       if (lastURLWord() !== "edit") {

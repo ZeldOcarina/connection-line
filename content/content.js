@@ -244,18 +244,20 @@ exports.frenchContent = function () {
     },
     form: {
       header: [
-        "Demandez immédiatement un devis gratuit! ",
+        "Demandez immédiatement un devis gratuit!",
         "10% de réduction sur les demandes en ligne!",
       ],
-      name: "Nom et prénom",
+      name: "Prénom et nom",
       email: "Email",
       phone: "Téléphone",
-      file: "Click to browse or drag the files to upload.",
+      file:
+        "Cliquez pour parcourir ou faites glisser les fichiers à télécharger.",
       richiesta: {
         richiestaLabel: "Insérez votre demande",
         richiestaTextarea: "demande",
       },
-      privacyConsent: "J’accepte le traitement de mes données personnelles.",
+      privacyConsent:
+        "J’autorise le traitement de mes données à caractère personnel.",
       newsletterConsent: "Oui, je souhaite m’inscrire à la newsletter.",
       cta: "ENVOYER",
     },

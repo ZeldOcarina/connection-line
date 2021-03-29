@@ -20,6 +20,7 @@ import me from "./utils/me";
 import blogComments from "./view/blogComments";
 import passwordRecover from "./controller/auth/passwordRecover";
 import passwordReset from "./controller/auth/passwordReset";
+import characterCounter from "./view/characterCounter";
 
 //import aws_s3 from './utils/aws_s3';
 
@@ -41,3 +42,4 @@ logout();
 blogComments();
 passwordReset();
 passwordRecover();
+characterCounter();

@@ -3,8 +3,18 @@
     <form class="new-post__form">
         <img class="new-post__icon" src="/assets/logo.png">
         <div class="new-post__input-container">
-            <label class="new-post__label" for="post-title">Titolo</label>
-            <input class="new-post__text-input" type="text" name="title" id="post-title" value="<%= post.title %>">
+            <label class="new-post__label" for="slug">Slug</label>
+            <input class="new-post__text-input" type="text" name="slug" id="slug" value="<%= post.slug %>" required>
+        </div>
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="page-title">Titolo della Pagina (Massimo 60 Caratteri)</label>
+            <input class="new-post__text-input" type="text" name="pageTitle" id="page-title" value="<%= post.pageTitle || '' %>" required>
+            <span class="new-post__page-title-character-counter"><span class="new-post__page-title-current-characters">0</span>/60 caratteri</span>
+        </div>
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="post-title">Titolo (Massimo 60 Caratteri)</label>
+            <input class="new-post__text-input" type="text" name="title" id="post-title" value="<%= post.title %>" required>
+            <span class="new-post__post-title-character-counter"><span class="new-post__post-title-current-characters">0</span>/60 caratteri</span>
         </div>
         <div class="new-post__input-container">
             <label class="new-post__label" for="post-subtitle">Sottotitolo</label>
@@ -14,11 +24,20 @@
             <label class="new-post__label" for="post-subtitle">Contenuto</label>
             <textarea class="new-post__textarea" type="text" name="content" id="post-textarea"><%= post.content %></textarea>
         </div>
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="post-seo-description">Descrizione SEO (120 - 320 caratteri)</label>
+            <input class="new-post__text-input" type="text" name="seoDescription" id="post-seo-description" value="<%= post.seoDescription %>">
+            <span class="new-post__character-counter"><span class="new-post__current-characters">0</span>/320 caratteri</span>
+        </div>
         <div class="new-post__input-container new-post__input-container--edit-file-container">
             <input type="file" class="form__input form__input--file" id="post-image"
                 name="post-image" accept="image/*" hidden>
             <span class="new-post__label">Immagine Principale:</span>
             <img class="new-post__edit-image" src="<%= post.image %>">
+        </div>
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="image-alt-text">Testo Alternativo per l'immagine</label>
+            <input class="new-post__text-input" type="text" name="imageAltText" id="image-alt-text" value="<%= post.imageAltText %>">
         </div>
         <input class="new-post__submit btn btn--primary" type="submit" value="Pubblica">
     </form>    

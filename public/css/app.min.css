@@ -2350,14 +2350,14 @@ body {
 .new-post__text-input {
   display: block;
   width: 100%;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: .5rem;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 
 .new-post__submit {
   width: 100%;
@@ -2365,7 +2365,7 @@ body {
 
 .new-post__edit-image {
   width: 100%;
-  transition: all .3s; }
+  transition: all 0.3s; }
   .new-post__edit-image:hover {
     cursor: pointer;
     filter: brightness(0.6); }
@@ -2714,3 +2714,9 @@ url(../img/nat-10.jpg);
 
 .text-center {
   text-align: center !important; }
+
+.red {
+  color: red; }
+
+.green {
+  color: green; }

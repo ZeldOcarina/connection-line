@@ -1,4 +1,6 @@
 <% const splittedPage = page.split('/'); %>
+<% const isBlogShowPage = splittedPage[1] === 'blog' && splittedPage[2] && splittedPage[2] !== 'post' && splittedPage[splittedPage.length - 1] !== 'edit' ; %>
+<% console.log(splittedPage[2]) %>
 <!DOCTYPE html>
 <html lang="it">
 
@@ -6,7 +8,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Connection Line SAGL | <%= content.title %></title>
+    <% if(isBlogShowPage) { %>
+        <title><%= title %></title> 
+        <meta name="description" content="<%= description %>">
+    <% } else { %>
+        <title>Connection Line SAGL | <%= content.title %></title>
+    <% } %>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

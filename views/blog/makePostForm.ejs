@@ -3,21 +3,40 @@
     <form class="new-post__form">
         <img class="new-post__icon" src="/assets/logo.png">
         <div class="new-post__input-container">
-            <label class="new-post__label" for="post-title">Titolo</label>
-            <input class="new-post__text-input" type="text" name="title" id="post-title">
+            <label class="new-post__label" for="slug">Slug</label>
+            <input class="new-post__text-input" type="text" name="slug" id="slug" required>
+        </div>
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="page-title">Titolo della Pagina (Massimo 60 Caratteri)</label>
+            <input class="new-post__text-input" type="text" name="pageTitle" id="page-title" required>
+            <span class="new-post__page-title-character-counter"><span class="new-post__page-title-current-characters">0</span>/60 caratteri</span>
+        </div>
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="post-title">Titolo (Massimo 60 Caratteri)</label>
+            <input class="new-post__text-input" type="text" name="title" id="post-title" required>
+            <span class="new-post__post-title-character-counter"><span class="new-post__post-title-current-characters">0</span>/60 caratteri</span>
         </div>
         <div class="new-post__input-container">
             <label class="new-post__label" for="post-subtitle">Sottotitolo</label>
-            <input class="new-post__text-input" type="text" name="subtitle" id="post-subtitle">
+            <input class="new-post__text-input" type="text" name="subtitle" id="post-subtitle" required>
         </div>
         <div class="new-post__input-container">
             <label class="new-post__label" for="post-subtitle">Contenuto</label>
             <input class="new-post__textarea" type="text" name="content" id="post-textarea">
         </div>
         <div class="new-post__input-container">
+            <label class="new-post__label" for="post-seo-description">Descrizione SEO (120 - 320 caratteri)</label>
+            <input class="new-post__text-input" type="text" name="seoDescription" id="post-seo-description" required>
+            <span class="new-post__character-counter"><span class="new-post__current-characters">0</span>/320 caratteri</span>
+        </div>
+        <div class="new-post__input-container">
             <input type="file" class="form__input form__input--file" id="post-image"
                 name="post-image" accept="image/*">
             <label class="form__input--label" for="post-image"><img class="form__input--file-icon" src="/assets/icons/upload.png">Carica l'immagine principale.</label>
+        </div>
+        <div class="new-post__input-container">
+            <label class="new-post__label" for="image-alt-text">Testo Alternativo per l'immagine</label>
+            <input class="new-post__text-input" type="text" name="imageAltText" id="image-alt-text">
         </div>
         <input class="new-post__submit btn btn--primary" type="submit" value="Pubblica">
     </form>    

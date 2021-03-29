@@ -23,13 +23,14 @@ mongoose
     "mongodb+srv://admin-mattia:" +
       process.env.MONGO_PWD +
       "@connection-line-fzqvp.mongodb.net/connectionLineDB",
-    { useNewUrlParser: true }
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false,
+      useCreateIndex: true,
+    }
   )
   .then(console.log("DB Connection successful on production DB!"));
-
-mongoose.set("useNewUrlParser", true);
-mongoose.set("useFindAndModify", false);
-mongoose.set("useCreateIndex", true);
 
 //PORT SETUP
 const server = app.listen(port, () =>
