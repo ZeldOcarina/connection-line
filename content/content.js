@@ -1,6 +1,9 @@
 exports.englishContent = function () {
   const englishText = {
+    lang: "en",
     title: "The Translation Specialists",
+    seoDescription:
+      "Connection Line SAGL has been active in Ticino in the field of linguistic services since 1997. We offer a network of professional translators working in their native languages.",
     menu: {
       home: "Home",
       numeri: "The Numbers",
@@ -159,7 +162,10 @@ exports.englishContent = function () {
 
 exports.frenchContent = function () {
   const frenchText = {
+    lang: "fr",
     title: "Des spécialistes de la traduction",
+    seoDescription:
+      "Nous sommes présents au Tessin dans le domaine des services linguistiques depuis 1997. L’agence Connection Line est une structure qui allie un réseau de professionnels de langues maternelles différentes en mesure de garantir aux entreprises présentes sur des marchés étrangers un service linguistique complet, efficace, sérieux et compétent.",
     menu: {
       home: "ACCUEIL",
       numeri: "LES CHIFFRES",
@@ -314,7 +320,10 @@ exports.frenchContent = function () {
 
 exports.germanContent = function () {
   const germanText = {
+    lang: "de",
     title: "Die Übersetzung Spezialisten",
+    seoDescription:
+      "Wir sind seit 1997 im Tessin im Bereich Übersetzungsdienstleistungen tätig. Die Übersetzungsagentur Connection Line wurde 1997 in Tessin gegründet und stellt seitdem zahlreichen Firmen, die mit internationalen Unternehmen zusammenarbeiten, ein Netz von professionellen Muttersprachlern zur Verfügung und gewährleistet einen seriösen und kompetenten sowie abgerundeten und effizienten Sprachservice.",
     menu: {
       home: "Heim",
       numeri: "Die Zahlen",
@@ -470,7 +479,10 @@ exports.germanContent = function () {
 
 exports.italianContent = function () {
   const italianText = {
+    lang: "it",
     title: "Gli Specialisti della Traduzione",
+    seoDescription:
+      "Connection Line SAGL è presente in Ticino nel campo dei servizi linguistici dal 1997. Mettiamo a disposizione una rete di professionisti madrelingua in grado di garantire un servizio linguistico completo ed efficiente.",
     menu: {
       home: "Home",
       numeri: "I Numeri",

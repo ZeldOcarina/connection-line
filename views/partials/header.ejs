@@ -2,7 +2,7 @@
 <% const isBlogShowPage = splittedPage[1] === 'blog' && splittedPage[2] && splittedPage[2] !== 'post' && splittedPage[splittedPage.length - 1] !== 'edit' ; %>
 <% console.log(splittedPage[2]) %>
 <!DOCTYPE html>
-<html lang="it">
+<html lang="<%= content.lang || 'it' %>">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,8 @@
         <meta name="keywords" content="<%= keywords %>">
     <% } else { %>
         <title>Connection Line SAGL | <%= content.title %></title>
+        <meta name="description" content="<%= content.seoDescription %>">
+        <meta name="keywords" content="<%= keywords %>">
     <% } %>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
