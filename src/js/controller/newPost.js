@@ -23,6 +23,7 @@ const newPost = () => {
   const originalSeoDescription = newPostForm.querySelector(
     "#post-seo-description"
   ).value;
+  const originalKeywords = newPostForm.querySelector("#keywords").value;
   const originalImageAltText = newPostForm.querySelector("#image-alt-text")
     .value;
 
@@ -33,6 +34,7 @@ const newPost = () => {
     subtitle: originalSubtitle,
     content: originalPostContent,
     seoDescription: originalSeoDescription,
+    keywords: originalKeywords,
     imageAltText: originalImageAltText,
   };
 
@@ -113,6 +115,7 @@ const newPost = () => {
       form.append("subtitle", formContent.subtitle);
       form.append("content", formContent.content);
       form.append("seoDescription", formContent.seoDescription);
+      form.append("keywords", formContent.keywords);
       form.append("imageAltText", formContent.imageAltText);
 
       if (fileInput.files && fileInput.files.length > 0)
@@ -123,11 +126,9 @@ const newPost = () => {
             : editPostImage.getAttribute("src")
         );
 
-      for (var [key, value] of form.entries()) {
-        console.log(key, value);
-      }
-
-      debugger;
+      // for (var [key, value] of form.entries()) {
+      //   console.log(key, value);
+      // }
 
       let result;
       if (lastURLWord() !== "edit") {

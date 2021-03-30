@@ -27,6 +27,7 @@ const postSchema = new mongoose.Schema({
     message:
       "La descrizione SEO deve superare i 120 caratteri ed essere inferiore ai 320!",
   },
+  keywords: String,
   slug: { type: String, /*slug: "title",*/ unique: true, slugPaddingSize: 1 },
   content: String,
   createdAt: Date,

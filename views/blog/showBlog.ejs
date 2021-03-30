@@ -1,11 +1,12 @@
-<%- include("../partials/header", { title: post.pageTitle, description: post.seoDescription, keywords: post.keywords, author: post.author.name }); -%>
+<%- include("../partials/header", { title: post.pageTitle || post.title, description: post.seoDescription, keywords: post.keywords, author: post.author.name }); -%>
 
 <div class="show-blog">
   <section
     class="blog-home__top-section"
     data-post-slug="<%= post.slug %>"
-    style="background-image: linear-gradient(to right, rgba(0, 88, 158, 0.3), rgba(180, 180, 180, 0.4)), url(<%= post.image %>); background-size: cover; background-position: center;"
   >
+    <img src="<%= post.image %>" alt="<%= post.imageAltText %>" class="blog-home__top-image">
+    <div class="blog-home__blue-cover" style=""></div>
     <div class="blog-home__top-section-container">
       <h1><%- post.title %></h1>
       <h2><%- post.subtitle %></h2>

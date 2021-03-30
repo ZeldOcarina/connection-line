@@ -2,6 +2,7 @@
   color: #2a2a2a;
 
   &__top-section {
+    position: relative;
     height: 70vh;
     display: flex;
     align-items: center;
@@ -10,7 +11,7 @@
     color: white;
 
     @include respond(ottocento) {
-      height: min-content;
+      height: 70vh;
     }
 
     h1,
@@ -57,6 +58,8 @@
         rgba($color-secondary, 0.7)
       );
       text-align: center;
+      position: absolute;
+      z-index: 10;
 
       @include respond(novecento) {
         padding: 5rem;
@@ -66,6 +69,31 @@
         padding: 3rem 2rem;
       }
     }
+  }
+
+  &__top-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    //position: absolute;
+  }
+
+  &__blue-cover {
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 88, 158, 0.3),
+      rgba(180, 180, 180, 0.4)
+    );
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
   }
 
   &__post-section {
