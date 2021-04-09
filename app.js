@@ -11,6 +11,7 @@ const cors = require("cors");
 //   reloadify = require("reloadify")(__dirname + "/public");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
+const sitemap = require("express-sitemap")();
 
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controller/errorController");
@@ -59,6 +60,9 @@ const userRoute = require("./routes/user");
 // API REQUIREMENT
 const apiBlogRoute = require("./routes/api/apiBlog");
 const usersRoute = require("./routes/api/users");
+
+sitemap.generate(app);
+sitemap.XMLtoFile();
 
 //TEST MIDDLEWARE
 app.use((req, res, next) => {

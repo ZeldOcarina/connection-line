@@ -1,6 +1,5 @@
 <% const splittedPage = page.split('/'); %>
 <% const isBlogShowPage = splittedPage[1] === 'blog' && splittedPage[2] && splittedPage[2] !== 'post' && splittedPage[splittedPage.length - 1] !== 'edit' ; %>
-<% console.log(splittedPage[2]) %>
 <!DOCTYPE html>
 <html lang="<%= content.lang || 'it' %>">
 

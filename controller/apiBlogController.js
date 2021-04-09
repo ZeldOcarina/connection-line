@@ -47,10 +47,7 @@ exports.updatePost = catchAsync(async (req, res, next) => {
 
   const editedPost = { ...req.body };
 
-  console.log(req.body);
-
   if (req.file && req.file.location) editedPost.image = req.file.location;
-
   const post = await Post.findOneAndUpdate(
     { slug: req.params.slug, author: user },
     editedPost,

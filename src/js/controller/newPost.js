@@ -43,9 +43,12 @@ const newPost = () => {
   tinymce.init({
     selector: ".new-post__textarea",
     height: "50rem",
-    plugins: "code emoticons table",
+    plugins: "code emoticons table link image imagetools",
+    forced_root_block: "",
+    force_br_newlines: true,
+    force_p_newlines: false,
     toolbar:
-      "undo redo | bold italic underline strikethrough removeformat | forecolor backcolor | alignleft aligncenter alignright alignjustify | outdent indent | emoticons code | table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow tableinsertcolbefore tableinsertcolafter tabledeletecol",
+      "undo redo | bold italic underline strikethrough | styleselect | link image | forecolor backcolor | alignleft aligncenter alignright alignjustify | outdent indent | emoticons code",
     init_instance_callback: function (editor) {
       editor.on("input", function (e) {
         formContent.content = tinymce.activeEditor.getContent();
@@ -91,22 +94,23 @@ const newPost = () => {
   }
 
   newPostForm.addEventListener("submit", async (e) => {
+    console.log(formContent);
+    console.log(postTitleInput.value);
     try {
       e.preventDefault();
       if (
-        seoDescriptionInput.value.length < 120 ||
-        seoDescriptionInput.value.length > 320
+        formContent.seoDescription.length < 120 ||
+        formContent.seoDescription.length > 320
       ) {
-        displayFlash(
+        return displayFlash(
           "error",
           "La descrizione SEO non è della lunghezza accettata"
         );
-        return;
       }
-      if (postTitleInput.value.length > 60)
-        displayFlash("error", "Il titolo del post è troppo lungo");
-      if (pageTitleInput.value.length > 60)
-        displayFlash("error", "Il titolo della pagina è troppo lungo");
+      if (formContent.title.length > 60)
+        return displayFlash("error", "Il titolo del post è troppo lungo");
+      if (formContent.pageTitle.length > 60)
+        return displayFlash("error", "Il titolo della pagina è troppo lungo");
 
       const form = new FormData();
       form.append("slug", formContent.slug);
