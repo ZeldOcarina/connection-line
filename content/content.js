@@ -117,8 +117,7 @@ exports.englishContent = function () {
     },
     popup: {
       header: "Sign up for our newsletter today!",
-      text:
-        "Don’t miss any of our special offers and keep up-to-date on the latest from the world of translation by signing up to our remarkable newsletter!",
+      text: "Don’t miss any of our special offers and keep up-to-date on the latest from the world of translation by signing up to our remarkable newsletter!",
       form: {
         name: "Name",
         email: "Email",
@@ -256,8 +255,7 @@ exports.frenchContent = function () {
       name: "Prénom et nom",
       email: "Email",
       phone: "Téléphone",
-      file:
-        "Cliquez pour parcourir ou faites glisser les fichiers à télécharger.",
+      file: "Cliquez pour parcourir ou faites glisser les fichiers à télécharger.",
       richiesta: {
         richiestaLabel: "Insérez votre demande",
         richiestaTextarea: "demande",
@@ -275,8 +273,7 @@ exports.frenchContent = function () {
     },
     popup: {
       header: "Inscrivez-vous à notre newsletter",
-      text:
-        "Ne passez à côté d’aucune de nos promotions et restez informés des dernières nouveautés du monde de la traduction en vous inscrivant à notre newsletter!",
+      text: "Ne passez à côté d’aucune de nos promotions et restez informés des dernières nouveautés du monde de la traduction en vous inscrivant à notre newsletter!",
       form: {
         name: "Nom",
         email: "Email",
@@ -325,13 +322,13 @@ exports.germanContent = function () {
     seoDescription:
       "Wir sind seit 1997 im Tessin im Bereich Übersetzungsdienstleistungen tätig. Die Übersetzungsagentur Connection Line wurde 1997 in Tessin gegründet und stellt seitdem zahlreichen Firmen, die mit internationalen Unternehmen zusammenarbeiten, ein Netz von professionellen Muttersprachlern zur Verfügung und gewährleistet einen seriösen und kompetenten sowie abgerundeten und effizienten Sprachservice.",
     menu: {
-      home: "Heim",
+      home: "Startseite",
       numeri: "Die Zahlen",
       storia: "Die Geschichte",
-      servizi: "die Armee-Einheiten",
+      servizi: "Dienstleistungen",
       seo: "SEO Übersetzungen",
       clienti: "Unsere Kunden",
-      contatti: "Kontaktlinsen",
+      contatti: "Kontakt",
     },
     header: {
       topHeader:
@@ -437,8 +434,7 @@ exports.germanContent = function () {
     },
     popup: {
       header: "Abonnieren Sie jetzt unseren Newsletter!",
-      text:
-        "Verpassen Sie keine unserer Werbeaktionen und bleiben Sie stets aktuell über die neuesten Nachrichten aus der Welt der Übersetzungen informiert, indem Sie unseren einzigartigen Newsletter abonnieren!",
+      text: "Verpassen Sie keine unserer Werbeaktionen und bleiben Sie stets aktuell über die neuesten Nachrichten aus der Welt der Übersetzungen informiert, indem Sie unseren einzigartigen Newsletter abonnieren!",
       form: {
         name: "Name",
         email: "E-Mail-Adresse",
@@ -595,8 +591,7 @@ Velocità, competenza e tecniche esclusive di controllo della qualità che assic
     },
     popup: {
       header: "Iscriviti subito alla nostra newsletter!",
-      text:
-        "Non perdere nessuna delle nostre promozioni e resta aggiornato sulle ultime novità dal mondo delle traduzioni iscrivendoti alla nostra imperdibile newsletter!",
+      text: "Non perdere nessuna delle nostre promozioni e resta aggiornato sulle ultime novità dal mondo delle traduzioni iscrivendoti alla nostra imperdibile newsletter!",
       form: {
         name: "Nome",
         email: "Email",
