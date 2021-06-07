@@ -12,6 +12,18 @@
         <meta name="description" content="<%= description %>">
         <meta name="author" content="<%= author %>">
         <meta name="keywords" content="<%= keywords %>">
+        <meta property="og:site_name" content="connectionline.ch">
+        <meta property="og:title" content="<%= title %>" />
+        <meta property="og:url" content="<%= `https://connectionline.ch/blog/${slug}` %>" />
+        <meta property="og:description" content="<%= description %>">
+        <meta property="og:type" content="article" />
+        <% if(image) { %>
+            <meta property="og:image" itemprop="image" content="<%= image %>">
+            <meta property="og:image:type" content="image/<%= image.endsWith('png') ? 'png' : 'jpeg' %>" /> 
+            <meta property="og:image:url" itemprop="image" content="<%= image %>">
+            <meta property="og:image:secure_url" itemprop="image" content="<%= image %>">
+        <% } %>
+        
     <% } else { %>
         <title>Connection Line SAGL | <%= content.title %></title>
         <meta name="description" content="<%= content.seoDescription %>">

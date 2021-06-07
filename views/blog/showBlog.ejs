@@ -1,4 +1,4 @@
-<%- include("../partials/header", { title: post.pageTitle || post.title, description: post.seoDescription, keywords: post.keywords, author: post.author.name }); -%>
+<%- include("../partials/header", { title: post.pageTitle || post.title, description: post.seoDescription, keywords: post.keywords, author: post.author.name, image: post.image, imageDescription: post.imageAltText, slug: post.slug }); -%>
 
 <div class="show-blog">
   <section
