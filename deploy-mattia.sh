@@ -2,7 +2,7 @@
 #npm run build
 #/home/Mattia/.nvm/versions/node/v12.18.2/bin/
 tar czfv connectionline.tar.gz config content controller models public routes src utils views .babelrc app.js package.json package-lock.json postcss.config.js server.js webpack.* ecosystem.config.js
-scp connectionline.tar.gz staging.connectionline.ch:/home/Mattia/
+scp connectionline.tar.gz Mattia@connectionline.ch:/home/Mattia/
 rm connectionline.tar.gz
 
 ssh Mattia@connectionline.ch << 'ENDSSH'

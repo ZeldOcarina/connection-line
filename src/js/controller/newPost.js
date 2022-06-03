@@ -48,7 +48,7 @@ const newPost = () => {
     force_br_newlines: true,
     force_p_newlines: false,
     toolbar:
-      "undo redo | bold italic underline strikethrough | styleselect | link image | forecolor backcolor | alignleft aligncenter alignright alignjustify | outdent indent | emoticons code",
+      "undo redo | bold italic underline strikethrough removeformat | styleselect | link image | forecolor backcolor | alignleft aligncenter alignright alignjustify | outdent indent | emoticons code",
     init_instance_callback: function (editor) {
       editor.on("input", function (e) {
         formContent.content = tinymce.activeEditor.getContent();

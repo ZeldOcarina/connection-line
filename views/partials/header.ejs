@@ -36,7 +36,11 @@ splittedPage[splittedPage.length - 1] !== 'edit' ; %>
     <title>Connection Line SAGL | <%= content.title %></title>
     <meta name="description" content="<%= content.seoDescription %>" />
     <meta name="keywords" content="<%= keywords %>" />
-    <meta property="og:image" itemprop="image" content="/screenshot.jpg" />
+    <meta
+      property="og:image"
+      itemprop="image"
+      content="https://connectionline.ch/screenshot.jpg"
+    />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
@@ -59,7 +63,7 @@ splittedPage[splittedPage.length - 1] !== 'edit' ; %>
     <% if(page === '/blog/post' || splittedPage[splittedPage.length - 1] ===
     'edit') { %>
     <script
-      src="https://cdn.tiny.cloud/1/<%= tinyAPIKey %>/tinymce/5/tinymce.min.js"
+      src="https://cdn.tiny.cloud/1/<%= tinyAPIKey %>/tinymce/6/tinymce.min.js"
       referrerpolicy="origin"
     ></script>
     <% } %>
@@ -137,10 +141,7 @@ splittedPage[splittedPage.length - 1] !== 'edit' ; %>
           <% if(splittedPage[1] === 'it') { %>
           <li class="navigation__item over-500-hidden">
             <div
-              class="
-                translations-navbar__container
-                translations-navbar__container--blog
-              "
+              class="translations-navbar__container translations-navbar__container--blog"
             >
               <a href="/blog" class="translations-navbar__blog-btn"
                 >Scopri il nostro blog!</a
@@ -232,9 +233,7 @@ splittedPage[splittedPage.length - 1] !== 'edit' ; %>
       </div>
       <% if(splittedPage[1] === 'it') { %>
       <div
-        class="
-          translations-navbar__container translations-navbar__container--blog
-        "
+        class="translations-navbar__container translations-navbar__container--blog"
       >
         <a href="/blog" class="translations-navbar__blog-btn"
           >Scopri il nostro blog!</a
