@@ -15,7 +15,7 @@
     "dev:sass": "sass src/scss/main.scss public/css/app.min.css -w",
     "compile:sass": "sass src/scss/main.scss public/css/app.comp.css",
     "prefix:css": "postcss public/css/app.comp.css -o public/css/style.prefix.css",
-    "compress:css": "sass public/css/style.prefix.css public/css/app.min.css --output-style compressed",
+    "compress:css": "sass public/css/style.prefix.css public/css/app.min.css --style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
     "build": "npm-run-all build:js compile:sass prefix:css compress:css"
   },

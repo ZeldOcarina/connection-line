@@ -43,14 +43,17 @@ const newPost = () => {
   tinymce.init({
     selector: ".new-post__textarea",
     height: "50rem",
-    plugins: "code emoticons table link image imagetools",
-    forced_root_block: "",
-    force_br_newlines: true,
-    force_p_newlines: false,
+    plugins: "code emoticons table link image",
     toolbar:
       "undo redo | bold italic underline strikethrough removeformat | styleselect | link image | forecolor backcolor | alignleft aligncenter alignright alignjustify | outdent indent | emoticons code",
     init_instance_callback: function (editor) {
       editor.on("input", function (e) {
+        formContent.content = tinymce.activeEditor.getContent();
+      });
+      editor.on("ExecCommand", function (e) {
+        formContent.content = tinymce.activeEditor.getContent();
+      });
+      editor.on("paste", function (e) {
         formContent.content = tinymce.activeEditor.getContent();
       });
     },
@@ -94,10 +97,10 @@ const newPost = () => {
   }
 
   newPostForm.addEventListener("submit", async (e) => {
-    console.log(formContent);
-    console.log(postTitleInput.value);
     try {
       e.preventDefault();
+      //console.log(formContent);
+
       if (
         formContent.seoDescription.length < 120 ||
         formContent.seoDescription.length > 320

@@ -120,6 +120,7 @@ exports.isLoggedIn = async (req, res, next) => {
     try {
       // 1) Verify the token
       const decoded = await jwt.verify(req.cookies.jwt, process.env.JWT_SECRET);
+
       // 2) Check if user exists
       const currentUser = await User.findById(decoded.id);
       if (!currentUser) return next();
